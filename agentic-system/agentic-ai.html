@@ -2642,7 +2642,7 @@ def run_agent(goal: str) -&gt; str:
         return;
       }
 
-      if (!chapterModeEnabled || !chapters.length) {
+      if (!chapters.length) {
         chapterControls.hidden = true;
         return;
       }
@@ -2764,6 +2764,16 @@ def run_agent(goal: str) -&gt; str:
       });
       updateChapterControls();
     }
+
+    globalThis.addEventListener('tutorial:navigate-chapter', (event) => {
+      const step = Number(event.detail?.step || 0);
+      if (!step) {
+        return;
+      }
+
+      const base = chapterModeEnabled ? activeChapterIndex : getBestChapterForScroll();
+      setActiveChapter(base + step);
+    });
 
     const tocLinks = Array.from(document.querySelectorAll('[data-toc-link]'));
     const observed = tocLinks

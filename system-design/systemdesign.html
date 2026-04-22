@@ -20,7 +20,6 @@
         <h2>Navigate</h2>
         <p>Major sections stay reachable on screen. Print output collapses to a clean single-column document.</p>
         <nav><ul class="toc-list">
-<li><a href="#table-of-contents" data-toc-link>Table of Contents</a></li>
 <li><a href="#quick-reference-cheat-sheet" data-toc-link>Quick Reference Cheat Sheet</a></li>
 <li><a href="#chapter-1-system-design-interview-framework" data-toc-link>Chapter 1: System Design Interview Framework</a></li>
 <li><a href="#chapter-2-fundamentals-of-system-design" data-toc-link>Chapter 2: Fundamentals of System Design</a></li>
@@ -51,28 +50,29 @@
 <h1 id="system-design">System Design</h1>
 <hr>
 <h2 id="table-of-contents">Table of Contents</h2>
-<ol start="0">
+<ol>
+
 <li><a href="#quick-reference-cheat-sheet">Quick Reference Cheat Sheet</a></li>
-<li><a href="#chapter-1-system-design-interview-framework">System Design Interview Framework</a></li>
-<li><a href="#chapter-2-fundamentals-of-system-design">Fundamentals of System Design</a></li>
-<li><a href="#chapter-3-networking-and-internet-fundamentals">Networking &amp; Internet Fundamentals</a></li>
-<li><a href="#chapter-4-microservice-architecture-principles">Microservice Architecture Principles</a></li>
-<li><a href="#chapter-5-availability-and-cap-theorem">Availability &amp; CAP Theorem</a></li>
-<li><a href="#chapter-6-database-internals">Database Internals</a></li>
-<li><a href="#chapter-7-rate-limiting">Rate Limiting</a></li>
-<li><a href="#chapter-8-distributed-consensus">Distributed Consensus</a></li>
-<li><a href="#chapter-9-distributed-systems">Distributed Systems</a></li>
-<li><a href="#chapter-10-security-design">Security Design</a></li>
-<li><a href="#chapter-11-caching-strategies">Caching Strategies</a></li>
-<li><a href="#chapter-12-event-driven-messaging-systems-beginner-to-expert">Event-Driven Messaging Systems</a></li>
-<li><a href="#chapter-13-consistent-hashing">Consistent Hashing</a></li>
-<li><a href="#chapter-14-designing-a-distributed-cache">Designing a Distributed Cache</a></li>
-<li><a href="#chapter-15-designing-an-auto-complete-engine">Designing an Auto-Complete Engine</a></li>
-<li><a href="#chapter-16-designing-a-scalable-notification-service">Designing a Scalable Notification Service</a></li>
-<li><a href="#chapter-17-designing-a-real-time-push-platform">Designing a Real-Time Push Platform</a></li>
-<li><a href="#chapter-18-designing-a-top-k-heavy-hitters-system">Designing a Top-K Heavy Hitters System</a></li>
-<li><a href="#chapter-19-url-shortener-pastebin">URL Shortener / Pastebin</a></li>
-<li><a href="#chapter-20-search-engine-design">Search Engine Design</a></li>
+<li><a href="#chapter-1-system-design-interview-framework">Chapter 1: System Design Interview Framework</a></li>
+<li><a href="#chapter-2-fundamentals-of-system-design">Chapter 2: Fundamentals of System Design</a></li>
+<li><a href="#chapter-3-networking-and-internet-fundamentals">Chapter 3: Networking &amp; Internet Fundamentals</a></li>
+<li><a href="#chapter-4-microservice-architecture">Chapter 4: Microservice Architecture</a></li>
+<li><a href="#chapter-5-availability-cap-theorem-and-reliability-patterns">Chapter 5: Availability, CAP Theorem &amp; Reliability Patterns</a></li>
+<li><a href="#chapter-6-database-internals">Chapter 6: Database Internals</a></li>
+<li><a href="#chapter-7-rate-limiting">Chapter 7: Rate Limiting</a></li>
+<li><a href="#chapter-8-distributed-consensus">Chapter 8: Distributed Consensus</a></li>
+<li><a href="#chapter-9-distributed-systems">Chapter 9: Distributed Systems</a></li>
+<li><a href="#chapter-10-security-design">Chapter 10: Security Design</a></li>
+<li><a href="#chapter-11-caching-strategies">Chapter 11: Caching Strategies</a></li>
+<li><a href="#chapter-12-event-driven-messaging-systems">Chapter 12: Event-Driven Messaging Systems</a></li>
+<li><a href="#chapter-13-consistent-hashing">Chapter 13: Consistent Hashing</a></li>
+<li><a href="#chapter-14-designing-a-distributed-cache">Chapter 14: Designing a Distributed Cache</a></li>
+<li><a href="#chapter-15-designing-an-auto-complete-engine">Chapter 15: Designing an Auto-Complete Engine</a></li>
+<li><a href="#chapter-16-designing-a-scalable-notification-service">Chapter 16: Designing a Scalable Notification Service</a></li>
+<li><a href="#chapter-17-designing-a-real-time-push-platform">Chapter 17: Designing a Real-Time Push Platform</a></li>
+<li><a href="#chapter-18-counting-at-scale-top-k-trending-items">Chapter 18: Counting at Scale — Top-K Trending Items</a></li>
+<li><a href="#chapter-19-url-shortener-and-pastebin">Chapter 19: URL Shortener &amp; Pastebin</a></li>
+<li><a href="#chapter-20-search-engine-design">Chapter 20: Search Engine Design</a></li>
 <li><a href="#glossary">Glossary</a></li>
 </ol>
 <hr>
@@ -300,14 +300,14 @@
 <td>Jumping into boxes without clarifying scope, API shape, or failure modes.</td>
 </tr>
 <tr>
-<td><strong>2. Networking</strong></td>
-<td>Trace the request path: <strong>DNS -&gt; TCP/TLS -&gt; CDN/gateway -&gt; LB/proxy -&gt; app -&gt; DB</strong>. Latency is additive; cutting hops is often better than micro-optimizing one component.</td>
-<td>Treating &quot;the backend&quot; as one hop and ignoring edge, TLS, or gateway cost.</td>
+<td><strong>2. Fundamentals</strong></td>
+<td>Name the dominant force first: <strong>latency, throughput, availability, consistency, durability, or operability</strong>. Every architecture choice optimizes one axis by spending another.</td>
+<td>Treating a design as universally correct instead of stating which trade-off it buys.</td>
 </tr>
 <tr>
-<td><strong>3. Fundamentals</strong></td>
-<td>Always say which force dominates: <strong>latency, throughput, availability, consistency, durability, operability</strong>. Every optimization helps one axis and hurts another.</td>
-<td>Calling a design &quot;best&quot; without naming the trade-off it optimizes for.</td>
+<td><strong>3. Networking</strong></td>
+<td>Trace the full request path: <strong>DNS -&gt; TCP/TLS -&gt; CDN/gateway -&gt; load balancer/proxy -&gt; app -&gt; data store</strong>. Latency is additive, and most user-visible slowness comes from too many hops.</td>
+<td>Treating &quot;the backend&quot; as one black box and ignoring edge, TLS, and routing costs.</td>
 </tr>
 <tr>
 <td><strong>4. Microservices</strong></td>
@@ -405,17 +405,17 @@
 <td>Putting APNs/FCM/Twilio calls on the user request path.</td>
 </tr>
 <tr>
-<td><strong>17. Zuul Push / real-time push</strong></td>
+<td><strong>17. Real-time push platform</strong></td>
 <td>Real-time push is a <strong>connection-state</strong> problem. Use <strong>WebSockets</strong>, event-driven socket servers, a <strong>registry (<code>client_id -&gt; server_id</code>)</strong>, and <strong>jittered reconnects</strong>. Scale on <strong>open connections</strong>, not RPS.</td>
 <td>Autoscaling on CPU/RPS while connection servers are actually saturated by socket count.</td>
 </tr>
 <tr>
-<td><strong>18. Top-K</strong></td>
+<td><strong>18. Top-K trending items</strong></td>
 <td>Large-scale Top-K usually needs <strong>two paths</strong>: <strong>approximate fast path</strong> (Count-Min Sketch + heap) and <strong>exact slow path</strong> (replayable aggregation). Partition by <strong>item key</strong> and watch for <strong>hot keys</strong>.</td>
 <td>Trying to make one exact real-time path serve both product and audit needs.</td>
 </tr>
 <tr>
-<td><strong>19. URL shortener / Pastebin</strong></td>
+<td><strong>19. URL shortener &amp; pastebin</strong></td>
 <td>Keep the redirect path tiny: <strong>code -&gt; target</strong> lookup should be cache-first and ultra-fast; do <strong>analytics, abuse checks, and cleanup asynchronously</strong>. Choose <strong>301 vs 302</strong> intentionally.</td>
 <td>Doing analytics or moderation synchronously on the redirect path.</td>
 </tr>
@@ -13753,148 +13753,208 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tr>
 </thead>
 <tbody><tr>
-<td><strong>Quorum</strong></td>
-<td>The minimum number of replicas that must agree for an operation to be considered committed or valid, usually a majority.</td>
+<td><strong>ABAC</strong></td>
+<td>Attribute-Based Access Control. Authorization is decided from attributes such as user role, geography, project, or request context instead of only one fixed role name.</td>
 </tr>
 <tr>
-<td><strong>Idempotency</strong></td>
-<td>A property where repeating the same request or message does not change the final result beyond the first successful execution.</td>
+<td><strong>ACID</strong></td>
+<td>Atomicity, Consistency, Isolation, Durability. The four properties that make a relational transaction correct under concurrency and crashes.</td>
+</tr>
+<tr>
+<td><strong>API gateway</strong></td>
+<td>The entry layer that handles authentication, rate limits, routing, protocol translation, and observability for external traffic before it reaches internal services.</td>
 </tr>
 <tr>
 <td><strong>Backpressure</strong></td>
 <td>A mechanism that slows producers or sheds work when consumers or downstream systems cannot keep up.</td>
 </tr>
 <tr>
-<td><strong>Replication lag</strong></td>
-<td>The delay between a write reaching the primary and that same write becoming visible on replicas.</td>
+<td><strong>B-tree</strong></td>
+<td>A balanced tree index optimized for point lookups and range scans. Common in relational databases such as Postgres and MySQL.</td>
 </tr>
 <tr>
-<td><strong>Leader election</strong></td>
-<td>The process of choosing one node to coordinate writes or metadata for a distributed cluster.</td>
+<td><strong>Bounded context</strong></td>
+<td>A Domain-Driven Design boundary inside which one model and vocabulary stay consistent. The same business word can mean different things in different contexts.</td>
 </tr>
 <tr>
-<td><strong>Split brain</strong></td>
-<td>A failure mode where two partitions each believe they are the active leader and accept conflicting work.</td>
-</tr>
-<tr>
-<td><strong>Eventual consistency</strong></td>
-<td>A model where replicas may temporarily disagree, but converge to the same value over time.</td>
-</tr>
-<tr>
-<td><strong>Deduplication</strong></td>
-<td>The act of detecting and ignoring repeated requests or messages so duplicates do not create duplicate side effects.</td>
-</tr>
-<tr>
-<td><strong>TTL (Time To Live)</strong></td>
-<td>The time after which cached data, sessions, or records expire automatically.</td>
-</tr>
-<tr>
-<td><strong>Hot key</strong></td>
-<td>A key that receives a disproportionate share of traffic and can overload one shard, cache node, or partition.</td>
+<td><strong>Cache-aside</strong></td>
+<td>A caching pattern where the application reads from cache first, falls back to the database on a miss, then writes the fetched value back to cache.</td>
 </tr>
 <tr>
 <td><strong>Cache stampede</strong></td>
 <td>A burst of simultaneous cache misses for the same hot key that overwhelms the backing store.</td>
 </tr>
 <tr>
+<td><strong>Canary deployment</strong></td>
+<td>A release strategy that routes a small percentage of traffic to a new version first, then ramps up gradually if latency and error rates remain healthy.</td>
+</tr>
+<tr>
+<td><strong>CAP theorem</strong></td>
+<td>In the presence of a network partition, a distributed system can guarantee at most two of consistency, availability, and partition tolerance. Since partitions are unavoidable, the practical trade-off is consistency versus availability.</td>
+</tr>
+<tr>
+<td><strong>CDC (Change Data Capture)</strong></td>
+<td>Streaming row-level data changes from a database to downstream systems so caches, search indexes, and analytics pipelines stay up to date.</td>
+</tr>
+<tr>
+<td><strong>Circuit breaker</strong></td>
+<td>A protection pattern that stops sending requests to a failing dependency until it recovers, preventing retry storms and thread exhaustion.</td>
+</tr>
+<tr>
+<td><strong>Compaction</strong></td>
+<td>The process of rewriting on-disk data to merge segments, remove deleted entries, and reclaim space. Central to LSM-tree storage engines.</td>
+</tr>
+<tr>
+<td><strong>Consistent hashing</strong></td>
+<td>A partitioning technique that minimizes key remapping when cache or storage nodes are added or removed.</td>
+</tr>
+<tr>
+<td><strong>Consumer group</strong></td>
+<td>A Kafka abstraction where multiple consumers share a topic&#39;s partitions so work is parallelized without processing the same partition twice within the same group.</td>
+</tr>
+<tr>
+<td><strong>Count-Min Sketch</strong></td>
+<td>A probabilistic data structure that estimates item frequencies with small memory use. Useful for streaming Top-K systems where exact counting is too expensive on the hot path.</td>
+</tr>
+<tr>
+<td><strong>CQRS</strong></td>
+<td>Command Query Responsibility Segregation. The write model and the read model are separated so each can be optimized independently.</td>
+</tr>
+<tr>
+<td><strong>Dead-letter queue (DLQ)</strong></td>
+<td>A queue or topic that holds messages which failed processing too many times, so one poison message does not block the whole stream.</td>
+</tr>
+<tr>
+<td><strong>Deduplication</strong></td>
+<td>Detecting and ignoring repeated requests or messages so retries do not create duplicate side effects.</td>
+</tr>
+<tr>
+<td><strong>Eventual consistency</strong></td>
+<td>A consistency model where replicas may temporarily disagree after a write but converge over time.</td>
+</tr>
+<tr>
+<td><strong>Fan-out</strong></td>
+<td>Delivering one event to many downstream consumers, such as inventory, billing, and notification services reading the same order-created event.</td>
+</tr>
+<tr>
+<td><strong>Fencing token</strong></td>
+<td>A monotonically increasing token attached to a lock or lease holder so stale owners can be rejected even if they still believe they hold the lock.</td>
+</tr>
+<tr>
+<td><strong>Gossip protocol</strong></td>
+<td>A peer-to-peer state propagation mechanism where nodes exchange membership and health information with random neighbors instead of relying on one coordinator.</td>
+</tr>
+<tr>
+<td><strong>Hot key</strong></td>
+<td>A key that receives far more traffic than average and can overload one cache node, shard, or partition.</td>
+</tr>
+<tr>
+<td><strong>Idempotency</strong></td>
+<td>A property where executing the same logical request multiple times leads to the same final outcome as executing it once.</td>
+</tr>
+<tr>
+<td><strong>Idempotency key</strong></td>
+<td>A client-supplied token that lets a server recognize retried requests and return the original result rather than processing the operation again.</td>
+</tr>
+<tr>
+<td><strong>Inverted index</strong></td>
+<td>A search index that maps each term to the set of documents containing it, enabling fast full-text lookup without scanning all documents.</td>
+</tr>
+<tr>
+<td><strong>Leader election</strong></td>
+<td>The process of choosing one node to coordinate writes or metadata for a distributed cluster.</td>
+</tr>
+<tr>
+<td><strong>LSM tree</strong></td>
+<td>A write-optimized storage engine that buffers writes in memory and flushes them to immutable disk files, later merging them through compaction.</td>
+</tr>
+<tr>
+<td><strong>mTLS</strong></td>
+<td>Mutual TLS. Both client and server present certificates so service-to-service calls are authenticated at the transport layer.</td>
+</tr>
+<tr>
+<td><strong>MVCC</strong></td>
+<td>Multi-Version Concurrency Control. Readers see a snapshot while writers create newer versions, which improves concurrency but requires cleanup of old versions.</td>
+</tr>
+<tr>
+<td><strong>Outbox pattern</strong></td>
+<td>A way to publish events reliably by writing the business change and the outbound event record in the same local database transaction, then forwarding events asynchronously.</td>
+</tr>
+<tr>
+<td><strong>PACELC</strong></td>
+<td>An extension of CAP that says systems also trade latency against consistency when there is no partition.</td>
+</tr>
+<tr>
+<td><strong>PageRank</strong></td>
+<td>A link-analysis score that estimates authority from how many other important pages link to a page. Often combined with lexical relevance in search ranking.</td>
+</tr>
+<tr>
+<td><strong>Posting list</strong></td>
+<td>The list of document identifiers stored for a term inside an inverted index. Query execution intersects posting lists for multi-term searches.</td>
+</tr>
+<tr>
+<td><strong>Quorum</strong></td>
+<td>The minimum number of replicas that must agree for a read or write to be considered successful, usually a majority.</td>
+</tr>
+<tr>
+<td><strong>Raft</strong></td>
+<td>A consensus algorithm where a leader replicates a log to followers and commits entries after a majority acknowledges them.</td>
+</tr>
+<tr>
+<td><strong>Replication lag</strong></td>
+<td>The delay between a write reaching the primary and that same write becoming visible on replicas.</td>
+</tr>
+<tr>
+<td><strong>RTO / RPO</strong></td>
+<td><code>RTO</code> is the target time to restore service after failure. <code>RPO</code> is the amount of data loss the business is willing to tolerate.</td>
+</tr>
+<tr>
+<td><strong>Saga pattern</strong></td>
+<td>A distributed transaction pattern that coordinates a sequence of local transactions and uses compensating actions when a later step fails.</td>
+</tr>
+<tr>
+<td><strong>Schema registry</strong></td>
+<td>A service that stores versioned event schemas and enforces compatibility rules so producers and consumers do not silently drift apart.</td>
+</tr>
+<tr>
+<td><strong>Service mesh</strong></td>
+<td>Infrastructure that adds mTLS, retries, traffic shaping, and observability to service-to-service calls without duplicating that logic in every application.</td>
+</tr>
+<tr>
 <td><strong>Sharding</strong></td>
 <td>Splitting data across multiple machines so storage and traffic scale horizontally.</td>
 </tr>
 <tr>
-<td><strong>Circuit breaker</strong></td>
-<td>A protection pattern that stops sending requests to a failing dependency until it recovers.</td>
-</tr>
-<tr>
 <td><strong>SLI / SLO / SLA</strong></td>
-<td><code>SLI</code> is a measured service metric, <code>SLO</code> is the internal target for that metric, and <code>SLA</code> is the external promise with contractual consequences.</td>
+<td><code>SLI</code> is the measured service indicator, <code>SLO</code> is the internal target, and <code>SLA</code> is the external promise with contractual consequences.</td>
 </tr>
 <tr>
-<td><strong>RTO / RPO</strong></td>
-<td><code>RTO</code> is how quickly service must be restored after failure, and <code>RPO</code> is how much data loss is acceptable.</td>
-</tr>
-<tr>
-<td><strong>ACID</strong></td>
-<td>Atomicity, Consistency, Isolation, Durability — the four properties that guarantee correct transaction behavior in relational databases.</td>
-</tr>
-<tr>
-<td><strong>WAL (Write-Ahead Log)</strong></td>
-<td>A durability mechanism where every change is written to an append-only log before being applied to the main data file. If the system crashes, the WAL is replayed to recover the last consistent state.</td>
-</tr>
-<tr>
-<td><strong>Saga pattern</strong></td>
-<td>A way to implement distributed transactions across microservices by splitting work into a chain of local transactions, each of which publishes an event or triggers the next step. If a step fails, compensating transactions roll back prior steps.</td>
-</tr>
-<tr>
-<td><strong>mTLS (mutual TLS)</strong></td>
-<td>An extension of TLS where both client and server authenticate each other with certificates. Used for service-to-service trust inside a service mesh, replacing password or token auth at the transport layer.</td>
-</tr>
-<tr>
-<td><strong>CDC (Change Data Capture)</strong></td>
-<td>Streaming database row-level changes (inserts, updates, deletes) to downstream consumers as they happen. Tools include Debezium for Postgres/MySQL and DynamoDB Streams. Useful for cache invalidation, event sourcing, and replication.</td>
-</tr>
-<tr>
-<td><strong>PACELC</strong></td>
-<td>An extension of CAP that also considers the latency–consistency trade-off when the network is healthy (no partition). Even with no partition, a system must choose between lower latency and stronger consistency.</td>
-</tr>
-<tr>
-<td><strong>Fan-out</strong></td>
-<td>Delivering one event or message to many downstream consumers. Example: one <code>ORDER_PLACED</code> event fans out to inventory, billing, notification, and analytics consumers, each reading from the same Kafka topic independently.</td>
-</tr>
-<tr>
-<td><strong>Blue-green deployment</strong></td>
-<td>A release strategy that runs two identical production environments. Traffic is switched from the old version (blue) to the new version (green) atomically, with near-instant rollback by switching back.</td>
-</tr>
-<tr>
-<td><strong>Canary deployment</strong></td>
-<td>A release strategy that routes a small percentage of traffic (e.g., 1–5%) to the new version and gradually increases it as confidence grows. Allows catching production bugs before they affect all users.</td>
-</tr>
-<tr>
-<td><strong>Bounded context</strong></td>
-<td>A Domain-Driven Design concept: the explicit boundary within which a particular domain model is defined and applies. The same word (e.g., &quot;Customer&quot;) can mean different things in different bounded contexts.</td>
-</tr>
-<tr>
-<td><strong>Schema registry</strong></td>
-<td>A service that stores and enforces versioned message schemas (usually Avro or Protobuf) for events on a message bus. Producers validate schemas before publishing; consumers validate on consumption, preventing deserialization errors from schema drift.</td>
-</tr>
-<tr>
-<td><strong>Service mesh</strong></td>
-<td>Infrastructure that manages service-to-service communication — including mTLS, retries, circuit breaking, and load balancing — at the platform layer rather than in application code. Examples: Istio, Linkerd.</td>
-</tr>
-<tr>
-<td><strong>Dead-letter queue (DLQ)</strong></td>
-<td>A separate queue or topic where messages are moved after failing more than N retry attempts. Prevents one malformed message from blocking an entire queue indefinitely.</td>
-</tr>
-<tr>
-<td><strong>Consumer group</strong></td>
-<td>A Kafka concept: a named set of consumers that collectively read from a topic. Each partition is assigned to exactly one consumer in the group, enabling parallel processing. Multiple groups can read the same topic independently at different offsets.</td>
-</tr>
-<tr>
-<td><strong>Inverted index</strong></td>
-<td>A data structure mapping each term to the list of documents containing it. The core of full-text search engines: given a query term, an O(1) lookup returns the posting list without scanning every document.</td>
-</tr>
-<tr>
-<td><strong>Posting list</strong></td>
-<td>The list of document IDs (and optionally positions and scores) stored under each term in an inverted index. Query execution intersects posting lists for multi-term queries.</td>
-</tr>
-<tr>
-<td><strong>Idempotency key</strong></td>
-<td>A client-supplied unique token attached to a request so that if the same request is retried, the server can detect and return the original response instead of processing it twice. Critical for payment APIs and message producers.</td>
-</tr>
-<tr>
-<td><strong>Two-phase commit (2PC)</strong></td>
-<td>A distributed protocol for atomic cross-node writes: a coordinator first asks all participants to &quot;prepare&quot; (Phase 1), then—only if all agree—tells them to &quot;commit&quot; (Phase 2). If any participant says no or crashes, the coordinator aborts. Guarantees atomicity but blocks if the coordinator crashes after Phase 1.</td>
-</tr>
-<tr>
-<td><strong>Gossip protocol</strong></td>
-<td>A peer-to-peer failure detection and state propagation mechanism where each node periodically exchanges its known-state with random neighbors. Used in Cassandra and Consul to propagate ring membership without a single coordinator.</td>
+<td><strong>Split brain</strong></td>
+<td>A failure mode where two partitions each believe they are the leader and both accept conflicting work.</td>
 </tr>
 <tr>
 <td><strong>TF-IDF</strong></td>
-<td>Term Frequency–Inverse Document Frequency. A relevance score that rewards terms appearing frequently in a specific document (TF) but penalizes terms appearing in almost every document (IDF), which makes them poor discriminators. Used in search ranking.</td>
+<td>Term Frequency-Inverse Document Frequency. A scoring method that rewards terms frequent in one document but rare across the corpus.</td>
 </tr>
 <tr>
-<td><strong>PageRank</strong></td>
-<td>A link-analysis algorithm that scores pages by the quantity and quality of pages linking to them. High PageRank means authoritative sites consider this page worth linking to. Used as an authority signal in web search ranking alongside content relevance.</td>
+<td><strong>Trie</strong></td>
+<td>A prefix tree used for efficient prefix lookups such as auto-complete suggestions. Lookup cost depends on prefix length, not total vocabulary size.</td>
+</tr>
+<tr>
+<td><strong>TTL (Time To Live)</strong></td>
+<td>The amount of time cached data, sessions, or records remain valid before expiring automatically.</td>
+</tr>
+<tr>
+<td><strong>Two-phase commit (2PC)</strong></td>
+<td>A distributed commit protocol that guarantees all participants either commit or abort together, but can block if the coordinator fails after prepare.</td>
+</tr>
+<tr>
+<td><strong>WAL (Write-Ahead Log)</strong></td>
+<td>A durability mechanism where changes are appended to a log before data pages are updated, allowing recovery after crashes.</td>
+</tr>
+<tr>
+<td><strong>WebSocket</strong></td>
+<td>A long-lived full-duplex connection between client and server, commonly used for real-time push systems, chat, and live dashboards.</td>
 </tr>
 </tbody></table></div>
 
@@ -13926,17 +13986,31 @@ Shard Builder / Segment Merger       Vector Shard Store
         return;
       }
 
+      const seenIds = new Set();
+      chapters = Array.from(document.querySelectorAll('[data-toc-link]'))
+        .map((link, index) => {
+          const id = link.getAttribute('href')?.slice(1);
+          const target = id ? document.getElementById(id) : null;
+          if (!id || !target || target.tagName !== 'H2' || seenIds.has(id)) {
+            return null;
+          }
+
+          seenIds.add(id);
+          return {
+            index,
+            id,
+            title: link.textContent?.trim() || target.textContent?.trim() || 'Untitled Section',
+          };
+        })
+        .filter(Boolean);
+
       const children = Array.from(article.children);
-      let sectionIndex = 0;
+      const chapterIndexesById = new Map(chapters.map((chapter) => [chapter.id, chapter.index]));
+      let sectionIndex = chapters.length ? chapters[0].index : 0;
 
       children.forEach((child) => {
-        if (child.matches('h2[id^="chapter-"]')) {
-          sectionIndex += 1;
-          chapters.push({
-            index: sectionIndex,
-            id: child.id,
-            title: child.textContent?.trim() || 'Untitled Chapter',
-          });
+        if (child.id && chapterIndexesById.has(child.id)) {
+          sectionIndex = chapterIndexesById.get(child.id);
         }
 
         child.dataset.chapterIndex = String(sectionIndex);
@@ -13949,7 +14023,7 @@ Shard Builder / Segment Merger       Vector Shard Store
       }
 
       const threshold = window.scrollY + 160;
-      let candidate = 0;
+      let candidate = chapters[0].index;
 
       chapters.forEach((chapter) => {
         const heading = document.getElementById(chapter.id);
@@ -13966,23 +14040,19 @@ Shard Builder / Segment Merger       Vector Shard Store
         return;
       }
 
-      if (!chapterModeEnabled || !chapters.length) {
+      if (!chapters.length) {
         chapterControls.hidden = true;
         return;
       }
 
       chapterControls.hidden = false;
 
-      if (activeChapterIndex === 0) {
-        chapterIndicator.textContent = 'Preface & Quick Reference';
-      } else {
-        const chapter = chapters.find((entry) => entry.index === activeChapterIndex);
-        chapterIndicator.textContent = chapter
-          ? chapter.title
-          : 'Chapter';
-      }
+      const chapter = chapters.find((entry) => entry.index === activeChapterIndex);
+      chapterIndicator.textContent = chapter
+        ? chapter.title
+        : 'Section';
 
-      prevChapterButton.disabled = activeChapterIndex === 0;
+      prevChapterButton.disabled = activeChapterIndex <= chapters[0].index;
       nextChapterButton.disabled = activeChapterIndex >= chapters[chapters.length - 1].index;
     };
 
@@ -14007,9 +14077,7 @@ Shard Builder / Segment Merger       Vector Shard Store
       localStorage.setItem('sd-view-mode', mode);
 
       if (chapterModeEnabled) {
-        const chapterId = activeChapterIndex === 0
-          ? document.querySelector('[data-toc-link]')?.getAttribute('href')?.slice(1)
-          : chapters.find((entry) => entry.index === activeChapterIndex)?.id;
+        const chapterId = chapters.find((entry) => entry.index === activeChapterIndex)?.id;
         if (chapterId) {
           document.querySelectorAll('[data-toc-link]').forEach((link) => {
             link.classList.toggle('is-active', link.getAttribute('href') === `#${chapterId}`);
@@ -14021,9 +14089,7 @@ Shard Builder / Segment Merger       Vector Shard Store
         if (!chapterModeEnabled) {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         } else {
-          const targetId = activeChapterIndex === 0
-            ? 'table-of-contents'
-            : chapters.find((entry) => entry.index === activeChapterIndex)?.id;
+          const targetId = chapters.find((entry) => entry.index === activeChapterIndex)?.id;
           const target = targetId ? document.getElementById(targetId) : null;
 
           if (target) {
@@ -14034,8 +14100,9 @@ Shard Builder / Segment Merger       Vector Shard Store
     };
 
     const setActiveChapter = (nextChapterIndex, shouldScroll = true) => {
+      const minChapterIndex = chapters.length ? chapters[0].index : 0;
       const maxChapterIndex = chapters.length ? chapters[chapters.length - 1].index : 0;
-      const clamped = Math.min(Math.max(nextChapterIndex, 0), maxChapterIndex);
+      const clamped = Math.min(Math.max(nextChapterIndex, minChapterIndex), maxChapterIndex);
       if (clamped === activeChapterIndex && chapterModeEnabled) {
         return;
       }
@@ -14044,9 +14111,26 @@ Shard Builder / Segment Merger       Vector Shard Store
       if (chapterModeEnabled) {
         applyViewMode('chapter', shouldScroll);
       } else {
+        if (shouldScroll) {
+          const targetId = chapters.find((entry) => entry.index === activeChapterIndex)?.id;
+          const target = targetId ? document.getElementById(targetId) : null;
+          if (target) {
+            requestAnimationFrame(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+          }
+        }
         updateChapterControls();
       }
     };
+
+    globalThis.addEventListener('tutorial:navigate-chapter', (event) => {
+      const step = Number(event.detail?.step || 0);
+      if (!step) {
+        return;
+      }
+
+      const base = chapterModeEnabled ? activeChapterIndex : getBestChapterForScroll();
+      setActiveChapter(base + step);
+    });
 
     markChapterSections();
 

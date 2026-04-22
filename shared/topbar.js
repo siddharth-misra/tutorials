@@ -1,8 +1,8 @@
 (function () {
-  const pagePath = globalThis.location?.pathname || "";
-  const isHomePage = pagePath.endsWith("/index.html") || pagePath.endsWith("/");
-  const isSystemDesignPage = pagePath.endsWith("/system-design/systemdesign.html");
-  const isAgenticAiPage = pagePath.endsWith("/agentic-system/agentic-ai.html");
+  const pagePath = (globalThis.location?.pathname || "").replace(/\/+$/u, "");
+  const isHomePage = pagePath === "" || pagePath.endsWith("/index.html");
+  const isSystemDesignPage = /\/system-design\/[^/]+\.html$/u.test(pagePath);
+  const isAgenticAiPage = /\/agentic-system\/[^/]+\.html$/u.test(pagePath);
 
   let pageConfig = null;
 
@@ -302,14 +302,36 @@
         .atlas-topbar {
           padding: 10px 14px;
           gap: 8px;
+          justify-content: space-between;
+        }
+
+        .atlas-topbar__left,
+        .atlas-topbar__center,
+        .atlas-topbar__right {
+          flex: 0 1 auto;
         }
 
         .atlas-topbar__sep {
           display: none;
         }
 
-        .atlas-topbar__center {
+        .atlas-topbar__title {
           display: none;
+        }
+
+        .atlas-topbar__nav-btn {
+          padding-left: 12px;
+          padding-right: 10px;
+        }
+
+        .atlas-topbar__nav-dropdown {
+          left: 50%;
+          transform: translateX(-50%) scale(0.94) translateY(-6px);
+          transform-origin: top center;
+        }
+
+        .atlas-topbar__nav-dropdown.is-open {
+          transform: translateX(-50%) scale(1) translateY(0);
         }
       }
 
@@ -389,7 +411,7 @@
   const navItemsMarkup = topicLinks
     .map((link) => {
       const isCurrent = link.key === pageConfig.current;
-      return `<a class="atlas-topbar__nav-item${isCurrent ? " is-current" : ""}" href="${link.href}"${isCurrent ? ' aria-current="page"' : ""}>${link.label}</a>`;
+      return `<a class="atlas-topbar__nav-item${isCurrent ? " is-current" : ""}" href="${link.href}" data-topic-link${isCurrent ? ' aria-current="page"' : ""}>${link.label}</a>`;
     })
     .join("");
 
@@ -406,10 +428,6 @@
       </div>
     </div>
   `;
-
-  const titleMarkup = pageConfig.isReader
-    ? `<h1 class="atlas-topbar__title">${pageConfig.title}</h1>`
-    : "";
 
   const chapterNavMarkup = pageConfig.isReader
     ? `
@@ -465,11 +483,21 @@
   // ── Topics dropdown toggle ──
   const navBtn = nav.querySelector("[data-nav-btn]");
   const navDropdown = nav.querySelector("[data-nav-dropdown]");
+  const topicNavLinks = Array.from(nav.querySelectorAll("[data-topic-link]"));
 
   navBtn.addEventListener("click", (e) => {
     e.stopPropagation();
     const isOpen = navDropdown.classList.toggle("is-open");
     navBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  topicNavLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      navDropdown.classList.remove("is-open");
+      navBtn.setAttribute("aria-expanded", "false");
+      globalThis.location.href = link.href;
+    });
   });
 
   // ── Chapter nav: delegate to sidebar buttons + mirror state ──
@@ -497,8 +525,12 @@
       new MutationObserver(syncState).observe(sidebarPrev, { attributes: true, attributeFilter: ["disabled"] });
       new MutationObserver(syncState).observe(sidebarNext, { attributes: true, attributeFilter: ["disabled"] });
 
-      topbarPrev.addEventListener("click", () => sidebarPrev.click());
-      topbarNext.addEventListener("click", () => sidebarNext.click());
+      topbarPrev.addEventListener("click", () => {
+        globalThis.dispatchEvent(new CustomEvent("tutorial:navigate-chapter", { detail: { step: -1 } }));
+      });
+      topbarNext.addEventListener("click", () => {
+        globalThis.dispatchEvent(new CustomEvent("tutorial:navigate-chapter", { detail: { step: 1 } }));
+      });
     }
   }
 

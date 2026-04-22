@@ -2642,7 +2642,7 @@ def run_agent(goal: str) -&gt; str:
         return;
       }
 
-      if (!chapters.length) {
+      if (!chapterModeEnabled || !chapters.length) {
         chapterControls.hidden = true;
         return;
       }

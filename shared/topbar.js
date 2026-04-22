@@ -1,6 +1,6 @@
 (function () {
   const pagePath = globalThis.location?.pathname || "";
-  const isHomePage = pagePath.endsWith("/index.html");
+  const isHomePage = pagePath.endsWith("/index.html") || pagePath.endsWith("/");
   const isSystemDesignPage = pagePath.endsWith("/system-design/systemdesign.html");
   const isAgenticAiPage = pagePath.endsWith("/agentic-system/agentic-ai.html");
 
@@ -366,15 +366,18 @@
     document.head.append(style);
   }
 
+  // Derive base so links work from any page depth (home = "./", reader = "../")
+  const base = pageConfig.homeHref.replace("index.html", "");
+
   const topicLinks = [
     {
       key: "system-design",
-      href: "../system-design/systemdesign.html",
+      href: `${base}system-design/systemdesign.html`,
       label: "System Design",
     },
     {
       key: "agentic-ai",
-      href: "../agentic-system/agentic-ai.html",
+      href: `${base}agentic-system/agentic-ai.html`,
       label: "Agentic AI",
     },
   ];

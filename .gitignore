@@ -16,3 +16,19 @@ _site/
 # counterproductive to check this file into the repository.
 # Details at https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# macOS
+.DS_Store
+
+# Node.js build tools (not needed for GitHub Pages)
+node_modules/
+package.json
+package-lock.json
+convert.js
+
+# Editor
+.vscode/
+
+# Source markdown files (HTML is what GitHub Pages serves)
+**/*.md
+agentic-system/node_modules

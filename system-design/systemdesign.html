@@ -50,31 +50,31 @@
 <h1 id="system-design">System Design</h1>
 <hr>
 <h2 id="table-of-contents">Table of Contents</h2>
-<ol>
+<ul class="toc-list">
 
-<li><a href="#quick-reference-cheat-sheet">Quick Reference Cheat Sheet</a></li>
-<li><a href="#chapter-1-system-design-interview-framework">Chapter 1: System Design Interview Framework</a></li>
-<li><a href="#chapter-2-fundamentals-of-system-design">Chapter 2: Fundamentals of System Design</a></li>
-<li><a href="#chapter-3-networking-and-internet-fundamentals">Chapter 3: Networking &amp; Internet Fundamentals</a></li>
-<li><a href="#chapter-4-microservice-architecture">Chapter 4: Microservice Architecture</a></li>
-<li><a href="#chapter-5-availability-cap-theorem-and-reliability-patterns">Chapter 5: Availability, CAP Theorem &amp; Reliability Patterns</a></li>
-<li><a href="#chapter-6-database-internals">Chapter 6: Database Internals</a></li>
-<li><a href="#chapter-7-rate-limiting">Chapter 7: Rate Limiting</a></li>
-<li><a href="#chapter-8-distributed-consensus">Chapter 8: Distributed Consensus</a></li>
-<li><a href="#chapter-9-distributed-systems">Chapter 9: Distributed Systems</a></li>
-<li><a href="#chapter-10-security-design">Chapter 10: Security Design</a></li>
-<li><a href="#chapter-11-caching-strategies">Chapter 11: Caching Strategies</a></li>
-<li><a href="#chapter-12-event-driven-messaging-systems">Chapter 12: Event-Driven Messaging Systems</a></li>
-<li><a href="#chapter-13-consistent-hashing">Chapter 13: Consistent Hashing</a></li>
-<li><a href="#chapter-14-designing-a-distributed-cache">Chapter 14: Designing a Distributed Cache</a></li>
-<li><a href="#chapter-15-designing-an-auto-complete-engine">Chapter 15: Designing an Auto-Complete Engine</a></li>
-<li><a href="#chapter-16-designing-a-scalable-notification-service">Chapter 16: Designing a Scalable Notification Service</a></li>
-<li><a href="#chapter-17-designing-a-real-time-push-platform">Chapter 17: Designing a Real-Time Push Platform</a></li>
-<li><a href="#chapter-18-counting-at-scale-top-k-trending-items">Chapter 18: Counting at Scale — Top-K Trending Items</a></li>
-<li><a href="#chapter-19-url-shortener-and-pastebin">Chapter 19: URL Shortener &amp; Pastebin</a></li>
-<li><a href="#chapter-20-search-engine-design">Chapter 20: Search Engine Design</a></li>
-<li><a href="#glossary">Glossary</a></li>
-</ol>
+<li><a href="#quick-reference-cheat-sheet" data-toc-link>Quick Reference Cheat Sheet</a></li>
+<li><a href="#chapter-1-system-design-interview-framework" data-toc-link>Chapter 1: System Design Interview Framework</a></li>
+<li><a href="#chapter-2-fundamentals-of-system-design" data-toc-link>Chapter 2: Fundamentals of System Design</a></li>
+<li><a href="#chapter-3-networking-and-internet-fundamentals" data-toc-link>Chapter 3: Networking &amp; Internet Fundamentals</a></li>
+<li><a href="#chapter-4-microservice-architecture" data-toc-link>Chapter 4: Microservice Architecture</a></li>
+<li><a href="#chapter-5-availability-cap-theorem-and-reliability-patterns" data-toc-link>Chapter 5: Availability, CAP Theorem &amp; Reliability Patterns</a></li>
+<li><a href="#chapter-6-database-internals" data-toc-link>Chapter 6: Database Internals</a></li>
+<li><a href="#chapter-7-rate-limiting" data-toc-link>Chapter 7: Rate Limiting</a></li>
+<li><a href="#chapter-8-distributed-consensus" data-toc-link>Chapter 8: Distributed Consensus</a></li>
+<li><a href="#chapter-9-distributed-systems" data-toc-link>Chapter 9: Distributed Systems</a></li>
+<li><a href="#chapter-10-security-design" data-toc-link>Chapter 10: Security Design</a></li>
+<li><a href="#chapter-11-caching-strategies" data-toc-link>Chapter 11: Caching Strategies</a></li>
+<li><a href="#chapter-12-event-driven-messaging-systems" data-toc-link>Chapter 12: Event-Driven Messaging Systems</a></li>
+<li><a href="#chapter-13-consistent-hashing" data-toc-link>Chapter 13: Consistent Hashing</a></li>
+<li><a href="#chapter-14-designing-a-distributed-cache" data-toc-link>Chapter 14: Designing a Distributed Cache</a></li>
+<li><a href="#chapter-15-designing-an-auto-complete-engine" data-toc-link>Chapter 15: Designing an Auto-Complete Engine</a></li>
+<li><a href="#chapter-16-designing-a-scalable-notification-service" data-toc-link>Chapter 16: Designing a Scalable Notification Service</a></li>
+<li><a href="#chapter-17-designing-a-real-time-push-platform" data-toc-link>Chapter 17: Designing a Real-Time Push Platform</a></li>
+<li><a href="#chapter-18-counting-at-scale-top-k-trending-items" data-toc-link>Chapter 18: Counting at Scale — Top-K Trending Items</a></li>
+<li><a href="#chapter-19-url-shortener-and-pastebin" data-toc-link>Chapter 19: URL Shortener &amp; Pastebin</a></li>
+<li><a href="#chapter-20-search-engine-design" data-toc-link>Chapter 20: Search Engine Design</a></li>
+<li><a href="#glossary" data-toc-link>Glossary</a></li>
+</ul>
 <hr>
 <p><strong>How to read this document</strong></p>
 <p>Every major topic answers five questions, clearly marked:</p>
@@ -14197,6 +14197,9 @@ Shard Builder / Segment Merger       Vector Shard Store
             event.preventDefault();
             setActiveChapter(chapterIndex, false);
             requestAnimationFrame(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+          } else {
+            event.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
         });
       });

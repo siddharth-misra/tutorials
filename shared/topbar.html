@@ -6,8 +6,8 @@
   <div class="atlas-topbar__center">
     <div class="atlas-topbar__nav-menu" data-nav-menu>
       <button class="atlas-topbar__nav-btn{{NAV_ACTIVE_CLASS}}" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
-        {{NAV_LABEL}}
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+        <span>{{NAV_LABEL}}</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="flex-shrink:0">
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
@@ -17,7 +17,7 @@
     </div>
   </div>
   <div class="atlas-topbar__right">
-{{READER_CONTROLS}}
+{{THEME_TOGGLE}}{{READER_CONTROLS}}
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->

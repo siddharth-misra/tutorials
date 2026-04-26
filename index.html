@@ -30,6 +30,7 @@
   <meta name="twitter:creator" content="@siddharthmisra" />
 
   <link rel="stylesheet" href="./shared/styles.css" />
+  <script>var t=localStorage.getItem("atlas-theme");if(t)document.documentElement.dataset.theme=t;</script>
   <style>
     :root {
       --canvas: #f3eadf;
@@ -50,8 +51,32 @@
       --font-body: "Charter", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
       --font-ui: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
       --font-display: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+      --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
       --body-size: 17.5px;
       --body-leading: 1.72;
+      --surface: rgba(255, 255, 255, 0.68);
+      --surface-border: rgba(101, 61, 42, 0.08);
+      --chip-bg: rgba(255, 255, 255, 0.76);
+      --card-overlay: rgba(255, 255, 255, 0.62);
+    }
+
+    [data-theme="dark"] {
+      --canvas: #130d08;
+      --canvas-deep: #0e0a06;
+      --paper: rgba(24, 18, 13, 0.88);
+      --paper-strong: #1e1711;
+      --ink: #f5f0ea;
+      --muted: #b8a898;
+      --line: rgba(255, 255, 255, 0.08);
+      --clay: #d4855a;
+      --clay-deep: #e09970;
+      --teal: #4db8b4;
+      --gold: #e6b96a;
+      --shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
+      --surface: rgba(255, 255, 255, 0.05);
+      --surface-border: rgba(255, 255, 255, 0.08);
+      --chip-bg: rgba(255, 255, 255, 0.07);
+      --card-overlay: rgba(255, 255, 255, 0.04);
     }
 
     * {
@@ -69,7 +94,7 @@
       background:
         radial-gradient(circle at top left, rgba(27, 106, 103, 0.16), transparent 26rem),
         radial-gradient(circle at 85% 15%, rgba(168, 80, 47, 0.18), transparent 24rem),
-        linear-gradient(180deg, var(--canvas) 0%, #f7f1e8 34%, var(--canvas-deep) 100%);
+        linear-gradient(180deg, var(--canvas) 0%, var(--canvas-deep) 34%, var(--canvas-deep) 100%);
       font-family: var(--font-body);
       font-size: var(--body-size);
       line-height: var(--body-leading);
@@ -139,9 +164,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 0 clamp(40px, 6vw, 80px);
       align-items: center;
-      background:
-        linear-gradient(135deg, rgba(255, 251, 245, 0.92) 0%, rgba(255, 246, 236, 0.98) 100%),
-        linear-gradient(135deg, rgba(213, 162, 87, 0.08), transparent 55%);
+      background: var(--paper);
     }
 
     .hero__copy::before {
@@ -181,8 +204,8 @@
     .hero__stat {
       padding: 20px 24px;
       border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.68);
-      border: 1px solid rgba(101, 61, 42, 0.08);
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
     }
 
     .hero__stat-value {
@@ -250,8 +273,8 @@
     }
 
     .cta--secondary {
-      background: rgba(255, 255, 255, 0.64);
-      border: 1px solid rgba(27, 106, 103, 0.16);
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
       color: var(--teal);
     }
 
@@ -268,7 +291,7 @@
       padding: 20px;
       border-radius: var(--radius-lg);
       background: var(--paper-strong);
-      border: 1px solid rgba(101, 61, 42, 0.08);
+      border: 1px solid var(--surface-border);
     }
 
     .signal::before {
@@ -322,15 +345,11 @@
     }
 
     .track--system {
-      background:
-        linear-gradient(160deg, rgba(255, 251, 245, 0.82) 0%, rgba(255, 246, 236, 0.95) 100%),
-        linear-gradient(135deg, rgba(213, 162, 87, 0.12), transparent 55%);
+      background: var(--paper);
     }
 
     .track--agentic {
-      background:
-        linear-gradient(160deg, rgba(251, 255, 254, 0.82) 0%, rgba(245, 251, 250, 0.95) 100%),
-        linear-gradient(135deg, rgba(27, 106, 103, 0.12), transparent 55%);
+      background: var(--paper);
     }
 
     /* ── Coming Soon tracks ── */
@@ -397,28 +416,11 @@
       pointer-events: none;
     }
 
-    .upcoming-card--dsa {
-      background:
-        linear-gradient(160deg, rgba(255, 249, 245, 0.86) 0%, rgba(255, 241, 232, 0.95) 100%),
-        linear-gradient(135deg, rgba(168, 80, 47, 0.1), transparent 55%);
-    }
-
-    .upcoming-card--patterns {
-      background:
-        linear-gradient(160deg, rgba(248, 245, 255, 0.86) 0%, rgba(240, 235, 255, 0.95) 100%),
-        linear-gradient(135deg, rgba(90, 55, 160, 0.09), transparent 55%);
-    }
-
-    .upcoming-card--design {
-      background:
-        linear-gradient(160deg, rgba(245, 255, 250, 0.86) 0%, rgba(232, 248, 240, 0.95) 100%),
-        linear-gradient(135deg, rgba(30, 120, 80, 0.09), transparent 55%);
-    }
-
+    .upcoming-card--dsa,
+    .upcoming-card--patterns,
+    .upcoming-card--design,
     .upcoming-card--combined {
-      background:
-        linear-gradient(160deg, rgba(255, 252, 240, 0.86) 0%, rgba(248, 242, 220, 0.95) 100%),
-        linear-gradient(135deg, rgba(180, 130, 30, 0.1), transparent 55%);
+      background: var(--paper);
     }
 
     .upcoming-card__badge {
@@ -427,8 +429,8 @@
       gap: 6px;
       padding: 5px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(101, 61, 42, 0.14);
-      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
       color: var(--muted);
       font: 700 0.72rem/1 var(--font-ui);
       letter-spacing: 0.14em;
@@ -515,8 +517,8 @@
       min-height: 36px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.76);
-      border: 1px solid rgba(101, 61, 42, 0.08);
+      background: var(--chip-bg);
+      border: 1px solid var(--surface-border);
       color: var(--muted);
       font: 600 0.84rem/1 var(--font-ui);
     }
@@ -528,7 +530,7 @@
       gap: 12px;
       margin-top: auto;
       padding-top: 12px;
-      border-top: 1px solid rgba(101, 61, 42, 0.08);
+      border-top: 1px solid var(--line);
     }
 
     .track__hint {
@@ -543,8 +545,9 @@
       justify-content: center;
       padding: 12px 18px;
       border-radius: 999px;
-      background: #fffefb;
-      border: 1px solid rgba(101, 61, 42, 0.12);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
       text-decoration: none;
       font: 700 0.9rem/1 var(--font-ui);
       white-space: nowrap;
@@ -588,8 +591,8 @@
       gap: 12px;
       padding: 24px;
       border-radius: var(--radius-md);
-      background: rgba(255, 255, 255, 0.62);
-      border: 1px solid rgba(101, 61, 42, 0.08);
+      background: var(--card-overlay);
+      border: 1px solid var(--surface-border);
     }
 
     .feature-card__icon {
@@ -599,7 +602,7 @@
       width: 44px;
       height: 44px;
       border-radius: 14px;
-      background: rgba(168, 80, 47, 0.1);
+      background: var(--surface);
       color: var(--clay-deep);
     }
 
@@ -670,6 +673,115 @@
         padding: 22px;
       }
     }
+
+    @media print {
+      *,
+      *::before,
+      *::after {
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        animation: none !important;
+      }
+
+      body {
+        background: #fff !important;
+        color: #111;
+        font-size: 11.5pt;
+        line-height: 1.62;
+      }
+
+      .shell {
+        max-width: none;
+        padding: 0;
+      }
+
+      /* Headings never orphan at the bottom of a page */
+      h1, h2, h3, h4 {
+        break-after: avoid;
+        page-break-after: avoid;
+        break-inside: avoid;
+        page-break-inside: avoid;
+        color: #111;
+      }
+
+      h1 + *, h2 + *, h3 + *, h4 + * {
+        break-before: avoid;
+        page-break-before: avoid;
+      }
+
+      /* Each track/card starts on a new page */
+      .track {
+        break-before: page;
+        page-break-before: always;
+        border: 1px solid #ccc;
+        border-radius: 0;
+      }
+
+      .track:first-of-type {
+        break-before: auto;
+        page-break-before: auto;
+      }
+
+      .hero__actions,
+      .cta,
+      .track__link,
+      .chip-row {
+        display: none !important;
+      }
+
+      .hero__copy {
+        display: block;
+        border: 0;
+        border-radius: 0;
+      }
+
+      .hero__stats,
+      .signal {
+        display: none !important;
+      }
+
+      .tracks {
+        display: block;
+      }
+
+      .upcoming-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ccc;
+        border-radius: 0;
+      }
+
+      .upcoming-card::after {
+        display: none;
+      }
+
+      .features {
+        border: 1px solid #ccc;
+        border-radius: 0;
+      }
+
+      .features__grid {
+        display: block;
+      }
+
+      .feature-card {
+        border: 0;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0;
+        padding: 12px 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      p, li {
+        orphans: 3;
+        widows: 3;
+      }
+    }
   </style>
 </head>
 <body class="has-atlas-topbar">
@@ -677,16 +789,13 @@
     <!-- BEGIN_SHARED_TOPBAR -->
 <nav class="atlas-topbar" data-unified-topbar="home" aria-label="Tutorials navigation">
   <div class="atlas-topbar__left">
-    <div class="atlas-topbar__brand">
-      <a href="./index.html" style="text-decoration:none;color:inherit;"><span class="atlas-topbar__brand-title">Tutorials</span></a>
-      <span class="atlas-topbar__byline">By <a href="https://siddharth-misra.github.io" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;">Siddharth Misra</a></span>
-    </div>
+    <a class="atlas-topbar__brand" href="./index.html"><span class="atlas-topbar__brand-title">Tutorials</span><span class="atlas-topbar__byline">By Siddharth Misra</span></a>
   </div>
   <div class="atlas-topbar__center">
     <div class="atlas-topbar__nav-menu" data-nav-menu>
       <button class="atlas-topbar__nav-btn" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
-        Topics
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+        <span>Topics</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="flex-shrink:0">
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
@@ -697,6 +806,20 @@
     </div>
   </div>
   <div class="atlas-topbar__right">
+    <div class="atlas-topbar__menu" data-topbar-menu>
+      <button class="atlas-topbar__menu-btn" type="button" aria-label="Options" aria-expanded="false" aria-haspopup="true" data-topbar-menu-btn>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="atlas-topbar__dropdown" data-topbar-dropdown>
+        <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-theme-label>Light Mode</span>
+        </button>
+      </div>
+    </div>
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->

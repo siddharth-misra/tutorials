@@ -23,6 +23,52 @@
   --body-size: 17.5px;
   --body-leading: 1.72;
   --max-width: 80ch;
+  --topbar-bg: rgba(255, 251, 245, 0.92);
+  --topbar-border: rgba(101, 61, 42, 0.14);
+  --topbar-shadow: 0 4px 24px rgba(42, 24, 16, 0.1);
+  --dropdown-bg: rgba(255, 251, 245, 0.97);
+  --body-bg-start: #f2e7d8;
+  --body-bg-mid: #f7f2e9;
+  --body-bg-end: #efe5d8;
+  --pre-bg: #fbf6ee;
+  --thead-bg: #f3e8da;
+  --btn-bg: rgba(255, 255, 255, 0.42);
+  --btn-bg-hover: rgba(255, 255, 255, 0.82);
+  --btn-border: rgba(127, 53, 25, 0.14);
+  --btn-border-hover: rgba(127, 53, 25, 0.28);
+  --item-hover-bg: rgba(168, 80, 47, 0.08);
+  --item-active-bg: rgba(168, 80, 47, 0.12);
+  --item-active-color: #7f3519;
+  --divider: rgba(101, 61, 42, 0.12);
+}
+
+[data-theme="dark"] {
+  --paper: #1a1410;
+  --card: #1e1812;
+  --ink: #f5f0ea;
+  --muted: #b8a898;
+  --line: #3a2e24;
+  --accent: #d4855a;
+  --accent-soft: #2e1c10;
+  --code-bg: #261d16;
+  --shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+  --topbar-bg: rgba(18, 13, 10, 0.96);
+  --topbar-border: rgba(255, 255, 255, 0.07);
+  --topbar-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --dropdown-bg: rgba(24, 18, 13, 0.99);
+  --body-bg-start: #130d08;
+  --body-bg-mid: #1a1310;
+  --body-bg-end: #16100c;
+  --pre-bg: #1e1711;
+  --thead-bg: #261d16;
+  --btn-bg: rgba(255, 255, 255, 0.07);
+  --btn-bg-hover: rgba(255, 255, 255, 0.13);
+  --btn-border: rgba(255, 255, 255, 0.1);
+  --btn-border-hover: rgba(255, 255, 255, 0.22);
+  --item-hover-bg: rgba(212, 133, 90, 0.12);
+  --item-active-bg: rgba(212, 133, 90, 0.18);
+  --item-active-color: #e09970;
+  --divider: rgba(255, 255, 255, 0.07);
 }
 
 * {
@@ -38,7 +84,7 @@ body {
   color: var(--ink);
   background:
     radial-gradient(circle at top left, rgba(156, 79, 44, 0.12), transparent 30rem),
-    linear-gradient(180deg, #f2e7d8 0%, #f7f2e9 16%, #efe5d8 100%);
+    linear-gradient(180deg, var(--body-bg-start) 0%, var(--body-bg-mid) 16%, var(--body-bg-end) 100%);
   font-family: var(--font-body);
   font-size: var(--body-size);
   line-height: var(--body-leading);
@@ -71,11 +117,11 @@ a {
   align-items: center;
   gap: 12px;
   padding: 12px 24px;
-  border-bottom: 1px solid rgba(101, 61, 42, 0.14);
-  background: rgba(255, 251, 245, 0.92);
+  border-bottom: 1px solid var(--topbar-border);
+  background: var(--topbar-bg);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 24px rgba(42, 24, 16, 0.1);
+  box-shadow: var(--topbar-shadow);
 }
 
 .atlas-topbar__left {
@@ -111,7 +157,7 @@ a {
   flex-direction: column;
   -webkit-align-items: flex-start;
   align-items: flex-start;
-  gap: 2px;
+  gap: 4px;
 }
 
 .atlas-topbar__brand-title {
@@ -122,11 +168,11 @@ a {
 }
 
 .atlas-topbar__byline {
-  font: 400 0.58rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
-  letter-spacing: 0.04em;
+  font: 400 0.66rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  letter-spacing: 0.03em;
   text-transform: none;
   color: var(--muted);
-  opacity: 0.7;
+  opacity: 0.85;
   white-space: nowrap;
 }
 
@@ -139,21 +185,31 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  width: 160px;
   min-height: 34px;
   padding: 6px 12px 6px 14px;
-  border: 1px solid rgba(127, 53, 25, 0.12);
+  border: 1px solid var(--btn-border);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.42);
-  color: var(--ink, #211915);
+  background: var(--btn-bg);
+  color: var(--ink);
   font: 600 0.88rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
   cursor: pointer;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
+  overflow: hidden;
+}
+
+.atlas-topbar__nav-btn > :not(svg) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
 }
 
 .atlas-topbar__nav-btn:hover {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.76);
-  border-color: rgba(127, 53, 25, 0.26);
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-hover);
 }
 
 .atlas-topbar__nav-btn.is-active {
@@ -179,12 +235,12 @@ a {
   top: calc(100% + 10px);
   min-width: 200px;
   padding: 6px;
-  border: 1px solid rgba(101, 61, 42, 0.14);
+  border: 1px solid var(--topbar-border);
   border-radius: 16px;
-  background: rgba(255, 251, 245, 0.97);
+  background: var(--dropdown-bg);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  box-shadow: 0 16px 40px rgba(42, 24, 16, 0.14);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
   z-index: 200;
   opacity: 0;
   pointer-events: none;
@@ -233,22 +289,22 @@ a {
 
 .atlas-topbar__nav-item:hover,
 .atlas-topbar__dropdown-item:hover {
-  background: rgba(168, 80, 47, 0.08);
-  color: var(--clay-deep, #7f3519);
+  background: var(--item-hover-bg);
+  color: var(--item-active-color);
   text-decoration: none;
 }
 
 .atlas-topbar__nav-item.is-current,
 .atlas-topbar__dropdown-item.is-active {
-  background: rgba(168, 80, 47, 0.12);
-  color: var(--clay-deep, #7f3519);
+  background: var(--item-active-bg);
+  color: var(--item-active-color);
   font-weight: 700;
 }
 
 .atlas-topbar__dropdown-divider {
   margin: 5px 8px;
   border: none;
-  border-top: 1px solid rgba(101, 61, 42, 0.12);
+  border-top: 1px solid var(--divider);
 }
 
 .atlas-topbar__chapter-nav {
@@ -265,17 +321,17 @@ a {
   width: 34px;
   height: 34px;
   padding: 0;
-  border: 1px solid rgba(127, 53, 25, 0.14);
+  border: 1px solid var(--btn-border);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.42);
-  color: var(--ink, #211915);
+  background: var(--btn-bg);
+  color: var(--ink);
   cursor: pointer;
   transition: background 160ms ease, border-color 160ms ease, opacity 160ms ease;
 }
 
 .atlas-topbar__chapter-btn:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.82);
-  border-color: rgba(127, 53, 25, 0.28);
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-hover);
 }
 
 .atlas-topbar__chapter-btn:disabled {
@@ -292,17 +348,17 @@ a {
   width: 38px;
   height: 38px;
   padding: 0;
-  border: 1px solid rgba(127, 53, 25, 0.14);
+  border: 1px solid var(--btn-border);
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.42);
+  background: var(--btn-bg);
   cursor: pointer;
   transition: background 160ms ease, border-color 160ms ease;
 }
 
 .atlas-topbar__menu-btn:hover,
 .atlas-topbar__menu-btn[aria-expanded="true"] {
-  background: rgba(255, 255, 255, 0.82);
-  border-color: rgba(127, 53, 25, 0.28);
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-hover);
 }
 
 .atlas-topbar__menu-btn span {
@@ -313,9 +369,12 @@ a {
   background: var(--ink, #211915);
 }
 
-h1, h2, h3, h4 {
-  scroll-margin-top: 92px;
-}
+/* Show sun in dark mode, moon in light mode */
+.atlas-topbar__theme-icon--sun { display: none; }
+.atlas-topbar__theme-icon--moon { display: block; }
+
+[data-theme="dark"] .atlas-topbar__theme-icon--sun { display: block; }
+[data-theme="dark"] .atlas-topbar__theme-icon--moon { display: none; }
 
 .has-atlas-topbar .sidebar {
   top: 92px;
@@ -407,9 +466,9 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(156, 79, 44, 0.22);
+  border: 1px solid var(--btn-border);
   border-radius: 999px;
-  background: rgba(255, 253, 249, 0.88);
+  background: var(--btn-bg);
   color: var(--ink);
   padding: 12px 16px;
   font: 600 0.95rem/1.1 var(--font-ui);
@@ -420,8 +479,8 @@ a:hover {
 
 .button:hover {
   transform: translateY(-1px);
-  border-color: rgba(156, 79, 44, 0.42);
-  background: #fffdf9;
+  border-color: var(--btn-border-hover);
+  background: var(--btn-bg-hover);
 }
 
 .layout {
@@ -429,7 +488,7 @@ a:hover {
   grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
   gap: 0;
   align-items: start;
-  border: 1px solid rgba(156, 79, 44, 0.12);
+  border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--card);
   box-shadow: var(--shadow);
@@ -443,8 +502,8 @@ a:hover {
   max-height: calc(100vh - 48px);
   overflow-y: auto;
   padding: 20px 16px;
-  border-right: 1px solid rgba(156, 79, 44, 0.12);
-  background: rgba(255, 253, 249, 0.82);
+  border-right: 1px solid var(--line);
+  background: var(--card);
 }
 
 .sidebar h2 {
@@ -488,7 +547,7 @@ a:hover {
 .toc-list a:hover,
 .toc-list a.is-active {
   background: var(--accent-soft);
-  color: #6f3417;
+  color: var(--item-active-color);
 }
 
 .document {
@@ -496,7 +555,7 @@ a:hover {
 }
 
 .article {
-  max-width: 90ch;
+  max-width: 74ch;
   margin: 0 auto;
   padding: 40px clamp(20px, 3vw, 48px);
   border: 0;
@@ -511,11 +570,11 @@ a:hover {
 
 .section-chapter {
   padding-top: 18px;
-  border-top: 2px solid rgba(156, 79, 44, 0.12);
+  border-top: 2px solid var(--line);
 }
 
 h1, h2, h3, h4 {
-  color: #17120f;
+  color: var(--ink);
   line-height: 1.12;
   scroll-margin-top: 92px;
 }
@@ -547,7 +606,7 @@ h4 {
   margin: 18px 0 10px;
   font: 700 1.04rem/1.35 var(--font-ui);
   letter-spacing: 0.01em;
-  color: #5b4538;
+  color: var(--muted);
 }
 
 p, li {
@@ -575,7 +634,8 @@ blockquote {
   padding: 18px 20px;
   border-left: 4px solid var(--accent);
   border-radius: 18px;
-  background: linear-gradient(180deg, rgba(156, 79, 44, 0.06), rgba(156, 79, 44, 0.03));
+  background: var(--accent-soft);
+  opacity: 0.9;
 }
 
 blockquote .section {
@@ -600,8 +660,8 @@ code {
   margin-bottom: 8px;
   padding: 4px 9px;
   border-radius: 999px;
-  background: #201a17;
-  color: #fff8ef;
+  background: var(--ink);
+  color: var(--paper);
   font: 700 0.8rem/1.1 var(--font-ui);
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -611,10 +671,10 @@ pre {
   margin: 0;
   padding: 18px 18px 20px;
   overflow-x: auto;
-  border: 1px solid rgba(156, 79, 44, 0.12);
+  border: 1px solid var(--line);
   border-radius: 18px;
-  background: #fbf6ee;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: var(--pre-bg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
   font: 0.94rem/1.6 var(--font-mono);
 }
 
@@ -633,10 +693,10 @@ pre code {
 .diagram-figure {
   margin: 22px 0 24px;
   padding: 16px;
-  border: 1px solid rgba(156, 79, 44, 0.14);
+  border: 1px solid var(--line);
   border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(239, 224, 212, 0.52));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
+  background: var(--card);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .diagram-figure img {
@@ -669,13 +729,13 @@ th, td {
 }
 
 thead th {
-  background: #f3e8da;
+  background: var(--thead-bg);
   font: 700 0.94rem/1.3 var(--font-ui);
   letter-spacing: 0.02em;
 }
 
 tbody tr:nth-child(even) td {
-  background: rgba(243, 232, 218, 0.32);
+  background: var(--accent-soft);
 }
 
 .section-toc ol {
@@ -693,8 +753,8 @@ tbody tr:nth-child(even) td {
   display: inline-flex;
   border-radius: 999px;
   padding: 2px;
-  border: 1px solid rgba(156, 79, 44, 0.22);
-  background: rgba(255, 253, 249, 0.82);
+  border: 1px solid var(--btn-border);
+  background: var(--btn-bg);
   gap: 4px;
 }
 
@@ -706,14 +766,14 @@ tbody tr:nth-child(even) td {
 }
 
 .button--view:hover {
-  border-color: rgba(156, 79, 44, 0.25);
-  background: rgba(239, 224, 212, 0.72);
+  border-color: var(--btn-border-hover);
+  background: var(--accent-soft);
 }
 
 .button--view.is-active {
-  border-color: rgba(156, 79, 44, 0.35);
+  border-color: var(--btn-border);
   background: var(--accent-soft);
-  color: #6f3417;
+  color: var(--item-active-color);
 }
 
 .chapter-controls {
@@ -723,10 +783,10 @@ tbody tr:nth-child(even) td {
   gap: 12px;
   margin: 0 auto 14px;
   padding: 10px 12px;
-  border: 1px solid rgba(156, 79, 44, 0.12);
+  border: 1px solid var(--line);
   border-radius: 16px;
-  background: rgba(255, 253, 249, 0.86);
-  box-shadow: 0 8px 28px rgba(38, 24, 17, 0.08);
+  background: var(--card);
+  box-shadow: var(--shadow);
 }
 
 .chapter-controls[hidden] {
@@ -770,7 +830,7 @@ tbody tr:nth-child(even) td {
   padding: 10px;
   border-radius: 14px;
   box-shadow: none;
-  background: rgba(255, 253, 249, 0.94);
+  background: var(--card);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -818,7 +878,7 @@ tbody tr:nth-child(even) td {
     position: static;
     max-height: none;
     border-right: 0;
-    border-bottom: 1px solid rgba(156, 79, 44, 0.12);
+    border-bottom: 1px solid var(--line);
   }
 }
 
@@ -883,7 +943,7 @@ tbody tr:nth-child(even) td {
 
 @page {
   size: A4;
-  margin: 13mm 12mm 15mm;
+  margin: 18mm 18mm 20mm;
 }
 
 @media print {
@@ -891,16 +951,35 @@ tbody tr:nth-child(even) td {
     --ink: #111;
     --muted: #444;
     --line: #cfcfcf;
+    --accent: #555;
+    --accent-soft: transparent;
+    --code-bg: #f0f0f0;
+    --pre-bg: #f5f5f5;
+    --thead-bg: #ebebeb;
+    --card: #fff;
+    --paper: #fff;
+    --shadow: none;
   }
 
-  body {
-    background: #fff;
-    color: #111;
-    font-size: 11pt;
-    line-height: 1.55;
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
+
+  body {
+    background: #fff !important;
+    color: #111;
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-size: 11.5pt;
+    line-height: 1.62;
+  }
+
+  tbody tr:nth-child(even) td { background: #f7f7f7 !important; }
 
   .app-shell {
     max-width: none;
@@ -909,7 +988,10 @@ tbody tr:nth-child(even) td {
 
   .site-nav,
   .masthead,
-  .sidebar {
+  .sidebar,
+  .chapter-controls,
+  .view-switch,
+  .actions {
     display: none !important;
   }
 
@@ -924,32 +1006,45 @@ tbody tr:nth-child(even) td {
   .layout,
   .document {
     display: block;
+    border: 0;
+    border-radius: 0;
   }
 
   .section + .section {
     margin-top: 18px;
   }
 
+  h1, h2, h3, h4 {
+    font-family: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+    color: #111;
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
   h1 {
-    font-size: 24pt;
-    line-height: 1.02;
+    font-size: 22pt;
+    line-height: 1.05;
   }
 
   h2 {
-    font-size: 16pt;
-    line-height: 1.14;
+    font-size: 15pt;
+    line-height: 1.16;
   }
 
   h3 {
-    font-size: 12.5pt;
-    line-height: 1.24;
+    font-size: 12pt;
+    line-height: 1.26;
   }
 
   h4 {
-    font-size: 10.8pt;
-    line-height: 1.3;
+    font-size: 10.5pt;
+    line-height: 1.32;
+    color: #444;
   }
 
+  /* Each chapter section starts on a new page */
   .section-chapter {
     margin-top: 0;
     padding-top: 0;
@@ -963,23 +1058,18 @@ tbody tr:nth-child(even) td {
     page-break-before: auto;
   }
 
+  /* Chapter headings break before but never orphan at the bottom of a page */
   h2[id^="chapter-"] {
     break-before: page;
     page-break-before: always;
-    break-after: avoid-page;
+    break-after: avoid;
     page-break-after: avoid;
     padding-top: 0;
   }
 
-  h2, h3, h4 {
-    break-after: avoid;
-    page-break-after: avoid;
-  }
-
-  h2[id^="chapter-"] + *,
-  h3 + *,
-  h4 + * {
-    break-before: avoid-page;
+  /* Element immediately after a heading cannot be the first thing on a new page */
+  h1 + *, h2 + *, h3 + *, h4 + * {
+    break-before: avoid;
     page-break-before: avoid;
   }
 
@@ -1001,7 +1091,7 @@ tbody tr:nth-child(even) td {
   img,
   svg,
   tr {
-    break-inside: avoid-page;
+    break-inside: avoid;
     page-break-inside: avoid;
   }
 
@@ -1009,13 +1099,30 @@ tbody tr:nth-child(even) td {
     overflow: visible;
     white-space: pre-wrap;
     word-break: break-word;
-    background: #fafafa;
-    box-shadow: none;
-    font-size: 9.4pt;
+    background: #f5f5f5 !important;
+    border: 1px solid #ddd;
+    font-family: "SFMono-Regular", Menlo, Monaco, "Courier New", monospace;
+    font-size: 9pt;
+    line-height: 1.5;
+    border-radius: 0;
+  }
+
+  code {
+    font-family: "SFMono-Regular", Menlo, Monaco, "Courier New", monospace;
+    font-size: 0.88em;
+    background: #f0f0f0 !important;
+    border-radius: 0;
   }
 
   table {
+    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
     font-size: 10pt;
+  }
+
+  thead th {
+    font-family: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+    background: #ebebeb !important;
+    color: #111;
   }
 
   thead {
@@ -1032,8 +1139,17 @@ tbody tr:nth-child(even) td {
 
   .code-label {
     border: 1px solid #000;
-    background: transparent;
+    background: transparent !important;
     color: #000;
+  }
+
+  blockquote {
+    border-left: 3px solid #888;
+    padding: 10px 16px;
+    margin: 14px 0;
+    color: #333;
+    font-style: italic;
+    border-radius: 0;
   }
 
   .section-toc ol {

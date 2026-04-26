@@ -1,4 +1,8 @@
 (function () {
+  // Apply saved theme immediately to avoid flash
+  const savedTheme = localStorage.getItem("atlas-theme");
+  if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+
   const nav = document.querySelector("[data-unified-topbar]");
   if (!nav) return;
 
@@ -89,4 +93,23 @@
     closeTopics();
     closeMenu();
   });
+
+  const themeBtn = nav.querySelector("[data-theme-toggle]");
+  if (themeBtn) {
+    const applyTheme = (theme) => {
+      document.documentElement.dataset.theme = theme;
+      localStorage.setItem("atlas-theme", theme);
+      const label = themeBtn.querySelector("[data-theme-label]");
+      if (label) label.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+    };
+
+    const currentTheme = document.documentElement.dataset.theme ||
+      (globalThis.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    applyTheme(currentTheme);
+
+    themeBtn.addEventListener("click", (event) => {
+      event.stopPropagation();
+      applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    });
+  }
 })();

@@ -32,6 +32,7 @@
   <meta name="twitter:creator" content="@siddharthmisra" />
 
   <link rel="stylesheet" href="../shared/styles.css" />
+  <script>var t=localStorage.getItem("atlas-theme");if(t)document.documentElement.dataset.theme=t;</script>
 </head>
 <body class="has-atlas-topbar">
   <div class="app-shell">
@@ -43,8 +44,8 @@
   <div class="atlas-topbar__center">
     <div class="atlas-topbar__nav-menu" data-nav-menu>
       <button class="atlas-topbar__nav-btn is-active" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
-        System Design
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+        <span>System Design</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="flex-shrink:0">
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
@@ -72,6 +73,12 @@
       <div class="atlas-topbar__dropdown" data-topbar-dropdown>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <hr class="atlas-topbar__dropdown-divider" />
+        <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-theme-label>Light Mode</span>
+        </button>
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-print>Print / Save PDF</button>
       </div>

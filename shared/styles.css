@@ -103,23 +103,31 @@ a {
 
 .atlas-topbar__brand {
   color: var(--clay-deep, var(--accent, #7f3519));
+  text-decoration: none;
+  flex-shrink: 0;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.atlas-topbar__brand-title {
   font: 700 0.88rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
   letter-spacing: 0.18em;
-  text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  flex-shrink: 0;
 }
 
 .atlas-topbar__byline {
-  font: 400 0.6rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
-  letter-spacing: 0.06em;
+  font: 400 0.58rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  letter-spacing: 0.04em;
   text-transform: none;
   color: var(--muted);
-  opacity: 0.8;
+  opacity: 0.7;
+  white-space: nowrap;
 }
 
 .atlas-topbar__nav-menu,

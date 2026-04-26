@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tutorials</title>
+  <link rel="stylesheet" href="./shared/styles.css" />
   <style>
     :root {
       --canvas: #f3eadf;
@@ -458,9 +459,34 @@
     }
   </style>
 </head>
-<body>
+<body class="has-atlas-topbar">
   <div class="shell">
-    <main>
+    <!-- BEGIN_SHARED_TOPBAR -->
+<nav class="atlas-topbar" data-unified-topbar="home" aria-label="Tutorials navigation">
+  <div class="atlas-topbar__left">
+    <a class="atlas-topbar__brand" href="./index.html">Tutorials</a>
+  </div>
+  <div class="atlas-topbar__center">
+    <div class="atlas-topbar__nav-menu" data-nav-menu>
+      <button class="atlas-topbar__nav-btn" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
+        Topics
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="atlas-topbar__nav-dropdown" data-nav-dropdown>
+        <a class="atlas-topbar__nav-item" href="./system-design/systemdesign.html" data-topic-link>System Design</a>
+        <a class="atlas-topbar__nav-item" href="./agentic-system/agentic-ai.html" data-topic-link>Agentic AI</a>
+      </div>
+    </div>
+  </div>
+  <div class="atlas-topbar__right">
+
+  </div>
+</nav>
+<!-- END_SHARED_TOPBAR -->
+
+<main>
       
     
       <section class="hero" aria-label="Tutorial cards">

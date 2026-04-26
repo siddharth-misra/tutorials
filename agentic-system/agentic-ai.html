@@ -6,9 +6,55 @@
   <title>Agentic AI</title>
   <link rel="stylesheet" href="../shared/styles.css" />
 </head>
-<body>
+<body class="has-atlas-topbar">
   <div class="app-shell">
-    <div class="layout">
+    <!-- BEGIN_SHARED_TOPBAR -->
+<nav class="atlas-topbar" data-unified-topbar="agentic-ai" aria-label="Tutorials navigation">
+  <div class="atlas-topbar__left">
+    <a class="atlas-topbar__brand" href="../index.html">Tutorials</a>
+  </div>
+  <div class="atlas-topbar__center">
+    <div class="atlas-topbar__nav-menu" data-nav-menu>
+      <button class="atlas-topbar__nav-btn is-active" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
+        Agentic AI
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div class="atlas-topbar__nav-dropdown" data-nav-dropdown>
+        <a class="atlas-topbar__nav-item" href="../system-design/systemdesign.html" data-topic-link>System Design</a>
+        <a class="atlas-topbar__nav-item is-current" href="../agentic-system/agentic-ai.html" data-topic-link aria-current="page">Agentic AI</a>
+      </div>
+    </div>
+  </div>
+  <div class="atlas-topbar__right">
+    <div class="atlas-topbar__chapter-nav" data-topbar-chapter-nav hidden>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous chapter" data-topbar-prev-chapter disabled>
+        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next chapter" data-topbar-next-chapter>
+        <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+    <div class="atlas-topbar__menu" data-topbar-menu>
+      <button class="atlas-topbar__menu-btn" type="button" aria-label="View options" aria-expanded="false" aria-haspopup="true" data-topbar-menu-btn>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="atlas-topbar__dropdown" data-topbar-dropdown>
+        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
+        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <hr class="atlas-topbar__dropdown-divider" />
+        <button class="atlas-topbar__dropdown-item" type="button" data-print>Print / Save PDF</button>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- END_SHARED_TOPBAR -->
+
+
+<div class="layout">
       <aside class="sidebar" aria-label="Document navigation">
         <div class="chapter-controls" data-chapter-controls hidden style="display:none !important">
           <p class="chapter-controls__meta" data-chapter-indicator>Chapter 1</p>
@@ -5525,11 +5571,6 @@ logger.info(&quot;Run completed with context: {}&quot;, ctx.toMap());
 
   <script src="../shared/topbar.js"></script>
   <script>
-    const printButton = document.querySelector('[data-print]');
-    if (printButton) {
-      printButton.addEventListener('click', () => window.print());
-    }
-
     const article = document.querySelector('.article');
     const chapterControls = document.querySelector('[data-chapter-controls]');
     const prevChapterButton = document.querySelector('[data-prev-chapter]');

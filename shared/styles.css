@@ -108,7 +108,18 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
   flex-shrink: 0;
+}
+
+.atlas-topbar__byline {
+  font: 400 0.6rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--muted);
+  opacity: 0.8;
 }
 
 .atlas-topbar__nav-menu,
@@ -1020,4 +1031,22 @@ tbody tr:nth-child(even) td {
   .section-toc ol {
     columns: 1;
   }
+}
+
+.site-footer {
+  text-align: center;
+  padding: 0.4rem 1rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+  margin-top: 0;
+}
+
+.site-footer a {
+  color: var(--clay);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
 }

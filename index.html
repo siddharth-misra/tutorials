@@ -92,15 +92,10 @@
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 22px;
-      align-items: stretch;
       margin-top: 28px;
     }
 
     .hero__copy,
-    .hero__stack,
     .path,
     .track {
       border: 1px solid var(--line);
@@ -112,20 +107,70 @@
     }
 
     .hero__copy {
-      padding: clamp(28px, 4vw, 44px);
+      padding: clamp(44px, 6vw, 72px) clamp(32px, 5vw, 64px);
       overflow: hidden;
       position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 clamp(40px, 6vw, 80px);
+      align-items: center;
+      background:
+        linear-gradient(135deg, rgba(255, 251, 245, 0.92) 0%, rgba(255, 246, 236, 0.98) 100%),
+        linear-gradient(135deg, rgba(213, 162, 87, 0.08), transparent 55%);
+    }
+
+    .hero__copy::before {
+      content: "";
+      position: absolute;
+      inset: -4rem -4rem auto auto;
+      width: 28rem;
+      height: 28rem;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(27, 106, 103, 0.1), transparent 68%);
+      pointer-events: none;
     }
 
     .hero__copy::after {
       content: "";
       position: absolute;
-      inset: auto -2rem -4rem auto;
-      width: 14rem;
-      height: 14rem;
+      inset: auto auto -6rem -4rem;
+      width: 22rem;
+      height: 22rem;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(27, 106, 103, 0.16), transparent 70%);
+      background: radial-gradient(circle, rgba(213, 162, 87, 0.12), transparent 68%);
       pointer-events: none;
+    }
+
+    .hero__text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero__stats {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero__stat {
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid rgba(101, 61, 42, 0.08);
+    }
+
+    .hero__stat-value {
+      margin: 0;
+      font: 700 2.2rem/1 var(--font-display);
+      letter-spacing: -0.04em;
+      color: var(--clay-deep);
+    }
+
+    .hero__stat-label {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font: 500 0.9rem/1.4 var(--font-ui);
     }
 
     .eyebrow {
@@ -138,23 +183,23 @@
 
     h1 {
       margin: 0;
-      max-width: 12ch;
-      font: 700 clamp(2.8rem, 7vw, 5.4rem)/0.95 var(--font-display);
+      font: 700 clamp(2.6rem, 5.5vw, 4.4rem)/1.0 var(--font-display);
       letter-spacing: -0.04em;
     }
 
     .hero__lede {
-      max-width: 34rem;
-      margin: 18px 0 0;
+      max-width: 38rem;
+      margin: 20px 0 0;
       color: var(--muted);
       font-size: 1.08rem;
+      line-height: 1.7;
     }
 
     .hero__actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 28px;
+      margin-top: 32px;
     }
 
     .cta {
@@ -263,6 +308,140 @@
         linear-gradient(135deg, rgba(27, 106, 103, 0.12), transparent 55%);
     }
 
+    /* ── Coming Soon tracks ── */
+
+    .coming-soon {
+      margin-top: 52px;
+    }
+
+    .coming-soon__header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .coming-soon__title {
+      margin: 0;
+      font: 700 clamp(1.45rem, 2.5vw, 1.9rem)/1.05 var(--font-display);
+      letter-spacing: -0.025em;
+    }
+
+    .coming-soon__note {
+      margin: 0;
+      color: var(--muted);
+      font: 600 0.8rem/1 var(--font-ui);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .upcoming-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .upcoming-card {
+      position: relative;
+      display: grid;
+      gap: 14px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--paper);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      opacity: 0.82;
+    }
+
+    .upcoming-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 6px,
+        rgba(101, 61, 42, 0.03) 6px,
+        rgba(101, 61, 42, 0.03) 7px
+      );
+      pointer-events: none;
+    }
+
+    .upcoming-card--dsa {
+      background:
+        linear-gradient(160deg, rgba(255, 249, 245, 0.86) 0%, rgba(255, 241, 232, 0.95) 100%),
+        linear-gradient(135deg, rgba(168, 80, 47, 0.1), transparent 55%);
+    }
+
+    .upcoming-card--patterns {
+      background:
+        linear-gradient(160deg, rgba(248, 245, 255, 0.86) 0%, rgba(240, 235, 255, 0.95) 100%),
+        linear-gradient(135deg, rgba(90, 55, 160, 0.09), transparent 55%);
+    }
+
+    .upcoming-card--design {
+      background:
+        linear-gradient(160deg, rgba(245, 255, 250, 0.86) 0%, rgba(232, 248, 240, 0.95) 100%),
+        linear-gradient(135deg, rgba(30, 120, 80, 0.09), transparent 55%);
+    }
+
+    .upcoming-card--combined {
+      background:
+        linear-gradient(160deg, rgba(255, 252, 240, 0.86) 0%, rgba(248, 242, 220, 0.95) 100%),
+        linear-gradient(135deg, rgba(180, 130, 30, 0.1), transparent 55%);
+    }
+
+    .upcoming-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(101, 61, 42, 0.14);
+      background: rgba(255, 255, 255, 0.7);
+      color: var(--muted);
+      font: 700 0.72rem/1 var(--font-ui);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    .upcoming-card__badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--muted);
+      opacity: 0.5;
+    }
+
+    .upcoming-card__title {
+      margin: 0;
+      font: 700 clamp(1.3rem, 2.2vw, 1.75rem)/1.05 var(--font-display);
+      letter-spacing: -0.025em;
+    }
+
+    .upcoming-card__body {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.97rem;
+    }
+
+    .upcoming-card .chip-row {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 940px) {
+      .upcoming-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     .track__meta {
       display: inline-flex;
       align-items: center;
@@ -346,66 +525,75 @@
       white-space: nowrap;
     }
 
-    .path {
+    /* ── Features strip ── */
+
+    .features {
       margin-top: 28px;
-      padding: 28px;
+      padding: 36px clamp(24px, 4vw, 48px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      background: var(--paper);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
     }
 
-    .path__eyebrow {
-      margin: 0;
+    .features__eyebrow {
+      margin: 0 0 6px;
       color: var(--clay-deep);
       font: 700 0.8rem/1.25 var(--font-ui);
       letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
-    .path__title {
-      margin: 12px 0 0;
-      font: 700 clamp(1.8rem, 3vw, 2.5rem)/1.05 var(--font-display);
+    .features__title {
+      margin: 0 0 28px;
+      font: 700 clamp(1.6rem, 2.8vw, 2.2rem)/1.05 var(--font-display);
       letter-spacing: -0.03em;
     }
 
-    .path__intro {
-      margin: 12px 0 0;
-      max-width: 42rem;
-      color: var(--muted);
-    }
-
-    .path__steps {
+    .features__grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
-      margin-top: 24px;
     }
 
-    .path-step {
-      padding: 20px;
+    .feature-card {
+      display: grid;
+      gap: 12px;
+      padding: 24px;
       border-radius: var(--radius-md);
       background: rgba(255, 255, 255, 0.62);
       border: 1px solid rgba(101, 61, 42, 0.08);
     }
 
-    .path-step__index {
-      display: inline-flex;
+    .feature-card__icon {
+      display: flex;
       align-items: center;
       justify-content: center;
-      width: 2rem;
-      height: 2rem;
-      border-radius: 50%;
-      background: rgba(168, 80, 47, 0.12);
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: rgba(168, 80, 47, 0.1);
       color: var(--clay-deep);
-      font: 700 0.9rem/1 var(--font-ui);
     }
 
-    .path-step h3 {
-      margin: 14px 0 0;
-      font: 700 1.1rem/1.15 var(--font-ui);
+    .feature-card__title {
+      margin: 0;
+      font: 700 1.05rem/1.2 var(--font-ui);
     }
 
-    .path-step p {
-      margin: 10px 0 0;
+    .feature-card__body {
+      margin: 0;
       color: var(--muted);
-      font-size: 0.96rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 940px) {
+      .features__grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @keyframes float {
@@ -420,14 +608,12 @@
     }
 
     @media (max-width: 940px) {
-      .hero,
-      .tracks,
-      .path__steps {
+      .hero__copy {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        max-width: none;
+      .tracks {
+        grid-template-columns: 1fr;
       }
 
       .track__footer {
@@ -441,6 +627,10 @@
         padding-inline: 16px;
       }
 
+      .hero__copy {
+        padding: 32px 22px;
+      }
+
       .hero__actions {
         width: 100%;
       }
@@ -450,8 +640,6 @@
         width: 100%;
       }
 
-      .hero__copy,
-      .hero__stack,
       .track,
       .path {
         padding: 22px;
@@ -464,7 +652,10 @@
     <!-- BEGIN_SHARED_TOPBAR -->
 <nav class="atlas-topbar" data-unified-topbar="home" aria-label="Tutorials navigation">
   <div class="atlas-topbar__left">
-    <a class="atlas-topbar__brand" href="./index.html"><span class="atlas-topbar__brand-title">Tutorials</span><span class="atlas-topbar__byline">By Siddharth Misra</span></a>
+    <div class="atlas-topbar__brand">
+      <a href="./index.html" style="text-decoration:none;color:inherit;"><span class="atlas-topbar__brand-title">Tutorials</span></a>
+      <span class="atlas-topbar__byline">By <a href="https://siddharth-misra.github.io" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px;">Siddharth Misra</a></span>
+    </div>
   </div>
   <div class="atlas-topbar__center">
     <div class="atlas-topbar__nav-menu" data-nav-menu>
@@ -481,53 +672,179 @@
     </div>
   </div>
   <div class="atlas-topbar__right">
-
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->
 
 <main>
-      
-    
-      <section class="hero" aria-label="Tutorial cards">
+
+      <!-- Hero -->
+      <section class="hero" aria-label="Introduction">
+        <div class="hero__copy">
+          <div class="hero__text">
+            <p class="eyebrow">Engineering tutorials by Siddharth Misra</p>
+            <h1>From first principles to production.</h1>
+            <p class="hero__lede">Six deep tracks covering System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns — written for engineers who want to understand the <em>why</em> behind every decision, not just copy a template.</p>
+            <div class="hero__actions">
+              <a class="cta cta--primary" href="./system-design/systemdesign.html">Start: System Design</a>
+              <a class="cta cta--secondary" href="./agentic-system/agentic-ai.html">Start: Agentic AI</a>
+            </div>
+          </div>
+          <div class="hero__stats">
+            <div class="hero__stat">
+              <p class="hero__stat-value">6</p>
+              <p class="hero__stat-label">tracks covering the full engineering stack — from algorithms to distributed systems to autonomous AI</p>
+            </div>
+            <div class="hero__stat">
+              <p class="hero__stat-value">2 live</p>
+              <p class="hero__stat-label">System Design and Agentic AI are complete and free to read — no account, no paywall</p>
+            </div>
+            <div class="hero__stat">
+              <p class="hero__stat-value">4 coming</p>
+              <p class="hero__stat-label">DSA, Coding Patterns, Design Patterns, and a combined curriculum are actively being written</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tracks -->
+      <div class="tracks" aria-label="Tutorial tracks">
         <article class="track track--system">
-          <div class="track__meta">Track One</div>
+          <div class="track__meta">Track One · Available now</div>
           <h2 class="track__title">System Design</h2>
-          <p class="track__body">A practical map of the ideas that show up repeatedly in interviews and real production systems: protocols, storage models, scaling primitives, resiliency patterns, and decision trade-offs.</p>
+          <p class="track__body">A complete reference for the ideas behind every serious distributed system — from how TCP and HTTP actually work, to the trade-offs between SQL and NoSQL, to the scaling and reliability decisions that separate toy projects from production ones. Built around the questions interviewers ask and the problems engineers actually hit.</p>
           <div class="chip-row" aria-label="System design topics">
-            <span class="chip">Networking</span>
+            <span class="chip">Networking &amp; Protocols</span>
             <span class="chip">Databases</span>
             <span class="chip">Caching</span>
             <span class="chip">Consistency</span>
             <span class="chip">Scalability</span>
+            <span class="chip">Resiliency</span>
           </div>
           <div class="track__footer">
-            <p class="track__hint">Best when you want to reason from infrastructure constraints upward.</p>
-            <a class="track__link" href="./system-design/systemdesign.html">Enter tutorial</a>
+            <p class="track__hint">Best starting point for system design interviews or anyone building backend infrastructure.</p>
+            <a class="track__link" href="./system-design/systemdesign.html">Read now →</a>
           </div>
         </article>
-      </section>
-      <section class="hero" aria-label="Tutorial cards">
 
         <article class="track track--agentic">
-          <div class="track__meta">Track Two</div>
+          <div class="track__meta">Track Two · Available now</div>
           <h2 class="track__title">Agentic AI</h2>
-          <p class="track__body">A guided reference for the jump from prompt-based systems to agentic ones: planning loops, state, retrieval, memory, tool use, evaluation, and architecture patterns for autonomous behavior.</p>
+          <p class="track__body">A practical guide for engineers making the jump from calling an LLM API to building systems that actually reason, remember, and act. Covers planning loops, state machines, tool use, memory architectures, RAG pipelines, evaluation, and the real failure modes that show up when agents run in production.</p>
           <div class="chip-row" aria-label="Agentic AI topics">
-            <span class="chip">Agents</span>
+            <span class="chip">Planning Loops</span>
             <span class="chip">Tool Calling</span>
             <span class="chip">Memory</span>
             <span class="chip">RAG</span>
-            <span class="chip">Multi-step Flows</span>
+            <span class="chip">Multi-agent Systems</span>
+            <span class="chip">Evaluation</span>
           </div>
           <div class="track__footer">
-            <p class="track__hint">Best when you want to build workflows that think, act, and recover.</p>
-            <a class="track__link" href="./agentic-system/agentic-ai.html">Enter tutorial</a>
+            <p class="track__hint">Best starting point for engineers building LLM-powered products or autonomous workflows.</p>
+            <a class="track__link" href="./agentic-system/agentic-ai.html">Read now →</a>
           </div>
         </article>
+      </div>
+
+      <!-- Features -->
+      <section class="features" aria-label="Tutorial features">
+        <p class="features__eyebrow">Built for how engineers actually read</p>
+        <h2 class="features__title">Every tutorial ships with three reading modes.</h2>
+        <div class="features__grid">
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M3 9h6M3 15h6"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Chapter-by-chapter</h3>
+            <p class="feature-card__body">Each tutorial is split into focused chapters. Navigate with the sidebar or the prev/next controls at the top — only the chapter you're on is rendered, so it stays fast and distraction-free.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Single-page view</h3>
+            <p class="feature-card__body">Switch to single-page mode to see the entire tutorial on one scrollable page — useful for searching across all chapters with Cmd+F, or reading linearly from start to finish without clicking through.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-card__icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 21h14"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Download as PDF</h3>
+            <p class="feature-card__body">Every tutorial is print-optimised. Hit the PDF button or use your browser's print dialog — headers, code blocks, tables, and diagrams all reflow cleanly for offline reading or annotation.</p>
+          </div>
+
+        </div>
       </section>
 
-      
+      <!-- Upcoming courses -->
+      <section class="coming-soon" aria-label="Upcoming courses">
+        <div class="coming-soon__header">
+          <h2 class="coming-soon__title">In development</h2>
+          <p class="coming-soon__note">Coming soon</p>
+        </div>
+        <div class="upcoming-grid">
+
+          <article class="upcoming-card upcoming-card--dsa">
+            <div class="upcoming-card__badge">Track Three</div>
+            <h3 class="upcoming-card__title">Data Structures &amp; Algorithms</h3>
+            <p class="upcoming-card__body">Most DSA content teaches you to pass a test. This track teaches you to think structurally — how to look at a problem, identify what data shape fits it, and reason about cost before you write a line. Covers arrays, linked lists, trees, heaps, graphs, sorting, and dynamic programming from the ground up.</p>
+            <div class="chip-row" aria-label="DSA topics">
+              <span class="chip">Arrays &amp; Strings</span>
+              <span class="chip">Trees &amp; Graphs</span>
+              <span class="chip">Dynamic Programming</span>
+              <span class="chip">Heaps &amp; Sorting</span>
+            </div>
+          </article>
+
+          <article class="upcoming-card upcoming-card--patterns">
+            <div class="upcoming-card__badge">Track Four</div>
+            <h3 class="upcoming-card__title">Coding Patterns</h3>
+            <p class="upcoming-card__body">Underneath the variety of interview problems is a short list of patterns that keep recurring. Once you can name them on sight — sliding window, two pointers, fast and slow, BFS/DFS, merge intervals, backtracking — most problems become variations on something you've already solved. This track builds that recognition deliberately.</p>
+            <div class="chip-row" aria-label="Coding patterns topics">
+              <span class="chip">Sliding Window</span>
+              <span class="chip">Two Pointers</span>
+              <span class="chip">BFS / DFS</span>
+              <span class="chip">Backtracking</span>
+              <span class="chip">Merge Intervals</span>
+            </div>
+          </article>
+
+          <article class="upcoming-card upcoming-card--design">
+            <div class="upcoming-card__badge">Track Five</div>
+            <h3 class="upcoming-card__title">Design Patterns</h3>
+            <p class="upcoming-card__body">Gang of Four and beyond — but explained as solutions to specific engineering problems, not as abstract taxonomy. Each pattern is shown in context: what the code looked like before, what problem it creates at scale, and why the pattern resolves it. Creational, structural, behavioral, plus SOLID and composition-over-inheritance in practice.</p>
+            <div class="chip-row" aria-label="Design patterns topics">
+              <span class="chip">Creational</span>
+              <span class="chip">Structural</span>
+              <span class="chip">Behavioral</span>
+              <span class="chip">SOLID Principles</span>
+            </div>
+          </article>
+
+          <article class="upcoming-card upcoming-card--combined">
+            <div class="upcoming-card__badge">Track Six · Combined</div>
+            <h3 class="upcoming-card__title">DSA + Coding Patterns + Design Patterns</h3>
+            <p class="upcoming-card__body">An end-to-end curriculum that treats the three tracks as one unified skill: understanding data structures, recognizing problem patterns, and applying software design principles. Built for engineers who want a single, coherent path from raw problem-solving to clean, scalable architecture — interview-ready and production-ready at the same time.</p>
+            <div class="chip-row" aria-label="Combined track topics">
+              <span class="chip">Unified Curriculum</span>
+              <span class="chip">Interview Ready</span>
+              <span class="chip">Clean Architecture</span>
+              <span class="chip">Java &amp; Python</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
     </main>
   </div>
   <footer class="site-footer">

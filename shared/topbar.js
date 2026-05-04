@@ -101,6 +101,14 @@
       localStorage.setItem("atlas-theme", theme);
       const label = themeBtn.querySelector("[data-theme-label]");
       if (label) label.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
+
+      const sunIcon = themeBtn.querySelector("[data-theme-icon-sun]");
+      const moonIcon = themeBtn.querySelector("[data-theme-icon-moon]");
+      if (sunIcon && moonIcon) {
+        // Show the icon for the mode user can switch to.
+        sunIcon.hidden = theme !== "dark";
+        moonIcon.hidden = theme === "dark";
+      }
     };
 
     const currentTheme = document.documentElement.dataset.theme ||
@@ -110,6 +118,7 @@
     themeBtn.addEventListener("click", (event) => {
       event.stopPropagation();
       applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      closeMenu();
     });
   }
 })();

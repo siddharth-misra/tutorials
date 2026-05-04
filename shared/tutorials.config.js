@@ -9,6 +9,11 @@ const tutorials = [
     label: "Agentic AI",
     hrefFromRoot: "agentic-system/agentic-ai.html",
   },
+  {
+    key: "aws",
+    label: "AWS",
+    hrefFromRoot: "aws/aws.html",
+  },
 ];
 
 module.exports = { tutorials };

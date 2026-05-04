@@ -52,6 +52,7 @@
       <div class="atlas-topbar__nav-dropdown" data-nav-dropdown>
         <a class="atlas-topbar__nav-item is-current" href="../system-design/systemdesign.html" data-topic-link aria-current="page">System Design</a>
         <a class="atlas-topbar__nav-item" href="../agentic-system/agentic-ai.html" data-topic-link>Agentic AI</a>
+        <a class="atlas-topbar__nav-item" href="../aws/aws.html" data-topic-link>AWS</a>
       </div>
     </div>
   </div>
@@ -75,8 +76,8 @@
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" data-theme-icon-moon width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span data-theme-label>Light Mode</span>
         </button>
         <hr class="atlas-topbar__dropdown-divider" />
@@ -86,6 +87,12 @@
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->
+
+
+
+
+
+
 
 
 <div class="layout">
@@ -100,7 +107,6 @@
         <h2>Navigate</h2>
         <p>Major sections stay reachable on screen. Print output collapses to a clean single-column document.</p>
         <nav><ul class="toc-list">
-<li><a href="#quick-reference-cheat-sheet" data-toc-link>Quick Reference Cheat Sheet</a></li>
 <li><a href="#chapter-1-system-design-interview-framework" data-toc-link>Chapter 1: System Design Interview Framework</a></li>
 <li><a href="#chapter-2-fundamentals-of-system-design" data-toc-link>Chapter 2: Fundamentals of System Design</a></li>
 <li><a href="#chapter-3-networking-and-internet-fundamentals" data-toc-link>Chapter 3: Networking &amp; Internet Fundamentals</a></li>
@@ -119,395 +125,16 @@
 <li><a href="#chapter-16-designing-a-scalable-notification-service" data-toc-link>Chapter 16: Designing a Scalable Notification Service</a></li>
 <li><a href="#chapter-17-designing-a-real-time-push-platform" data-toc-link>Chapter 17: Designing a Real-Time Push Platform</a></li>
 <li><a href="#chapter-18-counting-at-scale-top-k-trending-items" data-toc-link>Chapter 18: Counting at Scale — Top-K Trending Items</a></li>
-<li><a href="#chapter-19-url-shortener-and-pastebin" data-toc-link>Chapter 19: URL Shortener &amp; Pastebin</a></li>
+<li><a href="#chapter-19-url-shortener-and-pastebin" data-toc-link>Chapter 19: URL Shortener and Pastebin</a></li>
 <li><a href="#chapter-20-search-engine-design" data-toc-link>Chapter 20: Search Engine Design</a></li>
-<li><a href="#glossary" data-toc-link>Glossary</a></li>
         </ul></nav>
       </aside>
 
       <main class="document">
         <article class="article">
-<h1 id="system-design">System Design</h1>
-<hr>
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul class="toc-list">
-
-<li><a href="#quick-reference-cheat-sheet" data-toc-link>Quick Reference Cheat Sheet</a></li>
-<li><a href="#chapter-1-system-design-interview-framework" data-toc-link>Chapter 1: System Design Interview Framework</a></li>
-<li><a href="#chapter-2-fundamentals-of-system-design" data-toc-link>Chapter 2: Fundamentals of System Design</a></li>
-<li><a href="#chapter-3-networking-and-internet-fundamentals" data-toc-link>Chapter 3: Networking &amp; Internet Fundamentals</a></li>
-<li><a href="#chapter-4-microservice-architecture" data-toc-link>Chapter 4: Microservice Architecture</a></li>
-<li><a href="#chapter-5-availability-cap-theorem-and-reliability-patterns" data-toc-link>Chapter 5: Availability, CAP Theorem &amp; Reliability Patterns</a></li>
-<li><a href="#chapter-6-database-internals" data-toc-link>Chapter 6: Database Internals</a></li>
-<li><a href="#chapter-7-rate-limiting" data-toc-link>Chapter 7: Rate Limiting</a></li>
-<li><a href="#chapter-8-distributed-consensus" data-toc-link>Chapter 8: Distributed Consensus</a></li>
-<li><a href="#chapter-9-distributed-systems" data-toc-link>Chapter 9: Distributed Systems</a></li>
-<li><a href="#chapter-10-security-design" data-toc-link>Chapter 10: Security Design</a></li>
-<li><a href="#chapter-11-caching-strategies" data-toc-link>Chapter 11: Caching Strategies</a></li>
-<li><a href="#chapter-12-event-driven-messaging-systems" data-toc-link>Chapter 12: Event-Driven Messaging Systems</a></li>
-<li><a href="#chapter-13-consistent-hashing" data-toc-link>Chapter 13: Consistent Hashing</a></li>
-<li><a href="#chapter-14-designing-a-distributed-cache" data-toc-link>Chapter 14: Designing a Distributed Cache</a></li>
-<li><a href="#chapter-15-designing-an-auto-complete-engine" data-toc-link>Chapter 15: Designing an Auto-Complete Engine</a></li>
-<li><a href="#chapter-16-designing-a-scalable-notification-service" data-toc-link>Chapter 16: Designing a Scalable Notification Service</a></li>
-<li><a href="#chapter-17-designing-a-real-time-push-platform" data-toc-link>Chapter 17: Designing a Real-Time Push Platform</a></li>
-<li><a href="#chapter-18-counting-at-scale-top-k-trending-items" data-toc-link>Chapter 18: Counting at Scale — Top-K Trending Items</a></li>
-<li><a href="#chapter-19-url-shortener-and-pastebin" data-toc-link>Chapter 19: URL Shortener &amp; Pastebin</a></li>
-<li><a href="#chapter-20-search-engine-design" data-toc-link>Chapter 20: Search Engine Design</a></li>
-<li><a href="#glossary" data-toc-link>Glossary</a></li>
-</ul>
-<hr>
-<p><strong>How to read this document</strong></p>
-<p>Every major topic answers five questions, clearly marked:</p>
-<ul>
-<li><strong>Why this architecture?</strong> — The reasoning behind the design decision.</li>
-<li><strong>What can fail?</strong> — Concrete failure modes and mitigations.</li>
-<li><strong>How much will it cost?</strong> — Back-of-envelope cost estimates with real pricing.</li>
-<li><strong>How will teams maintain it?</strong> — Day-2 operations: deployment, monitoring, debugging.</li>
-<li><strong>How does it evolve in 3 years?</strong> — Where this design goes as the product matures.</li>
-<li><strong>How does it actually work?</strong> — The deeper mechanics that make the design correct, fast, and maintainable.</li>
-</ul>
-<p><strong>Study flow</strong></p>
-<p>This document is ordered for prep:</p>
-<ul>
-<li>Chapter 1 for the interview framework</li>
-<li>Chapter 2 for foundations of system design</li>
-<li>Chapter 3 for networking fundamentals</li>
-<li>Chapters 4 and 5 for microservice principles and availability</li>
-<li>Chapters 6 to 12 for core distributed-system primitives</li>
-<li>Chapters 13 and 14 for hashing and distributed cache mechanics</li>
-<li>Chapters 15 to 20 for applied system-design problems</li>
-</ul>
-<p><strong>Concepts that should appear explicitly somewhere in your notes</strong></p>
-<ul>
-<li><code>SLI / SLO / SLA</code></li>
-<li><code>RTO / RPO</code></li>
-<li>Schema evolution and backward compatibility</li>
-<li>Idempotency, retries, and deduplication</li>
-<li>Backpressure and load shedding</li>
-<li>Quorum reads/writes</li>
-<li>Multi-region active-active vs active-passive</li>
-<li>Data retention, replay, and restoration drills</li>
-</ul>
-<hr>
-<h2 id="quick-reference-cheat-sheet">Quick Reference Cheat Sheet</h2>
-<p><strong>Note:</strong> Use this card during review. All numbers are rough order-of-magnitude estimates for interviews.</p>
-<h3 id="key-latency-numbers">Key Latency Numbers</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Operation</th>
-<th>Latency</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>L1 cache reference</td>
-<td>~0.5 ns</td>
-</tr>
-<tr>
-<td>L2 cache reference</td>
-<td>~7 ns</td>
-</tr>
-<tr>
-<td>Main memory (RAM) access</td>
-<td>~100 ns</td>
-</tr>
-<tr>
-<td>Redis / in-process cache get</td>
-<td>~100 µs–1 ms</td>
-</tr>
-<tr>
-<td>SSD random read</td>
-<td>~100 µs</td>
-</tr>
-<tr>
-<td>Network round-trip (same datacenter)</td>
-<td>~500 µs</td>
-</tr>
-<tr>
-<td>Network round-trip (same region, cross-AZ)</td>
-<td>~1–2 ms</td>
-</tr>
-<tr>
-<td>DB query (indexed, warm cache)</td>
-<td>~1–5 ms</td>
-</tr>
-<tr>
-<td>HDD seek</td>
-<td>~10 ms</td>
-</tr>
-<tr>
-<td>Network round-trip (US ↔ Europe)</td>
-<td>~80–100 ms</td>
-</tr>
-<tr>
-<td>Network round-trip (US ↔ Asia)</td>
-<td>~150–200 ms</td>
-</tr>
-</tbody></table></div>
-<p><strong>Rule:</strong> One cross-region synchronous hop costs ~100 ms. Three hops = 300 ms — unacceptable for a checkout flow.</p>
-<h3 id="availability-nines">Availability &quot;Nines&quot;</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>SLA</th>
-<th>Annual downtime</th>
-<th>Use for</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>99%</td>
-<td>~3.65 days</td>
-<td>Internal tooling</td>
-</tr>
-<tr>
-<td>99.9%</td>
-<td>~8.7 hours</td>
-<td>Most B2B SaaS</td>
-</tr>
-<tr>
-<td>99.99%</td>
-<td>~52 minutes</td>
-<td>Payment APIs, S3</td>
-</tr>
-<tr>
-<td>99.999%</td>
-<td>~5 minutes</td>
-<td>Telecom, exchanges</td>
-</tr>
-</tbody></table></div>
-<p><strong>Formula:</strong> <code>Availability = MTTF / (MTTF + MTTR)</code></p>
-<p>This means <strong>availability is the fraction of total time the system is up</strong>: <strong>MTTF</strong> (Mean Time To Failure, the average healthy runtime before the next outage) divided by <strong>MTTF + MTTR</strong>, where <strong>MTTR</strong> (Mean Time To Recovery, the average time to restore service after an outage) is the downtime portion. Higher MTTF and lower MTTR increase availability.</p>
-<h3 id="back-of-envelope-rules-of-thumb">Back-of-Envelope Rules of Thumb</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Thing to estimate</th>
-<th>Rule</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Bytes per character</td>
-<td>1 byte (ASCII), up to 4 bytes (UTF-8)</td>
-</tr>
-<tr>
-<td>1 million seconds</td>
-<td>~11.5 days</td>
-</tr>
-<tr>
-<td>1 billion requests/day</td>
-<td>~11,600 RPS</td>
-</tr>
-<tr>
-<td>Average tweet size</td>
-<td>~280 bytes text + metadata ≈ ~1 KB</td>
-</tr>
-<tr>
-<td>Average photo (compressed)</td>
-<td>~300 KB</td>
-</tr>
-<tr>
-<td>Average HD video minute</td>
-<td>~10 MB</td>
-</tr>
-<tr>
-<td>1 TB disk</td>
-<td>~10⁶ MB, ~10⁹ KB</td>
-</tr>
-<tr>
-<td>QPS from a single server</td>
-<td>~1K–10K simple reads; ~100–1K writes</td>
-</tr>
-<tr>
-<td>Read replica headroom</td>
-<td>Each replica adds ~1K–5K read QPS</td>
-</tr>
-</tbody></table></div>
-<h3 id="common-capacity-estimation-steps">Common Capacity Estimation Steps</h3>
-<ol>
-<li>Daily active users × actions per day = daily events.</li>
-<li>Daily events / 86,400 = average RPS; multiply by 5–10× for peak.</li>
-<li>Average payload size × RPS = bandwidth.</li>
-<li>Storage = payload × events/day × retention days.</li>
-<li>Shards = total storage / per-node capacity.</li>
-<li>Sanity-check latency: sum up each hop.</li>
-</ol>
-<h3 id="multi-region-active-active-vs-active-passive">Multi-Region: Active-Active vs Active-Passive</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Model</th>
-<th>What it means</th>
-<th>Trade-offs</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Active-Passive</strong></td>
-<td>One region serves all traffic; the second is on standby. Failover is triggered manually or automatically on primary failure.</td>
-<td>Simpler to reason about. Failover takes time (RTO minutes–hours). The passive region is mostly idle cost. Write consistency is easier — one region owns writes.</td>
-</tr>
-<tr>
-<td><strong>Active-Active</strong></td>
-<td>Both regions simultaneously serve traffic and accept writes. Traffic is routed by geography (nearest region).</td>
-<td>Near-zero RTO for regional failure. Lower latency for global users. Requires conflict resolution for concurrent writes to the same record. Much harder to make strongly consistent.</td>
-</tr>
-</tbody></table></div>
-<p><strong>When to choose each:</strong></p>
-<ul>
-<li>Active-Passive: financial systems, single-tenant SaaS, teams without multi-region ops experience.</li>
-<li>Active-Active: global consumer apps (social, e-commerce), where per-region latency matters and eventual consistency is tolerable (DynamoDB Global Tables, Cassandra multi-DC writes, CockroachDB).</li>
-</ul>
-<p><strong>Key concepts that appear with multi-region:</strong></p>
-<ul>
-<li><strong>RTO (Recovery Time Objective):</strong> how quickly service must be restored. Active-Active targets seconds; Active-Passive typically targets minutes.</li>
-<li><strong>RPO (Recovery Point Objective):</strong> how much data loss is acceptable. Synchronous replication gives RPO ≈ 0; asynchronous replication accepts RPO of seconds to minutes.</li>
-<li><strong>Write conflict resolution:</strong> last-write-wins (LWW), vector clocks, CRDTs, or application-level merge logic.</li>
-<li><strong>Quorum writes across regions:</strong> strong consistency is possible but adds cross-region latency (~100 ms) to every write.</li>
-</ul>
-<h3 id="chapter-by-chapter-revision-grid">Chapter-by-Chapter Revision Grid</h3>
-<p>Use this as the fastest pass before an interview: one or two ideas per chapter, plus the mistake most people make.</p>
-<h3 id="interview-networking-and-foundations">Interview, Networking, and Foundations</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Chapter</th>
-<th>Quick revision points</th>
-<th>Common trap</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>1. Interview framework</strong></td>
-<td>Use the loop: <strong>requirements -&gt; scale -&gt; API -&gt; high-level design -&gt; bottlenecks -&gt; trade-offs</strong>. Speak at <strong>product, mechanism, and operations</strong> layers.</td>
-<td>Jumping into boxes without clarifying scope, API shape, or failure modes.</td>
-</tr>
-<tr>
-<td><strong>2. Fundamentals</strong></td>
-<td>Name the dominant force first: <strong>latency, throughput, availability, consistency, durability, or operability</strong>. Every architecture choice optimizes one axis by spending another.</td>
-<td>Treating a design as universally correct instead of stating which trade-off it buys.</td>
-</tr>
-<tr>
-<td><strong>3. Networking</strong></td>
-<td>Trace the full request path: <strong>DNS -&gt; TCP/TLS -&gt; CDN/gateway -&gt; load balancer/proxy -&gt; app -&gt; data store</strong>. Latency is additive, and most user-visible slowness comes from too many hops.</td>
-<td>Treating &quot;the backend&quot; as one black box and ignoring edge, TLS, and routing costs.</td>
-</tr>
-<tr>
-<td><strong>4. Microservices</strong></td>
-<td>Split services by <strong>business capability, data ownership, change cadence, scaling profile, and transaction boundary</strong>. Prefer a <strong>modular monolith</strong> until boundaries are real.</td>
-<td>Prematurely splitting into chatty services with shared databases.</td>
-</tr>
-</tbody></table></div>
-<h3 id="reliability-data-and-coordination">Reliability, Data, and Coordination</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Chapter</th>
-<th>Quick revision points</th>
-<th>Common trap</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>5. Availability &amp; CAP</strong></td>
-<td>During partitions, choose <strong>CP</strong> or <strong>AP</strong> per operation, not once for the whole product. Availability improves with <strong>higher MTTF</strong> and <strong>lower MTTR</strong>.</td>
-<td>Saying &quot;we want both consistency and availability&quot; without describing partition behavior.</td>
-</tr>
-<tr>
-<td><strong>6. Database internals</strong></td>
-<td><strong>B-tree</strong> favors reads/range scans; <strong>LSM</strong> favors writes. <strong>WAL before data pages</strong> gives durability; <strong>MVCC</strong> gives snapshot reads but needs cleanup.</td>
-<td>Adding indexes freely and forgetting they increase write amplification and storage.</td>
-</tr>
-<tr>
-<td><strong>7. Rate limiting</strong></td>
-<td><strong>Token bucket</strong> allows bursts, <strong>leaky bucket</strong> smooths traffic, <strong>sliding window</strong> is stricter. Define <strong>who</strong> is limited, <strong>where</strong> enforcement happens, and <strong>fail-open vs fail-closed</strong>.</td>
-<td>Implementing one global &quot;req/min&quot; rule without tying it to a resource or abuse case.</td>
-</tr>
-<tr>
-<td><strong>8. Distributed consensus</strong></td>
-<td>Consensus clusters stay small: usually <strong>3 or 5 nodes</strong>. In Raft: <strong>leader appends, majority commits, followers replicate, snapshots bound replay time</strong>.</td>
-<td>Using consensus for workloads that only need simple primary-replica failover.</td>
-</tr>
-<tr>
-<td><strong>9. Distributed systems</strong></td>
-<td>Know <strong>primary-replica vs leaderless</strong>, <strong>sync vs async replication</strong>, <strong>quorum rules</strong>, <strong>fencing tokens</strong>, <strong>delivery semantics</strong>, and <strong>sagas</strong>. Prefer <strong>idempotency + compensation</strong> over distributed 2PC in many microservice flows.</td>
-<td>Using distributed locks or leases without fencing tokens, then getting stale-writer corruption.</td>
-</tr>
-</tbody></table></div>
-<h3 id="security-caching-messaging-and-routing">Security, Caching, Messaging, and Routing</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Chapter</th>
-<th>Quick revision points</th>
-<th>Common trap</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>10. Security</strong></td>
-<td>Security is layered: <strong>authentication, authorization, TLS, encryption at rest, secrets management, rate limits, audit logs, WAF/DDoS controls</strong>. <strong>RBAC</strong> is simple; <strong>ABAC</strong> is expressive.</td>
-<td>Treating JWTs or OAuth as the whole security model instead of one layer.</td>
-</tr>
-<tr>
-<td><strong>11. Caching strategies</strong></td>
-<td><strong>Cache-aside</strong> is the default; <strong>write-through</strong> helps freshness; <strong>write-back</strong> is fastest but riskiest. Set <strong>TTL per dataset</strong>, add <strong>jitter</strong>, and plan for <strong>stampedes</strong> and <strong>hot keys</strong>.</td>
-<td>One TTL policy for everything, or no invalidation story after writes.</td>
-</tr>
-<tr>
-<td><strong>12. Messaging &amp; events</strong></td>
-<td><strong>Queue</strong> = one consumer path; <strong>pub/sub</strong> = fan-out. At-least-once delivery means <strong>idempotent consumers</strong>, <strong>DLQs</strong>, <strong>backoff + jitter</strong>, and usually the <strong>outbox pattern</strong>.</td>
-<td>Chasing &quot;exactly once&quot; everywhere instead of designing safe duplicates.</td>
-</tr>
-<tr>
-<td><strong>13. Consistent hashing</strong></td>
-<td>It minimizes remapping when nodes change; use <strong>virtual nodes</strong> (often ~100-200 per server) for balance. Rebalancing cost is about <strong>data movement</strong>, not hash lookup time.</td>
-<td>Using <code>hash(key) % N</code> in a cluster that needs frequent scaling or failover.</td>
-</tr>
-<tr>
-<td><strong>14. Distributed cache</strong></td>
-<td>A serious cache uses <strong>remote shared nodes, consistent hashing, replicas, discovery, and an eviction policy</strong>. Measure <strong>hit rate, eviction rate, lag, and memory pressure</strong>.</td>
-<td>Building a cache tier without discovery, failover, or warming strategy.</td>
-</tr>
-</tbody></table></div>
-<h3 id="applied-system-designs">Applied System Designs</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Chapter</th>
-<th>Quick revision points</th>
-<th>Common trap</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>15. Auto-complete</strong></td>
-<td>Use an <strong>in-memory trie</strong> for prefix search: lookup cost depends on <strong>prefix length</strong>, not dataset size. Keep <strong>serving</strong> separate from <strong>popularity updates</strong>.</td>
-<td>Using disk or DB lookups on every keystroke and missing the latency budget.</td>
-</tr>
-<tr>
-<td><strong>16. Notification service</strong></td>
-<td>Accept fast, <strong>deliver asynchronously</strong>, and <strong>persist before publish</strong>. Partition by <strong>recipient</strong> for best-effort ordering; centralize <strong>preferences, retries, DLQ, and provider failover</strong>.</td>
-<td>Putting APNs/FCM/Twilio calls on the user request path.</td>
-</tr>
-<tr>
-<td><strong>17. Real-time push platform</strong></td>
-<td>Real-time push is a <strong>connection-state</strong> problem. Use <strong>WebSockets</strong>, event-driven socket servers, a <strong>registry (<code>client_id -&gt; server_id</code>)</strong>, and <strong>jittered reconnects</strong>. Scale on <strong>open connections</strong>, not RPS.</td>
-<td>Autoscaling on CPU/RPS while connection servers are actually saturated by socket count.</td>
-</tr>
-<tr>
-<td><strong>18. Top-K trending items</strong></td>
-<td>Large-scale Top-K usually needs <strong>two paths</strong>: <strong>approximate fast path</strong> (Count-Min Sketch + heap) and <strong>exact slow path</strong> (replayable aggregation). Partition by <strong>item key</strong> and watch for <strong>hot keys</strong>.</td>
-<td>Trying to make one exact real-time path serve both product and audit needs.</td>
-</tr>
-<tr>
-<td><strong>19. URL shortener &amp; pastebin</strong></td>
-<td>Keep the redirect path tiny: <strong>code -&gt; target</strong> lookup should be cache-first and ultra-fast; do <strong>analytics, abuse checks, and cleanup asynchronously</strong>. Choose <strong>301 vs 302</strong> intentionally.</td>
-<td>Doing analytics or moderation synchronously on the redirect path.</td>
-</tr>
-<tr>
-<td><strong>20. Search engine</strong></td>
-<td>Search is two systems: <strong>offline crawl/index pipeline</strong> and <strong>online query serving</strong>. The <strong>inverted index</strong> is the core structure; ranking mixes <strong>lexical, authority, freshness, and quality</strong> signals.</td>
-<td>Mixing indexing and serving concerns, or thinking search is just a database query problem.</td>
-</tr>
-</tbody></table></div>
-<hr>
 <h2 id="chapter-1-system-design-interview-framework">Chapter 1: System Design Interview Framework</h2>
 <p><strong>Goal:</strong> Build a repeatable mental process for approaching any system design question — from a beginner who draws boxes to an expert who dissects failure modes, cost, and evolution. By the end of this chapter you have a framework, templates, and the vocabulary to run a strong interview discussion at any level.</p>
+<p><strong>How to use this chapter:</strong> Read Sections 1.2 to 1.8 first and practice the loop with one system (for example, URL shortener or notification service). Then revisit Sections 1.9 to 1.11 to deepen your answers from &quot;works on paper&quot; to &quot;works in production.&quot;</p>
 <hr>
 <h3 id="11-what-is-system-design-and-why-does-it-matter">1.1 What Is System Design, and Why Does It Matter?</h3>
 <p>System design is the practice of defining how software components — services, databases, caches, queues, APIs — fit together to solve a real business problem at a specific scale.</p>
@@ -524,6 +151,47 @@ Step 4  →  Draw the high-level design
 Step 5  →  Deep dive on bottlenecks and failure modes
 Step 6  →  Discuss trade-offs and evolution
 </code></pre></div>
+<h4 id="suggested-time-split-45-minute-interview">Suggested time split (45-minute interview)</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Time</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1. Requirements</td>
+<td>5–7 min</td>
+<td>Functional + non-functional scope, explicit assumptions</td>
+</tr>
+<tr>
+<td>2. Capacity</td>
+<td>4–6 min</td>
+<td>RPS, storage, bandwidth, peak multiplier</td>
+</tr>
+<tr>
+<td>3. API</td>
+<td>3–5 min</td>
+<td>2–3 core endpoints, idempotency/versioning notes</td>
+</tr>
+<tr>
+<td>4. High-level design</td>
+<td>8–10 min</td>
+<td>End-to-end architecture with sync/async separation</td>
+</tr>
+<tr>
+<td>5. Bottlenecks/failures</td>
+<td>10–12 min</td>
+<td>2–3 likely failure points + mitigations</td>
+</tr>
+<tr>
+<td>6. Trade-offs/evolution</td>
+<td>5–7 min</td>
+<td>Why this design now, and when to evolve</td>
+</tr>
+</tbody></table></div>
+<p>If the interview is shorter, keep the same order and compress details, not structure.</p>
 <p><strong>Why this order matters:</strong> Each step builds on the previous. You cannot estimate storage without knowing the data model. You cannot find bottlenecks without a design to interrogate. Skipping steps is the most common mistake — engineers jump to drawing boxes before they know what the boxes must do.</p>
 <p><strong>Real-world example:</strong> Interview loops at Google, Meta, and Amazon explicitly expect this progression. Interviewers at these companies are trained to probe each step; if you skip requirements, they will ask you to go back. Staying in the loop is not rigid — it is signal to the interviewer that you can structure ambiguous problems.</p>
 <hr>
@@ -548,7 +216,16 @@ Step 6  →  Discuss trade-offs and evolution
 <li><strong>&quot;What is the read/write ratio?&quot;</strong> — A system that is 99% reads (Wikipedia) is designed very differently from one that is 50/50 (Twitter timeline writes). Reads are typically cheap to scale horizontally; writes require more care with consistency and replication.</li>
 <li><strong>&quot;Is correctness, freshness, or cost the primary constraint?&quot;</strong> — These three frequently conflict. A social media feed can show slightly old posts (freshness sacrificed for cost). A bank ledger cannot (correctness non-negotiable, cost secondary).</li>
 </ol>
+<h4 id="requirement-prioritization-shorthand">Requirement prioritization shorthand</h4>
+<p>When constraints conflict, explicitly rank them as:</p>
+<ol>
+<li><strong>Must-have:</strong> Non-negotiable (for example, payment correctness)</li>
+<li><strong>Should-have:</strong> Important but negotiable (for example, p95 latency under 200 ms)</li>
+<li><strong>Nice-to-have:</strong> Deferrable (for example, real-time analytics)</li>
+</ol>
+<p>Saying this out loud helps the interviewer see decision quality, not just architecture knowledge.</p>
 <p><strong>Real-world example — Uber ride matching:</strong> Functional: match rider to nearby driver in real time. Non-functional: latency &lt; 2 s, availability &gt; 99.99% (an outage means no rides), eventual consistency acceptable for surge prices (a user seeing a price that is 10 seconds stale is fine), zero data loss for payments. Without asking these questions, you might design a strongly consistent system with cross-region synchronous writes — adding hundreds of milliseconds to the match path and making the system fragile during a regional outage.</p>
+<p><strong>Step output:</strong> A prioritized requirements list with explicit scope, assumptions, and success metrics.</p>
 <hr>
 <h3 id="14-step-2-estimate-scale-and-capacity">1.4 Step 2 — Estimate Scale and Capacity</h3>
 <p>Back-of-envelope math is not about precision. It is about finding which dimension — storage, bandwidth, compute — is the hardest constraint, and making sure your design handles it.</p>
@@ -560,6 +237,12 @@ Step 6  →  Discuss trade-offs and evolution
 <li><strong>Storage = payload × events/day × retention days.</strong> (1 KB × 500 M × 365 days ≈ 183 TB/year)</li>
 <li><strong>Shards = total storage ÷ per-node capacity; sanity-check latency by summing each hop.</strong></li>
 </ol>
+<h4 id="three-sanity-checks-interviewers-like">Three sanity checks interviewers like</h4>
+<ul>
+<li><strong>Peak skew check:</strong> Peaks are often bursty and regional, not globally smooth. If peak is 10× average, validate whether one region or one tenant could see 20×.</li>
+<li><strong>Read amplification check:</strong> One user action can trigger many reads (for example, timeline aggregation). Account for internal fan-out, not just external API calls.</li>
+<li><strong>Write amplification check:</strong> One write can create multiple downstream writes (feeds, notifications, indexes). This often becomes the true bottleneck.</li>
+</ul>
 <h4 id="rules-of-thumb-to-memorize">Rules of thumb to memorize</h4>
 <div class="table-wrap"><table>
 <thead>
@@ -595,6 +278,7 @@ Step 6  →  Discuss trade-offs and evolution
 </tbody></table></div>
 <h4 id="real-world-example-instagram-at-scale">Real-world example — Instagram at scale</h4>
 <p>Instagram serves ~100 M daily active users, each viewing ~50 photos/day. That is 5 billion photo views/day ≈ 58,000 read RPS on average, peaking above 200,000 RPS. A single database server handles at most ~10,000 reads/second. The math alone tells you that without caching (CDN + Redis), you need dozens of read replicas just for photo URLs — before a single line of product code is written. The capacity estimate drives the architecture.</p>
+<p><strong>Step output:</strong> A capacity sheet with average and peak RPS, bandwidth, storage growth, and first-pass sharding assumptions.</p>
 <hr>
 <h3 id="15-step-3-define-the-api-contract">1.5 Step 3 — Define the API Contract</h3>
 <p>The API step is where you prove that you thought about the interface before drawing component boxes. A well-defined API reveals hidden requirements (idempotency, versioning, authentication) and forces you to clarify data shapes.</p>
@@ -636,8 +320,17 @@ GET  /v1/notifications/{id}     # Check delivery status
 <td>Lets the service apply template selection and routing logic without coupling to payload shape</td>
 </tr>
 </tbody></table></div>
+<h4 id="minimal-api-reliability-contract">Minimal API reliability contract</h4>
+<p>Even if you do not write full OpenAPI specs, mention these explicitly:</p>
+<ul>
+<li><strong>Retries:</strong> Which responses are safe to retry (for example, <code>5xx</code> or timeout)?</li>
+<li><strong>Idempotency window:</strong> How long <code>idempotency_key</code> values are retained.</li>
+<li><strong>Error model:</strong> Use stable error codes (for example, <code>RATE_LIMITED</code>, <code>INVALID_RECIPIENT</code>) instead of only free-form messages.</li>
+<li><strong>Auth boundary:</strong> Who can call the endpoint (end-user token, service token, or both).</li>
+</ul>
 <p><strong>Design principle:</strong> Define the smallest API that satisfies the requirements. Every field you add is a contract you must maintain. Every field you leave out is a decision you are documenting consciously.</p>
 <p><strong>Beginner mistake:</strong> Designing the API as a database mirror — one endpoint per table, exposing internal schema. A good API represents domain operations (&quot;place an order,&quot; &quot;cancel a ride&quot;), not database tables (&quot;POST /orders_table&quot;). If the database schema changes, a domain-oriented API is isolated from the change.</p>
+<p><strong>Step output:</strong> A minimal API contract with key endpoints, request/response fields, idempotency strategy, and error model.</p>
 <hr>
 <h3 id="16-step-4-high-level-design">1.6 Step 4 — High-Level Design</h3>
 <p>Draw the minimum set of components that satisfies the requirements. This is not the time for deep optimization. The goal is a coherent end-to-end sketch that answers: how does data get in, how does it get stored, and how does it get out?</p>
@@ -690,6 +383,11 @@ GET  /v1/notifications/{id}     # Check delivery status
 <td>Serve static/cacheable content close to users</td>
 <td>Global user base, static assets</td>
 </tr>
+<tr>
+<td><strong>Observability stack</strong></td>
+<td>Metrics, logs, traces, alerting</td>
+<td>Any production system where MTTR matters</td>
+</tr>
 </tbody></table></div>
 <h4 id="the-two-paths-every-design-has">The two paths every design has</h4>
 <p>Always keep these separate in your diagram and explanation:</p>
@@ -708,6 +406,8 @@ GET  /v1/notifications/{id}     # Check delivery status
          └── Search index updater (async)
 </code></pre></div>
 <p>The user gets their photo URL in under a second. Thumbnails and feed updates happen within seconds. Search indexing may take minutes. Each path has the right latency contract for its purpose.</p>
+<p><strong>Production note:</strong> Include observability in the initial sketch, not as an afterthought. At minimum, define one user-facing SLI (for example, redirect success rate) and one system SLI (for example, queue lag).</p>
+<p><strong>Step output:</strong> One clear architecture diagram that separates request path and data path, with stores and queues labeled.</p>
 <hr>
 <h3 id="17-step-5-bottlenecks-and-failure-modes">1.7 Step 5 — Bottlenecks and Failure Modes</h3>
 <p>This is where senior candidates separate themselves. A beginner draws a correct design. A senior engineer knows exactly which part will break first and why.</p>
@@ -741,6 +441,15 @@ GET  /v1/notifications/{id}     # Check delivery status
 <td>If a payment service takes 5 seconds instead of 200 ms, what does the calling service do? Does it have a timeout? A circuit breaker?</td>
 </tr>
 </tbody></table></div>
+<h4 id="failure-mode-checklist-in-interviews">Failure-mode checklist in interviews</h4>
+<p>For each critical dependency, quickly state:</p>
+<ul>
+<li>Timeout budget (for example, 300 ms)</li>
+<li>Retry policy (count + backoff + jitter)</li>
+<li>Circuit breaker behavior (open/half-open/close)</li>
+<li>Fallback behavior (serve stale, queue for later, or fail fast)</li>
+</ul>
+<p>This turns abstract reliability claims into concrete engineering decisions.</p>
 <h4 id="failure-analysis-for-the-instagram-photo-upload-design">Failure analysis for the Instagram photo upload design</h4>
 <div class="table-wrap"><table>
 <thead>
@@ -772,6 +481,7 @@ GET  /v1/notifications/{id}     # Check delivery status
 </tr>
 </tbody></table></div>
 <p><strong>Real-world example:</strong> When a major celebrity like Taylor Swift tweets, Twitter&#39;s fan-out service used to push updates to ~90 M followers synchronously. This caused visible fan-out delays on the write path. The fix was a hybrid model: pre-compute feeds for most users on write, but merge celebrity tweets at read time.</p>
+<p><strong>Step output:</strong> A short failure table listing likely bottlenecks, blast radius, and mitigation per component.</p>
 <hr>
 <h3 id="18-step-6-trade-offs-and-evolution">1.8 Step 6 — Trade-Offs and Evolution</h3>
 <p>Every design optimizes for some constraints at the expense of others. A complete answer names the trade-off explicitly and explains how the design would evolve as the product grows.</p>
@@ -833,7 +543,13 @@ GET  /v1/notifications/{id}     # Check delivery status
 <td>Global latency requirements; compliance requiring data residency</td>
 </tr>
 </tbody></table></div>
+<h4 id="decision-log-template-high-signal-in-interviews">Decision log template (high signal in interviews)</h4>
+<p>Use this one-liner format as you discuss choices:</p>
+<p><code>Decision: &lt;choice&gt; | Why: &lt;primary constraint&gt; | Cost: &lt;what gets worse&gt; | Trigger to revisit: &lt;metric/threshold&gt;</code></p>
+<p>Example:</p>
+<p><code>Decision: eventual consistency for feed reads | Why: p95 latency target | Cost: occasional stale timeline | Trigger to revisit: stale-read complaints &gt; 0.5% of sessions</code></p>
 <p><strong>Rule:</strong> Do not design for Stage 3 when you are at Stage 1. Over-engineering costs money and engineering time, and the boundaries you guess at Stage 1 are usually wrong by Stage 3 anyway. The right answer is: &quot;Today I&#39;d build this; here is the clear trigger that tells us to move to the next stage.&quot;</p>
+<p><strong>Step output:</strong> A decision log with current choice, trade-off cost, and measurable trigger to evolve.</p>
 <hr>
 <h3 id="19-what-interview-ready-depth-actually-means">1.9 What Interview-Ready Depth Actually Means</h3>
 <p>A strong answer operates at three layers simultaneously:</p>
@@ -864,6 +580,7 @@ GET  /v1/notifications/{id}     # Check delivery status
 </tr>
 </tbody></table></div>
 <p>In practice, strong system-design discussions move repeatedly between these layers. A notification service is not just &quot;API → queue → workers.&quot; The real design also covers delivery semantics, idempotency, provider outage handling, queue backlog growth, and how cost controls interact with retries.</p>
+<p>This depth model is the quality bar for every step in Sections 1.3 to 1.8.</p>
 <hr>
 <h3 id="110-worked-example-design-a-url-shortener">1.10 Worked Example: Design a URL Shortener</h3>
 <p>This is one of the simplest system design questions. Walk through all six steps to see the framework in practice.</p>
@@ -906,15 +623,14 @@ GET  /v1/links/{code}/stats       # Click analytics
 <h3 id="111-interview-trade-off-questions">1.11 Interview Trade-Off Questions</h3>
 <h4 id="1-if-the-interviewer-gives-you-only-20-minutes-which-steps-do-you-compress-and-which-do-you-never-skip">1. If the interviewer gives you only 20 minutes, which steps do you compress and which do you never skip?</h4>
 <p><strong>Never skip:</strong> Step 1 (requirements) and Step 5 (bottlenecks). Without requirements, you might design the wrong system entirely. Without bottlenecks, you have no evidence that the design actually works at scale.</p>
-<p><strong>Compress:</strong> Step 3 (API) — mention one or two key endpoints and move on rather than detailing every field. Step 4 (high-level design) — draw the skeleton quickly and spend the saved time on deep-diving one interesting component.</p>
-<p><strong>The rule:</strong> Spend roughly 5 minutes on requirements and scale, 5 minutes on a minimal design sketch, and 10 minutes going deep on the one component that is most likely to break. Interviewers remember the depth of the hard discussion, not the breadth of a rushed sketch.</p>
+<p><strong>Compress:</strong> Step 3 (API) and Step 4 (high-level design). Mention only key endpoints and draw the minimum architecture needed to support discussion.</p>
+<p><strong>The rule:</strong> Follow the time split from Section 1.2 and use any remaining time for one high-value deep dive.</p>
 <hr>
 <h4 id="2-when-should-you-push-back-on-a-requirement-because-it-makes-the-design-unrealistic">2. When should you push back on a requirement because it makes the design unrealistic?</h4>
 <p>Push back when a requirement creates a contradiction you cannot resolve without acknowledging it — and when accepting it silently would produce a dishonest design.</p>
 <p><strong>Example of a contradiction to push back on:</strong> &quot;We need 100% availability and strong consistency across all global regions.&quot; That is impossible under network partitions (CAP theorem). The right response is: &quot;Strong consistency and 100% availability conflict during a partition. Can we accept eventual consistency for reads, or a brief write-outage during a partition, rather than 100% availability?&quot;</p>
-<p><strong>Example of a valid pushback on scope:</strong> &quot;You mentioned the system should support 10 billion daily users. Are we designing for that day-one, or should I design for current scale with a clear path to get there? Designing for 10 B users from scratch costs 100× more and takes far longer to build.&quot;</p>
-<p>Interviewers appreciate pushbacks that demonstrate real engineering judgment. They dislike pushbacks that are really just avoidance (&quot;that seems hard, can we simplify?&quot;). The difference is whether you propose a concrete alternative.</p>
-<hr>
+<p><strong>Example of a valid pushback on scope:</strong> &quot;You mentioned the system should support 10 billion daily users. Are we designing for that day one, or should I design for current scale with a clear path to get there? Designing for 10 B users from scratch costs 100× more and takes far longer to build.&quot;</p>
+<p>Interviewers appreciate pushback that demonstrates engineering judgment. They dislike pushback that is avoidance (&quot;that seems hard, can we simplify?&quot;). The difference is whether you propose a concrete alternative.</p>
 <h4 id="3-if-you-have-time-for-only-one-deep-dive-how-do-you-choose-between-scaling-data-model-and-failure-handling">3. If you have time for only one deep dive, how do you choose between scaling, data model, and failure handling?</h4>
 <p>Choose the dimension that, if wrong, would cause the most irreversible damage to the system.</p>
 <ul>
@@ -928,8 +644,10 @@ GET  /v1/links/{code}/stats       # Click analytics
 <p><strong>Rule of thumb:</strong> Data model for data-intensive products, failure handling for correctness-critical products, scaling for high-volume products.</p>
 <hr>
 <h2 id="chapter-2-fundamentals-of-system-design">Chapter 2: Fundamentals of System Design</h2>
+<p><strong>Goal:</strong> Build the baseline mental model for system design by understanding the core trade-off forces and the foundational building blocks used in nearly every large-scale system. By the end of this chapter you should be able to explain why a design uses a given component, what problem it solves, and what failure modes or costs it introduces.</p>
+<p><strong>How to use this chapter:</strong> Read Sections 2.1 to 2.3 first to internalize the forces and service boundaries that drive architectural choices. Then use Sections 2.4 to 2.8 as a reference for the core infrastructure components that recur in almost every interview and production system.</p>
 <p>This chapter covers the core trade-off forces that drive every system design decision and the fundamental building blocks — microservices, load balancers, databases, caches, file storage, and messaging queues — used to construct large-scale systems. Understanding these forces and components is the foundation for every design in this guide.</p>
-<h3 id="the-core-forces-behind-most-system-designs">The Core Forces Behind Most System Designs</h3>
+<h3 id="21-the-core-forces-behind-most-system-designs">2.1 The Core Forces Behind Most System Designs</h3>
 <p>Nearly every design decision in distributed systems is a response to a small number of recurring forces:</p>
 <ul>
 <li><strong>Latency (how long one request or operation takes)</strong> — how long one operation takes from the user&#39;s point of view.</li>
@@ -942,7 +660,7 @@ GET  /v1/links/{code}/stats       # Click analytics
 <p>Those forces interact. Batching improves throughput but can hurt latency. Stronger consistency improves correctness but may reduce availability during partitions. More caching reduces latency and cost, but increases staleness risk. Sharding (splitting data across many machines) improves scale, but complicates joins, transactions (groups of operations that succeed or fail together), and debugging.</p>
 <p>That is why &quot;best design&quot; is rarely absolute. Search prefers low latency and can tolerate slightly stale results. A bank ledger prefers durability and correctness over raw write throughput. A metrics pipeline often prefers availability and eventual convergence over strict transactional guarantees. When a system-design answer feels vague, it is usually because the speaker has not yet said which force matters most.</p>
 <hr>
-<h3 id="microservices">Microservices</h3>
+<h3 id="22-microservices">2.2 Microservices</h3>
 <p>The microservice architecture structures an application as a collection of small, independently deployable services. Each service:</p>
 <ul>
 <li>Is organized around a specific <strong>business capability</strong></li>
@@ -1214,7 +932,7 @@ GET  /v1/links/{code}/stats       # Click analytics
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="load-balancers">Load Balancers</h3>
+<h3 id="23-load-balancers">2.3 Load Balancers</h3>
 <p>A load balancer sits between clients and a pool of backend servers. Every incoming request arrives at the LB, which picks a healthy backend, forwards the request, and streams the response back to the client. From the client&#39;s perspective it looks like a single server; from the backend&#39;s perspective, load is spread evenly across the whole fleet.</p>
 <div class="code-block"><pre><code>Client ──► Load Balancer ──► Server A
                          ├──► Server B
@@ -1536,7 +1254,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="databases">Databases</h3>
+<h3 id="24-databases">2.4 Databases</h3>
 <p>A database provides structured, durable storage with access control and consistency guarantees.</p>
 <p><strong>ACID (transaction guarantees for correctness and crash safety) guarantees:</strong></p>
 <ul>
@@ -1675,7 +1393,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="caches">Caches</h3>
+<h3 id="25-caches">2.5 Caches</h3>
 <p>A cache is a small, fast storage layer that reduces latency and database load by serving frequently accessed data from memory.</p>
 <p><strong>Cache levels:</strong></p>
 <div class="table-wrap"><table>
@@ -1808,7 +1526,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="file-system-storage">File System Storage</h3>
+<h3 id="26-file-system-storage">2.6 File System Storage</h3>
 <p><strong>Block Storage</strong> — Data organized in fixed-size blocks on disk. Used for high-performance databases and OS volumes. AWS example: EBS (Elastic Block Store). Latency: ~1ms. Not shareable across instances.</p>
 <p><strong>Object Storage</strong> — Data stored as objects (binary blob + metadata + unique key). Designed for massive horizontal scale. AWS example: S3. Latency: ~10–100ms but handles trillions of objects at petabyte scale cheaply.</p>
 <p><strong>Distributed File System (DFS) properties:</strong></p>
@@ -1948,7 +1666,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="messaging-queues">Messaging Queues</h3>
+<h3 id="27-messaging-queues">2.7 Messaging Queues</h3>
 <p>Messaging queues enable <strong>asynchronous</strong> communication between services. Producers write messages to the queue; consumers read and process them independently and at their own pace.</p>
 <p><strong>Core components:</strong></p>
 <ul>
@@ -2057,7 +1775,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="networking">Networking</h3>
+<h3 id="28-networking-primer">2.8 Networking Primer</h3>
 <p>Cloud providers (AWS, Azure, GCP) provide Wide Area Networks spanning geographies. Services communicate using HTTP/HTTPS, gRPC (a binary RPC framework for fast service-to-service calls), or WebSocket protocols.<br>For a full treatment of DNS, TLS (the encryption layer that protects data while it travels over the network), load balancing, CDN, reverse proxies, API gateways, and common tooling, see Chapter 3.</p>
 <p><strong>Key latency reference numbers:</strong></p>
 <div class="table-wrap"><table>
@@ -2110,7 +1828,7 @@ User in London ──► Global LB ──► EU-West Region
 </tbody></table></div>
 <p><strong>Why these numbers matter:</strong> A system design choice that adds one synchronous cross-region hop adds ~100ms of latency to every user request. At 10 hops, that is 1 second added — unacceptable for a search engine or checkout flow.</p>
 <p>Use Chapter 3 for the detailed networking stack. This section is only the latency and topology primer for the rest of the document.</p>
-<h3 id="interview-trade-off-questions">Interview Trade-Off Questions</h3>
+<h3 id="29-interview-trade-off-questions">2.9 Interview Trade-Off Questions</h3>
 <ol>
 <li>When is a monolith the better engineering choice than microservices, even for a fast-growing product?</li>
 <li>If a system is slow, how do you decide whether to add caching, split services, or redesign the database access pattern first?</li>
@@ -3011,7 +2729,7 @@ Client → ACK    → Server
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="interview-trade-off-questions-1">Interview Trade-Off Questions</h3>
+<h3 id="interview-trade-off-questions">Interview Trade-Off Questions</h3>
 <ol>
 <li>How small is too small for a microservice? What metrics or signals indicate a boundary is over-split?</li>
 <li>When would you use choreography vs. orchestration for a saga? What are the debugging tradeoffs of each?</li>
@@ -3423,7 +3141,7 @@ After processing successfully:
 </tbody></table></div>
 <p>Each stage adds cost and operational complexity. Skip stages at your own risk — but also do not build Year 3 infrastructure before you have Year 1 users.</p>
 <hr>
-<h3 id="interview-trade-off-questions-2">Interview Trade-Off Questions</h3>
+<h3 id="interview-trade-off-questions-1">Interview Trade-Off Questions</h3>
 <p><strong>Q1. A payment service and a social feed service are both down. You can restore only one in the next 10 minutes. Which do you restore first, and why? What does this reveal about CAP positioning?</strong></p>
 <p>Restore the payment service first. Payments are CP — every failed payment is a direct, measurable revenue loss and a contractual SLA breach. A customer who cannot pay churns immediately and may dispute the failed transaction. A social feed being down is frustrating but survivable; users tolerate feed outages for minutes without leaving the platform. This reveals a core CAP principle: not all services deserve the same availability budget. CP services must be prioritized in incident response because consistency failures (double charges, lost transactions) create business liability that eventual consistency systems do not. In practice, CP services should also have more aggressive alerting thresholds, more redundancy, and dedicated on-call runbooks precisely because the cost of their downtime is quantifiably higher.</p>
 <hr>
@@ -6694,6 +6412,13 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 <td>Ordering trade-offs, replay-safe design, outbox pattern, schema compatibility, event sourcing, CQRS</td>
 </tr>
 </tbody></table></div>
+<h3 id="how-to-use-this-chapter">How to Use This Chapter</h3>
+<ul>
+<li>Read Parts 1-3 first to establish the mental model and vocabulary.</li>
+<li>Treat Parts 4-9 as the correctness core (idempotency, retries, outbox, replay, schema evolution).</li>
+<li>Use Parts 10-17 as interview and production design material.</li>
+<li>If preparing for interviews, practice answering the 8 Q&amp;A prompts out loud in under 2 minutes each.</li>
+</ul>
 <hr>
 <h3 id="part-1-why-messaging-beginner">Part 1 — Why Messaging? (Beginner)</h3>
 <h4 id="the-problem-with-synchronous-chains">The Problem with Synchronous Chains</h4>
@@ -6797,6 +6522,16 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 </tr>
 </tbody></table></div>
 <p>Many production systems combine both: pub/sub topics fan out <code>order_created</code> to downstream queues, which worker services drain independently.</p>
+<h4 id="event-vs-command-common-interview-trap">Event vs Command (Common Interview Trap)</h4>
+<ul>
+<li><strong>Event</strong> describes something that already happened (<code>order_created</code>, <code>payment_failed</code>).</li>
+<li><strong>Command</strong> asks for something to happen (<code>create_invoice</code>, <code>reserve_inventory</code>).</li>
+</ul>
+<p>Guideline:</p>
+<ul>
+<li>Use events for decoupled fan-out and auditability.</li>
+<li>Use commands when exactly one owner should perform an action.</li>
+</ul>
 <h4 id="core-vocabulary">Core Vocabulary</h4>
 <div class="table-wrap"><table>
 <thead>
@@ -6891,22 +6626,18 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 }
 </code></pre></div>
 <p>The consumer checks a <code>processed_events</code> table before acting:</p>
-<div class="code-block"><span class="code-label">sql</span><pre><code class="language-sql">-- Before processing
-SELECT 1 FROM processed_events
-WHERE consumer_name = &#39;payment_service&#39;
-  AND idempotency_key = &#39;order_123_payment_attempt_1&#39;;
-
--- If not found: process + insert (in one transaction)
+<div class="code-block"><span class="code-label">sql</span><pre><code class="language-sql">-- Attempt to claim the idempotency key first
 INSERT INTO processed_events (consumer_name, idempotency_key, processed_at)
-VALUES (&#39;payment_service&#39;, &#39;order_123_payment_attempt_1&#39;, NOW());
+VALUES (&#39;payment_service&#39;, &#39;order_123_payment_attempt_1&#39;, NOW())
+ON CONFLICT (consumer_name, idempotency_key) DO NOTHING;
 
--- Charge the user here (inside the same transaction if possible)
+-- If rows_affected = 0, this is a duplicate; skip side effects and ack safely.
 </code></pre></div>
 <p><strong>Key rules:</strong></p>
 <ol>
 <li>Use a <code>UNIQUE</code> constraint on <code>(consumer_name, idempotency_key)</code> to make dedup race-safe.</li>
-<li>Commit the processed_events row and the business side effect in the same database transaction where possible.</li>
-<li>If the side effect is external (payment gateway), store the external result and skip the call if already recorded.</li>
+<li>For DB-local effects, write business state and dedup marker in one transaction.</li>
+<li>For external effects (payment gateway, email), persist an idempotency state machine (<code>pending</code>/<code>succeeded</code>/<code>failed</code>) and reuse the same external idempotency key on retries.</li>
 </ol>
 <h4 id="real-world-example">Real-World Example</h4>
 <p>Stripe&#39;s payment API accepts an <code>Idempotency-Key</code> header. If you call Stripe twice with the same key, you get the same result without a second charge. Their servers store the first response keyed by your idempotency key and return it on replay.</p>
@@ -6915,6 +6646,11 @@ VALUES (&#39;payment_service&#39;, &#39;order_123_payment_attempt_1&#39;, NOW())
 <h4 id="when-to-retry">When to Retry</h4>
 <p>Retry only for <strong>transient failures</strong>: timeouts, HTTP 429 rate limit responses, temporary service unavailability.</p>
 <p>Do not retry <strong>permanent failures</strong>: invalid payload, business rule violation, message too large. These will never succeed and will tie up the consumer.</p>
+<p>Practical classifier:</p>
+<ul>
+<li>Retry: network timeout, 5xx, 429, transient broker/network errors.</li>
+<li>No retry: schema validation failure, missing required business fields, authorization failure.</li>
+</ul>
 <h4 id="exponential-backoff-with-jitter">Exponential Backoff with Jitter</h4>
 <p>A naive retry-immediately strategy causes <strong>retry storms</strong>: all consumers hit the same degraded service simultaneously, making recovery impossible.</p>
 <p>The solution is exponential backoff with jitter:</p>
@@ -7010,6 +6746,7 @@ attempt 5: wait 16s + random(0–8s)
 <li><strong>Scale consumers</strong> — add more consumer instances (add more partitions first if at capacity).</li>
 <li><strong>Throttle producers</strong> — if consumers cannot keep up, slow down ingestion via backpressure signals.</li>
 <li><strong>Prioritize queues</strong> — route critical events to separate high-priority topics consumed by dedicated workers.</li>
+<li><strong>Apply load shedding</strong> — if lag threatens critical SLOs, drop or sample non-critical traffic first.</li>
 </ol>
 <hr>
 <h3 id="part-7-the-outbox-pattern-solving-dual-write-intermediate-advanced">Part 7 — The Outbox Pattern: Solving Dual-Write (Intermediate → Advanced)</h3>
@@ -7045,7 +6782,7 @@ COMMIT;
 <ul>
 <li>If the DB transaction succeeds, the event will eventually be published (at-least-once).</li>
 <li>If the DB transaction fails, no event is published (atomicity).</li>
-<li>Database and event stream are always consistent.</li>
+<li>Database and event stream are eventually consistent, with no permanent dual-write gap.</li>
 </ul>
 <h4 id="cdc-based-outbox-production-scale">CDC-Based Outbox (Production Scale)</h4>
 <p>At high volume, polling the outbox table adds database load. Production systems use <strong>Change Data Capture (CDC)</strong> with Debezium:</p>
@@ -7089,18 +6826,18 @@ CORRECT:
 </thead>
 <tbody><tr>
 <td>Backward compatible</td>
-<td>New schema can read old data</td>
-<td>Add optional fields, remove fields</td>
+<td>New consumers can read old messages</td>
+<td>Add optional fields; avoid removing required fields</td>
 </tr>
 <tr>
 <td>Forward compatible</td>
-<td>Old schema can read new data</td>
-<td>Add fields with defaults</td>
+<td>Old consumers can read new messages</td>
+<td>Add fields only with safe defaults/optional semantics</td>
 </tr>
 <tr>
 <td>Full compatible</td>
-<td>Both directions</td>
-<td>Only add optional fields with defaults</td>
+<td>Both directions hold</td>
+<td>Add optional fields with defaults; avoid renames/removals</td>
 </tr>
 </tbody></table></div>
 <p><strong>E-commerce example:</strong> Adding <code>discount_code</code> to <code>order_created</code> is backward-compatible — old consumers ignore it. Removing <code>total</code> is not — old consumers that read <code>total</code> will break.</p>
@@ -7193,7 +6930,7 @@ Read Path:   Query   → Read Projection (pre-computed from events)
 <h4 id="amazon-sqs-sns">Amazon SQS / SNS</h4>
 <p>Managed services with zero operational overhead.</p>
 <ul>
-<li><strong>SQS</strong> — standard queue (at-least-once) or FIFO queue (exactly-once within the queue, strict order).</li>
+<li><strong>SQS</strong> — standard queue (at-least-once) or FIFO queue (ordered with deduplication window).</li>
 <li><strong>SNS</strong> — pub/sub fan-out to SQS queues, Lambda, HTTP endpoints.</li>
 </ul>
 <p><strong>Strengths:</strong> No infrastructure to manage, auto-scaling, pay-per-use, tight AWS integration.</p>
@@ -7241,9 +6978,9 @@ Read Path:   Query   → Read Projection (pre-computed from events)
 </tr>
 <tr>
 <td>Exactly-once within pipeline</td>
-<td>✓ (transactions)</td>
+<td>✓ (transactions, scoped)</td>
 <td>✗</td>
-<td>✓ (FIFO)</td>
+<td>Partial (dedup window + consumer idempotency still required)</td>
 </tr>
 </tbody></table></div>
 <hr>
@@ -7426,6 +7163,8 @@ POST /v1/dlq/{topic}/replay              -- replay DLQ messages
 <li><strong>Partition skew</strong> — alert if any partition is &gt; 2× average message rate</li>
 <li><strong>Error rate</strong> — alert if consumer error rate &gt; 1%</li>
 <li><strong>Broker disk usage</strong> — alert at 70% capacity</li>
+<li><strong>Consumer rebalance duration</strong> — alert if rebalances exceed expected deployment window</li>
+<li><strong>Retry-to-DLQ ratio</strong> — alert on sudden spikes (often indicates upstream regression)</li>
 </ol>
 <h4 id="slo-definition">SLO Definition</h4>
 <p>Define SLOs per topic class:</p>
@@ -7459,6 +7198,17 @@ POST /v1/dlq/{topic}/replay              -- replay DLQ messages
 <li><strong>DLQ replay runbook</strong> — identify error signature, fix root cause, replay with dry-run first, replay in batches with monitoring.</li>
 <li><strong>Broker node failure runbook</strong> — verify replicas are in-sync, allow rebalancing to complete, add replacement node.</li>
 <li><strong>Schema rollback runbook</strong> — if incompatible schema deployed, redeploy with compatible version, do not delete old schema registry entries.</li>
+</ol>
+<h4 id="pre-production-readiness-checklist">Pre-Production Readiness Checklist</h4>
+<p>Before shipping an event-driven workflow to production, verify:</p>
+<ol>
+<li>Every side-effect consumer has idempotency keys and dedup constraints.</li>
+<li>Retry policy distinguishes transient vs permanent failures.</li>
+<li>DLQ replay tooling exists and is tested in staging.</li>
+<li>Outbox (or CDC equivalent) is in place for all producer writes that also emit events.</li>
+<li>Schema compatibility mode is enforced in CI/CD.</li>
+<li>Dashboards include publish latency, lag, DLQ depth, error rate, and partition skew.</li>
+<li>At least one chaos test has been executed and documented.</li>
 </ol>
 <h4 id="chaos-engineering">Chaos Engineering</h4>
 <ol>
@@ -9275,10 +9025,21 @@ Read:   shard = random.randint(0, 9)
 <p><strong>Decision heuristic:</strong> If a managed service covers 90% of your requirements and the remaining 10% can be worked around, use managed. A self-managed cache control plane requires 3–5 dedicated engineers to maintain safely — that cost is rarely justified below significant scale.</p>
 <hr>
 <h2 id="chapter-15-designing-an-auto-complete-engine">Chapter 15: Designing an Auto-Complete Engine</h2>
+<h3 id="60-second-interview-summary">60-Second Interview Summary</h3>
+<p>Build autocomplete as an in-memory, sharded trie with top-K suggestions precomputed at each prefix node. Keep the serving path short: client -&gt; web tier -&gt; Redis -&gt; trie shard on cache miss. Route misses with consistent hashing, keep shard replicas for failover, and refresh ranking signals every 15 minutes from query logs. This gives sub-10 ms p99 latency with high availability while keeping operational complexity manageable.</p>
 <h3 id="what-problem-are-we-solving">What Problem Are We Solving?</h3>
 <p>Auto-complete is the feature where a search box shows suggestions as you type. You type <code>&quot;Dub&quot;</code> and see <code>Dubai</code>, <code>Dublin</code>, <code>Dubrovnik</code> appear instantly — before you finish the word.</p>
 <p><strong>Why is this hard?</strong> Every single keystroke fires a query. At 1,000 users typing simultaneously, that is thousands of sub-10 ms requests per second. A normal database query takes 20–100 ms. A disk seek takes ~10 ms. Neither can keep up. We need a completely different approach.</p>
 <p><strong>Real-world scale:</strong> Google&#39;s autocomplete serves billions of queries per day at under 5 ms median latency. Amazon shows product suggestions as you type in the search box. Airbnb completes destination names. Spotify completes song and artist names. All of these use the same core architecture this chapter walks through.</p>
+<h3 id="scope-and-assumptions-for-this-design">Scope and Assumptions (For This Design)</h3>
+<p>To keep the chapter focused, we explicitly scope what this system does and does not do:</p>
+<ul>
+<li><strong>In scope:</strong> Exact prefix suggestions, popularity-based ranking, locale-aware results, high availability.</li>
+<li><strong>Out of scope:</strong> Full-text relevance ranking, typo correction on the hot path, semantic retrieval, and user-level personalization inside the trie.</li>
+<li><strong>Latency budget:</strong> End-to-end p99 under 10 ms for suggestion API calls.</li>
+<li><strong>Serving model:</strong> Trie is memory-resident on indexer shards; web tier is stateless.</li>
+</ul>
+<p>This scope is intentionally strict because system design interviews reward clear boundaries and explicit trade-offs.</p>
 <hr>
 <h3 id="the-core-insight-why-a-trie">The Core Insight: Why a Trie?</h3>
 <p>Before jumping into the full system, you need to understand the key data structure: the <strong>trie</strong> (pronounced &quot;try,&quot; short for re<strong>trie</strong>val tree).</p>
@@ -9418,6 +9179,7 @@ class Trie:
 <li><strong>Bandwidth:</strong> 1,000 QPS × ~1 KB per response = ~1 MB/s egress. Negligible.</li>
 <li><strong>Popularity pipeline:</strong> 1,000 QPS query logs × 100 bytes/log = ~100 KB/s. A batch job every 15 minutes processes ~90 MB of logs — easily fits within a single-node Spark job.</li>
 </ol>
+<p><strong>Consistency note:</strong> We treat a &quot;shard&quot; as a <strong>logical primary partition</strong>. With replication factor 2, each logical shard has one primary and one replica.</p>
 <hr>
 <h3 id="data-model">Data Model</h3>
 <p>Three tables persist the data; the trie itself lives in memory (not a table).</p>
@@ -9568,7 +9330,8 @@ Content-Type: application/json
   &quot;prefix&quot;: &quot;dub&quot;,
   &quot;user_id&quot;: &quot;u_123&quot;,
   &quot;locale&quot;: &quot;en-US&quot;,
-  &quot;limit&quot;: 10
+  &quot;limit&quot;: 10,
+  &quot;request_id&quot;: &quot;d0f4e3d8-7bc7-4b56-92b7-8a6f0be6be9e&quot;
 }
 </code></pre></div>
 <p><strong>Response:</strong></p>
@@ -9580,10 +9343,18 @@ Content-Type: application/json
     {&quot;text&quot;: &quot;Dubrovnik&quot;, &quot;score&quot;: 0.74}
   ],
   &quot;latency_ms&quot;: 3,
-  &quot;cache_hit&quot;: true
+  &quot;cache_hit&quot;: true,
+  &quot;model_version&quot;: &quot;pop-v3.2&quot;
 }
 </code></pre></div>
 <p><strong>Why POST instead of GET?</strong> The prefix could be long, contain Unicode characters, or carry user context (locale, A/B test group). POST bodies handle all of this cleanly. GET with query parameters works for simple cases but breaks with complex Unicode in some HTTP clients.</p>
+<p><strong>Validation and limits:</strong></p>
+<ul>
+<li><code>prefix</code> length: 1 to 64 Unicode code points after normalization.</li>
+<li><code>limit</code>: 1 to 20 (default 10).</li>
+<li>Unsupported locale falls back to the product default locale.</li>
+<li>Rate-limit by user/IP to protect shards from abusive traffic.</li>
+</ul>
 <hr>
 <h3 id="memory-vs-disk-why-everything-must-be-in-ram">Memory vs. Disk: Why Everything Must Be In RAM</h3>
 <p>This is the single most important architectural decision in the chapter.</p>
@@ -9629,7 +9400,7 @@ Web Server 1    Web Server 2   ... (stateless; handles locale re-ranking)
   │
   │  (cache miss → consistent hash on prefix → target shard)
   │
-Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
+Indexer Shard 1   Shard 2   ...  Shard 8   (logical shards; trie in RAM)
   ├── Replica A                              (replication factor = 2)
   └── Replica B
          │
@@ -9654,6 +9425,44 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 <li>Web server writes result back to Redis cache (TTL = 15 minutes); returns to client.</li>
 </ol>
 <p><strong>Total latency on cache miss:</strong> ~3–8 ms (trie lookup ~1 ms + network round trip ~2–5 ms + re-ranking ~1 ms).</p>
+<h3 id="latency-budget-p99">Latency Budget (P99)</h3>
+<p>Define a budget per stage so the 10 ms target is enforceable:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Budget (ms)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Client -&gt; LB -&gt; Web</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Redis lookup (hit path)</td>
+<td>0.8</td>
+</tr>
+<tr>
+<td>Web -&gt; Indexer RPC (miss path)</td>
+<td>2.0</td>
+</tr>
+<tr>
+<td>Trie traversal + top-K read</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Re-ranking + serialization</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>Tail slack</td>
+<td>3.2</td>
+</tr>
+<tr>
+<td><strong>Total P99 budget</strong></td>
+<td><strong>10.0</strong></td>
+</tr>
+</tbody></table></div>
 <hr>
 <h3 id="sharding-strategy">Sharding Strategy</h3>
 <p>2 TB of trie data cannot fit on one machine. You need to distribute (shard) it. Three approaches:</p>
@@ -9681,7 +9490,7 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 <td>Even load; only adjacent keys migrate when a node is added or removed</td>
 </tr>
 </tbody></table></div>
-<p>Consistent hashing is covered in depth in Chapter 13. The key property here: when you add a 17th indexer node, only ~6% of keys migrate (those that fall between the new node and its predecessor on the ring). You do not need to rebuild the entire trie.</p>
+<p>Consistent hashing is covered in depth in Chapter 13. The key property here: when you add a 9th logical shard, only about $\frac{1}{9} \approx 11%$ of keys migrate (those that fall between the new node and its predecessor on the ring). You do not need to rebuild the entire trie.</p>
 <p>Each shard is replicated to 2 nodes. On shard failure, the replica takes over immediately with no rebuild required.</p>
 <hr>
 <h3 id="popularity-pipeline-keeping-rankings-fresh">Popularity Pipeline: Keeping Rankings Fresh</h3>
@@ -9800,6 +9609,16 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 <td>One shard gets 100× normal traffic for a viral term</td>
 <td>Cache layer absorbs this; if cache is cold, rate-limit per-prefix at the web server tier</td>
 </tr>
+<tr>
+<td>Bad ranking deploy</td>
+<td>Relevance drops quickly</td>
+<td>Canary rollout (1-5%), CTR guardrails, and one-click rollback</td>
+</tr>
+<tr>
+<td>Redis or shard transient outage</td>
+<td>Timeout spikes</td>
+<td>Serve stale cache or global defaults before failing empty</td>
+</tr>
 </tbody></table></div>
 <hr>
 <h3 id="cost-model-2">Cost Model</h3>
@@ -9813,8 +9632,8 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 </thead>
 <tbody><tr>
 <td>16 × Indexer Nodes</td>
-<td>r5.2xlarge (64 GB RAM each)</td>
-<td>~$4,800</td>
+<td>r6i.8xlarge (256 GB RAM each)</td>
+<td>~$23,200</td>
 </tr>
 <tr>
 <td>2 × Web Servers</td>
@@ -9844,11 +9663,11 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 <tr>
 <td><strong>Total at 1 K QPS</strong></td>
 <td></td>
-<td><strong>~$6,020/month</strong></td>
+<td><strong>~$24,420/month</strong></td>
 </tr>
 </tbody></table></div>
-<p><strong>Scaling to 10 K QPS:</strong> Add more web servers (<del>$300) and cache nodes (</del>$700). Indexer nodes do NOT need to grow — they scale with data volume, not query volume. Total at 10 K QPS: ~$7,000/month.</p>
-<p><strong>Key insight:</strong> The caching layer is what makes this economical. Without Redis, 10 K QPS would require 10× more indexer nodes (~$48,000/month for indexers alone). The $720 cache cluster saves ~$40,000/month.</p>
+<p><strong>Scaling to 10 K QPS:</strong> Add more web servers (<del>$300) and cache nodes (</del>$700). Indexer nodes do NOT need to grow — they scale with data volume, not query volume. Total at 10 K QPS: ~$25,400/month.</p>
+<p><strong>Key insight:</strong> Memory dominates cost. The cache layer still materially reduces indexer CPU pressure and tail latency, but the primary bill driver is the RAM footprint of the trie fleet.</p>
 <hr>
 <h3 id="operations-playbook">Operations Playbook</h3>
 <p><strong>Day-to-day monitoring:</strong></p>
@@ -9868,6 +9687,13 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 </ol>
 <p><strong>Index rebuild drill (quarterly):</strong><br>Simulate a full node restart from S3. Time-to-serve-first-query should be &lt; 5 minutes. This validates the S3 snapshot is current and the rebuild pipeline works before you need it in production.</p>
 <p><strong>A/B testing ranking changes:</strong><br>The re-ranking logic lives in the web server layer — completely separate from the trie. To test a new ranking algorithm: route 5% of traffic to web servers running the new algorithm; compare click-through rates. No trie modification needed.</p>
+<h3 id="correctness-guardrails">Correctness Guardrails</h3>
+<ul>
+<li>Normalize text before both cache key creation and trie lookup to avoid duplicate representations.</li>
+<li>Keep work bounded: fixed top-K, fixed timeout budget, and maximum response size.</li>
+<li>Propagate <code>request_id</code> through logs and tracing for fast incident debugging.</li>
+<li>Define fallback order clearly: fresh cache -&gt; shard result -&gt; stale cache -&gt; global defaults.</li>
+</ul>
 <hr>
 <h3 id="system-evolution-year-1-to-year-3">System Evolution: Year 1 to Year 3</h3>
 <div class="table-wrap"><table>
@@ -9880,7 +9706,7 @@ Indexer Shard 1   Shard 2   ...  Shard 16   (trie in RAM)
 </thead>
 <tbody><tr>
 <td><strong>Year 1</strong></td>
-<td>16 indexer nodes, batch popularity updates, English-only. Cache hit rate ~90%. Serves 1 K QPS.</td>
+<td>8 logical shards (16 indexer nodes with RF=2), batch popularity updates, English-only. Cache hit rate ~90%. Serves 1 K QPS.</td>
 <td>Launch with simplest thing that meets SLA. Operational debt is low.</td>
 </tr>
 <tr>
@@ -9927,6 +9753,14 @@ Compressed:     root → &quot;auto&quot; → &quot;complete&quot;       (2 node
 <li><strong>Reduce recall</strong> — serve top-5 suggestions instead of top-10. Halves the trie node annotation storage with minimal user-visible impact. Most users click the first 1–3 results anyway.</li>
 <li><strong>Increase staleness</strong> — update popularity scores every hour instead of every 15 minutes. No memory impact but reduces freshness.</li>
 <li><strong>Trade latency last</strong> — the 10 ms SLA exists because users perceive delays above 100 ms. Violating P99 latency has direct UX impact; avoid trading this unless all other options are exhausted.</li>
+</ol>
+<hr>
+<h3 id="what-interviewers-usually-probe-next">What Interviewers Usually Probe Next</h3>
+<ol>
+<li><strong>Multilingual correctness:</strong> How are normalization, case folding, and locale ranking handled?</li>
+<li><strong>Personalization boundary:</strong> Why does personalization happen in re-ranking rather than inside the trie?</li>
+<li><strong>Failure behavior:</strong> What does the API return during partial outages?</li>
+<li><strong>Measurement:</strong> Which SLOs and business guardrails prove the system is healthy?</li>
 </ol>
 <hr>
 <h2 id="chapter-16-designing-a-scalable-notification-service">Chapter 16: Designing a Scalable Notification Service</h2>
@@ -12046,164 +11880,134 @@ for each event x:
 <p><strong>Detection:</strong> Track <code>events_per_second</code> per Kafka partition. Alert when any partition exceeds <code>3× average</code>. This is a leading indicator that triggers intervention before the processor falls behind.</p>
 <p><strong>Mitigation:</strong> Implement sub-key splitting at the ingestion layer. Route all events for the hot item <code>viral_song_xyz</code> to a dedicated set of partitions using a random sub-key suffix: <code>viral_song_xyz_0</code> through <code>viral_song_xyz_9</code>. Each partition is processed independently. The global aggregator sums the sub-key counts: <code>total_count(&quot;viral_song_xyz&quot;) = sum(count(&quot;viral_song_xyz_0&quot;), ..., count(&quot;viral_song_xyz_9&quot;))</code>. This splits the hot key&#39;s load across 10 partitions without changing the rest of the pipeline. The sub-key mapping must be idempotent and stored in the routing configuration so replays produce the same routing decisions.</p>
 <hr>
-<h2 id="chapter-19-url-shortener-and-pastebin">Chapter 19: URL Shortener &amp; Pastebin</h2>
-<h3 id="the-core-problem-two-asymmetric-workloads">The Core Problem: Two Asymmetric Workloads</h3>
-<p>A URL shortener does two things:</p>
-<ol>
-<li><strong>Shorten (write):</strong> <code>https://example.com/very/long/path?tracking=123&amp;source=newsletter</code> → <code>sho.rt/aZ81kQ</code></li>
-<li><strong>Redirect (read):</strong> When someone clicks <code>sho.rt/aZ81kQ</code>, their browser instantly goes to the original URL.</li>
-</ol>
-<p>The fundamental asymmetry: you create each link <strong>once</strong>, but it may be clicked <strong>millions of times</strong>. A marketing email to 5 million subscribers that contains a link will generate millions of near-simultaneous redirects within minutes of send time. The read path must be extraordinarily fast. The write path can afford slightly more latency.</p>
-<p><strong>The caching insight:</strong> The <code>code → original URL</code> mapping is <strong>immutable</strong> once created — the short code never changes its target. This makes it a perfect candidate for aggressive caching at every layer: CDN edge caches, Redis, and even browser caches (with 301 redirects).</p>
-<p><strong>Pastebin</strong> is a URL shortener where the &quot;destination&quot; is a text blob (code snippet, log file, configuration, error trace) instead of a URL. The same short-code system applies; the difference is the redirect service instead returns content directly.</p>
+<h2 id="chapter-19-url-shortener-and-pastebin">Chapter 19: URL Shortener and Pastebin</h2>
+<h3 id="the-core-problem-2">The Core Problem</h3>
+<p>A URL shortener stores a mapping from a short code to a long destination URL:</p>
+<ul>
+<li>Create: <code>https://example.com/products/launch?campaign=spring-sale</code> -&gt; <code>sho.rt/aZ81kQ</code></li>
+<li>Read: <code>GET /aZ81kQ</code> -&gt; redirect the browser to the original URL</li>
+</ul>
+<p>Pastebin solves a closely related problem. Instead of mapping <code>code -&gt; long URL</code>, it maps <code>code -&gt; text content</code>. The short-code system, caching strategy, and metadata management are similar; the main difference is what happens on the read path:</p>
+<ul>
+<li>URL shortener: return an HTTP redirect</li>
+<li>Pastebin: return the stored content directly</li>
+</ul>
+<p>These systems are interesting because the workloads are asymmetric:</p>
+<ul>
+<li>A link or paste is usually created once.</li>
+<li>It may be read millions of times.</li>
+</ul>
+<p>That asymmetry pushes the design toward a very fast read path, aggressive caching, and asynchronous background processing for everything that is not strictly required to serve the user immediately.</p>
+<hr>
 <h3 id="beginners-mental-model">Beginner&#39;s Mental Model</h3>
-<p>Think of a URL shortener as a <strong>phone book in reverse</strong>:</p>
+<p>Think of the system as a highly optimized dictionary:</p>
 <ul>
-<li>Normal phone book: name → number</li>
-<li>URL shortener: short code → long URL</li>
+<li>Input key: short code such as <code>aZ81kQ</code></li>
+<li>Value: either a long URL or a text blob</li>
 </ul>
-<p>The short code is like a room number in a hotel: short, easy to say, but the hotel&#39;s front desk (your redirect service) knows exactly which room (URL) it maps to.</p>
-<p><strong>301 vs 302 — the fundamental tradeoff:</strong></p>
+<p>For URL shortening, the critical operation is not creating the entry. It is resolving the key during every click. That means the most important design question is:</p>
+<p><strong>How do we make <code>code -&gt; target</code> lookup extremely fast and extremely reliable?</strong></p>
+<p>Everything else, such as analytics, abuse detection, QR generation, and cleanup of expired records, should stay off the critical path whenever possible.</p>
+<hr>
+<h3 id="why-url-shortener-and-pastebin-are-grouped-together">Why URL Shortener and Pastebin Are Grouped Together</h3>
+<p>The two products share most of the same design building blocks:</p>
 <ul>
-<li><code>301 Moved Permanently</code> → browser caches this forever, CDN caches it → near-zero redirect latency from cache, but you <strong>lose all analytics</strong> on repeat clicks</li>
-<li><code>302 Found</code> (temporary) → every click reaches your servers → you <strong>capture every click for analytics</strong>, but must handle all traffic</li>
+<li>short unique identifiers</li>
+<li>metadata storage</li>
+<li>optional expiry</li>
+<li>ownership and deletion controls</li>
+<li>read-heavy traffic patterns</li>
+<li>abuse and rate-limiting concerns</li>
 </ul>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Use <code>301</code> when</th>
-<th>Use <code>302</code> when</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Link is permanent, analytics not needed</td>
-<td>Analytics must capture every click</td>
-</tr>
-<tr>
-<td>Link is in a cacheable context (CDN-heavy distribution)</td>
-<td>Link is temporary or has expiry</td>
-</tr>
-<tr>
-<td>You want to minimize origin server load</td>
-<td>You need to track unique visitors, referrers, devices</td>
-</tr>
-</tbody></table></div>
-<h3 id="real-world-examples-4">Real-World Examples</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Service</th>
-<th>Primary Use</th>
-<th>Scale</th>
-<th>Differentiation</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>TinyURL</strong></td>
-<td>General purpose link shortening</td>
-<td>Billions of links</td>
-<td>Oldest, most recognized</td>
-</tr>
-<tr>
-<td><strong>bit.ly</strong></td>
-<td>Marketing analytics</td>
-<td>Millions of links/day</td>
-<td>Rich click analytics, brand links</td>
-</tr>
-<tr>
-<td><strong>t.co</strong> (Twitter)</td>
-<td>Every URL in tweets</td>
-<td>Trillions of redirects</td>
-<td>Security scanning, malware detection</td>
-</tr>
-<tr>
-<td><strong>goo.gl</strong> (deprecated)</td>
-<td>Google services</td>
-<td>Billions of links</td>
-<td>QR code generation, AMP support</td>
-</tr>
-<tr>
-<td><strong>Pastebin</strong></td>
-<td>Code/text sharing</td>
-<td>20M+ pastes/month</td>
-<td>Syntax highlighting, expiry</td>
-</tr>
-<tr>
-<td><strong>GitHub Gist</strong></td>
-<td>Code snippet sharing</td>
-<td>Millions of gists</td>
-<td>Git-backed, forkable, versioned</td>
-</tr>
-</tbody></table></div>
+<p>They differ in one important way:</p>
+<ul>
+<li>URL shortener stores a small pointer and returns a redirect</li>
+<li>Pastebin may store a large payload and returns content directly</li>
+</ul>
+<p>This difference changes the storage layer and caching policy, but not the overall architecture style.</p>
 <hr>
 <h3 id="functional-requirements-5">Functional Requirements</h3>
 <ol>
-<li><strong>URL shortening:</strong> Given a long URL, return a unique short code.</li>
-<li><strong>Redirect:</strong> <code>GET /{code}</code> resolves to the original URL with an HTTP redirect.</li>
-<li><strong>Custom vanity aliases:</strong> Users may supply a preferred slug (e.g., <code>sho.rt/my-product-launch</code>).</li>
-<li><strong>TTL / expiration:</strong> Links carry an optional expiry; after expiry return <code>410 Gone</code>.</li>
-<li><strong>Paste support:</strong> Accept arbitrary text blobs up to a configured maximum size.</li>
-<li><strong>Link deactivation:</strong> Owners can deactivate a link before expiry.</li>
-<li><strong>Analytics:</strong> Track redirect count, unique visitors, country, referrer, device type per link.</li>
-<li><strong>Custom domains:</strong> Enterprise users can serve short links from their own domains (e.g., <code>go.acme.com/launch</code>).</li>
-<li><strong>QR code generation:</strong> Return a QR code image for any short link.</li>
-<li><strong>Rate limiting:</strong> Prevent abuse on the creation endpoint.</li>
-<li><strong>Abuse / malware detection:</strong> Scan destination URLs and flag or block harmful links.</li>
+<li>Create a short URL for a long destination URL.</li>
+<li>Redirect <code>GET /{code}</code> to the original URL.</li>
+<li>Support optional custom aliases such as <code>sho.rt/launch-day</code>.</li>
+<li>Support optional TTL and expiry.</li>
+<li>Allow owners to deactivate links before expiry.</li>
+<li>Store and retrieve text pastes.</li>
+<li>Support analytics for redirects.</li>
+<li>Support branded custom domains such as <code>go.company.com/deal</code>.</li>
+<li>Protect the system with rate limiting and abuse detection.</li>
+<li>Optionally generate QR codes for links.</li>
 </ol>
 <hr>
 <h3 id="non-functional-requirements-5">Non-Functional Requirements</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Property</th>
+<th>Requirement</th>
 <th>Target</th>
 </tr>
 </thead>
 <tbody><tr>
 <td>Redirect latency (p99)</td>
-<td>&lt; 20 ms</td>
+<td>&lt; 20 ms on cache hit</td>
 </tr>
 <tr>
-<td>Creation latency (p99)</td>
+<td>Link creation latency (p99)</td>
 <td>&lt; 200 ms</td>
 </tr>
 <tr>
 <td>Availability</td>
-<td>99.99% (&lt; 1 hr downtime/year)</td>
+<td>99.99%</td>
 </tr>
 <tr>
 <td>Durability</td>
-<td>No link lost once creation is confirmed</td>
+<td>No confirmed link is lost</td>
 </tr>
 <tr>
 <td>Read/write ratio</td>
-<td>~100:1 (reads dominate)</td>
+<td>~100:1 or higher</td>
 </tr>
 <tr>
-<td>Scale</td>
-<td>100 M new links/day, 10 B redirects/day</td>
+<td>Analytics freshness</td>
+<td>Eventually consistent</td>
 </tr>
 <tr>
 <td>Code uniqueness</td>
-<td>No two live codes may point to different targets</td>
-</tr>
-<tr>
-<td>Analytics consistency</td>
-<td>Eventually consistent; a few seconds of lag is acceptable</td>
+<td>No active code collision</td>
 </tr>
 </tbody></table></div>
 <hr>
 <h3 id="capacity-estimation-8">Capacity Estimation</h3>
+<p>Assume:</p>
+<ul>
+<li>100 million new links per day</li>
+<li>10 billion redirects per day</li>
+<li>1 million new pastes per day</li>
+<li>average paste size of 50 KB</li>
+</ul>
+<p>Derived estimates:</p>
 <ol>
-<li><strong>Code space:</strong> Base62 with 7 characters → <code>62^7</code> ≈ 3.5 trillion codes — enough for billions of links before collision pressure.</li>
-<li><strong>Metadata storage:</strong> 100 M links/day × ~100 bytes/link → ~10 GB/day of link metadata.</li>
-<li><strong>Redirect QPS:</strong> 10 B redirects/day ÷ 86,400 sec/day ≈ 115,000 redirects/second peak. Requires aggressive caching.</li>
-<li><strong>Paste storage:</strong> 1 M pastes/day × average 50 KB = ~50 GB/day — object storage is necessary.</li>
-<li><strong>Analytics events:</strong> 115 K click events/sec × 200 bytes each → ~23 MB/s write to analytics pipeline.</li>
-<li><strong>Redis working set:</strong> Top 1% of links get 99% of traffic. 1 M active links × 200 bytes = ~200 MB — trivially fits in Redis.</li>
+<li><p><strong>Redirect traffic:</strong><br><code>10B / 86400 ~= 115K</code> redirects/sec average. Real systems must handle bursty traffic, so design for significantly higher peak.</p>
+</li>
+<li><p><strong>Link metadata storage:</strong><br>If each link record averages ~100 bytes of compact metadata, <code>100M/day</code> is about <code>10 GB/day</code> before replication and indexes.</p>
+</li>
+<li><p><strong>Paste storage:</strong><br><code>1M * 50 KB = 50 GB/day</code>, which strongly suggests object storage rather than storing all content inline in a relational database.</p>
+</li>
+<li><p><strong>Analytics volume:</strong><br>If each click event is ~200 bytes, then <code>115K events/sec</code> means roughly <code>23 MB/sec</code> of analytics ingestion on average.</p>
+</li>
+<li><p><strong>Code space:</strong><br>Base62 with 7 characters gives <code>62^7 ~= 3.5 trillion</code> possible codes, which is enough for very large scale if code allocation is managed correctly.</p>
+</li>
 </ol>
+<p>The main lesson from capacity planning is simple:</p>
+<ul>
+<li>metadata can fit in a normal database or wide-column store</li>
+<li>click analytics becomes a streaming problem</li>
+<li>pastes require a cheap and durable blob store</li>
+</ul>
 <hr>
-<h3 id="entity-design-3">Entity Design</h3>
+<h3 id="core-data-model">Core Data Model</h3>
+<p>The exact schema depends on the storage technology, but the logical entities are stable.</p>
 <p><strong>User</strong></p>
 <div class="table-wrap"><table>
 <thead>
@@ -12224,14 +12028,14 @@ for each event x:
 <td></td>
 </tr>
 <tr>
-<td><code>created_at</code></td>
-<td><code>TIMESTAMP</code></td>
-<td></td>
-</tr>
-<tr>
 <td><code>plan</code></td>
 <td><code>VARCHAR(16)</code></td>
 <td>free / pro / enterprise</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td><code>TIMESTAMP</code></td>
+<td></td>
 </tr>
 </tbody></table></div>
 <p><strong>Link</strong></p>
@@ -12246,42 +12050,27 @@ for each event x:
 <tbody><tr>
 <td><code>code</code></td>
 <td><code>VARCHAR(8)</code> PK</td>
-<td>Base62 slug</td>
+<td>short slug</td>
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td><code>UUID</code> FK → User</td>
-<td>Nullable for anonymous links</td>
+<td><code>UUID</code> FK -&gt; User</td>
+<td>nullable for anonymous links</td>
 </tr>
 <tr>
 <td><code>original_url</code></td>
 <td><code>TEXT</code></td>
-<td>up to ~2 KB</td>
+<td>destination URL</td>
 </tr>
 <tr>
 <td><code>alias</code></td>
 <td><code>VARCHAR(64)</code> UNIQUE</td>
-<td>Nullable vanity slug</td>
+<td>nullable custom slug</td>
 </tr>
 <tr>
 <td><code>custom_domain_id</code></td>
-<td><code>UUID</code> FK → CustomDomain</td>
-<td>Nullable</td>
-</tr>
-<tr>
-<td><code>created_at</code></td>
-<td><code>TIMESTAMP</code></td>
-<td>immutable after creation</td>
-</tr>
-<tr>
-<td><code>expires_at</code></td>
-<td><code>TIMESTAMP</code></td>
-<td>NULL = no expiry</td>
-</tr>
-<tr>
-<td><code>is_active</code></td>
-<td><code>BOOLEAN</code></td>
-<td>soft-delete flag</td>
+<td><code>UUID</code> FK -&gt; CustomDomain</td>
+<td>nullable</td>
 </tr>
 <tr>
 <td><code>redirect_type</code></td>
@@ -12289,9 +12078,74 @@ for each event x:
 <td>301 or 302</td>
 </tr>
 <tr>
+<td><code>is_active</code></td>
+<td><code>BOOLEAN</code></td>
+<td>soft delete / kill switch</td>
+</tr>
+<tr>
+<td><code>expires_at</code></td>
+<td><code>TIMESTAMP</code></td>
+<td>nullable</td>
+</tr>
+<tr>
 <td><code>abuse_status</code></td>
 <td><code>VARCHAR(16)</code></td>
 <td>clean / flagged / blocked</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td><code>TIMESTAMP</code></td>
+<td></td>
+</tr>
+</tbody></table></div>
+<p><strong>Paste</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>code</code></td>
+<td><code>VARCHAR(8)</code> PK</td>
+<td>same code-space concept</td>
+</tr>
+<tr>
+<td><code>owner_id</code></td>
+<td><code>UUID</code> FK -&gt; User</td>
+<td>nullable</td>
+</tr>
+<tr>
+<td><code>content_inline</code></td>
+<td><code>TEXT</code></td>
+<td>for small pastes</td>
+</tr>
+<tr>
+<td><code>storage_key</code></td>
+<td><code>TEXT</code></td>
+<td>object-store key for large pastes</td>
+</tr>
+<tr>
+<td><code>size_bytes</code></td>
+<td><code>INT</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>language</code></td>
+<td><code>VARCHAR(32)</code></td>
+<td>optional syntax highlight hint</td>
+</tr>
+<tr>
+<td><code>expires_at</code></td>
+<td><code>TIMESTAMP</code></td>
+<td>nullable</td>
+</tr>
+<tr>
+<td><code>created_at</code></td>
+<td><code>TIMESTAMP</code></td>
+<td></td>
 </tr>
 </tbody></table></div>
 <p><strong>CustomDomain</strong></p>
@@ -12310,76 +12164,26 @@ for each event x:
 </tr>
 <tr>
 <td><code>owner_id</code></td>
-<td><code>UUID</code> FK → User</td>
+<td><code>UUID</code> FK -&gt; User</td>
 <td></td>
 </tr>
 <tr>
 <td><code>domain</code></td>
 <td><code>VARCHAR(253)</code> UNIQUE</td>
-<td>e.g., <code>go.acme.com</code></td>
-</tr>
-<tr>
-<td><code>ssl_cert_arn</code></td>
-<td><code>TEXT</code></td>
-<td>ACM certificate reference</td>
+<td>e.g. <code>go.company.com</code></td>
 </tr>
 <tr>
 <td><code>verified_at</code></td>
 <td><code>TIMESTAMP</code></td>
-<td>DNS TXT record verification</td>
+<td>set after DNS verification</td>
+</tr>
+<tr>
+<td><code>ssl_cert_ref</code></td>
+<td><code>TEXT</code></td>
+<td>certificate reference</td>
 </tr>
 </tbody></table></div>
-<p><strong>Paste</strong></p>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Type</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><code>code</code></td>
-<td><code>VARCHAR(8)</code> PK</td>
-<td>shares code-space with links</td>
-</tr>
-<tr>
-<td><code>owner_id</code></td>
-<td><code>UUID</code> FK → User</td>
-<td>Nullable</td>
-</tr>
-<tr>
-<td><code>storage_key</code></td>
-<td><code>TEXT</code></td>
-<td>S3/GCS object key for blob &gt; 64 KB</td>
-</tr>
-<tr>
-<td><code>content_inline</code></td>
-<td><code>TEXT</code></td>
-<td>Nullable — for blobs ≤ 64 KB</td>
-</tr>
-<tr>
-<td><code>size_bytes</code></td>
-<td><code>INT</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>language</code></td>
-<td><code>VARCHAR(32)</code></td>
-<td>syntax-highlight hint</td>
-</tr>
-<tr>
-<td><code>created_at</code></td>
-<td><code>TIMESTAMP</code></td>
-<td></td>
-</tr>
-<tr>
-<td><code>expires_at</code></td>
-<td><code>TIMESTAMP</code></td>
-<td></td>
-</tr>
-</tbody></table></div>
-<p><strong>ClickEvent</strong> (append-only analytics log)</p>
+<p><strong>ClickEvent</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -12395,8 +12199,8 @@ for each event x:
 </tr>
 <tr>
 <td><code>code</code></td>
-<td><code>VARCHAR(8)</code> FK → Link</td>
-<td></td>
+<td><code>VARCHAR(8)</code></td>
+<td>link code</td>
 </tr>
 <tr>
 <td><code>occurred_at</code></td>
@@ -12406,7 +12210,7 @@ for each event x:
 <tr>
 <td><code>country</code></td>
 <td><code>CHAR(2)</code></td>
-<td>geo-resolved from IP</td>
+<td>derived from IP</td>
 </tr>
 <tr>
 <td><code>referrer</code></td>
@@ -12419,12 +12223,12 @@ for each event x:
 <td>mobile / desktop / bot</td>
 </tr>
 <tr>
-<td><code>user_agent_hash</code></td>
+<td><code>visitor_hash</code></td>
 <td><code>CHAR(16)</code></td>
-<td>fingerprint for unique-visitor counting</td>
+<td>approximate unique visitor logic</td>
 </tr>
 </tbody></table></div>
-<p><strong>LinkStats</strong> (materialized counters — eventually consistent)</p>
+<p><strong>LinkStats</strong></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -12446,7 +12250,7 @@ for each event x:
 <tr>
 <td><code>unique_visitors</code></td>
 <td><code>BIGINT</code></td>
-<td>HLL-based approximation</td>
+<td>approximate is acceptable</td>
 </tr>
 <tr>
 <td><code>last_updated_at</code></td>
@@ -12455,244 +12259,324 @@ for each event x:
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="er-diagram-3">ER Diagram</h3>
-<div class="code-block"><pre><code>User ──────────&lt; Link &gt;────────────── LinkStats
-                  │
-                  └──────────────────&lt; ClickEvent
+<h3 id="high-level-architecture-4">High-Level Architecture</h3>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">Client
+  |
+  v
+CDN / Edge Cache
+  |
+  v
+Load Balancer
+  |
+  +--&gt; Creation Service ----&gt; Code Generator ----&gt; Metadata DB
+  |
+  +--&gt; Redirect Service ----&gt; Redis Cache -------&gt; Metadata DB
+  |                               |
+  |                               +--&gt; publish click event
+  |
+  +--&gt; Paste Service -------&gt; Metadata DB -------&gt; Object Storage
+  |
+  +--&gt; Analytics API -------&gt; Stats Store
+  |
+  +--&gt; QR Service -----------&gt; cacheable image output
 
-User ──────────&lt; Paste
-
-User ──────────&lt; CustomDomain ───────&lt; Link
-
-Link and Paste share the same code-space; a code is either a link or a paste, never both.
+Click events
+  |
+  v
+Kafka / Queue --&gt; Analytics Consumers --&gt; ClickEvent Store + LinkStats
 </code></pre></div>
+<p>This architecture separates the system by traffic shape:</p>
+<ul>
+<li><strong>Creation service</strong> handles relatively low write volume.</li>
+<li><strong>Redirect service</strong> handles very high read volume.</li>
+<li><strong>Paste service</strong> handles mixed metadata lookups and blob retrieval.</li>
+<li><strong>Analytics pipeline</strong> runs asynchronously so redirects remain fast.</li>
+</ul>
+<p>This separation is important because one overloaded analytics consumer should never make redirects slow.</p>
 <hr>
 <h3 id="api-design-6">API Design</h3>
-<h4 id="url-shortener">URL Shortener</h4>
+<h4 id="create-short-link">Create Short Link</h4>
 <div class="code-block"><span class="code-label">http</span><pre><code class="language-http">POST /v1/links
-Authorization: Bearer &lt;token&gt;  (optional for anonymous)
 
 {
   &quot;url&quot;: &quot;https://example.com/very/long/path?q=foo&quot;,
-  &quot;alias&quot;: &quot;my-product-launch&quot;,
+  &quot;alias&quot;: &quot;product-launch&quot;,
   &quot;ttl_seconds&quot;: 2592000,
   &quot;redirect_type&quot;: 302,
   &quot;custom_domain_id&quot;: &quot;dom_abc123&quot;
 }
+</code></pre></div>
+<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">201 Created
 
-201 Created
 {
   &quot;code&quot;: &quot;aZ81kQ&quot;,
   &quot;short_url&quot;: &quot;https://sho.rt/aZ81kQ&quot;,
-  &quot;custom_url&quot;: &quot;https://go.acme.com/my-product-launch&quot;,
   &quot;expires_at&quot;: &quot;2026-05-20T00:00:00Z&quot;,
   &quot;qr_code_url&quot;: &quot;https://api.sho.rt/v1/links/aZ81kQ/qr&quot;
 }
 </code></pre></div>
+<h4 id="redirect">Redirect</h4>
 <div class="code-block"><span class="code-label">http</span><pre><code class="language-http">GET /aZ81kQ
-→ 302 Location: https://example.com/very/long/path?q=foo
-→ 301 (if redirect_type is 301)
-→ 410 Gone (if expired or deactivated)
-→ 451 Unavailable For Legal Reasons (if abuse_status = blocked)
+-&gt; 302 Location: https://example.com/very/long/path?q=foo
+-&gt; 301 Location: ...
+-&gt; 410 Gone
+-&gt; 451 Unavailable For Legal Reasons
 </code></pre></div>
-<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">DELETE /v1/links/{code}
-Authorization: Bearer &lt;token&gt;
-→ 204 No Content
-</code></pre></div>
-<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">GET /v1/links/{code}/stats
-→ 200 OK
-{
-  &quot;code&quot;: &quot;aZ81kQ&quot;,
-  &quot;total_clicks&quot;: 142000,
-  &quot;unique_visitors&quot;: 98500,
-  &quot;top_countries&quot;: [{&quot;country&quot;: &quot;US&quot;, &quot;clicks&quot;: 80000}],
-  &quot;clicks_over_time&quot;: [{&quot;date&quot;: &quot;2026-04-19&quot;, &quot;clicks&quot;: 12000}]
-}
-</code></pre></div>
-<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">GET /v1/links/{code}/qr?size=256
-→ 200 OK  Content-Type: image/png
-(QR code image embedding https://sho.rt/aZ81kQ)
-</code></pre></div>
-<h4 id="pastebin">Pastebin</h4>
+<h4 id="create-paste">Create Paste</h4>
 <div class="code-block"><span class="code-label">http</span><pre><code class="language-http">POST /v1/pastes
+
 {
   &quot;content&quot;: &quot;package main\n\nfunc main() { ... }&quot;,
   &quot;language&quot;: &quot;go&quot;,
   &quot;ttl_seconds&quot;: 86400
 }
+</code></pre></div>
+<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">201 Created
 
-201 Created
 {
   &quot;code&quot;: &quot;xK9mPz&quot;,
   &quot;url&quot;: &quot;https://sho.rt/p/xK9mPz&quot;,
   &quot;expires_at&quot;: &quot;2026-04-21T00:00:00Z&quot;
 }
 </code></pre></div>
-<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">GET /p/{code}
-→ 200 OK  Content-Type: text/plain
-→ 410 Gone (expired)
+<h4 id="fetch-analytics">Fetch Analytics</h4>
+<div class="code-block"><span class="code-label">http</span><pre><code class="language-http">GET /v1/links/{code}/stats
 </code></pre></div>
 <hr>
-<h3 id="high-level-architecture-4">High-Level Architecture</h3>
-<div class="code-block"><pre><code>Client
-  │
-  ▼
-CDN / Edge Cache  (CloudFront / Cloudflare)
-  ├── 301 links: cached at edge indefinitely → zero origin hits after first request
-  ├── 302 links: short TTL cache (5–60 sec) → origin for each click, captures analytics
-  └── QR code images: cached at edge (immutable, long TTL)
-  │
-  │  cache miss
-  ▼
-Load Balancer  (L7, routes by path prefix)
-  │
-  ├─ /v1/links      → Creation Service  ──► Code Generator ──► Primary DB ──► Cache invalidation
-  ├─ /{code}        → Redirect Service  ──► Redis Cluster ──► Primary DB (miss)
-  ├─ /p/{code}      → Paste Service     ──► Redis ──► DB ──► S3 (large blobs)
-  ├─ /v1/*/stats    → Analytics API     ──► LinkStats table + ClickEvent store
-  └─ /v1/*/qr       → QR Service        ──► QR generation library ──► CDN cache
-  │
-  │  Redirect Service fires async click event
-  ▼
-Kafka topic: click_events
-  │
-  ▼
-Analytics Consumer  ──► Geo-resolve IP ──► ClickEvent table ──► LinkStats upsert
+<h3 id="request-flows">Request Flows</h3>
+<h4 id="1-link-creation-flow">1. Link Creation Flow</h4>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">1. Client sends long URL and optional metadata.
+2. Creation service validates URL, alias, TTL, and rate limits.
+3. Code generator creates or reserves a unique code.
+4. Metadata is written durably to the primary store.
+5. Cache may be warmed for hot links or left cold until first read.
+6. Response returns the short URL.
 </code></pre></div>
+<p>Important design point: the system must confirm creation only after durable metadata write succeeds. Otherwise a client may receive a short URL that later disappears.</p>
+<h4 id="2-redirect-flow">2. Redirect Flow</h4>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">1. Browser requests GET /aZ81kQ.
+2. CDN checks for cached redirect.
+3. On cache miss, request reaches redirect service.
+4. Redirect service checks Redis for code metadata.
+5. On Redis miss, service reads metadata DB.
+6. Service validates is_active, expires_at, and abuse_status.
+7. Service returns 301 or 302 with Location header.
+8. Service emits click event asynchronously.
+</code></pre></div>
+<p>This is the critical path. Only lookup, validation, and response generation belong here.</p>
+<h4 id="3-paste-read-flow">3. Paste Read Flow</h4>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">1. Client requests GET /p/{code}.
+2. Service resolves paste metadata from cache or DB.
+3. If small, return inline content.
+4. If large, fetch from object storage or stream it.
+5. Respect expiry and access rules.
+</code></pre></div>
+<p>The paste path is still read-heavy, but unlike redirects it may involve larger payload delivery. That is why object storage and CDN caching matter more here.</p>
 <hr>
-<h3 id="code-generation-deep-dive">Code Generation Deep-Dive</h3>
-<p>Two strategies for generating short codes:</p>
-<h4 id="strategy-1-counter-based-base62-encoding-of-distributed-id">Strategy 1: Counter-Based (Base62 encoding of distributed ID)</h4>
-<div class="code-block"><pre><code>Global counter (Redis INCR or Snowflake-style ID):
-  integer 12345678 → Base62 → &quot;5afX&quot;
-
-Characters: 0-9, a-z, A-Z (62 characters total)
-7 characters → 62^7 ≈ 3.5 trillion unique codes
+<h3 id="code-generation-strategies">Code Generation Strategies</h3>
+<p>The short code generator must satisfy three properties:</p>
+<ol>
+<li>uniqueness</li>
+<li>short human-friendly format</li>
+<li>resistance to cheap enumeration when possible</li>
+</ol>
+<p>There are two practical strategies.</p>
+<h4 id="strategy-a-counter-permutation-base62">Strategy A: Counter + Permutation + Base62</h4>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">global unique integer -&gt; reversible permutation -&gt; Base62 encoding
 </code></pre></div>
-<p>Pros: Zero collision. Predictable length growth. Sortable.<br>Cons: Sequential codes are <strong>enumerable</strong> — an attacker can crawl all short links by incrementing. Mitigate by shuffling with a bijective function (e.g., Feistel network or bit-reversal permutation).</p>
-<h4 id="strategy-2-csprng-hash-random-code">Strategy 2: CSPRNG Hash (Random code)</h4>
-<div class="code-block"><pre><code>Generate 7 random Base62 characters using CSPRNG.
-If code already exists in DB → retry with new random code.
+<p>Example:</p>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">12345678 -&gt; 93284751 -&gt; 6Mfa9
 </code></pre></div>
-<p>Pros: Non-enumerable — resistant to scraping. Each creation is independent.<br>Cons: Small but non-zero collision probability. Requires DB check on every creation.</p>
-<p><strong>Recommendation:</strong></p>
+<p>Why this works well:</p>
 <ul>
-<li>General/public links: counter-based with shuffle (predictable + collision-free + non-sequential appearance)</li>
-<li>Private/sensitive links (medical results, one-time share links): CSPRNG (enumeration-resistant)</li>
-<li>Vanity aliases: user-supplied, checked for uniqueness, reserved namespace for brand protection</li>
+<li>globally unique IDs eliminate collisions</li>
+<li>Base62 keeps codes compact</li>
+<li>reversible permutation hides obvious sequential patterns</li>
 </ul>
+<p>This is usually the best default for a general-purpose URL shortener because it is operationally simple and collision-free.</p>
+<h4 id="strategy-b-random-csprng-code-retry">Strategy B: Random CSPRNG Code + Retry</h4>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">generate random 7-char Base62 code
+if code already exists -&gt; retry
+</code></pre></div>
+<p>Why teams choose it:</p>
+<ul>
+<li>harder to enumerate</li>
+<li>independent generation across nodes</li>
+<li>good for sensitive content</li>
+</ul>
+<p>Trade-off:</p>
+<ul>
+<li>collisions are rare, but not impossible</li>
+<li>the system needs atomic insert-and-retry logic</li>
+</ul>
+<h4 id="recommendation">Recommendation</h4>
+<ul>
+<li>use <strong>counter + permutation + Base62</strong> for normal public links</li>
+<li>use <strong>random codes</strong> for security-sensitive or hard-to-enumerate shares</li>
+<li>treat <strong>vanity aliases</strong> as a separate reserved namespace</li>
+</ul>
+<p>Avoid deterministic hashing of the original URL as the primary code strategy. It creates awkward duplicate-handling behavior and still does not eliminate collision management.</p>
+<hr>
+<h3 id="caching-strategy-and-redirect-semantics">Caching Strategy and Redirect Semantics</h3>
+<p>Caching is the most important performance lever in this system because the mapping from code to destination changes rarely after creation.</p>
+<h4 id="cache-layers">Cache Layers</h4>
+<ul>
+<li><strong>CDN edge cache</strong> reduces origin traffic for very hot links.</li>
+<li><strong>Redis</strong> handles extremely fast metadata lookup for the redirect service.</li>
+<li><strong>Primary metadata store</strong> is the fallback source of truth.</li>
+</ul>
+<h4 id="301-vs-302">301 vs 302</h4>
+<p>This choice affects both performance and observability.</p>
+<ul>
+<li><p><code>301 Moved Permanently</code></p>
+<ul>
+<li>browsers and CDNs can cache aggressively</li>
+<li>lowers origin load and latency</li>
+<li>repeat clicks may never reach your service, so analytics become incomplete</li>
+</ul>
+</li>
+<li><p><code>302 Found</code></p>
+<ul>
+<li>redirects continue to hit your infrastructure</li>
+<li>supports analytics, abuse checks, and dynamic policy changes</li>
+<li>higher read load than 301</li>
+</ul>
+</li>
+</ul>
+<p>Practical default:</p>
+<ul>
+<li>use <code>302</code> by default when analytics or control matters</li>
+<li>use <code>301</code> only for truly stable permanent redirects where reduced observability is acceptable</li>
+</ul>
+<p>This is one of the most common interview trade-offs in URL shortener design, and the key is to explain the business impact, not just the HTTP semantics.</p>
+<hr>
+<h3 id="storage-choices">Storage Choices</h3>
+<p>Different data types in this system want different storage engines.</p>
+<h4 id="metadata-store">Metadata Store</h4>
+<p>Best fit:</p>
+<ul>
+<li>relational database for moderate scale and operational simplicity</li>
+<li>DynamoDB or Cassandra style key-value / wide-column store for very high-scale redirect lookup workloads</li>
+</ul>
+<p>Why:</p>
+<ul>
+<li>redirect lookups are usually single-key reads</li>
+<li>the access pattern is simple and predictable</li>
+<li>durability and availability matter more than complex joins</li>
+</ul>
+<h4 id="cache">Cache</h4>
+<p>Redis is a strong fit because:</p>
+<ul>
+<li>access is key-based</li>
+<li>latency is very low</li>
+<li>hot entries fit easily in memory</li>
+</ul>
+<h4 id="paste-content">Paste Content</h4>
+<p>Object storage is the right choice for larger pastes because:</p>
+<ul>
+<li>it is cheap and durable</li>
+<li>it avoids bloating the metadata database</li>
+<li>it handles large payloads better than a transactional metadata store</li>
+</ul>
+<p>Small pastes may still be stored inline for simplicity and faster reads.</p>
+<hr>
+<h3 id="analytics-design">Analytics Design</h3>
+<p>Analytics should be asynchronous.</p>
+<p>If analytics is written synchronously on the redirect path, then every click pays the cost of:</p>
+<ul>
+<li>event serialization</li>
+<li>network I/O</li>
+<li>potential storage or downstream service delay</li>
+</ul>
+<p>That is the wrong place to spend latency budget.</p>
+<p>A better design:</p>
+<div class="code-block"><span class="code-label">text</span><pre><code class="language-text">Redirect Service -&gt; emit click event -&gt; queue / Kafka -&gt; analytics consumers
+</code></pre></div>
+<p>The analytics pipeline can then compute:</p>
+<ul>
+<li>total clicks</li>
+<li>approximate unique visitors</li>
+<li>country distribution</li>
+<li>referrer breakdown</li>
+<li>device type distribution</li>
+<li>time-series aggregates</li>
+</ul>
+<h4 id="unique-visitor-counting">Unique Visitor Counting</h4>
+<p>Exact unique counting at large scale is expensive because it requires retaining many identifiers. In most analytics dashboards, approximate counting is acceptable.</p>
+<p>Use HyperLogLog or a similar probabilistic structure when:</p>
+<ul>
+<li>low memory usage matters</li>
+<li>a small error margin is acceptable</li>
+<li>analytics is informational rather than billing-critical</li>
+</ul>
+<h4 id="idempotency">Idempotency</h4>
+<p>Consumers must handle retries safely.</p>
+<p>Typical pattern:</p>
+<ul>
+<li>generate <code>event_id</code> at redirect time</li>
+<li>use <code>INSERT ... ON CONFLICT DO NOTHING</code> semantics in the consumer</li>
+<li>make downstream counter updates idempotent where possible</li>
+</ul>
+<p>This does not make the system magically perfect, but it makes retries safe and practical.</p>
+<hr>
+<h3 id="pastebin-specific-considerations">Pastebin-Specific Considerations</h3>
+<p>Pastebin adds a few concerns that a pure URL shortener may not need to handle as strongly:</p>
+<h4 id="content-size">Content Size</h4>
+<ul>
+<li>very small text can be stored inline</li>
+<li>larger content should live in object storage</li>
+</ul>
+<h4 id="rendering">Rendering</h4>
+<ul>
+<li>raw text response is simplest</li>
+<li>optional syntax highlighting is a presentation-layer concern and should not complicate storage design</li>
+</ul>
+<h4 id="privacy-and-abuse">Privacy and Abuse</h4>
+<ul>
+<li>some pastes may contain secrets, credentials, or malware payloads</li>
+<li>scanning and moderation are often more important than in a basic shortener</li>
+</ul>
+<h4 id="expiry">Expiry</h4>
+<p>Paste systems often rely more heavily on TTL, one-time sharing, and deletion semantics than consumer short links do.</p>
 <hr>
 <h3 id="custom-domains">Custom Domains</h3>
-<p>Enterprise users want their own branded short domains: <code>go.company.com/deal</code> instead of <code>sho.rt/deal</code>.</p>
-<p><strong>How it works:</strong></p>
-<ol>
-<li>User creates a <code>CustomDomain</code> record and verifies ownership via a DNS TXT record.</li>
-<li>User adds a CNAME pointing <code>go.company.com</code> → <code>sho.rt</code> in their DNS.</li>
-<li>A wildcard TLS certificate is provisioned (ACM) for <code>*.sho.rt</code> or per-domain cert via Let&#39;s Encrypt/ACM.</li>
-<li>The redirect service receives requests on <code>go.company.com</code>, looks up the <code>CustomDomain</code> row, and resolves the link against the same <code>Link</code> table filtered by <code>custom_domain_id</code>.</li>
-<li>Analytics are tagged with the custom domain to separate branded traffic in dashboards.</li>
-</ol>
-<hr>
-<h3 id="qr-code-generation">QR Code Generation</h3>
-<p>QR codes are generated on-demand and cached aggressively:</p>
-<div class="code-block"><pre><code>GET /v1/links/aZ81kQ/qr?size=256
-  1. Check CDN/Redis cache for qr:{code}:256
-  2. Cache hit → return cached PNG immediately
-  3. Cache miss → render QR code for https://sho.rt/aZ81kQ at 256px
-  4. Store in CDN (Cache-Control: immutable, max-age=31536000)
-  5. Return PNG
-</code></pre></div>
-<p>Since the link target is immutable, the QR code is also immutable — cache forever at CDN. QR codes can be generated using a library (e.g., <code>qrcode</code> in Python/Node.js, ZXing in Java) without any external API call.</p>
-<hr>
-<h3 id="redirect-flow-critical-path">Redirect Flow (Critical Path)</h3>
-<div class="code-block"><pre><code>1. Browser requests GET /aZ81kQ
-2. CDN edge check → HIT → return 301/302 instantly (&lt; 5 ms edge)
-3. CDN MISS → Load Balancer → Redirect Service
-4. Redirect Service: check Redis → HIT → return redirect, fire async Kafka click event
-5. Redis MISS → query DB → populate Redis with TTL → return redirect
-6. DB returns expired record → return 410 Gone
-7. Kafka consumer: geo-resolve IP, write ClickEvent, upsert LinkStats
-</code></pre></div>
-<p><strong>Target p99 latencies:</strong></p>
+<p>Custom domains are a business feature, especially for enterprise customers.</p>
+<p>Example:</p>
 <ul>
-<li>CDN cache hit: &lt; 5 ms</li>
-<li>Redis cache hit: &lt; 20 ms</li>
-<li>DB fallback: &lt; 50 ms</li>
+<li>platform URL: <code>sho.rt/sale</code></li>
+<li>branded URL: <code>go.company.com/sale</code></li>
 </ul>
-<hr>
-<h3 id="analytics">Analytics</h3>
-<p>The analytics pipeline captures every redirect asynchronously:</p>
-<ul>
-<li><strong>What we track:</strong> total clicks, unique visitors (HyperLogLog-based estimation), geographic distribution, referrer domain, device type (mobile / desktop / bot), click-over-time time series.</li>
-<li><strong>Why async:</strong> Synchronous analytics on the redirect path adds latency and couples availability. A Kafka topic absorbs bursts; the consumer processes at its own rate.</li>
-<li><strong>Exactly-once guarantee:</strong> Each <code>ClickEvent</code> has a unique <code>event_id</code>; consumer uses <code>INSERT ... ON CONFLICT DO NOTHING</code> on <code>event_id</code> before incrementing counters. Idempotent design handles Kafka consumer retries gracefully.</li>
-<li><strong>Unique visitors:</strong> Exact unique-visitor counting requires storing every user fingerprint — expensive at scale. Use <strong>HyperLogLog</strong> (Redis <code>PFADD</code>/<code>PFCOUNT</code>) for ~1% error with negligible memory. For billing-grade unique visitors, fall back to exact dedup within windows.</li>
-</ul>
-<hr>
-<h3 id="abuse-and-malware-detection">Abuse &amp; Malware Detection</h3>
-<p>t.co (Twitter&#39;s URL shortener) is one of the largest spam/malware detection systems in the world. Every link must be scanned:</p>
+<p>Typical flow:</p>
 <ol>
-<li><strong>At creation:</strong> Check the destination URL against a threat-intelligence database (Google Safe Browsing API, VirusTotal, internal blocklist). Flag suspicious links immediately; set <code>abuse_status = flagged</code>.</li>
-<li><strong>Async re-scan:</strong> A background job periodically re-scans existing links because a domain may become malicious after creation. Set <code>abuse_status = blocked</code> and return <code>451</code> on redirect.</li>
-<li><strong>User reporting:</strong> Allow users to report malicious links; feed reports into the blocklist.</li>
-<li><strong>Redirect interstitial (optional):</strong> For flagged (not yet confirmed blocked) links, show a warning page before redirecting to let users opt out.</li>
+<li>Customer creates a custom-domain record.</li>
+<li>Customer proves ownership through DNS verification.</li>
+<li>Customer points a CNAME or equivalent record to the platform.</li>
+<li>Platform provisions or attaches TLS certificates.</li>
+<li>Redirect service resolves links using both <code>Host</code> header and code.</li>
 </ol>
+<p>Design implication: the lookup key becomes closer to <code>(domain, code)</code> rather than just <code>code</code>.</p>
 <hr>
-<h3 id="trade-offs-2">Trade-Offs</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Decision</th>
-<th>Option A</th>
-<th>Option B</th>
-<th>Chosen &amp; Why</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Code generation</strong></td>
-<td>Sequential counter</td>
-<td>CSPRNG</td>
-<td><strong>Counter with shuffle</strong> for general; <strong>CSPRNG</strong> for private/sensitive links</td>
-</tr>
-<tr>
-<td><strong>301 vs 302</strong></td>
-<td>301 Permanent (browser caches)</td>
-<td>302 Temporary (every click hits servers)</td>
-<td><strong>302 by default</strong> for analytics; <strong>301 as opt-in</strong> when analytics not needed</td>
-</tr>
-<tr>
-<td><strong>Analytics path</strong></td>
-<td>Synchronous before redirect</td>
-<td>Async via Kafka</td>
-<td><strong>Async</strong> — synchronous analytics add latency and couple availability</td>
-</tr>
-<tr>
-<td><strong>Paste storage</strong></td>
-<td>Inline TEXT column in DB</td>
-<td>Object storage (S3/GCS)</td>
-<td><strong>Object storage</strong> for blobs &gt; 64 KB; inline for small pastes</td>
-</tr>
-<tr>
-<td><strong>Cache invalidation</strong></td>
-<td>TTL-only eviction</td>
-<td>TTL + active invalidation on delete</td>
-<td><strong>Both</strong> — TTL for normal expiry, active invalidation on deactivation</td>
-</tr>
-<tr>
-<td><strong>DB for redirects</strong></td>
-<td>Relational (Postgres)</td>
-<td>Key-value (DynamoDB)</td>
-<td><strong>DynamoDB / Cassandra</strong> for hot redirect path (single-key lookup, massive scale); Postgres for admin and analytics</td>
-</tr>
-<tr>
-<td><strong>Custom domains</strong></td>
-<td>Platform domain only</td>
-<td>Custom domain support</td>
-<td><strong>Custom domains</strong> needed at enterprise tier</td>
-</tr>
-</tbody></table></div>
+<h3 id="abuse-detection-and-safety">Abuse Detection and Safety</h3>
+<p>A public URL shortener will be abused unless it has explicit protections.</p>
+<p>Common threats:</p>
+<ul>
+<li>phishing destinations</li>
+<li>malware links</li>
+<li>spam campaigns</li>
+<li>brute-force creation attempts</li>
+<li>abusive or illegal paste content</li>
+</ul>
+<p>Mitigations:</p>
+<ol>
+<li>rate limit creation APIs</li>
+<li>check destinations against blocklists at creation time</li>
+<li>allow asynchronous rescans because a safe domain can become malicious later</li>
+<li>support manual reporting and takedown</li>
+<li>return <code>451</code> or a warning interstitial for blocked content where appropriate</li>
+</ol>
+<p>This is not an optional add-on at scale. It is a core platform responsibility.</p>
 <hr>
-<h3 id="failure-modes-and-mitigations-7">Failure Modes &amp; Mitigations</h3>
+<h3 id="failure-modes-and-mitigations-7">Failure Modes and Mitigations</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -12703,147 +12587,119 @@ If code already exists in DB → retry with new random code.
 </thead>
 <tbody><tr>
 <td>Code collision</td>
-<td>Two users get the same code</td>
-<td>Atomic <code>INSERT … ON CONFLICT</code>; retry with new code</td>
+<td>wrong mapping or failed creation</td>
+<td>atomic insert and retry</td>
 </tr>
 <tr>
-<td>Redis unavailable</td>
-<td>All redirects hit DB; latency spike</td>
-<td>DB handles redirect traffic at degraded latency; Redis failure is not data loss</td>
+<td>Redis outage</td>
+<td>redirect latency spike</td>
+<td>fall back to DB at degraded performance</td>
 </tr>
 <tr>
-<td>TTL cleanup lag</td>
-<td>Expired links still redirect</td>
-<td>Lazy expiry check on read (<code>expires_at &lt; NOW()</code> → 410); background sweeper purges old rows</td>
+<td>DB outage</td>
+<td>link creation and cold reads fail</td>
+<td>replication, failover, and aggressive cache survival</td>
 </tr>
 <tr>
-<td>Analytics consumer lag</td>
-<td>Stale stats</td>
-<td>Acceptable by design; stats are eventually consistent</td>
+<td>Expiry cleanup lag</td>
+<td>expired records remain stored longer</td>
+<td>enforce lazy expiry check on reads</td>
 </tr>
 <tr>
-<td>Abuse link clicks before detection</td>
-<td>User harmed by malicious redirect</td>
-<td>Async scan within seconds of creation; scan on first click if creation scan missed it</td>
+<td>Analytics lag</td>
+<td>stale dashboards</td>
+<td>acceptable eventual consistency</td>
 </tr>
 <tr>
-<td>Paste blob loss</td>
-<td>Content unavailable</td>
-<td>S3 has 11-nines durability; enable versioning against accidental deletes</td>
+<td>Abuse detection delay</td>
+<td>harmful links remain active briefly</td>
+<td>create-time scan plus fast asynchronous rescans</td>
 </tr>
 <tr>
 <td>Viral traffic spike</td>
-<td>Redis/DB overwhelmed</td>
-<td>CDN absorbs 301 traffic fully; Redis horizontal scaling; DB read replicas</td>
+<td>overloaded redirect infrastructure</td>
+<td>CDN, Redis, horizontal scaling, backpressure</td>
 </tr>
 <tr>
-<td>Custom domain misconfiguration</td>
-<td>Links return 404 for branded domain</td>
-<td>DNS verification before activation; automated HTTPS certificate renewal</td>
+<td>Object-store issue</td>
+<td>paste content unavailable</td>
+<td>retry logic, replication, durable storage configuration</td>
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="why-this-architecture-9">Why This Architecture?</h3>
-<p>The read path (redirect) must be dramatically faster than the write path (creation). The core design problem is making <code>code → target</code> lookups tiny, immutable, and cache-friendly. Everything else — analytics aggregation, abuse review, QR generation, TTL cleanup — runs off the critical path asynchronously. Separating the creation service from the redirect service lets each scale to its respective traffic shape independently.</p>
-<hr>
-<h3 id="how-much-will-it-cost-10">How Much Will It Cost?</h3>
-<p><strong>Infrastructure estimate (100 M new links/day, 10 B redirects/day — ~115 K redirects/sec peak):</strong></p>
+<h3 id="key-trade-offs">Key Trade-Offs</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
-<th>Component</th>
-<th>Spec</th>
-<th>Monthly Cost</th>
+<th>Decision</th>
+<th>Choice</th>
+<th>Why</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>CDN (CloudFront / Cloudflare)</td>
-<td>~60% of 301 traffic; 10 TB/month egress</td>
-<td>~$900</td>
+<td>Code generation</td>
+<td>counter + permutation by default</td>
+<td>simple, scalable, collision-free</td>
 </tr>
 <tr>
-<td>Redirect Service (4 × c5.xlarge, auto-scaled)</td>
-<td>~115K RPS with Redis cache</td>
-<td>~$600</td>
+<td>Sensitive sharing</td>
+<td>random codes</td>
+<td>harder to enumerate</td>
 </tr>
 <tr>
-<td>Redis Cluster (cache.r6g.large × 3)</td>
-<td>Hot code→URL cache, ~200 MB working set</td>
-<td>~$700</td>
+<td>Redirect type</td>
+<td>302 by default</td>
+<td>better analytics and operational control</td>
 </tr>
 <tr>
-<td>Primary DB (DynamoDB or RDS + 2 read replicas)</td>
-<td>100 M links/day × 100 bytes metadata</td>
-<td>~$1,500</td>
+<td>Analytics path</td>
+<td>asynchronous</td>
+<td>preserves redirect latency</td>
 </tr>
 <tr>
-<td>Creation Service (2 × c5.large)</td>
-<td>~1,200 writes/second average</td>
-<td>~$200</td>
+<td>Paste storage</td>
+<td>object store for large blobs</td>
+<td>cheaper and more durable</td>
 </tr>
 <tr>
-<td>Kafka + Analytics consumers (3-broker MSK + 2 × c5.large)</td>
-<td>115K click events/sec</td>
-<td>~$800</td>
+<td>Metadata lookup</td>
+<td>cache-first</td>
+<td>read-heavy workload demands it</td>
 </tr>
 <tr>
-<td>Object Storage (S3, paste blobs + QR images, ~1 TB/month)</td>
-<td>Standard storage + requests</td>
-<td>~$130</td>
-</tr>
-<tr>
-<td><strong>Total</strong></td>
-<td></td>
-<td><strong>~$4,830/month</strong></td>
+<td>Expiry enforcement</td>
+<td>check on read + background cleanup</td>
+<td>correctness plus operational simplicity</td>
 </tr>
 </tbody></table></div>
-<p>Cost drivers: DB read-replica and CDN egress dominate. A single viral link receiving 10 M clicks/day generates ~$50 in CDN egress alone. Redis memory is cheap relative to the latency savings.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-10">How Will Teams Maintain It?</h3>
+<h3 id="why-this-design-works">Why This Design Works</h3>
+<p>This design works because it respects the real bottleneck of the system:</p>
 <ul>
-<li>Monitor redirect p99 latency and Redis cache-hit rate (target &gt; 98%) at all times.</li>
-<li>Run TTL sweeps to reclaim storage from expired links and pastes.</li>
-<li>Watch analytics consumer lag — backlog indicates Kafka consumer needs more resources.</li>
-<li>Audit custom domain TLS certificates; automate renewal via Let&#39;s Encrypt or ACM.</li>
-<li>Run abuse scan coverage reports: what percentage of new links are scanned within 5 seconds of creation?</li>
+<li>reads dominate writes</li>
+<li>hot data is tiny and cacheable</li>
+<li>analytics is valuable but not latency-critical</li>
+<li>paste content storage is different from metadata storage</li>
 </ul>
+<p>The architecture therefore keeps the hot path narrow:</p>
+<ul>
+<li>resolve code</li>
+<li>validate policy</li>
+<li>return result</li>
+</ul>
+<p>Everything else is pushed behind queues, caches, and background workers.</p>
+<p>That is the main systems-design lesson in this chapter.</p>
 <hr>
-<h3 id="how-does-it-evolve-in-3-years-10">How Does It Evolve in 3 Years?</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Year</th>
-<th>Evolution</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Year 1</strong></td>
-<td>Basic shorten-and-redirect with TTL, soft-delete, and async click analytics.</td>
-</tr>
-<tr>
-<td><strong>Year 2</strong></td>
-<td>Analytics pipeline, Pastebin support, abuse detection, rate limiting, and QR code generation.</td>
-</tr>
-<tr>
-<td><strong>Year 3</strong></td>
-<td>Custom domains, richer analytics dashboards, enterprise SSO/audit logging, geographic routing (route US clicks to US edge, EU clicks to EU edge for GDPR compliance).</td>
-</tr>
-</tbody></table></div>
-<hr>
-<h3 id="interview-questions-and-answers-6">Interview Questions &amp; Answers</h3>
-<p><strong>Q1: When is a sequential counter acceptable for code generation, and when do you need random codes?</strong></p>
-<p>Sequential counters (Base62-encoded Snowflake IDs) are fine when: links are public content, enumeration of all links is not a security concern, and predictable sortable codes have operational value. Use random CSPRNG codes when: links are sensitive (medical results, private file shares, one-time download links), you need to prevent enumeration attacks (incrementing codes to scrape all links), or users must not be able to infer adjacent link codes. For a general consumer URL shortener, a counter with a bijective shuffle function (making codes appear random while remaining collision-free) is the best of both worlds. Never use MD5/SHA-256 truncation — the collision probability is non-trivial at scale.</p>
-<p><strong>Q2: When should redirects return 301 versus 302?</strong></p>
-<p><code>301 Moved Permanently</code> tells browsers and CDNs to cache the redirect indefinitely. Future clicks bypass your servers entirely — you lose analytics, but get near-zero redirect latency from CDN edge cache. <code>302 Found</code> means every click hits your redirect service, enabling analytics capture. <strong>Use 302 by default</strong> for any product that cares about analytics (which is almost always). Use 301 only for permanent vanity redirects where analytics are explicitly not needed — for example, a legacy domain redirect where you only care that users arrive at the new domain, not where they came from.</p>
-<p><strong>Q3: How much work should happen on the redirect path before analytics or other concerns hurt latency?</strong></p>
-<p>The redirect path should do exactly two things: <strong>code lookup</strong> and <strong>return redirect response</strong>. All analytics (click events, geo-resolution, device classification), abuse checks, and QR code generation must be async or cached. Budget: one Redis lookup targeting &lt; 5 ms, one DB fallback targeting &lt; 50 ms total p99. Any additional synchronous work adds latency to every single click, including the 115,000 redirects per second during a viral campaign. The async Kafka event can carry all context needed for analytics processing without blocking the redirect.</p>
-<p><strong>Q4: How would you handle a viral link that suddenly receives 10× expected traffic?</strong></p>
-<p>Multi-layer defense: (1) <strong>CDN absorbs 301 traffic completely</strong> — no origin hits after first edge fill. For 302 links, CDN can cache with a short TTL (5–60 sec), reducing origin load by ~80%. (2) <strong>Redis serves the hot redirect immutably</strong> — <code>code → URL</code> mapping never changes after creation, so it stays in Redis cache indefinitely; horizontal Redis scaling handles more concurrent connections. (3) <strong>DB read replicas</strong> absorb any remaining cache-miss traffic. (4) <strong>Rate-limit or sample analytics writes</strong> under extreme load — drop 1-in-10 click events at 100× traffic rather than backing up the redirect path. (5) The immutable mapping means aggressive caching is safe at every layer — no cache coherence issues.</p>
-<p><strong>Q5: How do you guarantee exactly-once analytics counting given Kafka consumer retries?</strong></p>
-<p>You cannot guarantee exactly-once cheaply across external Kafka delivery. The practical approach is <strong>idempotent consumer design</strong>: (1) Each <code>ClickEvent</code> carries a unique <code>event_id</code> generated by the redirect service before publishing to Kafka. (2) The analytics consumer uses <code>INSERT INTO click_events ... ON CONFLICT (event_id) DO NOTHING</code> before incrementing <code>total_clicks</code> in <code>LinkStats</code>. (3) For unique visitor counting using HyperLogLog, Redis <code>PFADD</code> is idempotent — adding the same fingerprint twice does not double-count. (4) Accept and document that analytics counts are <strong>best-effort eventually consistent</strong> — this is the appropriate guarantee for a click analytics system and should be explicit in the data contract with analytics consumers.</p>
-<p><strong>Q6: How do you implement custom domains without requiring users to change their entire DNS to point to your infrastructure?</strong></p>
-<p>Custom domains via <strong>CNAME delegation</strong>: the user adds a single CNAME record to their DNS pointing <code>go.company.com</code> → <code>sho.rt</code>. They keep control of their DNS provider. Your redirect service must: (1) Accept incoming requests on any hostname (using Server Name Indication / SNI), (2) Look up the <code>CustomDomain</code> row matching the <code>Host</code> header, (3) Resolve links scoped to that <code>custom_domain_id</code>, (4) Return the redirect. For TLS, use <strong>per-domain certificates via Let&#39;s Encrypt ACME protocol</strong> or <strong>AWS ACM with custom domain certificates</strong> — automate renewal. Challenge: at tens of thousands of custom domains, certificate provisioning and renewal becomes a platform-level problem, not a one-time setup.</p>
-<hr>
+<h3 id="summary">Summary</h3>
+<p>A URL shortener and Pastebin look simple on the surface, but they teach several core design principles:</p>
+<ol>
+<li>optimize for the dominant workload, not the most obvious API</li>
+<li>separate the read path from background processing</li>
+<li>choose storage by access pattern, not by habit</li>
+<li>treat abuse prevention and expiry as first-class concerns</li>
+<li>explain trade-offs in business terms, especially around caching and analytics</li>
+</ol>
+<p>If you can clearly justify code generation, caching, redirect semantics, storage separation, and asynchronous analytics, you have covered the heart of this design problem.</p>
 <h2 id="chapter-20-search-engine-design">Chapter 20: Search Engine Design</h2>
 <h3 id="the-core-problem-finding-needles-in-billions-of-haystacks-in-200-ms">The Core Problem: Finding Needles in Billions of Haystacks in 200 ms</h3>
 <p>Design a search engine that crawls documents from the web or an internal corpus, builds an inverted index, ranks results by relevance, and serves queries with low latency.</p>
@@ -12883,7 +12739,7 @@ Query &quot;redis consistency&quot;:
 </code></pre></div>
 <p>The inverted index converts &quot;scan every document&quot; → &quot;jump directly to candidates.&quot; The ranker then spends CPU only where it matters.</p>
 <hr>
-<h3 id="real-world-examples-5">Real-World Examples</h3>
+<h3 id="real-world-examples-4">Real-World Examples</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -12984,7 +12840,7 @@ Query &quot;redis consistency&quot;:
 <li><strong>Embedding storage (vector search):</strong> 1 B documents × 1,024-dimension float32 vector = ~4 TB just for embeddings.</li>
 </ol>
 <hr>
-<h3 id="entity-design-4">Entity Design</h3>
+<h3 id="entity-design-3">Entity Design</h3>
 <p><strong>Document</strong></p>
 <div class="table-wrap"><table>
 <thead>
@@ -13141,7 +12997,7 @@ Query &quot;redis consistency&quot;:
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="er-diagram-4">ER Diagram</h3>
+<h3 id="er-diagram-3">ER Diagram</h3>
 <div class="code-block"><pre><code>Document ─────────────&lt; Posting
     │
     ├─────────────────&lt; LinkEdge &gt;──────── Document
@@ -13200,7 +13056,7 @@ Online:
 <li>~80% of budget: known high-value domains, weighted by historical change rate and traffic importance</li>
 <li>~20%: discovering new URLs via outlinks from already-indexed pages and sitemap submission</li>
 </ul>
-<p><strong>Crawler politeness:</strong> Respect <code>robots.txt</code>. Rate-limit per domain (1 request/second default; negotiate <code>Crawl-delay</code>). Rotate user-agent and source IPs to avoid being blocked.</p>
+<p><strong>Crawler politeness:</strong> Respect <code>robots.txt</code>, identify the crawler with a stable user-agent, and rate-limit per domain (1 request/second default; honor <code>Crawl-delay</code> when published). Treat repeated 429/503 responses as backpressure signals and slow down rather than trying to evade blocking.</p>
 <hr>
 <h3 id="stage-2-parsing-and-canonicalization">Stage 2: Parsing and Canonicalization</h3>
 <p>After fetching raw HTML:</p>
@@ -13252,9 +13108,10 @@ Online:
 
 2. If top correction has significantly higher corpus frequency than original:
    → Show &quot;Did you mean: [correction]?&quot;
-   → Auto-apply correction (run both original and corrected queries in parallel)
+  → Auto-apply only for high-confidence cases; otherwise run the original query and show the correction as a suggestion
 </code></pre></div>
 <p><strong>Practical implementation:</strong> Use a trie or BK-tree over the vocabulary for fast edit-distance search. Do not run spell correction on every token — only tokens not found in vocabulary. Use the query log (not just documents) as the language model source — &quot;rdis&quot; is corrected to &quot;redis&quot; because millions of users search &quot;redis&quot; but almost none search &quot;rdis&quot;.</p>
+<p><strong>Serving policy:</strong> Auto-apply only very high-confidence corrections. For everything else, run the original query, surface the correction as a suggestion, and optionally run the corrected query on a shadow path for comparison.</p>
 <p><strong>Example:</strong></p>
 <div class="code-block"><pre><code>&quot;rdis consistncy&quot; →
   &quot;rdis&quot;:      candidates = {&quot;redis&quot; (ed=1), &quot;rdis&quot; (not in vocab)} → correct to &quot;redis&quot;
@@ -13268,10 +13125,10 @@ Result: &quot;Did you mean: redis consistency?&quot;
 <div class="code-block"><pre><code>term         │ postings (doc_id, term_freq, positions)
 ─────────────┼──────────────────────────────────────────────────
 &quot;redis&quot;      │ [(42, 3, [0,12,87]), (107, 1, [5]), (923, 2, [2,34])]
-&quot;consistent&quot; │ [(42, 1, [1]), (97, 4, [0,1,8,22]), (201, 2, [9,14])]
+&quot;consist&quot;    │ [(42, 1, [1]), (97, 4, [0,1,8,22]), (201, 2, [9,14])]
 &quot;cluster&quot;    │ [(107, 5, [0,1,2,3,4]), (201, 1, [11])]
 </code></pre></div>
-<p>A lookup of <code>&quot;redis consistency&quot;</code> fetches two postings lists and intersects (for AND) or unions (for OR) them, then scores each candidate document.</p>
+<p>A lookup of <code>&quot;redis consistency&quot;</code> first normalizes the query to tokens such as <code>&quot;redis&quot;</code> and <code>&quot;consist&quot;</code>, then fetches the postings lists and intersects (for AND) or unions (for OR) them before scoring each candidate document.</p>
 <h4 id="bm25-scoring-the-industry-standard">BM25 Scoring (The Industry Standard)</h4>
 <p>BM25 (Best Match 25) is the most widely used ranking function in full-text search. It scores a document <code>d</code> for query <code>q</code> as:</p>
 <p>$$\text{BM25}(d, q) = \sum_{t \in q} \text{IDF}(t) \cdot \frac{f(t, d) \cdot (k_1 + 1)}{f(t, d) + k_1 \cdot \left(1 - b + b \cdot \frac{|d|}{\text{avgDL}}\right)}$$</p>
@@ -13381,8 +13238,55 @@ Positions:
   &quot;consistency&quot; → [8, 12]
 
 Best window: [5..12] → &quot;Redis offers several consistency models. The most common is eventual consistency.&quot;
-Highlighted: &quot;Redis offers several &lt;b&gt;consistency&lt;/b&gt; models...eventual &lt;b&gt;consistency&lt;/b&gt;&quot;
+Highlighted: &quot;&lt;b&gt;Redis&lt;/b&gt; offers several &lt;b&gt;consistency&lt;/b&gt; models...eventual &lt;b&gt;consistency&lt;/b&gt;&quot;
 </code></pre></div>
+<hr>
+<h3 id="serving-path-latency-budget">Serving-Path Latency Budget</h3>
+<p>The easiest way to lose the interview is to say &quot;200 ms&quot; without showing where it goes. A realistic budget forces the architecture to stay honest:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Typical Budget</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API gateway + auth + parsing</td>
+<td>5-10 ms</td>
+</tr>
+<tr>
+<td>Query understanding + spell correction</td>
+<td>10-20 ms</td>
+</tr>
+<tr>
+<td>Broker fan-out to keyword shards</td>
+<td>20-50 ms</td>
+</tr>
+<tr>
+<td>Vector retrieval (if enabled)</td>
+<td>20-40 ms</td>
+</tr>
+<tr>
+<td>Candidate merge + ranking</td>
+<td>15-30 ms</td>
+</tr>
+<tr>
+<td>Snippet generation + response serialization</td>
+<td>10-20 ms</td>
+</tr>
+<tr>
+<td>Network tail / retries / safety margin</td>
+<td>20-40 ms</td>
+</tr>
+</tbody></table></div>
+<p>This is why most ranking features must be precomputed offline. If query-time ranking requires loading large feature sets or running heavyweight models synchronously, the p99 budget collapses immediately.</p>
+<p>Common latency controls:</p>
+<ul>
+<li>Keep hot postings lists and top ranking features in RAM.</li>
+<li>Use broker timeouts and partial-result thresholds rather than waiting for the slowest shard forever.</li>
+<li>Cache repeated head queries and shard-local postings for hot terms.</li>
+<li>Bound expensive work, for example limit ANN candidate count or snippet windows per result.</li>
+</ul>
 <hr>
 <h3 id="stage-8-ranking-signals">Stage 8: Ranking Signals</h3>
 <p>Full ranking combines offline and online signals:</p>
@@ -13522,6 +13426,18 @@ Highlighted: &quot;Redis offers several &lt;b&gt;consistency&lt;/b&gt; models...
 <li>Atomic shard swap: publish new segment file, update pointer; queries see either old or new, never partial</li>
 </ol>
 <hr>
+<h3 id="sharding-and-broker-fan-out">Sharding and Broker Fan-Out</h3>
+<p>At 1 B documents, one index node is not realistic. The corpus is partitioned into many shards, and the broker fans out each query to the relevant shard replicas.</p>
+<p><strong>Typical strategy:</strong></p>
+<ul>
+<li><strong>Document sharding:</strong> assign each document to a shard using hash(doc_id) or range partitioning.</li>
+<li><strong>Replication:</strong> keep 2-3 replicas per shard so reads can survive node failures and maintenance.</li>
+<li><strong>Scatter-gather:</strong> the broker sends the query to one healthy replica of each shard, each shard returns local top-K, and the broker merges them into global top-K.</li>
+<li><strong>Adaptive routing:</strong> for very selective filters such as language or tenant, only hit the shards that own the relevant partition.</li>
+</ul>
+<p><strong>Why local top-K works:</strong> each shard does not need to return every matching document. If the final answer is top-10, each shard can return its local top-100 or top-1000, and the broker merges those bounded heaps into a final top-10. That keeps network payloads and broker memory predictable.</p>
+<p><strong>Failure handling:</strong> if one replica is slow, the broker can hedge to another replica or degrade gracefully using partial results plus a warning metric. Search systems usually prefer slightly worse recall over a hard timeout for the whole query.</p>
+<hr>
 <h3 id="high-level-architecture-5">High-Level Architecture</h3>
 <div class="code-block"><pre><code>Seeds / Sitemaps / Sitemap APIs
         │
@@ -13603,7 +13519,7 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="trade-offs-3">Trade-Offs</h3>
+<h3 id="trade-offs-2">Trade-Offs</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -13702,11 +13618,11 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="why-this-architecture-10">Why This Architecture?</h3>
+<h3 id="why-this-architecture-9">Why This Architecture?</h3>
 <p>Search separates offline indexing from online query serving because each has incompatible performance requirements. Crawling, parsing, link-graph analysis, embedding generation, and segment merging are throughput-bound batch workloads that can afford latency. Query serving is a latency-bound interactive workload that cannot afford heavy computation. Mixing them degrades both.</p>
 <p>The inverted index is the foundational reason keyword search scales: it converts O(N) document scans into O(log N + result set size) postings list lookups. Hybrid retrieval adds semantic recall via vector search. BM25 provides robust relevance scoring with well-understood parameters. KWIC snippet generation makes results actionable without users needing to click through to understand relevance.</p>
 <hr>
-<h3 id="how-much-will-it-cost-11">How Much Will It Cost?</h3>
+<h3 id="how-much-will-it-cost-10">How Much Will It Cost?</h3>
 <p><strong>Infrastructure estimate (1 B documents, 100 K queries/second):</strong></p>
 <div class="table-wrap"><table>
 <thead>
@@ -13779,16 +13695,17 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tbody></table></div>
 <p>Vector search (GPU embedding + ANN storage) adds ~$9,500/month versus keyword-only. At early stage, defer vector search until keyword search quality plateaus.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-11">How Will Teams Maintain It?</h3>
+<h3 id="how-will-teams-maintain-it-10">How Will Teams Maintain It?</h3>
 <ul>
 <li>Monitor crawl success rate, robots.txt compliance, frontier depth, and per-domain fetch latency.</li>
 <li>Track indexing freshness SLO: time from fetch → searchable (target &lt; 5 min for high-priority domains).</li>
-<li>Measure query p50/p99 latency, zero-result rate, spell-correction accuracy, and CTR as a relevance proxy.</li>
+<li>Measure query p50/p95/p99 latency, timeout rate, zero-result rate, spell-correction acceptance rate, and CTR as relevance proxies.</li>
+<li>Track offline relevance metrics such as nDCG@10, MRR, and recall@100 on a labeled evaluation set before shipping ranking changes.</li>
 <li>Roll out ranking changes with <strong>offline evaluation</strong> (test on annotated query set) + <strong>canary traffic</strong> (5% of live traffic) before full rollout — &quot;fast but worse relevance&quot; is a regression.</li>
 <li>Maintain spam and abuse review pipelines — adversaries adapt to ranking signals continuously.</li>
 </ul>
 <hr>
-<h3 id="how-does-it-evolve-in-3-years-11">How Does It Evolve in 3 Years?</h3>
+<h3 id="how-does-it-evolve-in-3-years-10">How Does It Evolve in 3 Years?</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -13810,7 +13727,7 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="interview-questions-and-answers-7">Interview Questions &amp; Answers</h3>
+<h3 id="interview-questions-and-answers-6">Interview Questions &amp; Answers</h3>
 <p><strong>Q1: When is a classic inverted index (BM25) enough, and when does vector/semantic retrieval justify the extra complexity?</strong></p>
 <p>BM25 is sufficient when: users search with exact keywords, domain vocabulary is consistent and specialized (e.g., legal or medical systems where users know precise terms), and keyword recall is acceptable. Add vector retrieval when: queries are conversational (&quot;what causes memory leaks&quot;), synonyms and paraphrases are common and missing them causes visible quality degradation, cross-language search is needed, or user satisfaction data (CTR, reformulation rate) shows keyword-only misses are frequent. The operational cost of vector search is significant: embedding generation requires GPU inference, HNSW index at 1 B documents requires 4 TB storage, and ANN query latency adds 20–50 ms. Justify with measurable recall improvement before adding it.</p>
 <p><strong>Q2: Walk through exactly what happens from the moment a user types a query to seeing results — including spell correction, query understanding, and ranking.</strong></p>
@@ -13824,219 +13741,6 @@ Shard Builder / Segment Merger       Vector Shard Store
 <p><strong>Q6: How would you personalize search results while respecting user privacy?</strong></p>
 <p>Personalization is implemented through <strong>user feature vectors</strong> rather than raw query log replay: (1) For each user, maintain an aggregate feature vector: preferred language, location, top-10 topic categories inferred from recent clicks, preferred reading level. (2) At query time, use the user&#39;s feature vector to adjust ranking: upweight results matching preferred language, downweight topics the user historically skips, boost local results for location-sensitive queries. (3) <strong>Privacy safeguards:</strong> Store aggregate features only (not raw query text or URLs clicked). Apply differential privacy noise when computing features from small user populations. Offer a clear &quot;clear personalization history&quot; control. For GDPR compliance: process all personalization in the serving path without persisting query text beyond the session. (4) A/B test personalization: run personalized and non-personalized ranking in parallel for 5% of traffic each; measure CTR and reformulation rate to confirm personalization improves outcomes before full rollout.</p>
 <hr>
-<h2 id="glossary">Glossary</h2>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Term</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>ABAC</strong></td>
-<td>Attribute-Based Access Control. Authorization is decided from attributes such as user role, geography, project, or request context instead of only one fixed role name.</td>
-</tr>
-<tr>
-<td><strong>ACID</strong></td>
-<td>Atomicity, Consistency, Isolation, Durability. The four properties that make a relational transaction correct under concurrency and crashes.</td>
-</tr>
-<tr>
-<td><strong>API gateway</strong></td>
-<td>The entry layer that handles authentication, rate limits, routing, protocol translation, and observability for external traffic before it reaches internal services.</td>
-</tr>
-<tr>
-<td><strong>Backpressure</strong></td>
-<td>A mechanism that slows producers or sheds work when consumers or downstream systems cannot keep up.</td>
-</tr>
-<tr>
-<td><strong>B-tree</strong></td>
-<td>A balanced tree index optimized for point lookups and range scans. Common in relational databases such as Postgres and MySQL.</td>
-</tr>
-<tr>
-<td><strong>Bounded context</strong></td>
-<td>A Domain-Driven Design boundary inside which one model and vocabulary stay consistent. The same business word can mean different things in different contexts.</td>
-</tr>
-<tr>
-<td><strong>Cache-aside</strong></td>
-<td>A caching pattern where the application reads from cache first, falls back to the database on a miss, then writes the fetched value back to cache.</td>
-</tr>
-<tr>
-<td><strong>Cache stampede</strong></td>
-<td>A burst of simultaneous cache misses for the same hot key that overwhelms the backing store.</td>
-</tr>
-<tr>
-<td><strong>Canary deployment</strong></td>
-<td>A release strategy that routes a small percentage of traffic to a new version first, then ramps up gradually if latency and error rates remain healthy.</td>
-</tr>
-<tr>
-<td><strong>CAP theorem</strong></td>
-<td>In the presence of a network partition, a distributed system can guarantee at most two of consistency, availability, and partition tolerance. Since partitions are unavoidable, the practical trade-off is consistency versus availability.</td>
-</tr>
-<tr>
-<td><strong>CDC (Change Data Capture)</strong></td>
-<td>Streaming row-level data changes from a database to downstream systems so caches, search indexes, and analytics pipelines stay up to date.</td>
-</tr>
-<tr>
-<td><strong>Circuit breaker</strong></td>
-<td>A protection pattern that stops sending requests to a failing dependency until it recovers, preventing retry storms and thread exhaustion.</td>
-</tr>
-<tr>
-<td><strong>Compaction</strong></td>
-<td>The process of rewriting on-disk data to merge segments, remove deleted entries, and reclaim space. Central to LSM-tree storage engines.</td>
-</tr>
-<tr>
-<td><strong>Consistent hashing</strong></td>
-<td>A partitioning technique that minimizes key remapping when cache or storage nodes are added or removed.</td>
-</tr>
-<tr>
-<td><strong>Consumer group</strong></td>
-<td>A Kafka abstraction where multiple consumers share a topic&#39;s partitions so work is parallelized without processing the same partition twice within the same group.</td>
-</tr>
-<tr>
-<td><strong>Count-Min Sketch</strong></td>
-<td>A probabilistic data structure that estimates item frequencies with small memory use. Useful for streaming Top-K systems where exact counting is too expensive on the hot path.</td>
-</tr>
-<tr>
-<td><strong>CQRS</strong></td>
-<td>Command Query Responsibility Segregation. The write model and the read model are separated so each can be optimized independently.</td>
-</tr>
-<tr>
-<td><strong>Dead-letter queue (DLQ)</strong></td>
-<td>A queue or topic that holds messages which failed processing too many times, so one poison message does not block the whole stream.</td>
-</tr>
-<tr>
-<td><strong>Deduplication</strong></td>
-<td>Detecting and ignoring repeated requests or messages so retries do not create duplicate side effects.</td>
-</tr>
-<tr>
-<td><strong>Eventual consistency</strong></td>
-<td>A consistency model where replicas may temporarily disagree after a write but converge over time.</td>
-</tr>
-<tr>
-<td><strong>Fan-out</strong></td>
-<td>Delivering one event to many downstream consumers, such as inventory, billing, and notification services reading the same order-created event.</td>
-</tr>
-<tr>
-<td><strong>Fencing token</strong></td>
-<td>A monotonically increasing token attached to a lock or lease holder so stale owners can be rejected even if they still believe they hold the lock.</td>
-</tr>
-<tr>
-<td><strong>Gossip protocol</strong></td>
-<td>A peer-to-peer state propagation mechanism where nodes exchange membership and health information with random neighbors instead of relying on one coordinator.</td>
-</tr>
-<tr>
-<td><strong>Hot key</strong></td>
-<td>A key that receives far more traffic than average and can overload one cache node, shard, or partition.</td>
-</tr>
-<tr>
-<td><strong>Idempotency</strong></td>
-<td>A property where executing the same logical request multiple times leads to the same final outcome as executing it once.</td>
-</tr>
-<tr>
-<td><strong>Idempotency key</strong></td>
-<td>A client-supplied token that lets a server recognize retried requests and return the original result rather than processing the operation again.</td>
-</tr>
-<tr>
-<td><strong>Inverted index</strong></td>
-<td>A search index that maps each term to the set of documents containing it, enabling fast full-text lookup without scanning all documents.</td>
-</tr>
-<tr>
-<td><strong>Leader election</strong></td>
-<td>The process of choosing one node to coordinate writes or metadata for a distributed cluster.</td>
-</tr>
-<tr>
-<td><strong>LSM tree</strong></td>
-<td>A write-optimized storage engine that buffers writes in memory and flushes them to immutable disk files, later merging them through compaction.</td>
-</tr>
-<tr>
-<td><strong>mTLS</strong></td>
-<td>Mutual TLS. Both client and server present certificates so service-to-service calls are authenticated at the transport layer.</td>
-</tr>
-<tr>
-<td><strong>MVCC</strong></td>
-<td>Multi-Version Concurrency Control. Readers see a snapshot while writers create newer versions, which improves concurrency but requires cleanup of old versions.</td>
-</tr>
-<tr>
-<td><strong>Outbox pattern</strong></td>
-<td>A way to publish events reliably by writing the business change and the outbound event record in the same local database transaction, then forwarding events asynchronously.</td>
-</tr>
-<tr>
-<td><strong>PACELC</strong></td>
-<td>An extension of CAP that says systems also trade latency against consistency when there is no partition.</td>
-</tr>
-<tr>
-<td><strong>PageRank</strong></td>
-<td>A link-analysis score that estimates authority from how many other important pages link to a page. Often combined with lexical relevance in search ranking.</td>
-</tr>
-<tr>
-<td><strong>Posting list</strong></td>
-<td>The list of document identifiers stored for a term inside an inverted index. Query execution intersects posting lists for multi-term searches.</td>
-</tr>
-<tr>
-<td><strong>Quorum</strong></td>
-<td>The minimum number of replicas that must agree for a read or write to be considered successful, usually a majority.</td>
-</tr>
-<tr>
-<td><strong>Raft</strong></td>
-<td>A consensus algorithm where a leader replicates a log to followers and commits entries after a majority acknowledges them.</td>
-</tr>
-<tr>
-<td><strong>Replication lag</strong></td>
-<td>The delay between a write reaching the primary and that same write becoming visible on replicas.</td>
-</tr>
-<tr>
-<td><strong>RTO / RPO</strong></td>
-<td><code>RTO</code> is the target time to restore service after failure. <code>RPO</code> is the amount of data loss the business is willing to tolerate.</td>
-</tr>
-<tr>
-<td><strong>Saga pattern</strong></td>
-<td>A distributed transaction pattern that coordinates a sequence of local transactions and uses compensating actions when a later step fails.</td>
-</tr>
-<tr>
-<td><strong>Schema registry</strong></td>
-<td>A service that stores versioned event schemas and enforces compatibility rules so producers and consumers do not silently drift apart.</td>
-</tr>
-<tr>
-<td><strong>Service mesh</strong></td>
-<td>Infrastructure that adds mTLS, retries, traffic shaping, and observability to service-to-service calls without duplicating that logic in every application.</td>
-</tr>
-<tr>
-<td><strong>Sharding</strong></td>
-<td>Splitting data across multiple machines so storage and traffic scale horizontally.</td>
-</tr>
-<tr>
-<td><strong>SLI / SLO / SLA</strong></td>
-<td><code>SLI</code> is the measured service indicator, <code>SLO</code> is the internal target, and <code>SLA</code> is the external promise with contractual consequences.</td>
-</tr>
-<tr>
-<td><strong>Split brain</strong></td>
-<td>A failure mode where two partitions each believe they are the leader and both accept conflicting work.</td>
-</tr>
-<tr>
-<td><strong>TF-IDF</strong></td>
-<td>Term Frequency-Inverse Document Frequency. A scoring method that rewards terms frequent in one document but rare across the corpus.</td>
-</tr>
-<tr>
-<td><strong>Trie</strong></td>
-<td>A prefix tree used for efficient prefix lookups such as auto-complete suggestions. Lookup cost depends on prefix length, not total vocabulary size.</td>
-</tr>
-<tr>
-<td><strong>TTL (Time To Live)</strong></td>
-<td>The amount of time cached data, sessions, or records remain valid before expiring automatically.</td>
-</tr>
-<tr>
-<td><strong>Two-phase commit (2PC)</strong></td>
-<td>A distributed commit protocol that guarantees all participants either commit or abort together, but can block if the coordinator fails after prepare.</td>
-</tr>
-<tr>
-<td><strong>WAL (Write-Ahead Log)</strong></td>
-<td>A durability mechanism where changes are appended to a log before data pages are updated, allowing recovery after crashes.</td>
-</tr>
-<tr>
-<td><strong>WebSocket</strong></td>
-<td>A long-lived full-duplex connection between client and server, commonly used for real-time push systems, chat, and live dashboards.</td>
-</tr>
-</tbody></table></div>
 
         </article>
       </main>

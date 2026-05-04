@@ -22,6 +22,12 @@ const renderThemeToggle = () => `    <button class="atlas-topbar__theme-btn" typ
       </svg>
     </button>`;
 
+const renderThemeMenuItem = () => `        <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" data-theme-icon-moon width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-theme-label>Light Mode</span>
+        </button>`;
+
 const renderReaderControls = () => `    <div class="atlas-topbar__chapter-nav" data-topbar-chapter-nav hidden>
       <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous chapter" data-topbar-prev-chapter disabled>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -39,6 +45,8 @@ const renderReaderControls = () => `    <div class="atlas-topbar__chapter-nav" d
       <div class="atlas-topbar__dropdown" data-topbar-dropdown>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <hr class="atlas-topbar__dropdown-divider" />
+${renderThemeMenuItem()}
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-print>Print / Save PDF</button>
       </div>
@@ -66,7 +74,7 @@ const renderTopbar = ({
     .replaceAll("{{NAV_ACTIVE_CLASS}}", currentTopic ? " is-active" : "")
     .replaceAll("{{NAV_LABEL}}", escapeHtml(navLabel))
     .replaceAll("{{TOPIC_LINKS}}", topicLinks)
-    .replaceAll("{{THEME_TOGGLE}}", renderThemeToggle())
+    .replaceAll("{{THEME_TOGGLE}}", isReader ? "" : renderThemeToggle())
     .replaceAll("{{READER_CONTROLS}}", isReader ? renderReaderControls() : "");
 };
 

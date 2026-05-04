@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engineering Tutorials by Siddharth Misra — System Design, Agentic AI, DSA & More</title>
-  <meta name="description" content="Free, in-depth engineering tutorials covering System Design, Agentic AI, Data Structures & Algorithms, Coding Patterns, and Design Patterns. Written by Siddharth Misra for engineers who want to understand the why, not just copy a template." />
-  <meta name="keywords" content="system design tutorial, agentic AI tutorial, DSA tutorial, coding patterns, design patterns, software engineering, distributed systems, LLM agents, interview preparation" />
+  <title>Engineering Tutorials by Siddharth Misra — AWS, System Design, Agentic AI, DSA & More</title>
+  <meta name="description" content="Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, Data Structures & Algorithms, Coding Patterns, and Design Patterns. Written by Siddharth Misra for engineers who want to understand the why, not just copy a template." />
+  <meta name="keywords" content="AWS tutorial, cloud architecture tutorial, system design tutorial, agentic AI tutorial, DSA tutorial, coding patterns, design patterns, software engineering, distributed systems, LLM agents, interview preparation" />
   <meta name="author" content="Siddharth Misra" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://siddharth-misra.github.io/tutorials/" />
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://siddharth-misra.github.io/tutorials/" />
   <meta property="og:title" content="Engineering Tutorials by Siddharth Misra" />
-  <meta property="og:description" content="Free, in-depth engineering tutorials covering System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns. Built for engineers who want to understand the why behind every decision." />
+  <meta property="og:description" content="Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns. Built for engineers who want to understand the why behind every decision." />
   <meta property="og:site_name" content="Tutorials by Siddharth Misra" />
   <meta property="og:image" content="https://siddharth-misra.github.io/tutorials/shared/og-cover.png" />
   <meta property="og:image:width" content="1200" />
@@ -25,7 +25,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Engineering Tutorials by Siddharth Misra" />
-  <meta name="twitter:description" content="Free, in-depth engineering tutorials covering System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns." />
+  <meta name="twitter:description" content="Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns." />
   <meta name="twitter:image" content="https://siddharth-misra.github.io/tutorials/shared/og-cover.png" />
   <meta name="twitter:creator" content="@siddharthmisra" />
 
@@ -333,7 +333,7 @@
 
     .tracks {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 22px;
       margin-top: 28px;
     }
@@ -349,6 +349,10 @@
     }
 
     .track--agentic {
+      background: var(--paper);
+    }
+
+    .track--aws {
       background: var(--paper);
     }
 
@@ -491,6 +495,11 @@
     .track--agentic .track__meta::before {
       background: var(--teal);
       box-shadow: 0 0 0 6px rgba(27, 106, 103, 0.12);
+    }
+
+    .track--aws .track__meta::before {
+      background: #ff9900;
+      box-shadow: 0 0 0 6px rgba(255, 153, 0, 0.16);
     }
 
     .track__title {
@@ -650,6 +659,12 @@
       }
     }
 
+    @media (max-width: 1180px) {
+      .tracks {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
     @media (max-width: 640px) {
       .shell {
         padding-inline: 16px;
@@ -802,6 +817,7 @@
       <div class="atlas-topbar__nav-dropdown" data-nav-dropdown>
         <a class="atlas-topbar__nav-item" href="./system-design/systemdesign.html" data-topic-link>System Design</a>
         <a class="atlas-topbar__nav-item" href="./agentic-system/agentic-ai.html" data-topic-link>Agentic AI</a>
+        <a class="atlas-topbar__nav-item" href="./aws/aws.html" data-topic-link>AWS</a>
       </div>
     </div>
   </div>
@@ -832,20 +848,21 @@
           <div class="hero__text">
             <p class="eyebrow">Engineering tutorials by Siddharth Misra</p>
             <h1>From first principles to production.</h1>
-            <p class="hero__lede">Six deep tracks covering System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns — written for engineers who want to understand the <em>why</em> behind every decision, not just copy a template.</p>
+            <p class="hero__lede">Seven deep tracks covering AWS, System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns — written for engineers who want to understand the <em>why</em> behind every decision, not just copy a template.</p>
             <div class="hero__actions">
               <a class="cta cta--primary" href="./system-design/systemdesign.html">Start: System Design</a>
               <a class="cta cta--secondary" href="./agentic-system/agentic-ai.html">Start: Agentic AI</a>
+              <a class="cta cta--secondary" href="./aws/aws.html">Start: AWS</a>
             </div>
           </div>
           <div class="hero__stats">
             <div class="hero__stat">
-              <p class="hero__stat-value">6</p>
-              <p class="hero__stat-label">tracks covering the full engineering stack — from algorithms to distributed systems to autonomous AI</p>
+              <p class="hero__stat-value">7</p>
+              <p class="hero__stat-label">tracks covering cloud, distributed systems, autonomous AI, and the core engineering patterns behind them</p>
             </div>
             <div class="hero__stat">
-              <p class="hero__stat-value">2 live</p>
-              <p class="hero__stat-label">System Design and Agentic AI are complete and free to read — no account, no paywall</p>
+              <p class="hero__stat-value">3 live</p>
+              <p class="hero__stat-label">System Design, Agentic AI, and AWS are complete and free to read — no account, no paywall</p>
             </div>
             <div class="hero__stat">
               <p class="hero__stat-value">4 coming</p>
@@ -890,6 +907,24 @@
           <div class="track__footer">
             <p class="track__hint">Best starting point for engineers building LLM-powered products or autonomous workflows.</p>
             <a class="track__link" href="./agentic-system/agentic-ai.html">Read now →</a>
+          </div>
+        </article>
+
+        <article class="track track--aws">
+          <div class="track__meta">Track Three · Available now</div>
+          <h2 class="track__title">AWS</h2>
+          <p class="track__body">A production-aware AWS roadmap that starts with account setup and IAM, then moves through VPC networking, EC2, storage, managed databases, serverless, containers, observability, security, and multi-region architecture. Built for engineers who want to understand the trade-offs behind real cloud systems rather than memorize service names.</p>
+          <div class="chip-row" aria-label="AWS topics">
+            <span class="chip">VPC &amp; DNS</span>
+            <span class="chip">EC2 &amp; Load Balancing</span>
+            <span class="chip">S3, EBS &amp; EFS</span>
+            <span class="chip">RDS &amp; DynamoDB</span>
+            <span class="chip">Lambda &amp; Eventing</span>
+            <span class="chip">Security &amp; Observability</span>
+          </div>
+          <div class="track__footer">
+            <p class="track__hint">Best starting point for engineers moving into cloud architecture, platform work, or AWS-based application design.</p>
+            <a class="track__link" href="./aws/aws.html">Read now →</a>
           </div>
         </article>
       </div>
@@ -942,7 +977,7 @@
         <div class="upcoming-grid">
 
           <article class="upcoming-card upcoming-card--dsa">
-            <div class="upcoming-card__badge">Track Three</div>
+            <div class="upcoming-card__badge">Track Four</div>
             <h3 class="upcoming-card__title">Data Structures &amp; Algorithms</h3>
             <p class="upcoming-card__body">Most DSA content teaches you to pass a test. This track teaches you to think structurally — how to look at a problem, identify what data shape fits it, and reason about cost before you write a line. Covers arrays, linked lists, trees, heaps, graphs, sorting, and dynamic programming from the ground up.</p>
             <div class="chip-row" aria-label="DSA topics">
@@ -954,7 +989,7 @@
           </article>
 
           <article class="upcoming-card upcoming-card--patterns">
-            <div class="upcoming-card__badge">Track Four</div>
+            <div class="upcoming-card__badge">Track Five</div>
             <h3 class="upcoming-card__title">Coding Patterns</h3>
             <p class="upcoming-card__body">Underneath the variety of interview problems is a short list of patterns that keep recurring. Once you can name them on sight — sliding window, two pointers, fast and slow, BFS/DFS, merge intervals, backtracking — most problems become variations on something you've already solved. This track builds that recognition deliberately.</p>
             <div class="chip-row" aria-label="Coding patterns topics">
@@ -967,7 +1002,7 @@
           </article>
 
           <article class="upcoming-card upcoming-card--design">
-            <div class="upcoming-card__badge">Track Five</div>
+            <div class="upcoming-card__badge">Track Six</div>
             <h3 class="upcoming-card__title">Design Patterns</h3>
             <p class="upcoming-card__body">Gang of Four and beyond — but explained as solutions to specific engineering problems, not as abstract taxonomy. Each pattern is shown in context: what the code looked like before, what problem it creates at scale, and why the pattern resolves it. Creational, structural, behavioral, plus SOLID and composition-over-inheritance in practice.</p>
             <div class="chip-row" aria-label="Design patterns topics">
@@ -979,7 +1014,7 @@
           </article>
 
           <article class="upcoming-card upcoming-card--combined">
-            <div class="upcoming-card__badge">Track Six · Combined</div>
+            <div class="upcoming-card__badge">Track Seven · Combined</div>
             <h3 class="upcoming-card__title">DSA + Coding Patterns + Design Patterns</h3>
             <p class="upcoming-card__body">An end-to-end curriculum that treats the three tracks as one unified skill: understanding data structures, recognizing problem patterns, and applying software design principles. Built for engineers who want a single, coherent path from raw problem-solving to clean, scalable architecture — interview-ready and production-ready at the same time.</p>
             <div class="chip-row" aria-label="Combined track topics">
@@ -1005,7 +1040,7 @@
     "@type": "WebSite",
     "name": "Engineering Tutorials by Siddharth Misra",
     "url": "https://siddharth-misra.github.io/tutorials/",
-    "description": "Free, in-depth engineering tutorials covering System Design, Agentic AI, Data Structures & Algorithms, Coding Patterns, and Design Patterns.",
+    "description": "Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, Data Structures & Algorithms, Coding Patterns, and Design Patterns.",
     "author": {
       "@type": "Person",
       "name": "Siddharth Misra",
@@ -1024,6 +1059,13 @@
         "name": "Agentic AI",
         "description": "A practical guide for engineers building LLM-powered agentic systems with planning loops, tool use, memory, and RAG.",
         "url": "https://siddharth-misra.github.io/tutorials/agentic-system/agentic-ai.html",
+        "provider": { "@type": "Person", "name": "Siddharth Misra" }
+      },
+      {
+        "@type": "Course",
+        "name": "AWS",
+        "description": "A production-aware AWS learning path covering cloud foundations, networking, compute, storage, data, serverless, security, and operations.",
+        "url": "https://siddharth-misra.github.io/tutorials/aws/aws.html",
         "provider": { "@type": "Person", "name": "Siddharth Misra" }
       }
     ]

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&display=swap");
+
 /* ============================================================
    Shared tutorial styles
    Used by: system-design/systemdesign.html,
@@ -16,13 +18,18 @@
   --code-bg: #f1e7da;
   --shadow: 0 20px 48px rgba(38, 24, 17, 0.12);
   --radius: 22px;
-  --font-body: "Charter", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --font-ui: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
-  --font-display: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-ui: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-display: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
   --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
-  --body-size: 17.5px;
-  --body-leading: 1.72;
-  --max-width: 80ch;
+  --body-size: clamp(17px, 1rem + 0.18vw, 18.5px);
+  --body-leading: 1.78;
+  --measure: 72ch;
+  --sidebar-size: 0.97rem;
+  --meta-size: 0.95rem;
+  --small-size: 0.92rem;
+  --table-size: 0.97rem;
+  --code-size: 0.93rem;
   --topbar-bg: rgba(255, 251, 245, 0.92);
   --topbar-border: rgba(101, 61, 42, 0.14);
   --topbar-shadow: 0 4px 24px rgba(42, 24, 16, 0.1);
@@ -88,6 +95,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--body-size);
   line-height: var(--body-leading);
+  letter-spacing: 0.002em;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-kerning: normal;
@@ -161,14 +169,14 @@ a {
 }
 
 .atlas-topbar__brand-title {
-  font: 700 0.88rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  font: 700 0.88rem/1 var(--font-ui, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif);
   letter-spacing: 0.18em;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
 .atlas-topbar__byline {
-  font: 400 0.66rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  font: 400 0.66rem/1 var(--font-ui, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif);
   letter-spacing: 0.03em;
   text-transform: none;
   color: var(--muted);
@@ -192,7 +200,7 @@ a {
   border-radius: 999px;
   background: var(--btn-bg);
   color: var(--ink);
-  font: 600 0.88rem/1 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  font: 600 0.88rem/1 var(--font-ui, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif);
   cursor: pointer;
   transition: transform 160ms ease, background 160ms ease, border-color 160ms ease, color 160ms ease;
   overflow: hidden;
@@ -275,7 +283,7 @@ a {
   padding: 9px 14px;
   border-radius: 10px;
   color: var(--ink, #211915);
-  font: 500 0.92rem/1.2 var(--font-ui, "Avenir Next", "Segoe UI", sans-serif);
+  font: 500 0.92rem/1.2 var(--font-ui, "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif);
   text-decoration: none;
   transition: background 120ms ease, color 120ms ease;
 }
@@ -451,7 +459,7 @@ a:hover {
 .masthead__meta {
   margin: 12px 0 0;
   color: var(--muted);
-  font-size: 1rem;
+  font-size: var(--meta-size);
   line-height: 1.5;
 }
 
@@ -517,8 +525,8 @@ a:hover {
 .sidebar p {
   margin: 0 0 10px;
   color: var(--muted);
-  font-size: 0.92rem;
-  line-height: 1.55;
+  font-size: var(--small-size);
+  line-height: 1.62;
 }
 
 .toc-list {
@@ -536,11 +544,11 @@ a:hover {
 .toc-list a {
   display: block;
   padding: 5px 8px;
-  font-size: 0.92rem;
+  font-size: var(--sidebar-size);
   border-radius: 12px;
   color: var(--ink);
   text-decoration: none;
-  line-height: 1.45;
+  line-height: 1.5;
   transition: background 140ms ease, color 140ms ease;
 }
 
@@ -555,13 +563,17 @@ a:hover {
 }
 
 .article {
-  max-width: 74ch;
+  max-width: var(--measure);
   margin: 0 auto;
   padding: 40px clamp(20px, 3vw, 48px);
   border: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.article > :where(p, ul, ol, blockquote, table, .code-block, .diagram-figure, hr) {
+  max-width: var(--measure);
 }
 
 .section + .section {
@@ -613,6 +625,11 @@ p, li {
   margin: 0 0 14px;
 }
 
+p {
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
 ul, ol {
   margin: 0 0 18px 1.3rem;
   padding: 0;
@@ -648,7 +665,7 @@ code {
   padding: 0.12em 0.38em;
   border-radius: 0.4em;
   background: var(--code-bg);
-  font: 0.9em/1.45 var(--font-mono);
+  font: var(--code-size)/1.45 var(--font-mono);
 }
 
 .code-block {
@@ -675,7 +692,7 @@ pre {
   border-radius: 18px;
   background: var(--pre-bg);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  font: 0.94rem/1.6 var(--font-mono);
+  font: var(--code-size)/1.65 var(--font-mono);
 }
 
 pre code {
@@ -709,7 +726,7 @@ pre code {
 .diagram-figure figcaption {
   margin-top: 12px;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: var(--meta-size);
   line-height: 1.5;
 }
 
@@ -717,8 +734,8 @@ table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
-  font-size: 0.98rem;
-  line-height: 1.5;
+  font-size: var(--table-size);
+  line-height: 1.58;
 }
 
 th, td {
@@ -795,7 +812,7 @@ tbody tr:nth-child(even) td {
 
 .chapter-controls__meta {
   margin: 0;
-  font: 600 0.92rem/1.3 var(--font-ui);
+  font: 600 var(--small-size)/1.35 var(--font-ui);
   color: var(--muted);
   letter-spacing: 0.02em;
   text-align: center;
@@ -859,7 +876,7 @@ tbody tr:nth-child(even) td {
   line-height: 1.25;
   font-weight: 700;
   padding: 2px 6px 0;
-  text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 
 .is-hidden-chapter {
@@ -885,6 +902,12 @@ tbody tr:nth-child(even) td {
 @media (max-width: 720px) {
   :root {
     --body-size: 16.5px;
+    --body-leading: 1.74;
+    --sidebar-size: 0.95rem;
+    --meta-size: 0.93rem;
+    --small-size: 0.9rem;
+    --table-size: 0.94rem;
+    --code-size: 0.9rem;
   }
 
   .app-shell {
@@ -1015,7 +1038,7 @@ tbody tr:nth-child(even) td {
   }
 
   h1, h2, h3, h4 {
-    font-family: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
     color: #111;
     break-after: avoid;
     page-break-after: avoid;
@@ -1115,12 +1138,12 @@ tbody tr:nth-child(even) td {
   }
 
   table {
-    font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
     font-size: 10pt;
   }
 
   thead th {
-    font-family: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
     background: #ebebeb !important;
     color: #111;
   }

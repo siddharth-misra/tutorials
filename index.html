@@ -48,12 +48,12 @@
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 18px;
-      --font-body: "Charter", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-      --font-ui: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
-      --font-display: "Avenir Next", "Segoe UI", "Gill Sans", "Trebuchet MS", sans-serif;
+      --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --font-ui: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+      --font-display: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
       --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
-      --body-size: 17.5px;
-      --body-leading: 1.72;
+      --body-size: clamp(17px, 1rem + 0.18vw, 18.5px);
+      --body-leading: 1.78;
       --surface: rgba(255, 255, 255, 0.68);
       --surface-border: rgba(101, 61, 42, 0.08);
       --chip-bg: rgba(255, 255, 255, 0.76);
@@ -98,6 +98,7 @@
       font-family: var(--font-body);
       font-size: var(--body-size);
       line-height: var(--body-leading);
+      letter-spacing: 0.002em;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
       font-kerning: normal;

@@ -237,6 +237,27 @@ a {
   transform: rotate(180deg);
 }
 
+.atlas-topbar__theme-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--btn-border);
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+}
+
+.atlas-topbar__theme-btn:hover {
+  transform: translateY(-1px);
+  background: var(--btn-bg-hover);
+  border-color: var(--btn-border-hover);
+}
+
 .atlas-topbar__nav-dropdown,
 .atlas-topbar__dropdown {
   position: absolute;

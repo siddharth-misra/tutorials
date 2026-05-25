@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Engineering Tutorials by Siddharth Misra — AWS, System Design, Agentic AI, DSA & More</title>
-  <meta name="description" content="Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, Data Structures & Algorithms, Coding Patterns, and Design Patterns. Written by Siddharth Misra for engineers who want to understand the why, not just copy a template." />
-  <meta name="keywords" content="AWS tutorial, cloud architecture tutorial, system design tutorial, agentic AI tutorial, DSA tutorial, coding patterns, design patterns, software engineering, distributed systems, LLM agents, interview preparation" />
+  <title>Engineering Tutorials by Siddharth Misra | System Design, AWS, Agentic AI, DSA</title>
+  <meta name="description" content="Clear engineering tutorials on System Design, Agentic AI, AWS, DSA, Coding Patterns, and Java DSA + Patterns." />
+  <meta name="keywords" content="AWS tutorial, cloud architecture tutorial, system design tutorial, agentic AI tutorial, DSA tutorial, coding patterns, Java DSA tutorial, design patterns tutorial, software engineering, distributed systems, LLM agents, interview preparation" />
   <meta name="author" content="Siddharth Misra" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://siddharth-misra.github.io/tutorials/" />
-  <meta name="theme-color" content="#a8502f" />
+  <meta name="theme-color" content="#8e401f" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://siddharth-misra.github.io/tutorials/" />
   <meta property="og:title" content="Engineering Tutorials by Siddharth Misra" />
-  <meta property="og:description" content="Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns. Built for engineers who want to understand the why behind every decision." />
+  <meta property="og:description" content="Clear engineering tutorials on System Design, Agentic AI, AWS, DSA, Coding Patterns, and Java DSA + Patterns." />
   <meta property="og:site_name" content="Tutorials by Siddharth Misra" />
   <meta property="og:image" content="https://siddharth-misra.github.io/tutorials/shared/og-cover.png" />
   <meta property="og:image:width" content="1200" />
@@ -25,58 +25,63 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Engineering Tutorials by Siddharth Misra" />
-  <meta name="twitter:description" content="Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns." />
+  <meta name="twitter:description" content="Clear engineering tutorials on System Design, Agentic AI, AWS, DSA, Coding Patterns, and Java DSA + Patterns." />
   <meta name="twitter:image" content="https://siddharth-misra.github.io/tutorials/shared/og-cover.png" />
   <meta name="twitter:creator" content="@siddharthmisra" />
 
   <link rel="stylesheet" href="./shared/styles.css" />
   <script>var t=localStorage.getItem("atlas-theme");if(t)document.documentElement.dataset.theme=t;</script>
   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
+
     :root {
-      --canvas: #f3eadf;
-      --canvas-deep: #e8d8c5;
-      --paper: rgba(255, 251, 245, 0.76);
-      --paper-strong: #fffaf3;
-      --ink: #211915;
-      --muted: #6b5a51;
-      --line: rgba(101, 61, 42, 0.14);
-      --clay: #a8502f;
-      --clay-deep: #7f3519;
-      --teal: #1b6a67;
-      --gold: #d5a257;
-      --shadow: 0 22px 60px rgba(50, 31, 20, 0.14);
+      --canvas: #f5efe6;
+      --canvas-deep: #ead9c3;
+      --paper: rgba(255, 250, 243, 0.8);
+      --paper-strong: rgba(255, 252, 247, 0.94);
+      --surface: rgba(255, 255, 255, 0.64);
+      --surface-border: rgba(91, 61, 44, 0.1);
+      --ink: #1f1711;
+      --muted: #6a5a4f;
+      --line: rgba(91, 61, 44, 0.14);
+      --grid-line: rgba(91, 61, 44, 0.05);
+      --clay: #b35a34;
+      --clay-deep: #8e401f;
+      --teal: #0f6b69;
+      --gold: #c89342;
+      --forest: #2f7a52;
+      --bronze: #94663b;
+      --aws: #ff9900;
+      --shadow: 0 24px 60px rgba(51, 31, 19, 0.14);
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 18px;
       --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
-      --font-ui: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
-      --font-display: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
-      --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
-      --body-size: clamp(17px, 1rem + 0.18vw, 18.5px);
-      --body-leading: 1.78;
-      --surface: rgba(255, 255, 255, 0.68);
-      --surface-border: rgba(101, 61, 42, 0.08);
-      --chip-bg: rgba(255, 255, 255, 0.76);
-      --card-overlay: rgba(255, 255, 255, 0.62);
+      --font-ui: "IBM Plex Sans", "Segoe UI", Arial, sans-serif;
+      --font-display: "Fraunces", "Source Serif 4", Georgia, serif;
+      --body-size: clamp(17px, 1rem + 0.16vw, 18.5px);
+      --body-leading: 1.72;
     }
 
     [data-theme="dark"] {
-      --canvas: #130d08;
-      --canvas-deep: #0e0a06;
-      --paper: rgba(24, 18, 13, 0.88);
-      --paper-strong: #1e1711;
-      --ink: #f5f0ea;
-      --muted: #b8a898;
-      --line: rgba(255, 255, 255, 0.08);
-      --clay: #d4855a;
-      --clay-deep: #e09970;
-      --teal: #4db8b4;
-      --gold: #e6b96a;
-      --shadow: 0 22px 60px rgba(0, 0, 0, 0.5);
+      --canvas: #120c08;
+      --canvas-deep: #1a120e;
+      --paper: rgba(24, 18, 13, 0.9);
+      --paper-strong: rgba(31, 23, 17, 0.96);
       --surface: rgba(255, 255, 255, 0.05);
       --surface-border: rgba(255, 255, 255, 0.08);
-      --chip-bg: rgba(255, 255, 255, 0.07);
-      --card-overlay: rgba(255, 255, 255, 0.04);
+      --ink: #f6efe8;
+      --muted: #baa898;
+      --line: rgba(255, 255, 255, 0.08);
+      --grid-line: rgba(255, 255, 255, 0.04);
+      --clay: #d8885f;
+      --clay-deep: #e6a57f;
+      --teal: #59bdb8;
+      --gold: #ddb165;
+      --forest: #6cb183;
+      --bronze: #c3925d;
+      --aws: #ffb347;
+      --shadow: 0 28px 70px rgba(0, 0, 0, 0.5);
     }
 
     * {
@@ -90,11 +95,12 @@
     body {
       margin: 0;
       min-height: 100vh;
+      overflow-x: hidden;
       color: var(--ink);
       background:
-        radial-gradient(circle at top left, rgba(27, 106, 103, 0.16), transparent 26rem),
-        radial-gradient(circle at 85% 15%, rgba(168, 80, 47, 0.18), transparent 24rem),
-        linear-gradient(180deg, var(--canvas) 0%, var(--canvas-deep) 34%, var(--canvas-deep) 100%);
+        radial-gradient(circle at 12% 16%, rgba(15, 107, 105, 0.14), transparent 26rem),
+        radial-gradient(circle at 88% 12%, rgba(179, 90, 52, 0.16), transparent 22rem),
+        linear-gradient(180deg, var(--canvas) 0%, var(--canvas-deep) 38%, var(--canvas) 100%);
       font-family: var(--font-body);
       font-size: var(--body-size);
       line-height: var(--body-leading);
@@ -108,26 +114,24 @@
     body::after {
       content: "";
       position: fixed;
-      inset: auto;
-      width: 22rem;
-      height: 22rem;
-      border-radius: 50%;
-      filter: blur(10px);
+      inset: 0;
       pointer-events: none;
-      opacity: 0.5;
       z-index: 0;
     }
 
     body::before {
-      top: 12%;
-      left: -6rem;
-      background: radial-gradient(circle, rgba(213, 162, 87, 0.34), transparent 68%);
+      background:
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.85), transparent 78%);
+      opacity: 0.7;
     }
 
     body::after {
-      right: -7rem;
-      bottom: 8%;
-      background: radial-gradient(circle, rgba(27, 106, 103, 0.22), transparent 68%);
+      background:
+        radial-gradient(circle at 8% 76%, rgba(201, 147, 66, 0.16), transparent 18rem),
+        radial-gradient(circle at 92% 82%, rgba(15, 107, 105, 0.16), transparent 20rem);
     }
 
     a {
@@ -139,554 +143,631 @@
       z-index: 1;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 24px 72px;
+      padding: 32px 24px 80px;
+    }
+
+    main {
+      display: grid;
+      gap: 28px;
+      margin-top: 20px;
+    }
+
+    .hero,
+    .section {
+      scroll-margin-top: 96px;
+      width: 100%;
+      min-width: 0;
     }
 
     .hero {
-      margin-top: 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 22px;
+      align-items: stretch;
     }
 
-    .hero__copy,
-    .path,
-    .track {
+    .hero__panel,
+    .snapshot,
+    .launchpad,
+    .section,
+    .track-card,
+    .reader-card {
       border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
       background: var(--paper);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
       box-shadow: var(--shadow);
     }
 
-    .hero__copy {
-      padding: clamp(44px, 6vw, 72px) clamp(32px, 5vw, 64px);
+    .hero__panel,
+    .hero__aside,
+    .hero__content,
+    .hero__actions,
+    .hero__notes,
+    .catalog__grid,
+    .reader,
+    .snapshot,
+    .launchpad,
+    .section {
+      min-width: 0;
+    }
+
+    .track-card,
+    .reader-card,
+    .track-card__top,
+    .track-card__top > div,
+    .track-card__footer {
+      min-width: 0;
+      width: 100%;
+    }
+
+    .hero__panel {
+      position: relative;
       overflow: hidden;
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 clamp(40px, 6vw, 80px);
-      align-items: center;
-      background: var(--paper);
+      padding: clamp(34px, 5vw, 60px);
+      border-radius: var(--radius-xl);
     }
 
-    .hero__copy::before {
+    .hero__panel::before {
       content: "";
       position: absolute;
-      inset: -4rem -4rem auto auto;
-      width: 28rem;
-      height: 28rem;
+      top: -5rem;
+      right: -4rem;
+      width: 18rem;
+      height: 18rem;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(27, 106, 103, 0.1), transparent 68%);
-      pointer-events: none;
+      background: radial-gradient(circle, rgba(15, 107, 105, 0.18), transparent 70%);
     }
 
-    .hero__copy::after {
+    .hero__panel::after {
       content: "";
       position: absolute;
-      inset: auto auto -6rem -4rem;
-      width: 22rem;
-      height: 22rem;
+      left: -5rem;
+      bottom: -6rem;
+      width: 18rem;
+      height: 18rem;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(213, 162, 87, 0.12), transparent 68%);
-      pointer-events: none;
+      background: radial-gradient(circle, rgba(201, 147, 66, 0.18), transparent 70%);
     }
 
-    .hero__text {
+    .hero__content {
       position: relative;
       z-index: 1;
     }
 
-    .hero__stats {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      gap: 16px;
-    }
-
-    .hero__stat {
-      padding: 20px 24px;
-      border-radius: var(--radius-md);
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-    }
-
-    .hero__stat-value {
+    .hero__eyebrow,
+    .section-kicker,
+    .launchpad__kicker,
+    .track-card__category {
       margin: 0;
-      font: 700 2.2rem/1 var(--font-display);
-      letter-spacing: -0.04em;
-      color: var(--clay-deep);
-    }
-
-    .hero__stat-label {
-      margin: 6px 0 0;
-      color: var(--muted);
-      font: 500 0.9rem/1.4 var(--font-ui);
-    }
-
-    .eyebrow {
-      margin: 0 0 14px;
-      color: var(--teal);
-      font: 700 0.82rem/1.25 var(--font-ui);
-      letter-spacing: 0.18em;
+      font: 700 0.76rem/1.2 var(--font-ui);
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
-    h1 {
-      margin: 0;
-      font: 700 clamp(2.6rem, 5.5vw, 4.4rem)/1.0 var(--font-display);
-      letter-spacing: -0.04em;
+    .hero__eyebrow,
+    .section-kicker,
+    .launchpad__kicker {
+      color: var(--teal);
+    }
+
+    .hero__title {
+      max-width: 10.5ch;
+      margin: 14px 0 0;
+      font: 700 clamp(3rem, 6vw, 5rem)/0.94 var(--font-display);
+      letter-spacing: -0.05em;
     }
 
     .hero__lede {
-      max-width: 38rem;
-      margin: 20px 0 0;
+      max-width: 32rem;
+      margin: 18px 0 0;
       color: var(--muted);
-      font-size: 1.08rem;
-      line-height: 1.7;
+      font: 500 1.02rem/1.7 var(--font-ui);
     }
 
     .hero__actions {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
-      margin-top: 32px;
+      margin-top: 28px;
     }
 
-    .cta {
+    .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 50px;
       padding: 12px 20px;
       border-radius: 999px;
-      font: 700 0.95rem/1 var(--font-ui);
       text-decoration: none;
-      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      font: 700 0.92rem/1 var(--font-ui);
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease, box-shadow 160ms ease;
     }
 
-    .cta:hover {
+    .button:hover,
+    .button:focus-visible {
       transform: translateY(-1px);
     }
 
-    .cta--primary {
+    .button--primary {
       background: linear-gradient(135deg, var(--clay) 0%, var(--clay-deep) 100%);
-      color: #fff9f2;
-      box-shadow: 0 18px 34px rgba(127, 53, 25, 0.2);
+      color: #fff8f1;
+      box-shadow: 0 18px 34px rgba(142, 64, 31, 0.22);
     }
 
-    .cta--secondary {
-      background: var(--surface);
-      border: 1px solid var(--surface-border);
-      color: var(--teal);
-    }
-
-    .hero__stack {
-      display: grid;
-      gap: 16px;
-      padding: 18px;
-      align-content: center;
-    }
-
-    .signal {
-      position: relative;
-      overflow: hidden;
-      padding: 20px;
-      border-radius: var(--radius-lg);
-      background: var(--paper-strong);
-      border: 1px solid var(--surface-border);
-    }
-
-    .signal::before {
-      content: "";
-      position: absolute;
-      inset: auto auto -2.5rem -1.5rem;
-      width: 8rem;
-      height: 8rem;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(213, 162, 87, 0.18), transparent 72%);
-    }
-
-    .signal:nth-child(2) {
-      animation: float 8s ease-in-out infinite;
-    }
-
-    .signal:nth-child(3) {
-      animation: float 10s ease-in-out infinite reverse;
-    }
-
-    .signal__label {
-      margin: 0;
-      color: var(--muted);
-      font: 700 0.74rem/1.25 var(--font-ui);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .signal__title {
-      margin: 10px 0 0;
-      font: 700 1.42rem/1.08 var(--font-ui);
-    }
-
-    .signal__text {
-      margin: 10px 0 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
-
-    .tracks {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 28px;
-    }
-
-    .track {
-      display: grid;
-      gap: 18px;
-      padding: 26px;
-    }
-
-    .track--system {
-      background: var(--paper);
-    }
-
-    .track--agentic {
-      background: var(--paper);
-    }
-
-    .track--aws {
-      background: var(--paper);
-    }
-
-    /* ── Coming Soon tracks ── */
-
-    .coming-soon {
-      margin-top: 52px;
-    }
-
-    .coming-soon__header {
-      display: flex;
-      align-items: baseline;
-      gap: 16px;
-      margin-bottom: 22px;
-    }
-
-    .coming-soon__title {
-      margin: 0;
-      font: 700 clamp(1.45rem, 2.5vw, 1.9rem)/1.05 var(--font-display);
-      letter-spacing: -0.025em;
-    }
-
-    .coming-soon__note {
-      margin: 0;
-      color: var(--muted);
-      font: 600 0.8rem/1 var(--font-ui);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .upcoming-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .upcoming-card {
-      position: relative;
-      display: grid;
-      gap: 14px;
-      padding: 24px;
-      border: 1px solid var(--line);
-      border-radius: var(--radius-xl);
-      background: var(--paper);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      opacity: 0.82;
-    }
-
-    .upcoming-card::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: inherit;
-      background: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 6px,
-        rgba(101, 61, 42, 0.03) 6px,
-        rgba(101, 61, 42, 0.03) 7px
-      );
-      pointer-events: none;
-    }
-
-    .upcoming-card--dsa,
-    .upcoming-card--patterns,
-    .upcoming-card--design,
-    .upcoming-card--combined {
-      background: var(--paper);
-    }
-
-    .upcoming-card__badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 5px 10px;
-      border-radius: 999px;
+    .button--secondary {
       border: 1px solid var(--surface-border);
       background: var(--surface);
-      color: var(--muted);
-      font: 700 0.72rem/1 var(--font-ui);
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      width: fit-content;
+      color: var(--ink);
     }
 
-    .upcoming-card__badge::before {
-      content: "";
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--muted);
-      opacity: 0.5;
-    }
-
-    .upcoming-card__title {
-      margin: 0;
-      font: 700 clamp(1.3rem, 2.2vw, 1.75rem)/1.05 var(--font-display);
-      letter-spacing: -0.025em;
-    }
-
-    .upcoming-card__body {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.97rem;
-    }
-
-    .upcoming-card .chip-row {
-      opacity: 0.8;
-    }
-
-    @media (max-width: 940px) {
-      .upcoming-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .track__meta {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--muted);
-      font: 700 0.8rem/1 var(--font-ui);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .track__meta::before {
-      content: "";
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 0 6px rgba(213, 162, 87, 0.14);
-    }
-
-    .track--agentic .track__meta::before {
-      background: var(--teal);
-      box-shadow: 0 0 0 6px rgba(27, 106, 103, 0.12);
-    }
-
-    .track--aws .track__meta::before {
-      background: #ff9900;
-      box-shadow: 0 0 0 6px rgba(255, 153, 0, 0.16);
-    }
-
-    .track__title {
-      margin: 0;
-      font: 700 clamp(1.8rem, 3vw, 2.4rem)/1.02 var(--font-display);
-      letter-spacing: -0.03em;
-    }
-
-    .track__body {
-      margin: 0;
-      color: var(--muted);
-      font-size: 1rem;
-    }
-
-    .chip-row {
+    .hero__notes {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
+      margin-top: 24px;
     }
 
-    .chip {
+    .note-pill,
+    .tag {
       display: inline-flex;
       align-items: center;
       min-height: 36px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: var(--chip-bg);
       border: 1px solid var(--surface-border);
-      color: var(--muted);
-      font: 600 0.84rem/1 var(--font-ui);
-    }
-
-    .track__footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: auto;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-    }
-
-    .track__hint {
-      margin: 0;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .track__link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 12px 18px;
-      border-radius: 999px;
       background: var(--surface);
-      border: 1px solid var(--line);
-      color: var(--ink);
-      text-decoration: none;
-      font: 700 0.9rem/1 var(--font-ui);
-      white-space: nowrap;
+      font: 600 0.82rem/1 var(--font-ui);
     }
 
-    /* ── Features strip ── */
+    .note-pill {
+      color: var(--muted);
+    }
 
-    .features {
-      margin-top: 28px;
-      padding: 36px clamp(24px, 4vw, 48px);
-      border: 1px solid var(--line);
+    .hero__aside {
+      display: grid;
+      gap: 18px;
+      align-content: start;
+    }
+
+    .snapshot {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      padding: 18px;
       border-radius: var(--radius-xl);
-      background: var(--paper);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      box-shadow: var(--shadow);
     }
 
-    .features__eyebrow {
-      margin: 0 0 6px;
+    .snapshot__item {
+      min-height: 0;
+      height: auto;
+      padding: 16px;
+      border-radius: 18px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+    }
+
+    .snapshot__value {
+      display: block;
+      font: 700 clamp(1.6rem, 4vw, 2.5rem)/0.95 var(--font-display);
+      letter-spacing: -0.04em;
       color: var(--clay-deep);
-      font: 700 0.8rem/1.25 var(--font-ui);
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
     }
 
-    .features__title {
-      margin: 0 0 28px;
-      font: 700 clamp(1.6rem, 2.8vw, 2.2rem)/1.05 var(--font-display);
+    .snapshot__label {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font: 600 0.84rem/1.5 var(--font-ui);
+    }
+
+    .launchpad {
+      padding: 22px;
+      border-radius: var(--radius-xl);
+    }
+
+    .launchpad__title {
+      margin: 10px 0 0;
+      font: 700 1.45rem/1.05 var(--font-ui);
       letter-spacing: -0.03em;
     }
 
-    .features__grid {
+    .launchpad__list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .launchpad__link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      text-decoration: none;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .launchpad__link:hover,
+    .launchpad__link:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(179, 90, 52, 0.22);
+      background: var(--paper-strong);
+    }
+
+    .launchpad__text {
+      display: grid;
+      gap: 4px;
+    }
+
+    .launchpad__text strong {
+      font: 700 0.98rem/1.2 var(--font-ui);
+    }
+
+    .launchpad__text span {
+      color: var(--muted);
+      font: 600 0.82rem/1.4 var(--font-ui);
+    }
+
+    .launchpad__arrow {
+      flex-shrink: 0;
+      color: var(--clay-deep);
+      font: 700 1rem/1 var(--font-ui);
+    }
+
+    .section {
+      padding: 30px;
+      border-radius: var(--radius-xl);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    .section-title {
+      margin: 8px 0 0;
+      font: 700 clamp(1.8rem, 3vw, 2.6rem)/0.98 var(--font-display);
+      letter-spacing: -0.04em;
+    }
+
+    .section-note {
+      max-width: 24rem;
+      margin: 0;
+      color: var(--muted);
+      font: 600 0.92rem/1.55 var(--font-ui);
+      text-align: right;
+    }
+
+    .catalog__grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .track-card {
+      --track-accent: var(--clay);
+      position: relative;
+      display: grid;
+      gap: 16px;
+      min-height: 100%;
+      padding: 24px;
+      border-radius: var(--radius-lg);
+      transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    }
+
+    .track-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      border-radius: inherit;
+      background: linear-gradient(90deg, var(--track-accent), transparent 78%);
+    }
+
+    .track-card:hover,
+    .track-card:focus-within {
+      transform: translateY(-4px);
+      border-color: rgba(179, 90, 52, 0.22);
+      box-shadow: 0 28px 56px rgba(51, 31, 19, 0.16);
+    }
+
+    .track-card--system {
+      --track-accent: var(--teal);
+    }
+
+    .track-card--agentic {
+      --track-accent: var(--gold);
+    }
+
+    .track-card--aws {
+      --track-accent: var(--aws);
+    }
+
+    .track-card--dsa {
+      --track-accent: var(--forest);
+    }
+
+    .track-card--coding {
+      --track-accent: var(--bronze);
+    }
+
+    .track-card--java {
+      --track-accent: var(--clay);
+    }
+
+    .track-card__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .track-card__index {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: var(--surface);
+      border: 1px solid var(--surface-border);
+      color: var(--track-accent);
+      font: 700 0.82rem/1 var(--font-ui);
+      letter-spacing: 0.08em;
+    }
+
+    .track-card__title {
+      margin: 8px 0 0;
+      font: 700 1.5rem/1.05 var(--font-ui);
+      letter-spacing: -0.03em;
+      overflow-wrap: anywhere;
+    }
+
+    .track-card__body {
+      margin: 0;
+      color: var(--muted);
+      font: 500 0.97rem/1.65 var(--font-ui);
+      overflow-wrap: anywhere;
+    }
+
+    .track-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      color: var(--muted);
+    }
+
+    .track-card__footer {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 14px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+    }
+
+    .track-card__prompt {
+      margin: 0;
+      color: var(--muted);
+      font: 600 0.84rem/1.5 var(--font-ui);
+      overflow-wrap: anywhere;
+    }
+
+    .track-card__link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      border: 1px solid var(--surface-border);
+      background: var(--surface);
+      text-decoration: none;
+      white-space: nowrap;
+      font: 700 0.86rem/1 var(--font-ui);
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .track-card__link:hover,
+    .track-card__link:focus-visible {
+      transform: translateY(-1px);
+      border-color: rgba(179, 90, 52, 0.22);
+      background: var(--paper-strong);
+    }
+
+    .reader {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .feature-card {
-      display: grid;
-      gap: 12px;
-      padding: 24px;
-      border-radius: var(--radius-md);
-      background: var(--card-overlay);
-      border: 1px solid var(--surface-border);
+    .reader-card {
+      padding: 22px;
+      border-radius: var(--radius-lg);
+      background: var(--paper-strong);
     }
 
-    .feature-card__icon {
-      display: flex;
+    .reader-card__step {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
+      width: 40px;
+      height: 40px;
       border-radius: 14px;
+      border: 1px solid var(--surface-border);
       background: var(--surface);
       color: var(--clay-deep);
+      font: 700 0.84rem/1 var(--font-ui);
+      letter-spacing: 0.08em;
     }
 
-    .feature-card__title {
-      margin: 0;
-      font: 700 1.05rem/1.2 var(--font-ui);
+    .reader-card__title {
+      margin: 16px 0 0;
+      font: 700 1.18rem/1.15 var(--font-ui);
+      letter-spacing: -0.02em;
     }
 
-    .feature-card__body {
-      margin: 0;
+    .reader-card__body {
+      margin: 10px 0 0;
       color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font: 500 0.94rem/1.62 var(--font-ui);
+      overflow-wrap: anywhere;
     }
 
-    @media (max-width: 940px) {
-      .features__grid {
-        grid-template-columns: 1fr;
+    @media (prefers-reduced-motion: no-preference) {
+      .hero__panel,
+      .hero__aside > *,
+      .track-card,
+      .reader-card {
+        animation: rise 520ms ease both;
+      }
+
+      .hero__aside > *:nth-child(2) {
+        animation-delay: 90ms;
+      }
+
+      .track-card:nth-child(2) {
+        animation-delay: 60ms;
+      }
+
+      .track-card:nth-child(3) {
+        animation-delay: 110ms;
+      }
+
+      .track-card:nth-child(4) {
+        animation-delay: 160ms;
+      }
+
+      .track-card:nth-child(5) {
+        animation-delay: 210ms;
+      }
+
+      .track-card:nth-child(6) {
+        animation-delay: 260ms;
       }
     }
 
-    @keyframes float {
-      0%,
-      100% {
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+
+      to {
+        opacity: 1;
         transform: translateY(0);
       }
-
-      50% {
-        transform: translateY(-6px);
-      }
     }
 
-    @media (max-width: 940px) {
-      .hero__copy {
-        grid-template-columns: 1fr;
-      }
-
-      .tracks {
-        grid-template-columns: 1fr;
-      }
-
-      .track__footer {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-    }
-
-    @media (max-width: 1180px) {
-      .tracks {
+    @media (max-width: 1080px) {
+      .catalog__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 940px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .section-note {
+        max-width: none;
+        text-align: left;
+      }
+
+      .reader {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .atlas-topbar {
+        gap: 8px;
+        padding-inline: 14px;
+      }
+
+      .atlas-topbar__left {
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .atlas-topbar__center,
+      .atlas-topbar__right {
+        flex: 0 0 auto;
+      }
+
+      .atlas-topbar__brand-title {
+        font-size: 0.76rem;
+        letter-spacing: 0.14em;
+      }
+
+      .atlas-topbar__byline {
+        display: none;
+      }
+
+      .atlas-topbar__nav-btn {
+        width: auto;
+        min-width: 120px;
+        padding-inline: 12px;
+      }
+
       .shell {
         padding-inline: 16px;
       }
 
-      .hero__copy {
-        padding: 32px 22px;
+      .hero__panel,
+      .section {
+        padding: 24px 20px;
+      }
+
+      .hero__title {
+        font-size: clamp(2.6rem, 20vw, 4rem);
+        max-width: 8ch;
+      }
+
+      .hero__actions,
+      .catalog__grid,
+      .snapshot {
+        grid-template-columns: 1fr;
+      }
+
+      .snapshot {
+        display: flex;
+        flex-direction: column;
       }
 
       .hero__actions {
+        display: grid;
+      }
+
+      .button,
+      .track-card__link {
         width: 100%;
       }
 
-      .cta,
-      .track__link {
-        width: 100%;
+      .catalog__grid {
+        display: grid;
       }
 
-      .track,
-      .path {
-        padding: 22px;
+      .track-card__footer {
+        flex-direction: column;
       }
     }
 
@@ -694,17 +775,22 @@
       *,
       *::before,
       *::after {
-        background: transparent !important;
+        animation: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
-        animation: none !important;
       }
 
       body {
         background: #fff !important;
         color: #111;
-        font-size: 11.5pt;
-        line-height: 1.62;
+      }
+
+      body::before,
+      body::after,
+      .hero__actions,
+      .track-card__link,
+      .launchpad__arrow {
+        display: none !important;
       }
 
       .shell {
@@ -712,90 +798,29 @@
         padding: 0;
       }
 
-      /* Headings never orphan at the bottom of a page */
-      h1, h2, h3, h4 {
-        break-after: avoid;
-        page-break-after: avoid;
+      .hero,
+      .catalog__grid,
+      .reader {
+        display: block;
+      }
+
+      .hero__panel,
+      .snapshot,
+      .launchpad,
+      .section,
+      .track-card,
+      .reader-card {
+        border: 1px solid #ccc;
+        background: #fff !important;
+      }
+
+      .snapshot,
+      .launchpad,
+      .track-card,
+      .reader-card {
         break-inside: avoid;
         page-break-inside: avoid;
-        color: #111;
-      }
-
-      h1 + *, h2 + *, h3 + *, h4 + * {
-        break-before: avoid;
-        page-break-before: avoid;
-      }
-
-      /* Each track/card starts on a new page */
-      .track {
-        break-before: page;
-        page-break-before: always;
-        border: 1px solid #ccc;
-        border-radius: 0;
-      }
-
-      .track:first-of-type {
-        break-before: auto;
-        page-break-before: auto;
-      }
-
-      .hero__actions,
-      .cta,
-      .track__link,
-      .chip-row {
-        display: none !important;
-      }
-
-      .hero__copy {
-        display: block;
-        border: 0;
-        border-radius: 0;
-      }
-
-      .hero__stats,
-      .signal {
-        display: none !important;
-      }
-
-      .tracks {
-        display: block;
-      }
-
-      .upcoming-card {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        border: 1px solid #ccc;
-        border-radius: 0;
-      }
-
-      .upcoming-card::after {
-        display: none;
-      }
-
-      .features {
-        border: 1px solid #ccc;
-        border-radius: 0;
-      }
-
-      .features__grid {
-        display: block;
-      }
-
-      .feature-card {
-        border: 0;
-        border-bottom: 1px solid #ddd;
-        border-radius: 0;
-        padding: 12px 0;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      p, li {
-        orphans: 3;
-        widows: 3;
+        margin-top: 12px;
       }
     }
   </style>
@@ -811,7 +836,7 @@
     <div class="atlas-topbar__nav-menu" data-nav-menu>
       <button class="atlas-topbar__nav-btn" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
         <span>Topics</span>
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="flex-shrink:0">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
@@ -819,213 +844,253 @@
         <a class="atlas-topbar__nav-item" href="./system-design/systemdesign.html" data-topic-link>System Design</a>
         <a class="atlas-topbar__nav-item" href="./agentic-system/agentic-ai.html" data-topic-link>Agentic AI</a>
         <a class="atlas-topbar__nav-item" href="./aws/aws.html" data-topic-link>AWS</a>
+        <a class="atlas-topbar__nav-item" href="./dsa/dsa.html" data-topic-link>DSA</a>
+        <a class="atlas-topbar__nav-item" href="./coding-patterns/coding-patterns.html" data-topic-link>Coding Patterns</a>
+        <a class="atlas-topbar__nav-item" href="./dsa-coding-design-patterns/dsa-coding-design.html" data-topic-link>Java DSA + Patterns</a>
       </div>
     </div>
   </div>
   <div class="atlas-topbar__right">
-    <div class="atlas-topbar__menu" data-topbar-menu>
-      <button class="atlas-topbar__menu-btn" type="button" aria-label="Options" aria-expanded="false" aria-haspopup="true" data-topbar-menu-btn>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="atlas-topbar__dropdown" data-topbar-dropdown>
-        <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span data-theme-label>Light Mode</span>
-        </button>
-      </div>
-    </div>
+    <button class="atlas-topbar__theme-btn" type="button" aria-label="Toggle dark mode" data-theme-toggle>
+      <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->
 
+
+
 <main>
 
-      <!-- Hero -->
-      <section class="hero" aria-label="Introduction">
-        <div class="hero__copy">
-          <div class="hero__text">
-            <p class="eyebrow">Engineering tutorials by Siddharth Misra</p>
-            <h1>From first principles to production.</h1>
-            <p class="hero__lede">Seven deep tracks covering AWS, System Design, Agentic AI, DSA, Coding Patterns, and Design Patterns — written for engineers who want to understand the <em>why</em> behind every decision, not just copy a template.</p>
+      <section class="hero" aria-labelledby="home-title">
+        <div class="hero__panel">
+          <div class="hero__content">
+            <p class="hero__eyebrow">Tutorial library</p>
+            <h1 class="hero__title" id="home-title">Learn the systems behind the software.</h1>
+            <p class="hero__lede">Six focused tracks for engineers who want clear mental models, sharper trade-offs, and less filler.</p>
             <div class="hero__actions">
-              <a class="cta cta--primary" href="./system-design/systemdesign.html">Start: System Design</a>
-              <a class="cta cta--secondary" href="./agentic-system/agentic-ai.html">Start: Agentic AI</a>
-              <a class="cta cta--secondary" href="./aws/aws.html">Start: AWS</a>
+              <a class="button button--primary" href="./system-design/systemdesign.html">Start with System Design</a>
+              <a class="button button--secondary" href="#tracks">Browse all tracks</a>
+            </div>
+            <div class="hero__notes" aria-label="Library highlights">
+              <span class="note-pill">Free to read</span>
+              <span class="note-pill">Chapter-based</span>
+              <span class="note-pill">Print-friendly</span>
             </div>
           </div>
-          <div class="hero__stats">
-            <div class="hero__stat">
-              <p class="hero__stat-value">7</p>
-              <p class="hero__stat-label">tracks covering cloud, distributed systems, autonomous AI, and the core engineering patterns behind them</p>
+        </div>
+
+        <div class="hero__aside">
+          <div class="snapshot" aria-label="Library snapshot">
+            <div class="snapshot__item">
+              <span class="snapshot__value">6</span>
+              <span class="snapshot__label">Focused tracks</span>
             </div>
-            <div class="hero__stat">
-              <p class="hero__stat-value">3 live</p>
-              <p class="hero__stat-label">System Design, Agentic AI, and AWS are complete and free to read — no account, no paywall</p>
+            <div class="snapshot__item">
+              <span class="snapshot__value">Free</span>
+              <span class="snapshot__label">No paywall</span>
             </div>
-            <div class="hero__stat">
-              <p class="hero__stat-value">4 coming</p>
-              <p class="hero__stat-label">DSA, Coding Patterns, Design Patterns, and a combined curriculum are actively being written</p>
+            <div class="snapshot__item">
+              <span class="snapshot__value">3</span>
+              <span class="snapshot__label">Reading modes</span>
             </div>
           </div>
+
+          <aside class="launchpad" aria-labelledby="launchpad-title">
+            <p class="launchpad__kicker">Start here</p>
+            <h2 class="launchpad__title" id="launchpad-title">Common entry points.</h2>
+            <div class="launchpad__list">
+              <a class="launchpad__link" href="./system-design/systemdesign.html">
+                <span class="launchpad__text">
+                  <strong>System Design</strong>
+                  <span>Architecture, scaling, reliability</span>
+                </span>
+                <span class="launchpad__arrow">→</span>
+              </a>
+              <a class="launchpad__link" href="./agentic-system/agentic-ai.html">
+                <span class="launchpad__text">
+                  <strong>Agentic AI</strong>
+                  <span>Planning, tools, memory, evaluation</span>
+                </span>
+                <span class="launchpad__arrow">→</span>
+              </a>
+              <a class="launchpad__link" href="./dsa-coding-design-patterns/dsa-coding-design.html">
+                <span class="launchpad__text">
+                  <strong>Java DSA + Patterns</strong>
+                  <span>One integrated prep path</span>
+                </span>
+                <span class="launchpad__arrow">→</span>
+              </a>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <!-- Tracks -->
-      <div class="tracks" aria-label="Tutorial tracks">
-        <article class="track track--system">
-          <div class="track__meta">Track One · Available now</div>
-          <h2 class="track__title">System Design</h2>
-          <p class="track__body">A complete reference for the ideas behind every serious distributed system — from how TCP and HTTP actually work, to the trade-offs between SQL and NoSQL, to the scaling and reliability decisions that separate toy projects from production ones. Built around the questions interviewers ask and the problems engineers actually hit.</p>
-          <div class="chip-row" aria-label="System design topics">
-            <span class="chip">Networking &amp; Protocols</span>
-            <span class="chip">Databases</span>
-            <span class="chip">Caching</span>
-            <span class="chip">Consistency</span>
-            <span class="chip">Scalability</span>
-            <span class="chip">Resiliency</span>
+      <section class="section" id="tracks" aria-labelledby="tracks-title">
+        <div class="section-header">
+          <div>
+            <p class="section-kicker">Tracks</p>
+            <h2 class="section-title" id="tracks-title">Pick the outcome you want.</h2>
           </div>
-          <div class="track__footer">
-            <p class="track__hint">Best starting point for system design interviews or anyone building backend infrastructure.</p>
-            <a class="track__link" href="./system-design/systemdesign.html">Read now →</a>
-          </div>
-        </article>
+          <p class="section-note">Each track is chapter-based, searchable, and ready for offline review.</p>
+        </div>
 
-        <article class="track track--agentic">
-          <div class="track__meta">Track Two · Available now</div>
-          <h2 class="track__title">Agentic AI</h2>
-          <p class="track__body">A practical guide for engineers making the jump from calling an LLM API to building systems that actually reason, remember, and act. Covers planning loops, state machines, tool use, memory architectures, RAG pipelines, evaluation, and the real failure modes that show up when agents run in production.</p>
-          <div class="chip-row" aria-label="Agentic AI topics">
-            <span class="chip">Planning Loops</span>
-            <span class="chip">Tool Calling</span>
-            <span class="chip">Memory</span>
-            <span class="chip">RAG</span>
-            <span class="chip">Multi-agent Systems</span>
-            <span class="chip">Evaluation</span>
-          </div>
-          <div class="track__footer">
-            <p class="track__hint">Best starting point for engineers building LLM-powered products or autonomous workflows.</p>
-            <a class="track__link" href="./agentic-system/agentic-ai.html">Read now →</a>
-          </div>
-        </article>
-
-        <article class="track track--aws">
-          <div class="track__meta">Track Three · Available now</div>
-          <h2 class="track__title">AWS</h2>
-          <p class="track__body">A production-aware AWS roadmap that starts with account setup and IAM, then moves through VPC networking, EC2, storage, managed databases, serverless, containers, observability, security, and multi-region architecture. Built for engineers who want to understand the trade-offs behind real cloud systems rather than memorize service names.</p>
-          <div class="chip-row" aria-label="AWS topics">
-            <span class="chip">VPC &amp; DNS</span>
-            <span class="chip">EC2 &amp; Load Balancing</span>
-            <span class="chip">S3, EBS &amp; EFS</span>
-            <span class="chip">RDS &amp; DynamoDB</span>
-            <span class="chip">Lambda &amp; Eventing</span>
-            <span class="chip">Security &amp; Observability</span>
-          </div>
-          <div class="track__footer">
-            <p class="track__hint">Best starting point for engineers moving into cloud architecture, platform work, or AWS-based application design.</p>
-            <a class="track__link" href="./aws/aws.html">Read now →</a>
-          </div>
-        </article>
-      </div>
-
-      <!-- Features -->
-      <section class="features" aria-label="Tutorial features">
-        <p class="features__eyebrow">Built for how engineers actually read</p>
-        <h2 class="features__title">Every tutorial ships with three reading modes.</h2>
-        <div class="features__grid">
-
-          <div class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M3 9h6M3 15h6"/>
-              </svg>
+        <div class="catalog__grid" aria-label="Tutorial tracks">
+          <article class="track-card track-card--system">
+            <div class="track-card__top">
+              <div>
+                <p class="track-card__category">Backend architecture</p>
+                <h3 class="track-card__title">System Design</h3>
+              </div>
+              <span class="track-card__index">01</span>
             </div>
-            <h3 class="feature-card__title">Chapter-by-chapter</h3>
-            <p class="feature-card__body">Each tutorial is split into focused chapters. Navigate with the sidebar or the prev/next controls at the top — only the chapter you're on is rendered, so it stays fast and distraction-free.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M4 6h16M4 12h16M4 18h16"/>
-              </svg>
+            <p class="track-card__body">Protocols, databases, caching, queues, scaling, and failure handling.</p>
+            <div class="track-card__tags" aria-label="System Design topics">
+              <span class="tag">Networking</span>
+              <span class="tag">Datastores</span>
+              <span class="tag">Reliability</span>
             </div>
-            <h3 class="feature-card__title">Single-page view</h3>
-            <p class="feature-card__body">Switch to single-page mode to see the entire tutorial on one scrollable page — useful for searching across all chapters with Cmd+F, or reading linearly from start to finish without clicking through.</p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-card__icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 21h14"/>
-              </svg>
+            <div class="track-card__footer">
+              <p class="track-card__prompt">Best for production architecture judgment and backend interviews.</p>
+              <a class="track-card__link" href="./system-design/systemdesign.html">Open track</a>
             </div>
-            <h3 class="feature-card__title">Download as PDF</h3>
-            <p class="feature-card__body">Every tutorial is print-optimised. Hit the PDF button or use your browser's print dialog — headers, code blocks, tables, and diagrams all reflow cleanly for offline reading or annotation.</p>
-          </div>
+          </article>
 
+          <article class="track-card track-card--agentic">
+            <div class="track-card__top">
+              <div>
+                <p class="track-card__category">LLM products</p>
+                <h3 class="track-card__title">Agentic AI</h3>
+              </div>
+              <span class="track-card__index">02</span>
+            </div>
+            <p class="track-card__body">Planning loops, tool calling, memory, retrieval, orchestration, and evaluation.</p>
+            <div class="track-card__tags" aria-label="Agentic AI topics">
+              <span class="tag">Planning</span>
+              <span class="tag">Tool Use</span>
+              <span class="tag">RAG</span>
+            </div>
+            <div class="track-card__footer">
+              <p class="track-card__prompt">Best for engineers moving from prompts to real agent systems.</p>
+              <a class="track-card__link" href="./agentic-system/agentic-ai.html">Open track</a>
+            </div>
+          </article>
+
+          <article class="track-card track-card--aws">
+            <div class="track-card__top">
+              <div>
+                <p class="track-card__category">Cloud systems</p>
+                <h3 class="track-card__title">AWS</h3>
+              </div>
+              <span class="track-card__index">03</span>
+            </div>
+            <p class="track-card__body">Accounts, IAM, networking, compute, storage, databases, serverless, and operations.</p>
+            <div class="track-card__tags" aria-label="AWS topics">
+              <span class="tag">VPC</span>
+              <span class="tag">Compute</span>
+              <span class="tag">Security</span>
+            </div>
+            <div class="track-card__footer">
+              <p class="track-card__prompt">Best for platform work, cloud design, and AWS fundamentals.</p>
+              <a class="track-card__link" href="./aws/aws.html">Open track</a>
+            </div>
+          </article>
+
+          <article class="track-card track-card--dsa">
+            <div class="track-card__top">
+              <div>
+                <p class="track-card__category">Algorithmic thinking</p>
+                <h3 class="track-card__title">Data Structures &amp; Algorithms</h3>
+              </div>
+              <span class="track-card__index">04</span>
+            </div>
+            <p class="track-card__body">Java-first coverage of arrays, trees, graphs, greedy methods, and dynamic programming.</p>
+            <div class="track-card__tags" aria-label="DSA topics">
+              <span class="tag">Trees</span>
+              <span class="tag">Graphs</span>
+              <span class="tag">DP</span>
+            </div>
+            <div class="track-card__footer">
+              <p class="track-card__prompt">Best for interview depth and structured problem solving.</p>
+              <a class="track-card__link" href="./dsa/dsa.html">Open track</a>
+            </div>
+          </article>
+
+          <article class="track-card track-card--coding">
+            <div class="track-card__top">
+              <div>
+                <p class="track-card__category">Pattern recognition</p>
+                <h3 class="track-card__title">Coding Patterns</h3>
+              </div>
+              <span class="track-card__index">05</span>
+            </div>
+            <p class="track-card__body">Reusable templates for windows, intervals, traversals, searches, and DP families.</p>
+            <div class="track-card__tags" aria-label="Coding Patterns topics">
+              <span class="tag">Windows</span>
+              <span class="tag">Intervals</span>
+              <span class="tag">Search</span>
+            </div>
+            <div class="track-card__footer">
+              <p class="track-card__prompt">Best for faster recognition and cleaner interview solutions.</p>
+              <a class="track-card__link" href="./coding-patterns/coding-patterns.html">Open track</a>
+            </div>
+          </article>
+
+          <article class="track-card track-card--java">
+            <div class="track-card__top">
+              <div>
+                <p class="track-card__category">Integrated path</p>
+                <h3 class="track-card__title">Java DSA + Patterns</h3>
+              </div>
+              <span class="track-card__index">06</span>
+            </div>
+            <p class="track-card__body">One Java-first roadmap across language foundations, DSA, coding patterns, and design patterns.</p>
+            <div class="track-card__tags" aria-label="Java DSA and Patterns topics">
+              <span class="tag">Java</span>
+              <span class="tag">DSA</span>
+              <span class="tag">Design Patterns</span>
+            </div>
+            <div class="track-card__footer">
+              <p class="track-card__prompt">Best for one end-to-end preparation path instead of separate tracks.</p>
+              <a class="track-card__link" href="./dsa-coding-design-patterns/dsa-coding-design.html">Open track</a>
+            </div>
+          </article>
         </div>
       </section>
 
-      <!-- Upcoming courses -->
-      <section class="coming-soon" aria-label="Upcoming courses">
-        <div class="coming-soon__header">
-          <h2 class="coming-soon__title">In development</h2>
-          <p class="coming-soon__note">Coming soon</p>
+      <section class="section" aria-labelledby="reading-title">
+        <div class="section-header">
+          <div>
+            <p class="section-kicker">Reading modes</p>
+            <h2 class="section-title" id="reading-title">Use the format that fits the session.</h2>
+          </div>
+          <p class="section-note">Short sessions, long reads, and offline review are all built in.</p>
         </div>
-        <div class="upcoming-grid">
 
-          <article class="upcoming-card upcoming-card--dsa">
-            <div class="upcoming-card__badge">Track Four</div>
-            <h3 class="upcoming-card__title">Data Structures &amp; Algorithms</h3>
-            <p class="upcoming-card__body">Most DSA content teaches you to pass a test. This track teaches you to think structurally — how to look at a problem, identify what data shape fits it, and reason about cost before you write a line. Covers arrays, linked lists, trees, heaps, graphs, sorting, and dynamic programming from the ground up.</p>
-            <div class="chip-row" aria-label="DSA topics">
-              <span class="chip">Arrays &amp; Strings</span>
-              <span class="chip">Trees &amp; Graphs</span>
-              <span class="chip">Dynamic Programming</span>
-              <span class="chip">Heaps &amp; Sorting</span>
-            </div>
+        <div class="reader">
+          <article class="reader-card">
+            <span class="reader-card__step">01</span>
+            <h3 class="reader-card__title">Chapter view</h3>
+            <p class="reader-card__body">Move one chapter at a time with sidebar navigation and prev-next controls.</p>
           </article>
 
-          <article class="upcoming-card upcoming-card--patterns">
-            <div class="upcoming-card__badge">Track Five</div>
-            <h3 class="upcoming-card__title">Coding Patterns</h3>
-            <p class="upcoming-card__body">Underneath the variety of interview problems is a short list of patterns that keep recurring. Once you can name them on sight — sliding window, two pointers, fast and slow, BFS/DFS, merge intervals, backtracking — most problems become variations on something you've already solved. This track builds that recognition deliberately.</p>
-            <div class="chip-row" aria-label="Coding patterns topics">
-              <span class="chip">Sliding Window</span>
-              <span class="chip">Two Pointers</span>
-              <span class="chip">BFS / DFS</span>
-              <span class="chip">Backtracking</span>
-              <span class="chip">Merge Intervals</span>
-            </div>
+          <article class="reader-card">
+            <span class="reader-card__step">02</span>
+            <h3 class="reader-card__title">Single page</h3>
+            <p class="reader-card__body">Switch to one long page when you want fast search or uninterrupted reading.</p>
           </article>
 
-          <article class="upcoming-card upcoming-card--design">
-            <div class="upcoming-card__badge">Track Six</div>
-            <h3 class="upcoming-card__title">Design Patterns</h3>
-            <p class="upcoming-card__body">Gang of Four and beyond — but explained as solutions to specific engineering problems, not as abstract taxonomy. Each pattern is shown in context: what the code looked like before, what problem it creates at scale, and why the pattern resolves it. Creational, structural, behavioral, plus SOLID and composition-over-inheritance in practice.</p>
-            <div class="chip-row" aria-label="Design patterns topics">
-              <span class="chip">Creational</span>
-              <span class="chip">Structural</span>
-              <span class="chip">Behavioral</span>
-              <span class="chip">SOLID Principles</span>
-            </div>
+          <article class="reader-card">
+            <span class="reader-card__step">03</span>
+            <h3 class="reader-card__title">PDF export</h3>
+            <p class="reader-card__body">Use the print view for clean offline review, annotation, and reference notes.</p>
           </article>
-
-          <article class="upcoming-card upcoming-card--combined">
-            <div class="upcoming-card__badge">Track Seven · Combined</div>
-            <h3 class="upcoming-card__title">DSA + Coding Patterns + Design Patterns</h3>
-            <p class="upcoming-card__body">An end-to-end curriculum that treats the three tracks as one unified skill: understanding data structures, recognizing problem patterns, and applying software design principles. Built for engineers who want a single, coherent path from raw problem-solving to clean, scalable architecture — interview-ready and production-ready at the same time.</p>
-            <div class="chip-row" aria-label="Combined track topics">
-              <span class="chip">Unified Curriculum</span>
-              <span class="chip">Interview Ready</span>
-              <span class="chip">Clean Architecture</span>
-              <span class="chip">Java &amp; Python</span>
-            </div>
-          </article>
-
         </div>
       </section>
 
@@ -1041,7 +1106,7 @@
     "@type": "WebSite",
     "name": "Engineering Tutorials by Siddharth Misra",
     "url": "https://siddharth-misra.github.io/tutorials/",
-    "description": "Free, in-depth engineering tutorials covering AWS, System Design, Agentic AI, Data Structures & Algorithms, Coding Patterns, and Design Patterns.",
+    "description": "Clear engineering tutorials on System Design, Agentic AI, AWS, DSA, Coding Patterns, and Java DSA + Patterns.",
     "author": {
       "@type": "Person",
       "name": "Siddharth Misra",
@@ -1067,6 +1132,27 @@
         "name": "AWS",
         "description": "A production-aware AWS learning path covering cloud foundations, networking, compute, storage, data, serverless, security, and operations.",
         "url": "https://siddharth-misra.github.io/tutorials/aws/aws.html",
+        "provider": { "@type": "Person", "name": "Siddharth Misra" }
+      },
+      {
+        "@type": "Course",
+        "name": "Data Structures & Algorithms",
+        "description": "A Java-first DSA learning path covering arrays, strings, hashing, linked structures, trees, heaps, graphs, greedy methods, and dynamic programming.",
+        "url": "https://siddharth-misra.github.io/tutorials/dsa/dsa.html",
+        "provider": { "@type": "Person", "name": "Siddharth Misra" }
+      },
+      {
+        "@type": "Course",
+        "name": "Coding Patterns",
+        "description": "A Java-first coding patterns learning path covering recognition signals, invariants, reusable templates, and the transition from brute force to optimized problem-solving patterns.",
+        "url": "https://siddharth-misra.github.io/tutorials/coding-patterns/coding-patterns.html",
+        "provider": { "@type": "Person", "name": "Siddharth Misra" }
+      },
+      {
+        "@type": "Course",
+        "name": "Java DSA + Patterns",
+        "description": "A Java-first learning path combining language fluency, DSA, coding patterns, and design patterns across foundations, graphs, dynamic programming, and reusable architecture patterns.",
+        "url": "https://siddharth-misra.github.io/tutorials/dsa-coding-design-patterns/dsa-coding-design.html",
         "provider": { "@type": "Person", "name": "Siddharth Misra" }
       }
     ]

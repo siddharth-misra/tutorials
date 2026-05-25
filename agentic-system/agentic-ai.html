@@ -53,6 +53,9 @@
         <a class="atlas-topbar__nav-item" href="../system-design/systemdesign.html" data-topic-link>System Design</a>
         <a class="atlas-topbar__nav-item is-current" href="../agentic-system/agentic-ai.html" data-topic-link aria-current="page">Agentic AI</a>
         <a class="atlas-topbar__nav-item" href="../aws/aws.html" data-topic-link>AWS</a>
+        <a class="atlas-topbar__nav-item" href="../dsa/dsa.html" data-topic-link>DSA</a>
+        <a class="atlas-topbar__nav-item" href="../coding-patterns/coding-patterns.html" data-topic-link>Coding Patterns</a>
+        <a class="atlas-topbar__nav-item" href="../dsa-coding-design-patterns/dsa-coding-design.html" data-topic-link>Java DSA + Patterns</a>
       </div>
     </div>
   </div>
@@ -87,6 +90,12 @@
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->
+
+
+
+
+
+
 
 
 
@@ -129,31 +138,8 @@
 
       <main class="document">
         <article class="article">
-<h2 id="table-of-contents">Table of Contents</h2>
-<ul class="toc-list">
-
-<li><a href="#1-ai-agents-from-prompt-response-to-goal-driven-systems" data-toc-link>1. AI Agents — From Prompt Response to Goal-Driven Systems</a></li>
-<li><a href="#2-core-building-blocks-of-an-agentic-system" data-toc-link>2. Core Building Blocks of an Agentic System</a></li>
-<li><a href="#3-configuring-llm-behavior-for-agentic-systems" data-toc-link>3. Configuring LLM Behavior for Agentic Systems</a></li>
-<li><a href="#4-memory-systems" data-toc-link>4. Memory Systems</a></li>
-<li><a href="#5-tool-use-and-function-calling" data-toc-link>5. Tool Use &amp; Function Calling</a></li>
-<li><a href="#6-the-agentic-reasoning-loop" data-toc-link>6. The Agentic Reasoning Loop</a></li>
-<li><a href="#7-agentic-patterns" data-toc-link>7. Agentic Patterns</a></li>
-<li><a href="#8-planning-strategies" data-toc-link>8. Planning Strategies</a></li>
-<li><a href="#9-rag-retrieval-augmented-generation" data-toc-link>9. RAG — Retrieval-Augmented Generation</a></li>
-<li><a href="#10-vector-databases" data-toc-link>10. Vector Databases</a></li>
-<li><a href="#11-strategies-to-avoid-hallucinations" data-toc-link>11. Strategies to Avoid Hallucinations</a></li>
-<li><a href="#12-guardrails-and-safety" data-toc-link>12. Guardrails &amp; Safety</a></li>
-<li><a href="#13-agentic-loop-end-control-mechanisms" data-toc-link>13. Agentic Loop End-Control Mechanisms</a></li>
-<li><a href="#14-multi-agent-systems-for-complex-workflows" data-toc-link>14. Multi-Agent Systems for Complex Workflows</a></li>
-<li><a href="#15-observability-evaluation-and-continuous-improvement" data-toc-link>15. Observability, Evaluation, and Continuous Improvement</a></li>
-<li><a href="#16-production-best-practices-for-agentic-systems" data-toc-link>16. Production Best Practices for Agentic Systems</a></li>
-<li><a href="#17-leading-agentic-ai-teams-with-technical-depth" data-toc-link>17. Leading Agentic AI Teams with Technical Depth</a></li>
-<li><a href="#18-production-blueprints-three-end-to-end-financial-services-agents" data-toc-link>18. Production Blueprints — Three End-to-End Financial Services Agents</a></li>
-<li><a href="#19-language-understanding-foundations-for-agentic-systems" data-toc-link>19. Language Understanding Foundations for Agentic Systems</a></li>
-<li><a href="#20-ml-lifecycle-for-agentic-systems" data-toc-link>20. ML Lifecycle for Agentic Systems</a></li>
-</ul>
-<hr>
+<h1>Agentic AI Tutorial</h1>
+<p class="article-intro">A practical guide to building agentic AI systems, from planning loops and tool use to memory, retrieval, evaluation, and production controls.</p>
 <h2 id="1-ai-agents-from-prompt-response-to-goal-driven-systems">1. AI Agents — From Prompt Response to Goal-Driven Systems</h2>
 <p>An AI agent is a software system that can take a goal, observe the current situation, decide what to do next, use tools, and continue until it either completes the job or hits a stop condition.</p>
 <p>That definition matters because many systems are called &quot;agents&quot; when they are really only chat interfaces on top of a language model. In an agentic system, the model is not just generating text. It participates in a controlled loop that connects reasoning, tool use, memory, policies, and completion criteria.</p>
@@ -5780,7 +5766,7 @@ logger.info(&quot;Run completed with context: {}&quot;, ctx.toMap());
         nextChapterButton.addEventListener('click', () => setActiveChapter(activeChapterIndex + 1));
       }
 
-      applyViewMode(savedMode === 'chapter' ? 'chapter' : 'continuous');
+    applyViewMode(savedMode === 'continuous' ? 'continuous' : 'chapter');
     } else {
       viewModeButtons.forEach((button) => {
         button.disabled = true;

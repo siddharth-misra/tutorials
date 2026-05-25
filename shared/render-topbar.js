@@ -1,14 +1,14 @@
-const fs = require("fs");
-const path = require("path");
-const { tutorials } = require("./tutorials.config");
+const fs = require("node:fs");
+const path = require("node:path");
+const { tutorials, publicTutorials } = require("./tutorials.config");
 
 const templatePath = path.join(__dirname, "topbar.html");
 
 const escapeHtml = (value) => String(value)
-  .replace(/&/g, "&amp;")
-  .replace(/</g, "&lt;")
-  .replace(/>/g, "&gt;")
-  .replace(/"/g, "&quot;");
+  .replaceAll("&", "&amp;")
+  .replaceAll("<", "&lt;")
+  .replaceAll(">", "&gt;")
+  .replaceAll('"', "&quot;");
 
 const toHref = (hrefFromRoot, depth) => `${depth}${hrefFromRoot}`;
 
@@ -61,7 +61,7 @@ const renderTopbar = ({
   const homeHref = `${depth}index.html`;
   const currentTopic = tutorials.find((tutorial) => tutorial.key === current);
   const navLabel = currentTopic ? currentTopic.label : "Topics";
-  const topicLinks = tutorials.map((tutorial) => {
+  const topicLinks = publicTutorials.map((tutorial) => {
     const isCurrent = tutorial.key === current;
     const currentClass = isCurrent ? " is-current" : "";
     const ariaCurrent = isCurrent ? ' aria-current="page"' : "";
@@ -95,7 +95,8 @@ const applyTopbar = (html, options) => {
       classes.push("has-atlas-topbar");
     }
 
-    return `<body${attrs.replace(classMatch[0], `class="${classes.join(" ")}"`)}>`;
+    const classAttr = `class="${classes.join(" ")}"`;
+    return `<body${attrs.replace(classMatch[0], classAttr)}>`;
   });
 
   if (markedTopbar.test(nextHtml)) {

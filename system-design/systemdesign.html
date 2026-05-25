@@ -53,6 +53,9 @@
         <a class="atlas-topbar__nav-item is-current" href="../system-design/systemdesign.html" data-topic-link aria-current="page">System Design</a>
         <a class="atlas-topbar__nav-item" href="../agentic-system/agentic-ai.html" data-topic-link>Agentic AI</a>
         <a class="atlas-topbar__nav-item" href="../aws/aws.html" data-topic-link>AWS</a>
+        <a class="atlas-topbar__nav-item" href="../dsa/dsa.html" data-topic-link>DSA</a>
+        <a class="atlas-topbar__nav-item" href="../coding-patterns/coding-patterns.html" data-topic-link>Coding Patterns</a>
+        <a class="atlas-topbar__nav-item" href="../dsa-coding-design-patterns/dsa-coding-design.html" data-topic-link>Java DSA + Patterns</a>
       </div>
     </div>
   </div>
@@ -87,6 +90,12 @@
   </div>
 </nav>
 <!-- END_SHARED_TOPBAR -->
+
+
+
+
+
+
 
 
 
@@ -132,6 +141,8 @@
 
       <main class="document">
         <article class="article">
+<h1>System Design Tutorial</h1>
+<p class="article-intro">A complete reference for distributed systems, from networking and data fundamentals through caching, consistency, scalability, and reliability.</p>
 <h2 id="chapter-1-system-design-interview-framework">Chapter 1: System Design Interview Framework</h2>
 <p><strong>Goal:</strong> Build a repeatable mental process for approaching any system design question — from a beginner who draws boxes to an expert who dissects failure modes, cost, and evolution. By the end of this chapter you have a framework, templates, and the vocabulary to run a strong interview discussion at any level.</p>
 <p><strong>How to use this chapter:</strong> Read Sections 1.2 to 1.8 first and practice the loop with one system (for example, URL shortener or notification service). Then revisit Sections 1.9 to 1.11 to deepen your answers from &quot;works on paper&quot; to &quot;works in production.&quot;</p>
@@ -13935,7 +13946,7 @@ Shard Builder / Segment Merger       Vector Shard Store
         nextChapterButton.addEventListener('click', () => setActiveChapter(activeChapterIndex + 1));
       }
 
-      applyViewMode(savedMode === 'chapter' ? 'chapter' : 'continuous');
+      applyViewMode(savedMode === 'continuous' ? 'continuous' : 'chapter');
     } else {
       viewModeButtons.forEach((button) => {
         button.disabled = true;

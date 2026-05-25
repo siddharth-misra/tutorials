@@ -62,10 +62,10 @@
   </div>
   <div class="atlas-topbar__right">
     <div class="atlas-topbar__chapter-nav" data-topbar-chapter-nav hidden>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous chapter" data-topbar-prev-chapter disabled>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous" data-topbar-prev-chapter disabled>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next chapter" data-topbar-next-chapter>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next" data-topbar-next-chapter>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
@@ -77,7 +77,7 @@
       </button>
       <div class="atlas-topbar__dropdown" data-topbar-dropdown>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
-        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Section View</button>
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
           <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -93,46 +93,44 @@
 <!-- END_SHARED_TOPBAR -->
 
 
-
-
     <div class="layout">
       <aside class="sidebar" aria-label="Document navigation">
         <div class="chapter-controls" data-chapter-controls hidden>
-          <p class="chapter-controls__meta" data-chapter-indicator>Chapter 1</p>
+          <p class="chapter-controls__meta" data-chapter-indicator>1</p>
           <div class="chapter-controls__nav">
-            <button class="button" type="button" data-prev-chapter aria-label="Go to previous chapter">Previous</button>
-            <button class="button" type="button" data-next-chapter aria-label="Go to next chapter">Next</button>
+            <button class="button" type="button" data-prev-chapter aria-label="Go to previous">Previous</button>
+            <button class="button" type="button" data-next-chapter aria-label="Go to next">Next</button>
           </div>
         </div>
         <h2>Navigate</h2>
         <p>Major sections stay reachable on screen. Print output collapses to a clean single-column document.</p>
         <nav aria-label="Coding patterns chapter navigation"><ul class="toc-list">
-<li><a href="#chapter-1-java-toolkit-for-pattern-solving" data-toc-link>Chapter 1: Java Toolkit for Pattern Solving</a></li>
-<li><a href="#chapter-2-how-to-recognize-a-coding-pattern" data-toc-link>Chapter 2: How to Recognize a Coding Pattern</a></li>
-<li><a href="#chapter-3-hashing-and-accumulation-patterns" data-toc-link>Chapter 3: Hashing and Accumulation Patterns</a></li>
-<li><a href="#chapter-4-two-pointer-and-window-patterns" data-toc-link>Chapter 4: Two-Pointer and Window Patterns</a></li>
-<li><a href="#chapter-5-stack-and-queue-driven-patterns" data-toc-link>Chapter 5: Stack and Queue Driven Patterns</a></li>
-<li><a href="#chapter-6-grid-and-traversal-patterns" data-toc-link>Chapter 6: Grid and Traversal Patterns</a></li>
-<li><a href="#chapter-7-binary-search-families" data-toc-link>Chapter 7: Binary Search Families</a></li>
-<li><a href="#chapter-8-ordering-and-interval-patterns" data-toc-link>Chapter 8: Ordering and Interval Patterns</a></li>
-<li><a href="#chapter-9-selection-and-choice-patterns" data-toc-link>Chapter 9: Selection and Choice Patterns</a></li>
-<li><a href="#chapter-10-recursive-search-patterns" data-toc-link>Chapter 10: Recursive Search Patterns</a></li>
-<li><a href="#chapter-11-tree-patterns" data-toc-link>Chapter 11: Tree Patterns</a></li>
-<li><a href="#chapter-12-graph-connectivity-patterns" data-toc-link>Chapter 12: Graph Connectivity Patterns</a></li>
-<li><a href="#chapter-13-weighted-graph-and-network-patterns" data-toc-link>Chapter 13: Weighted Graph and Network Patterns</a></li>
-<li><a href="#chapter-14-dynamic-programming-foundations" data-toc-link>Chapter 14: Dynamic Programming Foundations</a></li>
-<li><a href="#chapter-15-choice-and-sequence-dp-patterns" data-toc-link>Chapter 15: Choice and Sequence DP Patterns</a></li>
-<li><a href="#chapter-16-advanced-state-dp-patterns" data-toc-link>Chapter 16: Advanced State DP Patterns</a></li>
-<li><a href="#chapter-17-dp-optimization-patterns" data-toc-link>Chapter 17: DP Optimization Patterns</a></li>
-<li><a href="#chapter-18-range-query-patterns" data-toc-link>Chapter 18: Range Query Patterns</a></li>
-<li><a href="#chapter-19-string-processing-patterns" data-toc-link>Chapter 19: String Processing Patterns</a></li>
-<li><a href="#chapter-20-geometry-and-event-patterns" data-toc-link>Chapter 20: Geometry and Event Patterns</a></li>
-<li><a href="#chapter-21-advanced-tree-and-path-query-patterns" data-toc-link>Chapter 21: Advanced Tree and Path Query Patterns</a></li>
-<li><a href="#chapter-22-games-and-probabilistic-thinking" data-toc-link>Chapter 22: Games and Probabilistic Thinking</a></li>
-<li><a href="#chapter-23-hybrid-pattern-composition" data-toc-link>Chapter 23: Hybrid Pattern Composition</a></li>
-<li><a href="#chapter-24-reusable-java-pattern-templates" data-toc-link>Chapter 24: Reusable Java Pattern Templates</a></li>
-<li><a href="#chapter-25-pattern-comparison-and-revision-systems" data-toc-link>Chapter 25: Pattern Comparison and Revision Systems</a></li>
-<li><a href="#chapter-26-practice-tracks-and-real-world-transfer" data-toc-link>Chapter 26: Practice Tracks and Real-World Transfer</a></li>
+<li><a href="#1-java-toolkit-for-pattern-solving" data-toc-link>1: Java Toolkit for Pattern Solving</a></li>
+<li><a href="#2-how-to-recognize-a-coding-pattern" data-toc-link>2: How to Recognize a Coding Pattern</a></li>
+<li><a href="#3-hashing-and-accumulation-patterns" data-toc-link>3: Hashing and Accumulation Patterns</a></li>
+<li><a href="#4-two-pointer-and-window-patterns" data-toc-link>4: Two-Pointer and Window Patterns</a></li>
+<li><a href="#5-stack-and-queue-driven-patterns" data-toc-link>5: Stack and Queue Driven Patterns</a></li>
+<li><a href="#6-grid-and-traversal-patterns" data-toc-link>6: Grid and Traversal Patterns</a></li>
+<li><a href="#7-binary-search-families" data-toc-link>7: Binary Search Families</a></li>
+<li><a href="#8-ordering-and-interval-patterns" data-toc-link>8: Ordering and Interval Patterns</a></li>
+<li><a href="#9-selection-and-choice-patterns" data-toc-link>9: Selection and Choice Patterns</a></li>
+<li><a href="#10-recursive-search-patterns" data-toc-link>10: Recursive Search Patterns</a></li>
+<li><a href="#11-tree-patterns" data-toc-link>11: Tree Patterns</a></li>
+<li><a href="#12-graph-connectivity-patterns" data-toc-link>12: Graph Connectivity Patterns</a></li>
+<li><a href="#13-weighted-graph-and-network-patterns" data-toc-link>13: Weighted Graph and Network Patterns</a></li>
+<li><a href="#14-dynamic-programming-foundations" data-toc-link>14: Dynamic Programming Foundations</a></li>
+<li><a href="#15-choice-and-sequence-dp-patterns" data-toc-link>15: Choice and Sequence DP Patterns</a></li>
+<li><a href="#16-advanced-state-dp-patterns" data-toc-link>16: Advanced State DP Patterns</a></li>
+<li><a href="#17-dp-optimization-patterns" data-toc-link>17: DP Optimization Patterns</a></li>
+<li><a href="#18-range-query-patterns" data-toc-link>18: Range Query Patterns</a></li>
+<li><a href="#19-string-processing-patterns" data-toc-link>19: String Processing Patterns</a></li>
+<li><a href="#20-geometry-and-event-patterns" data-toc-link>20: Geometry and Event Patterns</a></li>
+<li><a href="#21-advanced-tree-and-path-query-patterns" data-toc-link>21: Advanced Tree and Path Query Patterns</a></li>
+<li><a href="#22-games-and-probabilistic-thinking" data-toc-link>22: Games and Probabilistic Thinking</a></li>
+<li><a href="#23-hybrid-pattern-composition" data-toc-link>23: Hybrid Pattern Composition</a></li>
+<li><a href="#24-reusable-java-pattern-templates" data-toc-link>24: Reusable Java Pattern Templates</a></li>
+<li><a href="#25-pattern-comparison-and-revision-systems" data-toc-link>25: Pattern Comparison and Revision Systems</a></li>
+<li><a href="#26-practice-tracks-and-real-world-transfer" data-toc-link>26: Practice Tracks and Real-World Transfer</a></li>
         </ul></nav>
       </aside>
 
@@ -140,7 +138,7 @@
         <article class="article">
 <h1>Coding Patterns Tutorial</h1>
 <p class="article-intro">A Java-first roadmap for recognizing recurring problem structures, validating invariants, and moving from brute force to reusable interview-grade templates.</p>
-<h2 id="chapter-1-java-toolkit-for-pattern-solving">Chapter 1: Java Toolkit for Pattern Solving</h2>
+<h2 id="1-java-toolkit-for-pattern-solving">1: Java Toolkit for Pattern Solving</h2>
 <h3 id="0-introduction">0. Introduction</h3>
 <p>This chapter builds the Java toolkit that later pattern work depends on. It sits in Part I - Pattern Foundations and Linear Thinking (Weeks 1-4), with the roadmap treating it as beginner work, so the point is to remove mechanical friction before the algorithmic ideas get harder. In practical terms, it supports the Part I outcome of writing clean Java scaffolding for array, string, and hash-based solutions and building the habits needed to explain why a better linear workflow beats a naive scan when it applies.</p>
 <p>Read it as the setup layer for the rest of the roadmap. Because this is the first chapter, it establishes the baseline every later coding-pattern chapter depends on, and Chapter 2 immediately builds on it by turning that toolkit into pattern recognition, clue spotting, and brute-force selection from real problem statements. The prerequisite is simple: be comfortable running a Java program and following basic control flow, then focus on sequence containers, hash-based workflows, comparator-driven ordering, safe loop templates, fast I/O, and debugging discipline.</p>
@@ -1160,8 +1158,8 @@ class ServiceDeskSimulation {
 <li><input checked="" disabled="" type="checkbox"> 1.6 Debugging with traces, assertions, and dry runs</li>
 </ul>
 <p>Coverage Summary: 6/6 official subtopics covered<br>This must always be 6/6 before final output</p>
-<p>Next chapter: How to Recognize a Coding Pattern</p>
-<h2 id="chapter-2-how-to-recognize-a-coding-pattern">Chapter 2: How to Recognize a Coding Pattern</h2>
+<p>Next: How to Recognize a Coding Pattern</p>
+<h2 id="2-how-to-recognize-a-coding-pattern">2: How to Recognize a Coding Pattern</h2>
 <h3 id="0-introduction-1">0. Introduction</h3>
 <p>This chapter sits in Part I - Pattern Foundations and Linear Thinking (Weeks 1-4), with the roadmap treating it as beginner work. Its goal is to learn a repeatable method for moving from a raw problem statement to a small shortlist of plausible patterns instead of guessing an algorithm from memory. This chapter directly supports the Part I outcome of moving from raw problem statements to a plausible pattern shortlist before writing code.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 1 built the Java toolkit. This chapter uses that toolkit to decide what kind of solution shape a problem is asking for. Chapter 3 turns pattern recognition into concrete families built on hashing and accumulation. Start this chapter after you are comfortable with basic Java arrays, strings, loops, maps, sets, and simple complexity comparison from Chapter 1. The main themes here are Definition and core idea of a pattern, Why patterns exist in algorithmic problem solving, Recognition signals and common problem clues, Reading input conditions and output goals, Picking a brute-force baseline before optimizing, and When not to force a familiar pattern.</p>
@@ -1767,8 +1765,8 @@ public class TwoSumRecognition {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 3: Hashing and Accumulation Patterns</p>
-<h2 id="chapter-3-hashing-and-accumulation-patterns">Chapter 3: Hashing and Accumulation Patterns</h2>
+<p>Next: 3: Hashing and Accumulation Patterns</p>
+<h2 id="3-hashing-and-accumulation-patterns">3: Hashing and Accumulation Patterns</h2>
 <h3 id="0-introduction-2">0. Introduction</h3>
 <p>This chapter sits in Part I - Pattern Foundations and Linear Thinking (Weeks 1-4), with the roadmap treating it as beginner to early intermediate work. Its goal is to build reliable Java techniques for counting, membership lookup, prefix accumulation, and prefix-plus-hash combinations so repeated scans can be replaced by reused state. This chapter directly supports the Part I outcome of writing clean Java scaffolding for array, string, and hash-based solutions and explaining why a linear scan can beat nested loops.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 2 explained how to recognize a pattern from clues and bottlenecks. This chapter turns that recognition skill into concrete hash and accumulation techniques. Chapter 4 extends linear reasoning from remembered state into moving pointers and dynamic windows. Start this chapter after you are comfortable with Chapter 1 Java toolkit, Chapter 2 pattern recognition workflow, basic complexity comparison, and comfort with arrays, strings, maps, and sets. The main themes here are Frequency Counter Pattern, Hash Map Lookup Pattern, Prefix Sum Pattern, Prefix XOR and accumulation variants, Combining prefix data with hashing, and Common map-state mistakes and collision-style pitfalls.</p>
@@ -2428,8 +2426,8 @@ public class SubarraySumEqualsK {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 4: Two-Pointer and Window Patterns</p>
-<h2 id="chapter-4-two-pointer-and-window-patterns">Chapter 4: Two-Pointer and Window Patterns</h2>
+<p>Next: 4: Two-Pointer and Window Patterns</p>
+<h2 id="4-two-pointer-and-window-patterns">4: Two-Pointer and Window Patterns</h2>
 <h3 id="0-introduction-3">0. Introduction</h3>
 <p>This chapter sits in Part I - Pattern Foundations and Linear Thinking (Weeks 1-4), with the roadmap treating it as beginner to intermediate work. Its goal is to learn how to solve linear-scan problems by moving one or more pointers with a clear invariant instead of restarting work with nested loops. This chapter directly supports the Part I outcome of explaining why a linear scan can replace a naive nested-loop approach when the problem&#39;s structure permits pointer movement.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 3 taught how to carry remembered state across a linear scan with maps and prefix data. This chapter teaches how to carry moving boundaries across a linear scan. Chapter 5 shifts from pointer-managed scans to stateful simulations built on stacks, queues, and monotonic structures. Start this chapter after you are comfortable with Chapters 1 through 3, comfort with arrays and strings, and basic reasoning about loop invariants and boundary checks. The main themes here are Two Pointers Pattern, Sliding Window Pattern, Fast and Slow Pointer Pattern, In-Place Reversal Pattern, Partitioning, shrinking, and expanding workflows, and Recognition checklist for linear-scan problems.</p>
@@ -3077,8 +3075,8 @@ public class LongestUniqueSubstring {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 5: Stack and Queue Driven Patterns</p>
-<h2 id="chapter-5-stack-and-queue-driven-patterns">Chapter 5: Stack and Queue Driven Patterns</h2>
+<p>Next: 5: Stack and Queue Driven Patterns</p>
+<h2 id="5-stack-and-queue-driven-patterns">5: Stack and Queue Driven Patterns</h2>
 <h3 id="0-introduction-4">0. Introduction</h3>
 <p>This chapter sits in Part II - Simulation, Ordering, and Search Space Control (Weeks 5-9), with the roadmap treating it as intermediate work. Its goal is to learn how to model algorithm state with stacks, queues, monotonic stacks, and monotonic queues so simulations stay correct, efficient, and easy to reason about. This chapter directly supports the Part II outcome of recognizing when state should be modeled with a stack, queue, or ordered simulation instead of repeated rescans.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 4 used pointer movement to manage linear scans. This chapter shifts from moving boundaries to explicit stateful simulation using ordered containers. Chapter 6 takes the idea of controlled state expansion into grids, flood fill, and breadth-first traversal. Start this chapter after you are comfortable with Chapters 1 through 4, especially comfort with Java <code>ArrayDeque</code>, loop invariants, and contiguous scans. The main themes here are Stack Simulation Pattern, Queue Simulation Pattern, Monotonic Stack Pattern, Monotonic Queue Pattern, Push-pop invariants and state cleanup rules, and Simulation mistakes that create stale state bugs.</p>
@@ -3728,8 +3726,8 @@ public class SlidingWindowMaximum {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 6: Grid and Traversal Patterns</p>
-<h2 id="chapter-6-grid-and-traversal-patterns">Chapter 6: Grid and Traversal Patterns</h2>
+<p>Next: 6: Grid and Traversal Patterns</p>
+<h2 id="6-grid-and-traversal-patterns">6: Grid and Traversal Patterns</h2>
 <h3 id="0-introduction-5">0. Introduction</h3>
 <p>This chapter sits in Part II - Simulation, Ordering, and Search Space Control (Weeks 5-9), with the roadmap treating it as intermediate work. Its goal is to learn how to model grids as structured traversal spaces so you can scan cells safely, explore connected regions correctly, and choose between DFS-style and BFS-style expansion with confidence. This chapter directly supports the Part II outcome of modeling state with queues and using invariants to keep simulations and traversals correct.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 5 focused on ordered simulation state in stacks and queues. This chapter uses queues and traversal state to move through 2D spaces. Chapter 7 turns traversal-style reasoning into binary search invariants and bounded search over ordered domains. Start this chapter after you are comfortable with Chapters 1 through 5, especially loops, queues, simple recursion, and the idea of pending frontier state. The main themes here are Matrix Traversal Pattern, Flood Fill Pattern, Multi-Source BFS Pattern, Boundary checks, visited state, and direction vectors, Layered expansion versus DFS-style exploration, and Visual walkthroughs for grid problems.</p>
@@ -4441,8 +4439,8 @@ public class RottingOranges {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 7: Binary Search Families</p>
-<h2 id="chapter-7-binary-search-families">Chapter 7: Binary Search Families</h2>
+<p>Next: 7: Binary Search Families</p>
+<h2 id="7-binary-search-families">7: Binary Search Families</h2>
 <h3 id="0-introduction-6">0. Introduction</h3>
 <p>This chapter sits in Part II - Simulation, Ordering, and Search Space Control (Weeks 5-9), with the roadmap treating it as intermediate work. Its goal is to learn how to use binary search as an invariant-driven search method over sorted data and monotonic answer spaces, not as a memorized loop with fragile boundary updates. This chapter directly supports the Part II outcome of using invariants to keep bounded search spaces correct and solving medium problems with a repeatable pattern-first workflow.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 6 used traversal frontiers to search grids. This chapter moves from state expansion to bounded search over ordered or monotonic spaces. Chapter 8 broadens the use of ordering from search boundaries to sorting, intervals, and placement-by-index workflows. Start this chapter after you are comfortable with Chapters 1 through 6, especially sorted-order reasoning, loop invariants, and careful boundary updates. The main themes here are Binary Search Pattern, Binary Search on Answer Pattern, Lower bound, upper bound, and search invariants, Designing monotonic conditions, Off-by-one handling and termination rules, and Template comparison for inclusive and exclusive ranges.</p>
@@ -5104,8 +5102,8 @@ return left;
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 8: Ordering and Interval Patterns</p>
-<h2 id="chapter-8-ordering-and-interval-patterns">Chapter 8: Ordering and Interval Patterns</h2>
+<p>Next: 8: Ordering and Interval Patterns</p>
+<h2 id="8-ordering-and-interval-patterns">8: Ordering and Interval Patterns</h2>
 <h3 id="0-introduction-7">0. Introduction</h3>
 <p>This chapter sits in Part II - Simulation, Ordering, and Search Space Control (Weeks 5-9), with the roadmap treating it as intermediate work. Its goal is to learn how sorting and placement-by-index reveal hidden structure in interval problems and missing-value problems, so overlap handling and index recovery become systematic instead of ad hoc. This chapter directly supports the Part II outcome of recognizing when state should be modeled by sorted order and using invariants to keep interval normalization correct.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 7 used ordered search spaces to cut away impossible halves. This chapter uses ordering to normalize overlaps, group related intervals, and place values where they logically belong. Chapter 9 turns ordering choices into broader selection strategies involving heaps, greedy decisions, meet-in-the-middle splits, and randomized selection. Start this chapter after you are comfortable with Chapters 1 through 7, especially sorting, boundary reasoning, and careful loop invariants. The main themes here are Merge Intervals Pattern, Cyclic Sort Pattern, Sorting by endpoints and overlap normalization, Placement-by-index problems and missing-value tricks, Interval edge cases with touching and nested ranges, and When sorting is the real hidden pattern.</p>
@@ -5673,8 +5671,8 @@ public class InsertIntervalSolver {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 9: Selection and Choice Patterns</p>
-<h2 id="chapter-9-selection-and-choice-patterns">Chapter 9: Selection and Choice Patterns</h2>
+<p>Next: 9: Selection and Choice Patterns</p>
+<h2 id="9-selection-and-choice-patterns">9: Selection and Choice Patterns</h2>
 <h3 id="0-introduction-8">0. Introduction</h3>
 <p>This chapter sits in Part II - Simulation, Ordering, and Search Space Control (Weeks 5-9), with the roadmap treating it as intermediate to upper intermediate work. Its goal is to learn how to choose among many candidates efficiently using heaps, greedy choices, meet-in-the-middle search splitting, and randomized selection instead of exhaustive comparison. This chapter directly supports the Part II outcome of recognizing when state should be modeled with a heap or sorted order and solving medium problems with a repeatable pattern-first workflow.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 8 showed how normalization and ordering make structure visible. This chapter builds on that by choosing the right strategy for selecting, ranking, or filtering candidates once structure is known. Chapter 10 moves from controlled choice among visible candidates into recursive search trees where choices branch and must be explored or pruned systematically. Start this chapter after you are comfortable with Chapters 1 through 8, especially sorting, heaps, binary search, and interval/order reasoning. The main themes here are Top K Elements Pattern, Heap Pattern, Greedy Choice Pattern, Meet in the Middle Pattern, Randomized Algorithm Pattern, and Trade-offs between sorting, heap selection, greed, and search splitting.</p>
@@ -6350,8 +6348,8 @@ public class RandomizedQuickselect {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 10: Recursive Search Patterns</p>
-<h2 id="chapter-10-recursive-search-patterns">Chapter 10: Recursive Search Patterns</h2>
+<p>Next: 10: Recursive Search Patterns</p>
+<h2 id="10-recursive-search-patterns">10: Recursive Search Patterns</h2>
 <h3 id="0-introduction-9">0. Introduction</h3>
 <p>This chapter sits in Part III - Recursive Search, Trees, and Graph Structure (Weeks 10-15), with the roadmap treating it as intermediate to upper intermediate work. Its goal is to learn how to model recursive search as an explicit decision tree so you can explore choices systematically, roll state back safely, prune impossible branches, and cache repeated subproblems when the same state appears again. This chapter directly supports the Part III outcome of explaining recursion and state clearly, without hand-waving over what the call stack stores or how branching decisions evolve.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 9 focused on making controlled choices without full branching. This chapter opens Part III by handling problems where choices really do branch and must be explored as a search tree. Chapter 11 takes recursive and level-order reasoning from generic search trees into concrete tree data structures, tries, and ancestor queries. Start this chapter after you are comfortable with Chapters 1 through 9, especially stacks and queues as hidden control-flow models, sorting, and careful invariant reasoning. The main themes here are Recursion Tree Pattern, Backtracking Pattern, Subsets Pattern, Permutations Pattern, Memoization Pattern, and Pruning, rollback, and search-tree visualization.</p>
@@ -6983,8 +6981,8 @@ public class ClimbingStairsMemoization {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 11: Tree Patterns</p>
-<h2 id="chapter-11-tree-patterns">Chapter 11: Tree Patterns</h2>
+<p>Next: 11: Tree Patterns</p>
+<h2 id="11-tree-patterns">11: Tree Patterns</h2>
 <h3 id="0-introduction-10">0. Introduction</h3>
 <p>This chapter sits in Part III - Recursive Search, Trees, and Graph Structure (Weeks 10-15), with the roadmap treating it as intermediate to upper intermediate work. Its goal is to learn how to reason about trees through traversal state, subtree summaries, ancestor relationships, and prefix-structured search so you can choose the right tree pattern instead of treating every tree problem as raw recursion. This chapter directly supports the Part III outcome of mapping tree problems to the right traversal or preprocessing pattern and explaining recursion state without hand-waving.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 10 introduced recursive search trees and backtracking. This chapter turns that search-state thinking into concrete tree traversals, subtree summaries, and ancestor-aware reasoning. Chapter 12 generalizes many of these traversal ideas from trees to full graph connectivity, cycles, dependencies, and components. Start this chapter after you are comfortable with Chapters 1 through 10, especially recursion trees, queues, stacks, and the idea that each recursive call or frontier entry carries precise state. The main themes here are Tree DFS Pattern, Tree BFS Pattern, Lowest Common Ancestor Pattern, Trie Pattern, Prefix Tree Search Pattern, and Path state, subtree state, and ancestor queries.</p>
@@ -7658,8 +7656,8 @@ public class BinaryTreeLevelOrderTraversal {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 12: Graph Connectivity Patterns</p>
-<h2 id="chapter-12-graph-connectivity-patterns">Chapter 12: Graph Connectivity Patterns</h2>
+<p>Next: 12: Graph Connectivity Patterns</p>
+<h2 id="12-graph-connectivity-patterns">12: Graph Connectivity Patterns</h2>
 <h3 id="0-introduction-11">0. Introduction</h3>
 <p>This chapter sits in Part III - Recursive Search, Trees, and Graph Structure (Weeks 10-15), with the roadmap treating it as intermediate to upper intermediate work. Its goal is to learn how to model graph problems around connectivity, reachability, dependencies, and cycles so you can choose DFS, BFS, union find, topological sort, or strongly connected component logic deliberately. This chapter directly supports the Part III outcome of mapping graph problems to the right traversal or preprocessing pattern and building confidence with connectivity problems in Java.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 11 used DFS, BFS, and ancestor reasoning on trees, where structure is acyclic and rooted. This chapter generalizes those ideas to graphs, where cycles, multiple components, and arbitrary edges make visited-state discipline essential. Chapter 13 adds weights and capacities, turning plain connectivity into shortest paths, minimum spanning trees, and flow networks. Start this chapter after you are comfortable with Chapters 1 through 11, especially DFS, BFS, queues, recursion state, and tree traversal discipline. The main themes here are Graph DFS Pattern, Graph BFS Pattern, Union Find Pattern, Topological Sort Pattern, Strongly Connected Components Pattern, and Modeling components, dependencies, and cycles.</p>
@@ -8377,8 +8375,8 @@ public class CourseScheduleTopologicalSort {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 13: Weighted Graph and Network Patterns</p>
-<h2 id="chapter-13-weighted-graph-and-network-patterns">Chapter 13: Weighted Graph and Network Patterns</h2>
+<p>Next: 13: Weighted Graph and Network Patterns</p>
+<h2 id="13-weighted-graph-and-network-patterns">13: Weighted Graph and Network Patterns</h2>
 <h3 id="0-introduction-12">0. Introduction</h3>
 <p>This chapter sits in Part III - Recursive Search, Trees, and Graph Structure (Weeks 10-15), with the roadmap treating it as upper intermediate to advanced work. Its goal is to learn how to choose between shortest-path, minimum spanning tree, and flow-network patterns in weighted graphs by understanding relaxation, cut intuition, residual structure, and the objective each algorithm is actually optimizing. This chapter directly supports the Part III outcome of building confidence with medium and hard connectivity problems in Java and choosing the right weighted-graph pattern from the problem statement.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 12 focused on connectivity, components, and dependencies in unweighted graphs. This chapter adds edge weights and capacities, which change the right objective and therefore the right algorithm. Chapter 14 shifts from graph-structured search into dynamic programming state design, where repeated subproblems and transitions become explicit. Start this chapter after you are comfortable with Chapters 1 through 12, especially graph traversal, priority queues, union find, and careful state modeling. The main themes here are Shortest Path Pattern, Minimum Spanning Tree Pattern, Advanced Graph Flow Pattern, Relaxation and cut-based intuition, Residual thinking and network transformation basics, and Choosing between traversal, shortest path, MST, and flow.</p>
@@ -9074,8 +9072,8 @@ public class MaxFlowEdmondsKarp {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 14: Dynamic Programming Foundations</p>
-<h2 id="chapter-14-dynamic-programming-foundations">Chapter 14: Dynamic Programming Foundations</h2>
+<p>Next: 14: Dynamic Programming Foundations</p>
+<h2 id="14-dynamic-programming-foundations">14: Dynamic Programming Foundations</h2>
 <h3 id="0-introduction-13">0. Introduction</h3>
 <p>This chapter sits in Part IV - Dynamic Programming Pattern Mastery (Weeks 16-22), with the roadmap treating it as intermediate to upper intermediate work. Its goal is to learn how to turn repeated recursive work into explicit dynamic programming states, transitions, and tables so you can move from intuition to correct and efficient Java implementations. This chapter directly supports the Part IV outcome of moving from pattern recognition to explicit state and transition design and writing Java DP solutions from recurrence to optimized implementation.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 13 finished weighted graph optimization. This chapter opens Part IV by shifting from graph objectives to repeated subproblem structure and explicit state design. Chapter 15 builds on these foundations with major DP families such as knapsack, subsequence, string, interval, and state-machine DP. Start this chapter after you are comfortable with Chapters 1 through 13, especially recursion trees, memoization from Chapter 10, and careful invariant-based reasoning. The main themes here are 1D Dynamic Programming Pattern, 2D Dynamic Programming Pattern, Memoization Pattern revisited, State Representation, Transition Logic, and Tabulation versus recursion trade-offs.</p>
@@ -9680,8 +9678,8 @@ public class CoinChangeDP {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 15: Choice and Sequence DP Patterns</p>
-<h2 id="chapter-15-choice-and-sequence-dp-patterns">Chapter 15: Choice and Sequence DP Patterns</h2>
+<p>Next: 15: Choice and Sequence DP Patterns</p>
+<h2 id="15-choice-and-sequence-dp-patterns">15: Choice and Sequence DP Patterns</h2>
 <h3 id="0-introduction-14">0. Introduction</h3>
 <p>This chapter sits in Part IV - Dynamic Programming Pattern Mastery (Weeks 16-22), with the roadmap treating it as upper intermediate work. Its goal is to learn the main dynamic programming families where decisions over items, prefixes, strings, ranges, and explicit modes lead to reusable state and transition templates. This chapter directly supports the Part IV outcome of writing Java DP solutions from recurrence to optimized implementation and moving from pattern recognition to explicit state design.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 14 established DP foundations: state meaning, transition logic, memoization, and tabulation. This chapter applies those foundations to the major DP families that appear across interviews and contests. Chapter 16 pushes DP state design further into trees, digits, bitmasks, compressed states, sparse memo tables, and harder pruning logic. Start this chapter after you are comfortable with Chapters 1 through 14, especially state representation, transition logic, and memoization-versus-tabulation trade-offs. The main themes here are Knapsack Pattern, Subsequence DP Pattern, String DP Pattern, Interval DP Pattern, State Machine DP Pattern, and Recurrence mistakes, invalid states, and base-case design.</p>
@@ -10281,8 +10279,8 @@ public class CoinChangeDP {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 16: Advanced State DP Patterns</p>
-<h2 id="chapter-16-advanced-state-dp-patterns">Chapter 16: Advanced State DP Patterns</h2>
+<p>Next: 16: Advanced State DP Patterns</p>
+<h2 id="16-advanced-state-dp-patterns">16: Advanced State DP Patterns</h2>
 <h3 id="0-introduction-15">0. Introduction</h3>
 <p>This chapter sits in Part IV - Dynamic Programming Pattern Mastery (Weeks 16-22), with the roadmap treating it as advanced work. Its goal is to learn how to design dynamic programming states when the problem structure is no longer a simple index or prefix, but instead involves trees, digits, bitmasks, compressed states, sparse memo tables, and search pruning. This chapter directly supports the Part IV outcome of moving from pattern recognition to explicit state and transition design and understanding where advanced optimization or proof obligations begin.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 15 covered major standard DP families such as knapsack, subsequence, string, interval, and state-machine patterns. This chapter extends DP into richer state spaces where the subproblem is structural rather than purely positional. Chapter 17 studies optimization-heavy DP techniques that reduce transition cost or exploit formal monotonicity and convexity assumptions. Start this chapter after you are comfortable with Chapters 1 through 15, especially recursion trees, memoization, interval reasoning, state machines, and careful invalid-state design. The main themes here are Tree DP Pattern, Digit DP Pattern, Bitmask DP Pattern, Advanced State Compression Pattern, Sparse-state memo tables and caching strategies, and Constraint-driven pruning in hard DP problems.</p>
@@ -10996,8 +10994,8 @@ public class PartitionKSubsetsDP {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 17: DP Optimization Patterns</p>
-<h2 id="chapter-17-dp-optimization-patterns">Chapter 17: DP Optimization Patterns</h2>
+<p>Next: 17: DP Optimization Patterns</p>
+<h2 id="17-dp-optimization-patterns">17: DP Optimization Patterns</h2>
 <h3 id="0-introduction-16">0. Introduction</h3>
 <p>This chapter sits in Part IV - Dynamic Programming Pattern Mastery (Weeks 16-22), with the roadmap treating it as advanced to expert work. Its goal is to learn the advanced optimization patterns that speed up expensive dynamic programming transitions, along with the mathematical prerequisites needed to use them safely. This chapter directly supports the Part IV outcome of understanding which advanced DP optimizations require proof before use and when a correct simpler DP should be preferred.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 16 focused on advanced DP state design across trees, digits, masks, and sparse memoization. This chapter assumes the state and recurrence are already correct and focuses on accelerating expensive transitions. This is the closing chapter of Part IV. After this point, the major DP families, advanced state models, and optimization-heavy techniques have all been covered. Start this chapter after you are comfortable with Chapters 1 through 16, especially state design, interval reasoning, prefix sums, monotonic queues, divide-and-conquer thinking, and the discipline of proving invariants before optimizing. The main themes here are Divide and Conquer Pattern, Divide and Conquer DP Pattern, Knuth Optimization Pattern, Convex Hull Trick Pattern, Monotonicity assumptions and optimization prerequisites, and When a simpler DP is better than a theoretical optimization.</p>
@@ -11718,8 +11716,8 @@ public class ConvexHullTrickDP {
 <li><p>Coverage Summary: 6/6 official subtopics covered</p>
 </li>
 </ul>
-<p>Next chapter: End of Part IV - revisit weak areas, re-solve representative DP families, and benchmark baseline versus optimized solutions</p>
-<h2 id="chapter-18-range-query-patterns">Chapter 18: Range Query Patterns</h2>
+<p>Next: End of Part IV - revisit weak areas, re-solve representative DP families, and benchmark baseline versus optimized solutions</p>
+<h2 id="18-range-query-patterns">18: Range Query Patterns</h2>
 <h3 id="0-introduction-17">0. Introduction</h3>
 <p>This chapter sits in Part V - Range Queries, Strings, and Geometry (Weeks 23-28), with the roadmap treating it as advanced work. Its goal is to learn how to model range-query problems from the constraints first so you can choose prefix sums, Fenwick trees, segment trees, or sparse tables deliberately instead of by habit. This chapter directly supports the Part V outcome of matching query problems to preprocessing-heavy or update-heavy solutions based on the constraints.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 17 focused on optimizing dynamic programming transitions when the recurrence structure allowed it. This chapter shifts from recurrence speedups to data structures that answer repeated interval questions efficiently. Chapter 19 moves from interval preprocessing on arrays to preprocessing-heavy string tools such as rolling hash and string matching. Start this chapter after you are comfortable with Chapters 1 through 17, especially arrays, prefix sums, trees, binary search thinking, and the habit of checking constraints before committing to a data structure. The main themes here are Range Query Pattern, Segment Tree Pattern, Fenwick Tree Pattern, Sparse Table Pattern, Point updates, range updates, and immutable queries, and Choosing the right query structure from the constraints.</p>
@@ -12434,8 +12432,8 @@ public class FenwickRangeSumExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 19: String Processing Patterns</p>
-<h2 id="chapter-19-string-processing-patterns">Chapter 19: String Processing Patterns</h2>
+<p>Next: 19: String Processing Patterns</p>
+<h2 id="19-string-processing-patterns">19: String Processing Patterns</h2>
 <h3 id="0-introduction-18">0. Introduction</h3>
 <p>This chapter sits in Part V - Range Queries, Strings, and Geometry (Weeks 23-28), with the roadmap treating it as advanced to expert work. Its goal is to learn how to preprocess and compare strings efficiently so repeated matching, substring ranking, and suffix-based reasoning become structured choices instead of ad hoc loops. This chapter directly supports the Part V outcome of using advanced string tools without losing sight of correctness guarantees and memory trade-offs.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 18 focused on repeated interval queries over arrays. This chapter carries the same preprocessing mindset into strings, where the repeated work is substring comparison and pattern matching. Chapter 20 moves from string structure to geometry and event ordering, where sorted events and boundary reasoning matter as much as text preprocessing matters here. Start this chapter after you are comfortable with Chapters 1 through 18, especially arrays, hashing, prefix thinking, binary search, and the habit of choosing a structure from the query pattern. The main themes here are Rolling Hash Pattern, String Matching Pattern, Suffix Array Pattern, Suffix Tree Pattern, Prefix-function and Z-style matching intuition, and Collision handling, verification, and memory trade-offs.</p>
@@ -13103,8 +13101,8 @@ public class SuffixArrayExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 20: Geometry and Event Patterns</p>
-<h2 id="chapter-20-geometry-and-event-patterns">Chapter 20: Geometry and Event Patterns</h2>
+<p>Next: 20: Geometry and Event Patterns</p>
+<h2 id="20-geometry-and-event-patterns">20: Geometry and Event Patterns</h2>
 <h3 id="0-introduction-19">0. Introduction</h3>
 <p>This chapter sits in Part V - Range Queries, Strings, and Geometry (Weeks 23-28), with the roadmap treating it as advanced to expert work. Its goal is to learn how to turn spatial problems into ordered events, safe numeric predicates, and compressed coordinate structures so geometric reasoning stays correct under edge cases. This chapter directly supports the Part V outcome of reasoning about events, coordinates, and geometry with clean implementation structure.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 19 focused on preprocessing immutable strings. This chapter shifts from text structure to spatial structure, where sorting events and respecting boundaries matter more than prefix reuse. Chapter 21 moves into advanced tree path-query structures, where coordinate flattening and segment trees reappear in a different setting. Start this chapter after you are comfortable with Chapters 1 through 19, especially sorting, interval reasoning, segment trees, coordinate compression, and careful invariant tracking. The main themes here are Geometry Pattern, Sweep Line Pattern, Line Sweep plus Events Pattern, Coordinate compression and sorted events, Area, intersection, and boundary-case reasoning, and Numeric stability and overflow handling in Java.</p>
@@ -13771,8 +13769,8 @@ public class RectangleUnionAreaExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 21: Advanced Tree and Path Query Patterns</p>
-<h2 id="chapter-21-advanced-tree-and-path-query-patterns">Chapter 21: Advanced Tree and Path Query Patterns</h2>
+<p>Next: 21: Advanced Tree and Path Query Patterns</p>
+<h2 id="21-advanced-tree-and-path-query-patterns">21: Advanced Tree and Path Query Patterns</h2>
 <h3 id="0-introduction-20">0. Introduction</h3>
 <p>This chapter sits in Part VI - Expert Structures and Hybrid Problem Solving (Weeks 29-34), with the roadmap treating it as advanced to expert work. Its goal is to learn how to preprocess trees so subtree and path queries become indexed range problems instead of repeated traversals. This chapter directly supports the Part VI outcome of justifying advanced structures with clear trade-offs instead of memorizing them as rituals.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 20 used coordinate compression and sweep structures on geometric objects. This chapter reuses that same flatten-and-index mindset on trees. Chapter 22 shifts from structural tree preprocessing to game-state analysis and probabilistic reasoning. Start this chapter after you are comfortable with Chapters 1 through 20, especially DFS, BFS, segment trees, Fenwick trees, recursion state, and range-query reasoning. The main themes here are Heavy Light Decomposition Pattern, Lowest Common Ancestor Pattern revisited with preprocessing, Euler tour flattening for subtree queries, Segment tree plus tree path combinations, Path queries versus subtree queries, and Trade-offs versus simpler DFS-based approaches.</p>
@@ -14563,8 +14561,8 @@ public class HeavyLightDecompositionExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 22: Games and Probabilistic Thinking</p>
-<h2 id="chapter-22-games-and-probabilistic-thinking">Chapter 22: Games and Probabilistic Thinking</h2>
+<p>Next: 22: Games and Probabilistic Thinking</p>
+<h2 id="22-games-and-probabilistic-thinking">22: Games and Probabilistic Thinking</h2>
 <h3 id="0-introduction-21">0. Introduction</h3>
 <p>This chapter sits in Part VI - Expert Structures and Hybrid Problem Solving (Weeks 29-34), with the roadmap treating it as advanced work. Its goal is to learn how to reason about turn-based optimal play, winning and losing states, and randomized algorithms with clear expectations about guarantees and adversarial inputs. This chapter directly supports the Part VI outcome of justifying advanced techniques with clear trade-offs instead of treating them as memorized tricks.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 21 focused on advanced tree preprocessing. This chapter shifts from structural decomposition to strategic reasoning, where the state meaning and guarantee type matter more than the shape of a data structure. Chapter 23 combines multiple patterns in hard problems, including cases where game reasoning, DP, graphs, or randomized ideas overlap. Start this chapter after you are comfortable with Chapters 1 through 21, especially recursion, DP, greedy counterexamples, adversarial thinking, and the habit of proving invariants before trusting a shortcut. The main themes here are Game Theory Pattern, Randomized Algorithm Pattern revisited, Winning states, losing states, and turn-based analysis, Expected behavior versus worst-case guarantees, Adversarial testing and counterexample design, and When randomness simplifies an otherwise hard strategy.</p>
@@ -15099,8 +15097,8 @@ public class RandomizedQuickselectExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 23: Hybrid Pattern Composition</p>
-<h2 id="chapter-23-hybrid-pattern-composition">Chapter 23: Hybrid Pattern Composition</h2>
+<p>Next: 23: Hybrid Pattern Composition</p>
+<h2 id="23-hybrid-pattern-composition">23: Hybrid Pattern Composition</h2>
 <h3 id="0-introduction-22">0. Introduction</h3>
 <p>This chapter sits in Part VI - Expert Structures and Hybrid Problem Solving (Weeks 29-34), with the roadmap treating it as advanced to expert work. Its goal is to learn how to solve hard problems by combining smaller known patterns without losing control of correctness, explanation quality, or debugging discipline. This chapter directly supports the Part VI outcome of approaching hard problems as compositions of smaller recognizable moves.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 22 focused on game-state and probabilistic reasoning. This chapter widens the lens and asks how to combine multiple familiar patterns inside one hard problem. Chapter 24 shifts from solving hybrid problems to storing the reusable Java templates and snippets that make those solutions faster to implement. Start this chapter after you are comfortable with Chapters 1 through 22, especially prefix sums, monotonic queues, graph traversal, DP, heaps, and the habit of verifying one pattern before adding a second one. The main themes here are Expert Hybrid Pattern, Multi-Pattern Problems, Pattern Combinations across arrays, graphs, and DP, Brute force to optimal workflow for hard problems, Anti-patterns in pattern recognition, and Communication strategy for interviews and contests.</p>
@@ -15652,8 +15650,8 @@ public class TspHybridExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 24: Reusable Java Pattern Templates</p>
-<h2 id="chapter-24-reusable-java-pattern-templates">Chapter 24: Reusable Java Pattern Templates</h2>
+<p>Next: 24: Reusable Java Pattern Templates</p>
+<h2 id="24-reusable-java-pattern-templates">24: Reusable Java Pattern Templates</h2>
 <h3 id="0-introduction-23">0. Introduction</h3>
 <p>This chapter sits in Part VII - Revision, Library Building, and Long-Term Mastery (Weeks 35-36), with the roadmap treating it as intermediate to advanced consolidation work. Its goal is to learn how to turn recurring pattern logic into reusable, bug-resistant Java templates instead of re-inventing each solution under time pressure. This chapter directly supports the Part VII outcome of building a reusable Java pattern library and a personal revision sheet.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 23 focused on combining patterns in hard problems. This chapter makes those solutions easier to implement repeatedly by extracting reusable Java templates. Chapter 25 builds on these templates by comparing neighboring patterns and designing a revision system for choosing among them quickly. Start this chapter after you are comfortable with Chapters 1 through 23, especially familiarity with the main pattern families and the implementation pain points each one introduces. The main themes here are Pattern Template, Standard Structure, Common Variables, Reusable Snippets, Testing Cases, and Best practices for bug-resistant Java implementations.</p>
@@ -16199,8 +16197,8 @@ public class DpTemplateExample {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 25: Pattern Comparison and Revision Systems</p>
-<h2 id="chapter-25-pattern-comparison-and-revision-systems">Chapter 25: Pattern Comparison and Revision Systems</h2>
+<p>Next: 25: Pattern Comparison and Revision Systems</p>
+<h2 id="25-pattern-comparison-and-revision-systems">25: Pattern Comparison and Revision Systems</h2>
 <h3 id="0-introduction-24">0. Introduction</h3>
 <p>This chapter sits in Part VII - Revision, Library Building, and Long-Term Mastery (Weeks 35-36), with the roadmap treating it as consolidation and execution refinement work. Its goal is to learn how to compare neighboring patterns quickly, build a revision system that reinforces the right distinctions, and solve familiar problems faster under time pressure. This chapter directly supports the Part VII outcome of recognizing neighboring patterns quickly under time pressure.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 24 built reusable Java templates. This chapter focuses on choosing among those templates quickly and reinforcing the distinctions that matter most. Chapter 26 turns the revision system into practice tracks, interview transfer, and real-world analogies. Start this chapter after you are comfortable with Chapters 1 through 24, especially the main pattern families, common failure modes, and the reusable Java scaffolds built in the previous chapter. The main themes here are Comparison with Similar Patterns, Revision Notes and Cheat Sheet, Mastery Checklist, Practice Roadmap, Speed Solving Strategy, and FAQ and selection heuristics.</p>
@@ -16718,8 +16716,8 @@ public class PatternComparisonExampleThree {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Chapter 26: Practice Tracks and Real-World Transfer</p>
-<h2 id="chapter-26-practice-tracks-and-real-world-transfer">Chapter 26: Practice Tracks and Real-World Transfer</h2>
+<p>Next: 26: Practice Tracks and Real-World Transfer</p>
+<h2 id="26-practice-tracks-and-real-world-transfer">26: Practice Tracks and Real-World Transfer</h2>
 <h3 id="0-introduction-25">0. Introduction</h3>
 <p>This chapter sits in Part VII - Revision, Library Building, and Long-Term Mastery (Weeks 35-36), with the roadmap treating it as consolidation and transfer work. Its goal is to learn how to turn pattern study into sustained practice, interview readiness, competitive programming progress, and real-world transfer through deliberate problem tracks. This chapter directly supports the Part VII outcome of being ready for interviews, contests, and advanced self-study.</p>
 <p>Read it as a bridge in the larger sequence. Chapter 25 focused on choosing patterns quickly and building a revision system. This chapter turns that system into a long-term practice plan and transfer model. This is the final numbered chapter. The natural next step is the capstone practice cycle, postmortems, and continued pattern-based problem solving. Start this chapter after you are comfortable with Chapters 1 through 25, especially the pattern library, revision sheets, comparison heuristics, and reusable Java templates built in the closing chapters. The main themes here are Easy problems by pattern family, Medium problems by pattern family, Hard problems by pattern family, Interview Questions, Competitive Programming Problems, and Real-World Applications and production-style analogies.</p>
@@ -17285,7 +17283,7 @@ public class PracticeTrackExampleThree {
 <li><p>This must always be 6/6 before final output</p>
 </li>
 </ul>
-<p>Next chapter: Capstone milestones, curated postmortems, and continued pattern-based practice</p>
+<p>Next: Capstone milestones, curated postmortems, and continued pattern-based practice</p>
 
         </article>
       </main>
@@ -17479,7 +17477,7 @@ public class PracticeTrackExampleThree {
         nextChapterButton.addEventListener('click', () => setActiveChapter(activeChapterIndex + 1));
       }
 
-            applyViewMode('chapter');
+      applyViewMode('chapter');
     } else {
       viewModeButtons.forEach((button) => {
         button.disabled = true;

@@ -9,7 +9,7 @@
   <meta name="author" content="Siddharth Misra" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://siddharth-misra.github.io/tutorials/aws/aws.html" />
-  <meta name="theme-color" content="#ff9900" />
+  <meta name="theme-color" content="#2563eb" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
@@ -62,10 +62,10 @@
   </div>
   <div class="atlas-topbar__right">
     <div class="atlas-topbar__chapter-nav" data-topbar-chapter-nav hidden>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous chapter" data-topbar-prev-chapter disabled>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous" data-topbar-prev-chapter disabled>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next chapter" data-topbar-next-chapter>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next" data-topbar-next-chapter>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
@@ -77,7 +77,7 @@
       </button>
       <div class="atlas-topbar__dropdown" data-topbar-dropdown>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
-        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Section View</button>
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
           <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -104,50 +104,50 @@
 
 
 
+
 <div class="layout">
       <aside class="sidebar" aria-label="Document navigation">
         <div class="chapter-controls" data-chapter-controls hidden>
-          <p class="chapter-controls__meta" data-chapter-indicator>Chapter 1</p>
+          <p class="chapter-controls__meta" data-chapter-indicator>1</p>
           <div class="chapter-controls__nav">
-            <button class="button" type="button" data-prev-chapter aria-label="Go to previous chapter">Previous</button>
-            <button class="button" type="button" data-next-chapter aria-label="Go to next chapter">Next</button>
+            <button class="button" type="button" data-prev-chapter aria-label="Go to previous">Previous</button>
+            <button class="button" type="button" data-next-chapter aria-label="Go to next">Next</button>
           </div>
         </div>
-        <h2>Navigate</h2>
-        <p>Major sections stay reachable on screen. Print output collapses to a clean single-column document.</p>
+
         <nav aria-label="AWS chapter navigation"><ul class="toc-list">
-<li><a href="#chapter-1-cloud-basics-and-aws-global-infrastructure" data-toc-link>Chapter 1: Cloud Basics and AWS Global Infrastructure</a></li>
-<li><a href="#chapter-2-aws-account-setup-and-cost-guardrails" data-toc-link>Chapter 2: AWS Account Setup and Cost Guardrails</a></li>
-<li><a href="#chapter-3-iam-fundamentals" data-toc-link>Chapter 3: IAM Fundamentals</a></li>
-<li><a href="#chapter-4-console-cli-and-sdk-workflow" data-toc-link>Chapter 4: Console, CLI, and SDK Workflow</a></li>
-<li><a href="#chapter-5-vpc-fundamentals" data-toc-link>Chapter 5: VPC Fundamentals</a></li>
-<li><a href="#chapter-6-ec2-essentials" data-toc-link>Chapter 6: EC2 Essentials</a></li>
-<li><a href="#chapter-7-elastic-load-balancing-and-auto-scaling" data-toc-link>Chapter 7: Elastic Load Balancing and Auto Scaling</a></li>
-<li><a href="#chapter-8-route-53-and-dns-routing" data-toc-link>Chapter 8: Route 53 and DNS Routing</a></li>
-<li><a href="#chapter-9-s3-object-storage" data-toc-link>Chapter 9: S3 Object Storage</a></li>
-<li><a href="#chapter-10-ebs-and-efs" data-toc-link>Chapter 10: EBS and EFS</a></li>
-<li><a href="#chapter-11-rds-and-aurora" data-toc-link>Chapter 11: RDS and Aurora</a></li>
-<li><a href="#chapter-12-dynamodb" data-toc-link>Chapter 12: DynamoDB</a></li>
-<li><a href="#chapter-13-elasticache" data-toc-link>Chapter 13: ElastiCache</a></li>
-<li><a href="#chapter-14-lambda" data-toc-link>Chapter 14: Lambda</a></li>
-<li><a href="#chapter-15-api-gateway" data-toc-link>Chapter 15: API Gateway</a></li>
-<li><a href="#chapter-16-sqs-sns-and-eventbridge" data-toc-link>Chapter 16: SQS, SNS, and EventBridge</a></li>
-<li><a href="#chapter-17-step-functions" data-toc-link>Chapter 17: Step Functions</a></li>
-<li><a href="#chapter-18-ecr" data-toc-link>Chapter 18: ECR</a></li>
-<li><a href="#chapter-19-ecs-and-fargate" data-toc-link>Chapter 19: ECS and Fargate</a></li>
-<li><a href="#chapter-20-eks-basics" data-toc-link>Chapter 20: EKS Basics</a></li>
-<li><a href="#chapter-21-infrastructure-as-code" data-toc-link>Chapter 21: Infrastructure as Code</a></li>
-<li><a href="#chapter-22-cicd-on-aws" data-toc-link>Chapter 22: CI/CD on AWS</a></li>
-<li><a href="#chapter-23-cloudwatch" data-toc-link>Chapter 23: CloudWatch</a></li>
-<li><a href="#chapter-24-cloudtrail-and-aws-config" data-toc-link>Chapter 24: CloudTrail and AWS Config</a></li>
-<li><a href="#chapter-25-kms-secrets-manager-and-parameter-store" data-toc-link>Chapter 25: KMS, Secrets Manager, and Parameter Store</a></li>
-<li><a href="#chapter-26-waf-shield-and-cognito" data-toc-link>Chapter 26: WAF, Shield, and Cognito</a></li>
-<li><a href="#chapter-27-backup-and-disaster-recovery" data-toc-link>Chapter 27: Backup and Disaster Recovery</a></li>
-<li><a href="#chapter-28-cost-optimization-and-well-architected-review" data-toc-link>Chapter 28: Cost Optimization and Well-Architected Review</a></li>
-<li><a href="#chapter-29-multi-account-and-landing-zone-design" data-toc-link>Chapter 29: Multi-Account and Landing Zone Design</a></li>
-<li><a href="#chapter-30-multi-region-architecture" data-toc-link>Chapter 30: Multi-Region Architecture</a></li>
-<li><a href="#chapter-31-data-and-analytics-services" data-toc-link>Chapter 31: Data and Analytics Services</a></li>
-<li><a href="#chapter-32-capstone-project" data-toc-link>Chapter 32: Capstone Project</a></li>
+<li><a href="#1-cloud-basics-and-aws-global-infrastructure" data-toc-link>1: Cloud Basics and AWS Global Infrastructure</a></li>
+<li><a href="#2-aws-account-setup-and-cost-guardrails" data-toc-link>2: AWS Account Setup and Cost Guardrails</a></li>
+<li><a href="#3-iam-fundamentals" data-toc-link>3: IAM Fundamentals</a></li>
+<li><a href="#4-console-cli-and-sdk-workflow" data-toc-link>4: Console, CLI, and SDK Workflow</a></li>
+<li><a href="#5-vpc-fundamentals" data-toc-link>5: VPC Fundamentals</a></li>
+<li><a href="#6-ec2-essentials" data-toc-link>6: EC2 Essentials</a></li>
+<li><a href="#7-elastic-load-balancing-and-auto-scaling" data-toc-link>7: Elastic Load Balancing and Auto Scaling</a></li>
+<li><a href="#8-route-53-and-dns-routing" data-toc-link>8: Route 53 and DNS Routing</a></li>
+<li><a href="#9-s3-object-storage" data-toc-link>9: S3 Object Storage</a></li>
+<li><a href="#10-ebs-and-efs" data-toc-link>10: EBS and EFS</a></li>
+<li><a href="#11-rds-and-aurora" data-toc-link>11: RDS and Aurora</a></li>
+<li><a href="#12-dynamodb" data-toc-link>12: DynamoDB</a></li>
+<li><a href="#13-elasticache" data-toc-link>13: ElastiCache</a></li>
+<li><a href="#14-lambda" data-toc-link>14: Lambda</a></li>
+<li><a href="#15-api-gateway" data-toc-link>15: API Gateway</a></li>
+<li><a href="#16-sqs-sns-and-eventbridge" data-toc-link>16: SQS, SNS, and EventBridge</a></li>
+<li><a href="#17-step-functions" data-toc-link>17: Step Functions</a></li>
+<li><a href="#18-ecr" data-toc-link>18: ECR</a></li>
+<li><a href="#19-ecs-and-fargate" data-toc-link>19: ECS and Fargate</a></li>
+<li><a href="#20-eks-basics" data-toc-link>20: EKS Basics</a></li>
+<li><a href="#21-infrastructure-as-code" data-toc-link>21: Infrastructure as Code</a></li>
+<li><a href="#22-cicd-on-aws" data-toc-link>22: CI/CD on AWS</a></li>
+<li><a href="#23-cloudwatch" data-toc-link>23: CloudWatch</a></li>
+<li><a href="#24-cloudtrail-and-aws-config" data-toc-link>24: CloudTrail and AWS Config</a></li>
+<li><a href="#25-kms-secrets-manager-and-parameter-store" data-toc-link>25: KMS, Secrets Manager, and Parameter Store</a></li>
+<li><a href="#26-waf-shield-and-cognito" data-toc-link>26: WAF, Shield, and Cognito</a></li>
+<li><a href="#27-backup-and-disaster-recovery" data-toc-link>27: Backup and Disaster Recovery</a></li>
+<li><a href="#28-cost-optimization-and-well-architected-review" data-toc-link>28: Cost Optimization and Well-Architected Review</a></li>
+<li><a href="#29-multi-account-and-landing-zone-design" data-toc-link>29: Multi-Account and Landing Zone Design</a></li>
+<li><a href="#30-multi-region-architecture" data-toc-link>30: Multi-Region Architecture</a></li>
+<li><a href="#31-data-and-analytics-services" data-toc-link>31: Data and Analytics Services</a></li>
+<li><a href="#32-capstone-project" data-toc-link>32: Capstone Project</a></li>
         </ul></nav>
       </aside>
 
@@ -155,7 +155,7 @@
         <article class="article">
 <h1>AWS Tutorial</h1>
 <p class="article-intro">A complete AWS learning path from account setup and networking through compute, data, serverless, operations, and multi-region architecture.</p>
-<h2 id="chapter-1-cloud-basics-and-aws-global-infrastructure">Chapter 1: Cloud Basics and AWS Global Infrastructure</h2>
+<h2 id="1-cloud-basics-and-aws-global-infrastructure">1: Cloud Basics and AWS Global Infrastructure</h2>
 <p>Amazon Web Services (AWS) is a cloud computing platform that gives you infrastructure, storage, networking, databases, and many other managed services on demand. Before learning individual AWS services, you need a clear picture of the cloud model itself and of the physical and logical structure AWS uses to deliver it.</p>
 <p>In simple terms, this chapter explains what cloud computing is, why organizations choose it, and how AWS organizes its global infrastructure through Regions, Availability Zones, and edge locations. This matters because almost every later architecture decision depends on these basics: where you deploy, how you design for failure, who manages which layer, and how you think about availability, latency, and recovery.</p>
 <p>You can think of this chapter as the foundation for the rest of the roadmap. It shows how AWS works at a high level, why the shared responsibility model is important, and how the platform is built to support resilient systems before you move into specific services such as Amazon Elastic Compute Cloud (Amazon EC2), Amazon Simple Storage Service (Amazon S3), or AWS Lambda.</p>
@@ -386,7 +386,7 @@
 <li>Write down a simple RTO and RPO target for a learning application and explain how that would affect architecture.</li>
 </ol>
 <hr>
-<h3 id="110-chapter-recap">1.10 Chapter Recap</h3>
+<h3 id="110-recap">1.10 Recap</h3>
 <ul>
 <li>Cloud computing trades fixed infrastructure for on-demand services.</li>
 <li>AWS organizes infrastructure into regions, AZs, and edge locations.</li>
@@ -396,8 +396,8 @@
 <li>Service model choice affects how much infrastructure you manage and where operational responsibility shifts.</li>
 <li>Solutions architects use the Well-Architected pillars, service scope, and RTO or RPO goals to justify foundational design choices.</li>
 </ul>
-<p>Next chapter: set up an AWS account correctly so you start with strong security and cost controls instead of fixing preventable mistakes later.</p>
-<h2 id="chapter-2-aws-account-setup-and-cost-guardrails">Chapter 2: AWS Account Setup and Cost Guardrails</h2>
+<p>Next: set up an AWS account correctly so you start with strong security and cost controls instead of fixing preventable mistakes later.</p>
+<h2 id="2-aws-account-setup-and-cost-guardrails">2: AWS Account Setup and Cost Guardrails</h2>
 <p>Your Amazon Web Services (AWS) account is the starting point for everything you build. It controls billing, identity, logging, and access to every service, so a weak setup here can create security risks or unexpected costs very quickly.</p>
 <p>This chapter explains how to set up an account so it is safe to learn in and easier to operate later in production. You will see why protecting the root user, turning on billing alerts, and adding basic guardrails matter before you launch real workloads.</p>
 <hr>
@@ -592,7 +592,7 @@
 <li>Describe one reason a single learning account is fine now and one reason it becomes weak for production later.</li>
 </ol>
 <hr>
-<h3 id="212-chapter-recap">2.12 Chapter Recap</h3>
+<h3 id="212-recap">2.12 Recap</h3>
 <ul>
 <li>Root user protection is mandatory, not optional.</li>
 <li>Budgets, billing alerts, and Cost Explorer are part of the foundation.</li>
@@ -601,8 +601,8 @@
 <li>A clean AWS account starts with strong security, monitored notification paths, and simple operational guardrails.</li>
 <li>Solutions architects also define landing-zone direction, logging baselines, account boundaries, and lifecycle discipline early instead of retrofitting them later.</li>
 </ul>
-<p>Next chapter: learn IAM so the right people and services get the right permissions, and nothing more.</p>
-<h2 id="chapter-3-iam-fundamentals">Chapter 3: IAM Fundamentals</h2>
+<p>Next: learn IAM so the right people and services get the right permissions, and nothing more.</p>
+<h2 id="3-iam-fundamentals">3: IAM Fundamentals</h2>
 <p>AWS Identity and Access Management (IAM) is the system that decides who can do what in your AWS environment. It is one of the most important AWS services because every action, from opening the console to deploying an application, depends on permissions.</p>
 <p>This chapter introduces the main IAM building blocks such as users, groups, roles, and policies. You will learn why least privilege matters, how teams and applications get access safely, and why good IAM design is a foundation for secure production systems.</p>
 <hr>
@@ -840,7 +840,7 @@
 <li>Explain how you would troubleshoot an access denial when the identity policy looks correct at first glance.</li>
 </ol>
 <hr>
-<h3 id="312-chapter-recap">3.12 Chapter Recap</h3>
+<h3 id="312-recap">3.12 Recap</h3>
 <ul>
 <li>IAM controls access to AWS resources.</li>
 <li>Users, groups, roles, and policies solve different access-control problems.</li>
@@ -849,8 +849,8 @@
 <li>Roles and temporary credentials are safer than hard-coded long-term keys, and trust policies are as important as permission policies.</li>
 <li>Solutions architects should also understand federation, resource-based policies, and layered permission controls across multiple accounts.</li>
 </ul>
-<p>Next chapter: use the console, CLI, and SDKs correctly so you can work with AWS interactively, from scripts, and from applications.</p>
-<h2 id="chapter-4-console-cli-and-sdk-workflow">Chapter 4: Console, CLI, and SDK Workflow</h2>
+<p>Next: use the console, CLI, and SDKs correctly so you can work with AWS interactively, from scripts, and from applications.</p>
+<h2 id="4-console-cli-and-sdk-workflow">4: Console, CLI, and SDK Workflow</h2>
 <p>There are three common ways to work with AWS: the web console, the Command Line Interface (CLI), and Software Development Kits (SDKs). They all talk to the same AWS services, but each one fits a different kind of task.</p>
 <p>This chapter shows when to use each approach in practice. The console is useful for learning and inspection, the CLI is useful for repeatable operator tasks, and SDKs are how applications call AWS services directly in code.</p>
 <hr>
@@ -1046,7 +1046,7 @@
 <li>Explain how an SDK running on EC2 should obtain credentials without storing access keys on disk.</li>
 </ol>
 <hr>
-<h3 id="412-chapter-recap">4.12 Chapter Recap</h3>
+<h3 id="412-recap">4.12 Recap</h3>
 <ul>
 <li>The console is best for exploration and visual inspection.</li>
 <li>The CLI is best for repeatable commands and automation.</li>
@@ -1056,7 +1056,7 @@
 <li>Solutions architects also treat repeatability, auditability, and multi-account safety as first-class workflow requirements.</li>
 </ul>
 <p>Next phase: start building real infrastructure with networking and compute services such as VPC and EC2.</p>
-<h2 id="chapter-5-vpc-fundamentals">Chapter 5: VPC Fundamentals</h2>
+<h2 id="5-vpc-fundamentals">5: VPC Fundamentals</h2>
 <p>Amazon Virtual Private Cloud (Amazon VPC) is the networking layer for many AWS workloads. It gives you a private network boundary where you choose IP ranges, divide resources into subnets, and control how traffic enters, leaves, and moves between systems.</p>
 <p>This chapter explains why VPC design matters for both security and reliability. You will learn how ideas like Classless Inter-Domain Routing (CIDR) blocks, route tables, internet access, Network Address Translation (NAT), security groups, and network access control lists (ACLs) work together at a high level.</p>
 <hr>
@@ -1329,7 +1329,7 @@
 <li>Explain whether your data subnet should be private with controlled egress or fully isolated with no internet path at all.</li>
 </ol>
 <hr>
-<h3 id="512-chapter-recap">5.12 Chapter Recap</h3>
+<h3 id="512-recap">5.12 Recap</h3>
 <ul>
 <li>A VPC is the regional network boundary for many AWS workloads.</li>
 <li>CIDR planning affects future scale and connectivity, not just initial setup.</li>
@@ -1340,8 +1340,8 @@
 <li>Security groups are the main workload-level traffic control, while NACLs provide subnet-level filtering and require careful handling because they are stateless.</li>
 <li>Good VPC design reduces attack surface, improves resilience, and makes traffic paths and failure analysis easier to reason about.</li>
 </ul>
-<p>Next chapter: EC2 Essentials.</p>
-<h2 id="chapter-6-ec2-essentials">Chapter 6: EC2 Essentials</h2>
+<p>Next: EC2 Essentials.</p>
+<h2 id="6-ec2-essentials">6: EC2 Essentials</h2>
 <p>Amazon Elastic Compute Cloud (Amazon EC2) gives you virtual machines in AWS. It is a core service because it lets you run operating systems, install software, and control the environment more directly than many higher-level AWS options.</p>
 <p>This chapter explains how EC2 is used for real workloads and what choices matter most. You will learn why instance type, Amazon Machine Image (AMI), storage, and pricing model affect performance, reliability, and cost when you run servers in production.</p>
 <hr>
@@ -1595,7 +1595,7 @@
 <li>Describe one design where horizontal scaling is better than vertical scaling and one where the opposite may be more practical.</li>
 </ol>
 <hr>
-<h3 id="612-chapter-recap">6.12 Chapter Recap</h3>
+<h3 id="612-recap">6.12 Recap</h3>
 <ul>
 <li>EC2 gives you flexible compute, but you keep significant operational responsibility.</li>
 <li>Every instance is a combination of image, size, network placement, storage, and identity decisions.</li>
@@ -1606,8 +1606,8 @@
 <li>Pricing models should follow workload interrupt tolerance, predictability, and how much interruption the system can absorb.</li>
 <li>Strong EC2 architecture assumes instances can be replaced rather than preserved forever.</li>
 </ul>
-<p>Next chapter: Elastic Load Balancing and Auto Scaling.</p>
-<h2 id="chapter-7-elastic-load-balancing-and-auto-scaling">Chapter 7: Elastic Load Balancing and Auto Scaling</h2>
+<p>Next: Elastic Load Balancing and Auto Scaling.</p>
+<h2 id="7-elastic-load-balancing-and-auto-scaling">7: Elastic Load Balancing and Auto Scaling</h2>
 <p>Most production applications cannot depend on one server. Elastic Load Balancing spreads incoming traffic across multiple targets, and Auto Scaling adjusts capacity when demand changes or when instances fail.</p>
 <p>This chapter shows how these services help keep applications available and responsive. You will learn why health checks, target groups, and scaling rules are important, and how AWS uses them to replace unhealthy compute and add or remove capacity automatically.</p>
 <hr>
@@ -1839,7 +1839,7 @@
 <li>Explain why a stateful session model can make horizontal scaling harder even when the infrastructure layer is correct.</li>
 </ol>
 <hr>
-<h3 id="712-chapter-recap">7.12 Chapter Recap</h3>
+<h3 id="712-recap">7.12 Recap</h3>
 <ul>
 <li>Load balancers spread traffic and help isolate users from individual server failures.</li>
 <li>ALB is usually the default for HTTP and HTTPS applications, while NLB fits lower-level transport needs.</li>
@@ -1849,8 +1849,8 @@
 <li>Scaling policies only work well when the chosen metrics match real workload pressure and when scale-out delay is accounted for.</li>
 <li>Multi-AZ load balancing and fleet replacement are baseline reliability patterns, not advanced extras.</li>
 </ul>
-<p>Next chapter: Route 53 and DNS Routing.</p>
-<h2 id="chapter-8-route-53-and-dns-routing">Chapter 8: Route 53 and DNS Routing</h2>
+<p>Next: Route 53 and DNS Routing.</p>
+<h2 id="8-route-53-and-dns-routing">8: Route 53 and DNS Routing</h2>
 <p>The Domain Name System (DNS) is what turns names people use into destinations computers can reach. Amazon Route 53 is AWS&#39;s DNS service, and it plays a major role in how users find your applications and how traffic is directed during normal operation or failure.</p>
 <p>This chapter explains why DNS is more than a simple naming tool. You will learn how hosted zones, records, alias targets, health checks, and routing policies are used to send users to the right endpoint with the right balance of speed, availability, and control.</p>
 <hr>
@@ -2071,7 +2071,7 @@
 <li>Describe one case where DNS should point to a stable application entry point and one case where internal-only service names should stay private.</li>
 </ol>
 <hr>
-<h3 id="812-chapter-recap">8.12 Chapter Recap</h3>
+<h3 id="812-recap">8.12 Recap</h3>
 <ul>
 <li>Route 53 is AWS&#39;s managed DNS service and a major traffic steering layer.</li>
 <li>Hosted zones define where Route 53 is authoritative, but delegation must also be correct.</li>
@@ -2081,8 +2081,8 @@
 <li>Health checks and routing policies support availability goals, but they do not replace a real recovery design.</li>
 <li>DNS is most effective when it works with sound regional, application, and data architecture decisions.</li>
 </ul>
-<p>Next chapter: S3 Object Storage.</p>
-<h2 id="chapter-9-s3-object-storage">Chapter 9: S3 Object Storage</h2>
+<p>Next: S3 Object Storage.</p>
+<h2 id="9-s3-object-storage">9: S3 Object Storage</h2>
 <p>Amazon Simple Storage Service (Amazon S3) is AWS object storage for files such as images, logs, backups, documents, and static website assets. It is widely used because it is durable, highly scalable, and easy to connect to from many other AWS services.</p>
 <p>This chapter explains how S3 stores data as objects inside buckets and why that model matters. You will learn how teams use storage classes, versioning, lifecycle rules, and access controls to keep data available, secure, and cost-aware in production.</p>
 <hr>
@@ -2242,10 +2242,10 @@
 <li>Describe when versioning is important and when it may create unnecessary cost without a clear retention plan.</li>
 </ol>
 <hr>
-<h3 id="912-chapter-recap">9.12 Chapter Recap</h3>
+<h3 id="912-recap">9.12 Recap</h3>
 <p>S3 is AWS&#39;s core object storage service and is used for static assets, uploads, logs, backups, and analytical datasets. Its main strengths are durability, scale, and service integrations, but it needs deliberate design around access control, lifecycle management, versioning, and public delivery. Strong S3 usage starts with the right storage model and a clear security and retention strategy.</p>
-<p>Next chapter: Chapter 10: EBS and EFS</p>
-<h2 id="chapter-10-ebs-and-efs">Chapter 10: EBS and EFS</h2>
+<p>Next: 10: EBS and EFS</p>
+<h2 id="10-ebs-and-efs">10: EBS and EFS</h2>
 <p>Some workloads need storage that looks like a disk, and others need a shared file system that many machines can use at the same time. Amazon Elastic Block Store (Amazon EBS) and Amazon Elastic File System (Amazon EFS) solve these two different problems.</p>
 <p>This chapter shows when block storage is the right fit and when shared file storage makes more sense. You will learn how these services are used with Amazon Elastic Compute Cloud (Amazon EC2), and why performance, availability, persistence, and cost all affect the design choice.</p>
 <hr>
@@ -2411,10 +2411,10 @@
 <li>Identify one workload where the correct answer is neither EBS nor EFS because object storage is a better model.</li>
 </ol>
 <hr>
-<h3 id="1012-chapter-recap">10.12 Chapter Recap</h3>
+<h3 id="1012-recap">10.12 Recap</h3>
 <p>EBS provides persistent block storage for EC2-based workloads, while EFS provides a managed shared file system for workloads that need concurrent file access. The correct choice depends on storage semantics, performance expectations, sharing needs, and recovery requirements. Strong storage design begins by understanding what the application actually needs rather than treating all persistence as the same problem.</p>
-<p>Next chapter: Chapter 11: RDS and Aurora</p>
-<h2 id="chapter-11-rds-and-aurora">Chapter 11: RDS and Aurora</h2>
+<p>Next: 11: RDS and Aurora</p>
+<h2 id="11-rds-and-aurora">11: RDS and Aurora</h2>
 <p>Relational databases are still a common choice for applications that need structured data, transactions, and SQL. Amazon Relational Database Service (Amazon RDS) and Amazon Aurora let AWS manage much of the operational work, such as backups, patching, and failover, while you still make key design decisions.</p>
 <p>This chapter explains where managed relational databases fit in AWS architecture. You will learn how they differ from running a database yourself on Amazon Elastic Compute Cloud (Amazon EC2), and why backups, read scaling, and Multi-Availability Zone design matter in production.</p>
 <hr>
@@ -2573,10 +2573,10 @@
 <li>Describe one case where running a database on EC2 might be justified and why it is usually not the default choice.</li>
 </ol>
 <hr>
-<h3 id="1112-chapter-recap">11.12 Chapter Recap</h3>
+<h3 id="1112-recap">11.12 Recap</h3>
 <p>RDS and Aurora provide managed relational database options that reduce operational burden while preserving the core strengths of relational systems. Strong design still requires deliberate decisions about availability, backups, read scaling, credentials, and network access. Managed databases simplify operations, but they do not remove the need for sound architectural judgment.</p>
-<p>Next chapter: Chapter 12: DynamoDB</p>
-<h2 id="chapter-12-dynamodb">Chapter 12: DynamoDB</h2>
+<p>Next: 12: DynamoDB</p>
+<h2 id="12-dynamodb">12: DynamoDB</h2>
 <p>Amazon DynamoDB is a managed NoSQL database built for very high scale and low-latency access. It is useful when applications need fast, predictable performance without managing database servers.</p>
 <p>This chapter introduces the DynamoDB design mindset, which is different from traditional relational modeling. You will learn why partition keys, sort keys, and access patterns shape the data model, and how that affects application design, scaling, and operational simplicity.</p>
 <hr>
@@ -2719,10 +2719,10 @@
 <li>Explain why a relational design process and a DynamoDB design process usually start from different questions.</li>
 </ol>
 <hr>
-<h3 id="1212-chapter-recap">12.12 Chapter Recap</h3>
+<h3 id="1212-recap">12.12 Recap</h3>
 <p>DynamoDB is a fully managed NoSQL database built for high-scale, low-latency workloads, but it demands an access-pattern-first design mindset. Partition keys, sort keys, secondary indexes, and throughput choices all shape both performance and cost. Strong DynamoDB design begins by understanding how the application reads and writes data, not by copying relational habits into a different service.</p>
-<p>Next chapter: Chapter 13: ElastiCache</p>
-<h2 id="chapter-13-elasticache">Chapter 13: ElastiCache</h2>
+<p>Next: 13: ElastiCache</p>
+<h2 id="13-elasticache">13: ElastiCache</h2>
 <p>Caching helps applications respond faster and reduces pressure on slower backend systems such as databases. Amazon ElastiCache provides in-memory data stores that applications can use to keep frequently accessed data close and fast.</p>
 <p>This chapter explains why caching is powerful but also easy to misuse. You will learn how ElastiCache fits into application architecture, what kinds of data are good candidates for caching, and why expiration, consistency, and failure handling matter in production.</p>
 <hr>
@@ -2867,10 +2867,10 @@
 <li>List two data types that should probably not be cached without careful review.</li>
 </ol>
 <hr>
-<h3 id="1312-chapter-recap">13.12 Chapter Recap</h3>
+<h3 id="1312-recap">13.12 Recap</h3>
 <p>ElastiCache helps applications reduce latency and offload databases by storing frequently used data in memory, but it adds a second data-access layer that must be designed carefully. Strong caching architecture defines the system of record clearly, chooses appropriate TTL and invalidation behavior, and ensures the application can degrade safely when the cache is cold or unavailable. Cache is a performance tool, not a substitute for sound data design.</p>
-<p>Next chapter: Chapter 14: Lambda</p>
-<h2 id="chapter-14-lambda">Chapter 14: Lambda</h2>
+<p>Next: 14: Lambda</p>
+<h2 id="14-lambda">14: Lambda</h2>
 <p>AWS Lambda runs code in response to events without requiring you to manage servers directly. It is a core serverless service and is often used for APIs, file processing, automation, and event-driven workflows.</p>
 <p>This chapter explains where Lambda works well and where its limits matter. You will learn how functions are invoked, how scaling and concurrency behave, and why packaging, permissions, execution time, and networking decisions affect reliability and cost.</p>
 <hr>
@@ -3140,7 +3140,7 @@
 <li>Sketch an idempotency strategy for a Lambda function that processes order-created events.</li>
 </ol>
 <hr>
-<h3 id="1412-chapter-recap">14.12 Chapter Recap</h3>
+<h3 id="1412-recap">14.12 Recap</h3>
 <ul>
 <li>Lambda is event-driven compute that removes server management but not architecture responsibility.</li>
 <li>Invocation model matters because synchronous, asynchronous, and poll-based sources behave differently under failure.</li>
@@ -3149,8 +3149,8 @@
 <li>Packaging size, initialization cost, and VPC networking choices directly affect latency, cost, and operability.</li>
 <li>Reliable Lambda systems depend on idempotency, observability, and explicit failure-handling strategy.</li>
 </ul>
-<p>Next chapter: Chapter 15: API Gateway</p>
-<h2 id="chapter-15-api-gateway">Chapter 15: API Gateway</h2>
+<p>Next: 15: API Gateway</p>
+<h2 id="15-api-gateway">15: API Gateway</h2>
 <p>An Application Programming Interface (API) is often the front door to an application. Amazon API Gateway helps you publish, secure, and manage APIs so clients can call backend services in a controlled and observable way.</p>
 <p>This chapter shows how API Gateway is used in front of AWS Lambda, containers, and other services. You will learn why endpoint type, authentication, throttling, stages, and integrations matter when building APIs that are safe to expose to real users.</p>
 <hr>
@@ -3382,7 +3382,7 @@
 <li>Sketch a versioning strategy for a future breaking change.</li>
 </ol>
 <hr>
-<h3 id="1512-chapter-recap">15.12 Chapter Recap</h3>
+<h3 id="1512-recap">15.12 Recap</h3>
 <ul>
 <li>API Gateway is a managed front door for APIs, not just a request router.</li>
 <li>The right API type depends on needed features, cost sensitivity, and client pattern.</li>
@@ -3391,8 +3391,8 @@
 <li>Integration style affects coupling, error handling, and where validation logic belongs.</li>
 <li>Strong API designs treat observability, traffic shaping, and backend protection as first-class concerns.</li>
 </ul>
-<p>Next chapter: Chapter 16: SQS, SNS, and EventBridge</p>
-<h2 id="chapter-16-sqs-sns-and-eventbridge">Chapter 16: SQS, SNS, and EventBridge</h2>
+<p>Next: 16: SQS, SNS, and EventBridge</p>
+<h2 id="16-sqs-sns-and-eventbridge">16: SQS, SNS, and EventBridge</h2>
 <p>Modern systems often work better when parts of the application do not talk to each other directly. Amazon Simple Queue Service (Amazon SQS), Amazon Simple Notification Service (Amazon SNS), and Amazon EventBridge are AWS services for messaging and event-driven communication.</p>
 <p>This chapter explains the different delivery models they provide and why those differences matter. You will learn when to use a queue, when to use publish and subscribe, and when an event bus is the better choice for decoupling systems, absorbing traffic spikes, and routing events cleanly.</p>
 <hr>
@@ -3610,7 +3610,7 @@
 <li>Describe a realistic workload that should use API Gateway plus SQS instead of a long synchronous backend call.</li>
 </ol>
 <hr>
-<h3 id="1612-chapter-recap">16.12 Chapter Recap</h3>
+<h3 id="1612-recap">16.12 Recap</h3>
 <ul>
 <li>SQS provides durable queue-based decoupling and backlog absorption.</li>
 <li>SNS provides publish-subscribe fan-out to multiple subscribers.</li>
@@ -3619,8 +3619,8 @@
 <li>Dead-letter queues, visibility timeout tuning, and idempotent consumers are key reliability controls.</li>
 <li>Strong messaging architectures choose services by communication pattern, not by brand similarity.</li>
 </ul>
-<p>Next chapter: Chapter 17: Step Functions</p>
-<h2 id="chapter-17-step-functions">Chapter 17: Step Functions</h2>
+<p>Next: 17: Step Functions</p>
+<h2 id="17-step-functions">17: Step Functions</h2>
 <p>AWS Step Functions is a workflow orchestration service that coordinates multiple steps in a process. Instead of hiding control flow inside custom application code, you describe the workflow as a state machine and let AWS run it.</p>
 <p>This chapter explains why orchestration becomes important as systems grow. You will learn how Step Functions is used to connect services, manage retries and failures, and make multi-step business processes easier to understand, operate, and recover in production.</p>
 <hr>
@@ -3842,7 +3842,7 @@
 <li>Describe one business workflow in your system that should use Step Functions instead of custom orchestration code.</li>
 </ol>
 <hr>
-<h3 id="1712-chapter-recap">17.12 Chapter Recap</h3>
+<h3 id="1712-recap">17.12 Recap</h3>
 <ul>
 <li>Step Functions provides explicit workflow orchestration through state machines.</li>
 <li>Standard and Express workflows solve different problems and should be chosen by workload behavior.</li>
@@ -3851,8 +3851,8 @@
 <li>Step Functions is strongest when coordination logic is the real problem to solve.</li>
 <li>Clear orchestration reduces hidden control-flow bugs and improves operational understanding of complex workflows.</li>
 </ul>
-<p>Next chapter: Chapter 18: ECR</p>
-<h2 id="chapter-18-ecr">Chapter 18: ECR</h2>
+<p>Next: 18: ECR</p>
+<h2 id="18-ecr">18: ECR</h2>
 <p>Amazon Elastic Container Registry (Amazon ECR) stores container images for deployment on AWS. It gives teams a central place to push, version, scan, and manage the artifacts that container platforms pull at runtime.</p>
 <p>This chapter explains why image management is part of a secure delivery pipeline, not just a storage task. You will learn how repositories, tags, digests, lifecycle policies, and scanning help teams ship containers in a more repeatable and production-safe way.</p>
 <hr>
@@ -4053,7 +4053,7 @@
 <li>Explain which roles should be allowed to push images and which should only pull them.</li>
 </ol>
 <hr>
-<h3 id="1812-chapter-recap">18.12 Chapter Recap</h3>
+<h3 id="1812-recap">18.12 Recap</h3>
 <ul>
 <li>ECR is the managed container registry layer for AWS container delivery workflows.</li>
 <li>Repositories, tags, and digests define how image artifacts are stored and identified.</li>
@@ -4062,8 +4062,8 @@
 <li>ECR integrates with ECS, EKS, Lambda container images, and CI/CD pipelines.</li>
 <li>Clear artifact identity and access boundaries are core delivery requirements, not optional cleanup details.</li>
 </ul>
-<p>Next chapter: Chapter 19: ECS and Fargate</p>
-<h2 id="chapter-19-ecs-and-fargate">Chapter 19: ECS and Fargate</h2>
+<p>Next: 19: ECS and Fargate</p>
+<h2 id="19-ecs-and-fargate">19: ECS and Fargate</h2>
 <p>Amazon Elastic Container Service (Amazon ECS) is AWS&#39;s container orchestration service, and AWS Fargate is a serverless compute option for running those containers. Together, they let you deploy applications in containers without building your own full container platform.</p>
 <p>This chapter explains how tasks, services, clusters, and networking fit together at a high level. You will learn why some teams choose ECS on Amazon Elastic Compute Cloud (Amazon EC2) for more control, while others choose Fargate to reduce infrastructure management.</p>
 <hr>
@@ -4263,7 +4263,7 @@
 <li>Describe one workload that should stay on ECS and one that should move to Lambda or EKS instead.</li>
 </ol>
 <hr>
-<h3 id="1912-chapter-recap">19.12 Chapter Recap</h3>
+<h3 id="1912-recap">19.12 Recap</h3>
 <ul>
 <li>ECS is AWS&#39;s managed container orchestration service for running tasks and services.</li>
 <li>Fargate removes host management, while ECS on EC2 offers deeper control and potentially better packing efficiency.</li>
@@ -4272,8 +4272,8 @@
 <li>IAM boundaries, image hygiene, and observability shape container security and operability.</li>
 <li>ECS is often the pragmatic middle path between raw servers and full Kubernetes adoption.</li>
 </ul>
-<p>Next chapter: Chapter 20: EKS Basics</p>
-<h2 id="chapter-20-eks-basics">Chapter 20: EKS Basics</h2>
+<p>Next: 20: EKS Basics</p>
+<h2 id="20-eks-basics">20: EKS Basics</h2>
 <p>Amazon Elastic Kubernetes Service (Amazon EKS) is AWS&#39;s managed Kubernetes platform. It runs the Kubernetes control plane for you, but you still need to understand how Kubernetes works and what operating responsibilities remain.</p>
 <p>This chapter explains where EKS fits and why teams choose it. You will learn the basics of how workloads run on Kubernetes, how networking and identity affect cluster design, and why EKS is powerful but more operationally demanding than simpler AWS compute options.</p>
 <hr>
@@ -4453,7 +4453,7 @@
 <li>Describe a realistic reason your organization would adopt EKS and one weak reason it should reject.</li>
 </ol>
 <hr>
-<h3 id="2012-chapter-recap">20.12 Chapter Recap</h3>
+<h3 id="2012-recap">20.12 Recap</h3>
 <ul>
 <li>EKS provides a managed Kubernetes control plane, but teams still own significant platform operations work.</li>
 <li>Kubernetes primitives such as Pods, Deployments, Services, and Ingress shape how workloads run and communicate.</li>
@@ -4462,8 +4462,8 @@
 <li>EKS is the right choice when Kubernetes is a genuine requirement, not just when containers are present.</li>
 <li>Platform ownership and operational maturity determine whether EKS becomes an asset or a burden.</li>
 </ul>
-<p>Next chapter: Chapter 21: Infrastructure as Code</p>
-<h2 id="chapter-21-infrastructure-as-code">Chapter 21: Infrastructure as Code</h2>
+<p>Next: 21: Infrastructure as Code</p>
+<h2 id="21-infrastructure-as-code">21: Infrastructure as Code</h2>
 <p>Infrastructure as Code means defining cloud resources in files instead of creating them by hand in a console. This matters because infrastructure becomes reviewable, repeatable, versioned, and safer to change over time.</p>
 <p>This chapter introduces the main AWS approaches, including AWS CloudFormation and the AWS Cloud Development Kit (AWS CDK). You will learn how teams use code-driven infrastructure to reduce manual mistakes, manage environments consistently, and control changes in production.</p>
 <hr>
@@ -4654,7 +4654,7 @@
 <li>Describe how you would separate shared platform infrastructure from one application&#39;s infrastructure.</li>
 </ol>
 <hr>
-<h3 id="2112-chapter-recap">21.12 Chapter Recap</h3>
+<h3 id="2112-recap">21.12 Recap</h3>
 <ul>
 <li>Infrastructure as Code turns infrastructure into versioned, reviewable, repeatable source artifacts.</li>
 <li>CloudFormation and CDK both support AWS-native IaC workflows with different trade-offs around abstraction and clarity.</li>
@@ -4663,8 +4663,8 @@
 <li>Infrastructure changes need testing, approval, and rollback thinking just like application releases.</li>
 <li>The goal is not simply automation. The goal is controlled, understandable, reproducible infrastructure change.</li>
 </ul>
-<p>Next chapter: Chapter 22: CI/CD on AWS</p>
-<h2 id="chapter-22-cicd-on-aws">Chapter 22: CI/CD on AWS</h2>
+<p>Next: 22: CI/CD on AWS</p>
+<h2 id="22-cicd-on-aws">22: CI/CD on AWS</h2>
 <p>Continuous Integration and Continuous Delivery (CI/CD) is the practice of building, testing, and deploying software through automated pipelines. In AWS, this helps teams move faster while still applying checks, approvals, and rollback strategies.</p>
 <p>This chapter explains how AWS supports delivery workflows from source change to production release. You will learn why pipeline stages matter, how automation reduces risky manual steps, and what controls are needed to make releases secure, observable, and dependable.</p>
 <hr>
@@ -4852,7 +4852,7 @@
 <li>Compare a direct manual release process with the controlled pipeline you designed and identify the operational risks removed.</li>
 </ol>
 <hr>
-<h3 id="2212-chapter-recap">22.12 Chapter Recap</h3>
+<h3 id="2212-recap">22.12 Recap</h3>
 <ul>
 <li>CI/CD makes software and infrastructure delivery repeatable, testable, and auditable.</li>
 <li>AWS delivery workflows often combine services such as CodePipeline, CodeBuild, ECR, and CloudFormation or CDK deployment steps.</li>
@@ -4861,8 +4861,8 @@
 <li>Observability and rollback readiness are part of delivery design, not afterthoughts.</li>
 <li>A mature pipeline optimizes both speed and control instead of sacrificing one for the other.</li>
 </ul>
-<p>Next chapter: Chapter 23: CloudWatch</p>
-<h2 id="chapter-23-cloudwatch">Chapter 23: CloudWatch</h2>
+<p>Next: 23: CloudWatch</p>
+<h2 id="23-cloudwatch">23: CloudWatch</h2>
 <p>Amazon CloudWatch is a core observability service for AWS workloads. It collects and works with metrics, logs, alarms, dashboards, and events so operators can see what a system is doing and respond when something goes wrong.</p>
 <p>This chapter explains why monitoring is an active part of running production systems, not just a reporting tool. You will learn how CloudWatch helps teams detect failures, track performance, and build operational awareness around applications and infrastructure.</p>
 <hr>
@@ -5049,10 +5049,10 @@
 <li>Explain how you would investigate a sudden increase in API latency using metrics, dashboards, and logs together.</li>
 </ol>
 <hr>
-<h3 id="2312-chapter-recap">23.12 Chapter Recap</h3>
+<h3 id="2312-recap">23.12 Recap</h3>
 <p>CloudWatch gives AWS workloads their basic operational visibility. Metrics show trends and health signals, logs explain behavior in detail, alarms decide when action is required, and dashboards provide shared context for operators. Good CloudWatch design is not about collecting everything. It is about collecting the signals that help teams detect, diagnose, and respond to real problems quickly and safely.</p>
-<p>Next chapter: CloudTrail and AWS Config</p>
-<h2 id="chapter-24-cloudtrail-and-aws-config">Chapter 24: CloudTrail and AWS Config</h2>
+<p>Next: CloudTrail and AWS Config</p>
+<h2 id="24-cloudtrail-and-aws-config">24: CloudTrail and AWS Config</h2>
 <p>AWS CloudTrail and AWS Config both help you understand change in your AWS environment, but they answer different questions. CloudTrail records API activity, while Config records the state of resources and how that state changes over time.</p>
 <p>This chapter explains why both services are important for security and operations. You will learn how they support auditing, investigation, governance, and drift detection, and why production environments need clear records of both actions and configuration history.</p>
 <hr>
@@ -5222,10 +5222,10 @@
 <li>Sketch an organization-level design for storing audit logs from multiple AWS accounts.</li>
 </ol>
 <hr>
-<h3 id="2412-chapter-recap">24.12 Chapter Recap</h3>
+<h3 id="2412-recap">24.12 Recap</h3>
 <p>CloudTrail records account and API activity, while AWS Config records resource configuration state and compliance over time. CloudTrail helps identify who made a change and how. Config helps show what changed and whether the new state violates expectations. Together, they provide the audit and drift-detection foundation needed for secure, governed AWS environments.</p>
-<p>Next chapter: Chapter 25: KMS, Secrets Manager, and Parameter Store</p>
-<h2 id="chapter-25-kms-secrets-manager-and-parameter-store">Chapter 25: KMS, Secrets Manager, and Parameter Store</h2>
+<p>Next: 25: KMS, Secrets Manager, and Parameter Store</p>
+<h2 id="25-kms-secrets-manager-and-parameter-store">25: KMS, Secrets Manager, and Parameter Store</h2>
 <p>Applications need encryption keys, secrets, and configuration values, but they should not store them directly in code. AWS Key Management Service (AWS KMS), AWS Secrets Manager, and AWS Systems Manager Parameter Store help teams handle sensitive data in safer and more manageable ways.</p>
 <p>This chapter explains what each service is for and why mixing them up causes bad designs. You will learn how they are used for encryption, credentials, tokens, and configuration, and how the right choice improves security, rotation, and operational control.</p>
 <hr>
@@ -5392,10 +5392,10 @@
 <li>Sketch a safe secret-retrieval pattern for a Lambda function or containerized service.</li>
 </ol>
 <hr>
-<h3 id="2512-chapter-recap">25.12 Chapter Recap</h3>
+<h3 id="2512-recap">25.12 Recap</h3>
 <p>KMS manages encryption keys, Secrets Manager manages secret values and their lifecycle, and Parameter Store manages configuration values with optional secure storage for simpler sensitive data. Strong AWS designs distinguish among these concerns instead of forcing one service to solve every problem. The result is clearer ownership, safer access control, and less exposure of sensitive information in application code and operations.</p>
-<p>Next chapter: Chapter 26: WAF, Shield, and Cognito</p>
-<h2 id="chapter-26-waf-shield-and-cognito">Chapter 26: WAF, Shield, and Cognito</h2>
+<p>Next: 26: WAF, Shield, and Cognito</p>
+<h2 id="26-waf-shield-and-cognito">26: WAF, Shield, and Cognito</h2>
 <p>Internet-facing applications need protection at both the network edge and the user identity layer. AWS Web Application Firewall (AWS WAF), AWS Shield, and Amazon Cognito each solve a different part of that problem.</p>
 <p>This chapter explains how these services fit into a practical security architecture. You will learn how AWS WAF filters web requests, how Shield helps with Distributed Denial of Service (DDoS) protection, and how Cognito manages user sign-in, authentication, and identity flows for applications.</p>
 <hr>
@@ -5542,10 +5542,10 @@
 <li>Explain why login success does not remove the need for application-level authorization checks.</li>
 </ol>
 <hr>
-<h3 id="2612-chapter-recap">26.12 Chapter Recap</h3>
+<h3 id="2612-recap">26.12 Recap</h3>
 <p>WAF filters web requests, Shield strengthens DDoS resilience, and Cognito manages end-user identity. Together they protect different layers of an internet-facing AWS application. Strong architectures treat them as complementary controls within a broader security design that also includes authorization, monitoring, scaling, and safe operational practices.</p>
-<p>Next chapter: Chapter 27: Backup and Disaster Recovery</p>
-<h2 id="chapter-27-backup-and-disaster-recovery">Chapter 27: Backup and Disaster Recovery</h2>
+<p>Next: 27: Backup and Disaster Recovery</p>
+<h2 id="27-backup-and-disaster-recovery">27: Backup and Disaster Recovery</h2>
 <p>Backups and disaster recovery are related, but they are not the same thing. A backup helps you restore data, while a disaster recovery plan helps you restore service after a major failure such as infrastructure loss, corruption, or regional disruption.</p>
 <p>This chapter explains how to think about recovery in business terms instead of vague promises. You will learn why Recovery Point Objective (RPO) and Recovery Time Objective (RTO) guide design choices, and how AWS supports recovery patterns with different costs, speeds, and levels of complexity.</p>
 <hr>
@@ -5690,10 +5690,10 @@
 <li>Explain why same-account backups may be insufficient for certain threat models.</li>
 </ol>
 <hr>
-<h3 id="2712-chapter-recap">27.12 Chapter Recap</h3>
+<h3 id="2712-recap">27.12 Recap</h3>
 <p>Backups, high availability, and disaster recovery serve different purposes and must be designed together. RPO and RTO define the acceptable loss and recovery window, and those targets determine which recovery pattern makes sense. In AWS, strong recovery design includes protected backups, restore testing, dependency-aware procedures, and clear trade-offs between speed, complexity, and cost.</p>
-<p>Next chapter: Chapter 28: Cost Optimization and Well-Architected Review</p>
-<h2 id="chapter-28-cost-optimization-and-well-architected-review">Chapter 28: Cost Optimization and Well-Architected Review</h2>
+<p>Next: 28: Cost Optimization and Well-Architected Review</p>
+<h2 id="28-cost-optimization-and-well-architected-review">28: Cost Optimization and Well-Architected Review</h2>
 <p>Good AWS design is not only about making systems work. It is also about spending money deliberately and checking whether the architecture is balanced across cost, security, reliability, performance, and operations.</p>
 <p>This chapter explains how cost optimization works as an ongoing engineering habit, not a one-time cleanup. You will learn how the AWS Well-Architected Framework helps teams review trade-offs, find waste, and make better design choices before small inefficiencies become expensive problems.</p>
 <hr>
@@ -5846,10 +5846,10 @@
 <li>Write down three Well-Architected review questions you would ask before approving a major workload expansion.</li>
 </ol>
 <hr>
-<h3 id="2812-chapter-recap">28.12 Chapter Recap</h3>
+<h3 id="2812-recap">28.12 Recap</h3>
 <p>Cost optimization in AWS is a design discipline grounded in usage patterns, not a late-stage cleanup activity. The best results come from understanding cost drivers, removing waste deliberately, matching service and purchasing choices to real workload behavior, and reviewing trade-offs through the Well-Architected pillars. A mature workload is not the cheapest possible system. It is the system whose cost and architectural quality both make sense for the business.</p>
-<p>Next chapter: Chapter 29: Multi-Account and Landing Zone Design</p>
-<h2 id="chapter-29-multi-account-and-landing-zone-design">Chapter 29: Multi-Account and Landing Zone Design</h2>
+<p>Next: 29: Multi-Account and Landing Zone Design</p>
+<h2 id="29-multi-account-and-landing-zone-design">29: Multi-Account and Landing Zone Design</h2>
 <p>As AWS environments grow, one account is usually not enough. Multi-account design gives teams clearer security boundaries, better billing separation, safer experimentation, and more controlled operations across environments and business units.</p>
 <p>This chapter explains how a landing zone provides the starting structure for operating at scale. You will learn how AWS Organizations, service control policies (SCPs), shared logging, and account standards are used to build a foundation that supports governance without blocking delivery.</p>
 <hr>
@@ -5998,10 +5998,10 @@
 <li>List the baseline controls you would want every new AWS account to inherit automatically.</li>
 </ol>
 <hr>
-<h3 id="2912-chapter-recap">29.12 Chapter Recap</h3>
+<h3 id="2912-recap">29.12 Recap</h3>
 <p>Multi-account AWS design uses the account boundary as a core isolation and governance tool. AWS Organizations, OUs, and SCPs make it possible to apply guardrails across environments, while a landing zone provides the baseline structure for identity, logging, networking, and account provisioning. Strong designs use these capabilities to reduce blast radius, clarify ownership, and keep growth manageable over time.</p>
-<p>Next chapter: Chapter 30: Multi-Region Architecture</p>
-<h2 id="chapter-30-multi-region-architecture">Chapter 30: Multi-Region Architecture</h2>
+<p>Next: 30: Multi-Region Architecture</p>
+<h2 id="30-multi-region-architecture">30: Multi-Region Architecture</h2>
 <p>Most AWS workloads start in one Region, but some need to run across multiple Regions for resilience, lower latency, or legal and compliance reasons. Multi-region design can improve outcomes, but it also adds real complexity to networking, data management, deployment, and operations.</p>
 <p>This chapter explains when multi-region architecture is worth that cost. You will learn how teams think about traffic routing, failover, data replication, and service placement when building systems that must keep working beyond the limits of a single Region.</p>
 <hr>
@@ -6141,10 +6141,10 @@
 <li>Describe how you would test a regional failover without waiting for a real outage.</li>
 </ol>
 <hr>
-<h3 id="3012-chapter-recap">30.12 Chapter Recap</h3>
+<h3 id="3012-recap">30.12 Recap</h3>
 <p>Multi-region architecture should be driven by explicit needs such as resilience, latency, or compliance. It requires more than copying infrastructure into another region: traffic routing, state management, failover behavior, security dependencies, and operating processes all have to work across regions. The best design is the one whose extra complexity is justified by real business impact.</p>
-<p>Next chapter: Chapter 31: Data and Analytics Services</p>
-<h2 id="chapter-31-data-and-analytics-services">Chapter 31: Data and Analytics Services</h2>
+<p>Next: 31: Data and Analytics Services</p>
+<h2 id="31-data-and-analytics-services">31: Data and Analytics Services</h2>
 <p>AWS offers a wide range of data and analytics services, each built for a different job. Services such as Amazon Athena, AWS Glue, Amazon Redshift, and Amazon Kinesis help teams query data, prepare datasets, run large-scale analytics, and process streams of events.</p>
 <p>This chapter explains how these services fit together at a high level instead of treating them as isolated tools. You will learn how to think about batch versus streaming, data lake versus warehouse patterns, and how latency, scale, and operational effort influence the right choice.</p>
 <hr>
@@ -6291,10 +6291,10 @@
 <li>List the governance questions you would ask before giving analysts access to customer event data.</li>
 </ol>
 <hr>
-<h3 id="3112-chapter-recap">31.12 Chapter Recap</h3>
+<h3 id="3112-recap">31.12 Recap</h3>
 <p>AWS analytics services support different data shapes and latency requirements. Athena is useful for querying well-structured data in S3, Glue helps catalog and prepare data, Redshift supports warehouse-style analytics, and Kinesis handles streaming event flows. Strong analytical architecture chooses among these tools based on workload patterns, data quality needs, governance requirements, and cost discipline.</p>
-<p>Next chapter: Chapter 32: Capstone Project</p>
-<h2 id="chapter-32-capstone-project">Chapter 32: Capstone Project</h2>
+<p>Next: 32: Capstone Project</p>
+<h2 id="32-capstone-project">32: Capstone Project</h2>
 <p>This chapter brings the roadmap together by moving from individual AWS services to a complete system design. The goal is not to memorize one perfect architecture, but to practice making connected decisions that reflect real production needs.</p>
 <p>You will use the ideas from earlier chapters to shape a realistic workload across networking, compute, storage, security, observability, delivery, and cost. The focus is on reasoning clearly about trade-offs, because strong AWS design comes from how services work together, not from listing as many services as possible.</p>
 <hr>
@@ -6444,9 +6444,9 @@
 <li>List the infrastructure-as-code and CI/CD controls needed before the workload should be called production-ready.</li>
 </ol>
 <hr>
-<h3 id="3212-chapter-recap">32.12 Chapter Recap</h3>
+<h3 id="3212-recap">32.12 Recap</h3>
 <p>The capstone turns AWS service knowledge into architecture judgment. A strong final design connects identity, networking, compute, storage, messaging, observability, governance, recovery, and delivery into one system whose trade-offs are clear. The goal is not to build the most complex architecture. The goal is to design one that is secure, operable, scalable, and appropriate for the problem.</p>
-<p>Next chapter: Revisit the roadmap sections that the capstone exposed as weak points and deepen them in implementation.</p>
+<p>Next: Revisit the roadmap sections that the capstone exposed as weak points and deepen them in implementation.</p>
 
         </article>
       </main>

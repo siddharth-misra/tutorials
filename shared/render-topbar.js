@@ -29,10 +29,10 @@ const renderThemeMenuItem = () => `        <button class="atlas-topbar__dropdown
         </button>`;
 
 const renderReaderControls = () => `    <div class="atlas-topbar__chapter-nav" data-topbar-chapter-nav hidden>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous chapter" data-topbar-prev-chapter disabled>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous" data-topbar-prev-chapter disabled>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next chapter" data-topbar-next-chapter>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next" data-topbar-next-chapter>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
@@ -44,7 +44,7 @@ const renderReaderControls = () => `    <div class="atlas-topbar__chapter-nav" d
       </button>
       <div class="atlas-topbar__dropdown" data-topbar-dropdown>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
-        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Section View</button>
         <hr class="atlas-topbar__dropdown-divider" />
 ${renderThemeMenuItem()}
         <hr class="atlas-topbar__dropdown-divider" />

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 /* ============================================================
    Shared tutorial styles
@@ -8,73 +8,73 @@
    ============================================================ */
 
 :root {
-  --paper: #f6f0e6;
-  --card: #fffdf9;
-  --ink: #201a17;
-  --muted: #6b5f58;
-  --line: #d7c9bb;
-  --accent: #9c4f2c;
-  --accent-soft: #efe0d4;
-  --code-bg: #f1e7da;
-  --shadow: 0 20px 48px rgba(38, 24, 17, 0.12);
-  --radius: 22px;
-  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --font-ui: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --font-display: "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
-  --font-mono: "SFMono-Regular", "Menlo", "Monaco", "Courier New", monospace;
-  --body-size: clamp(17px, 1rem + 0.18vw, 18.5px);
-  --body-leading: 1.78;
+  --paper: #f8f9fb;
+  --card: #ffffff;
+  --ink: #1a1a2e;
+  --muted: #4a4a68;
+  --line: #e5e7eb;
+  --accent: #2563eb;
+  --accent-soft: #eff6ff;
+  --code-bg: #f1f5f9;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --radius: 12px;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-ui: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'Menlo', monospace;
+  --body-size: clamp(15.5px, 1rem + 0.1vw, 16.5px);
+  --body-leading: 1.72;
   --measure: 72ch;
-  --sidebar-size: 0.97rem;
-  --meta-size: 0.95rem;
-  --small-size: 0.92rem;
-  --table-size: 0.97rem;
-  --code-size: 0.93rem;
-  --topbar-bg: rgba(255, 251, 245, 0.92);
-  --topbar-border: rgba(101, 61, 42, 0.14);
-  --topbar-shadow: 0 4px 24px rgba(42, 24, 16, 0.1);
-  --dropdown-bg: rgba(255, 251, 245, 0.97);
-  --body-bg-start: #f2e7d8;
-  --body-bg-mid: #f7f2e9;
-  --body-bg-end: #efe5d8;
-  --pre-bg: #fbf6ee;
-  --thead-bg: #f3e8da;
-  --btn-bg: rgba(255, 255, 255, 0.42);
-  --btn-bg-hover: rgba(255, 255, 255, 0.82);
-  --btn-border: rgba(127, 53, 25, 0.14);
-  --btn-border-hover: rgba(127, 53, 25, 0.28);
-  --item-hover-bg: rgba(168, 80, 47, 0.08);
-  --item-active-bg: rgba(168, 80, 47, 0.12);
-  --item-active-color: #7f3519;
-  --divider: rgba(101, 61, 42, 0.12);
+  --sidebar-size: 0.875rem;
+  --meta-size: 0.875rem;
+  --small-size: 0.85rem;
+  --table-size: 0.875rem;
+  --code-size: 0.875rem;
+  --topbar-bg: rgba(255, 255, 255, 0.92);
+  --topbar-border: rgba(0, 0, 0, 0.08);
+  --topbar-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+  --dropdown-bg: rgba(255, 255, 255, 0.97);
+  --body-bg-start: #f8f9fb;
+  --body-bg-mid: #ffffff;
+  --body-bg-end: #f8f9fb;
+  --pre-bg: #f8fafc;
+  --thead-bg: #eff6ff;
+  --btn-bg: rgba(255, 255, 255, 0.7);
+  --btn-bg-hover: rgba(255, 255, 255, 0.95);
+  --btn-border: rgba(0, 0, 0, 0.12);
+  --btn-border-hover: rgba(37, 99, 235, 0.4);
+  --item-hover-bg: rgba(37, 99, 235, 0.06);
+  --item-active-bg: rgba(37, 99, 235, 0.1);
+  --item-active-color: #1d4ed8;
+  --divider: rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] {
-  --paper: #1a1410;
-  --card: #1e1812;
-  --ink: #f5f0ea;
-  --muted: #b8a898;
-  --line: #3a2e24;
-  --accent: #d4855a;
-  --accent-soft: #2e1c10;
-  --code-bg: #261d16;
-  --shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
-  --topbar-bg: rgba(18, 13, 10, 0.96);
+  --paper: #0f1117;
+  --card: #1a2032;
+  --ink: #e8eaf6;
+  --muted: #9ba3c0;
+  --line: #2a3150;
+  --accent: #60a5fa;
+  --accent-soft: #1e3a5f;
+  --code-bg: #1e293b;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --topbar-bg: rgba(15, 17, 23, 0.96);
   --topbar-border: rgba(255, 255, 255, 0.07);
-  --topbar-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --dropdown-bg: rgba(24, 18, 13, 0.99);
-  --body-bg-start: #130d08;
-  --body-bg-mid: #1a1310;
-  --body-bg-end: #16100c;
-  --pre-bg: #1e1711;
-  --thead-bg: #261d16;
+  --topbar-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+  --dropdown-bg: rgba(15, 17, 23, 0.99);
+  --body-bg-start: #0f1117;
+  --body-bg-mid: #161b27;
+  --body-bg-end: #0f1117;
+  --pre-bg: #161b27;
+  --thead-bg: #1e3a5f;
   --btn-bg: rgba(255, 255, 255, 0.07);
   --btn-bg-hover: rgba(255, 255, 255, 0.13);
   --btn-border: rgba(255, 255, 255, 0.1);
   --btn-border-hover: rgba(255, 255, 255, 0.22);
-  --item-hover-bg: rgba(212, 133, 90, 0.12);
-  --item-active-bg: rgba(212, 133, 90, 0.18);
-  --item-active-color: #e09970;
+  --item-hover-bg: rgba(96, 165, 250, 0.1);
+  --item-active-bg: rgba(96, 165, 250, 0.16);
+  --item-active-color: #93c5fd;
   --divider: rgba(255, 255, 255, 0.07);
 }
 
@@ -89,9 +89,7 @@ html {
 body {
   margin: 0;
   color: var(--ink);
-  background:
-    radial-gradient(circle at top left, rgba(156, 79, 44, 0.12), transparent 30rem),
-    linear-gradient(180deg, var(--body-bg-start) 0%, var(--body-bg-mid) 16%, var(--body-bg-end) 100%);
+  background: linear-gradient(180deg, var(--body-bg-start) 0%, var(--body-bg-mid) 40%, var(--body-bg-end) 100%);
   font-family: var(--font-body);
   font-size: var(--body-size);
   line-height: var(--body-leading);

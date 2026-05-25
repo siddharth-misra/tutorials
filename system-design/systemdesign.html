@@ -9,7 +9,7 @@
   <meta name="author" content="Siddharth Misra" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://siddharth-misra.github.io/tutorials/system-design/systemdesign.html" />
-  <meta name="theme-color" content="#a8502f" />
+  <meta name="theme-color" content="#2563eb" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
@@ -62,10 +62,10 @@
   </div>
   <div class="atlas-topbar__right">
     <div class="atlas-topbar__chapter-nav" data-topbar-chapter-nav hidden>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous chapter" data-topbar-prev-chapter disabled>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Previous" data-topbar-prev-chapter disabled>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M6 1L1 6l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
-      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next chapter" data-topbar-next-chapter>
+      <button class="atlas-topbar__chapter-btn" type="button" aria-label="Next" data-topbar-next-chapter>
         <svg width="7" height="12" viewBox="0 0 7 12" fill="none" aria-hidden="true"><path d="M1 1l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
@@ -77,7 +77,7 @@
       </button>
       <div class="atlas-topbar__dropdown" data-topbar-dropdown>
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="continuous">Single Page</button>
-        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
+        <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Section View</button>
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
           <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -107,38 +107,40 @@
 
 
 
+
+
+
 <div class="layout">
       <aside class="sidebar" aria-label="Document navigation">
         <div class="chapter-controls" data-chapter-controls hidden>
-          <p class="chapter-controls__meta" data-chapter-indicator>Chapter 1</p>
+          <p class="chapter-controls__meta" data-chapter-indicator>1</p>
           <div class="chapter-controls__nav">
-            <button class="button" type="button" data-prev-chapter aria-label="Go to previous chapter">Previous</button>
-            <button class="button" type="button" data-next-chapter aria-label="Go to next chapter">Next</button>
+            <button class="button" type="button" data-prev-chapter aria-label="Go to previous">Previous</button>
+            <button class="button" type="button" data-next-chapter aria-label="Go to next">Next</button>
           </div>
         </div>
-        <h2>Navigate</h2>
-        <p>Major sections stay reachable on screen. Print output collapses to a clean single-column document.</p>
+
         <nav aria-label="System Design chapter navigation"><ul class="toc-list">
-<li><a href="#chapter-1-system-design-interview-framework" data-toc-link>Chapter 1: System Design Interview Framework</a></li>
-<li><a href="#chapter-2-fundamentals-of-system-design" data-toc-link>Chapter 2: Fundamentals of System Design</a></li>
-<li><a href="#chapter-3-networking-and-internet-fundamentals" data-toc-link>Chapter 3: Networking &amp; Internet Fundamentals</a></li>
-<li><a href="#chapter-4-microservice-architecture" data-toc-link>Chapter 4: Microservice Architecture</a></li>
-<li><a href="#chapter-5-availability-cap-theorem-and-reliability-patterns" data-toc-link>Chapter 5: Availability, CAP Theorem &amp; Reliability Patterns</a></li>
-<li><a href="#chapter-6-database-internals" data-toc-link>Chapter 6: Database Internals</a></li>
-<li><a href="#chapter-7-rate-limiting" data-toc-link>Chapter 7: Rate Limiting</a></li>
-<li><a href="#chapter-8-distributed-consensus" data-toc-link>Chapter 8: Distributed Consensus</a></li>
-<li><a href="#chapter-9-distributed-systems" data-toc-link>Chapter 9: Distributed Systems</a></li>
-<li><a href="#chapter-10-security-design" data-toc-link>Chapter 10: Security Design</a></li>
-<li><a href="#chapter-11-caching-strategies" data-toc-link>Chapter 11: Caching Strategies</a></li>
-<li><a href="#chapter-12-event-driven-messaging-systems" data-toc-link>Chapter 12: Event-Driven Messaging Systems</a></li>
-<li><a href="#chapter-13-consistent-hashing" data-toc-link>Chapter 13: Consistent Hashing</a></li>
-<li><a href="#chapter-14-designing-a-distributed-cache" data-toc-link>Chapter 14: Designing a Distributed Cache</a></li>
-<li><a href="#chapter-15-designing-an-auto-complete-engine" data-toc-link>Chapter 15: Designing an Auto-Complete Engine</a></li>
-<li><a href="#chapter-16-designing-a-scalable-notification-service" data-toc-link>Chapter 16: Designing a Scalable Notification Service</a></li>
-<li><a href="#chapter-17-designing-a-real-time-push-platform" data-toc-link>Chapter 17: Designing a Real-Time Push Platform</a></li>
-<li><a href="#chapter-18-counting-at-scale-top-k-trending-items" data-toc-link>Chapter 18: Counting at Scale — Top-K Trending Items</a></li>
-<li><a href="#chapter-19-url-shortener-and-pastebin" data-toc-link>Chapter 19: URL Shortener and Pastebin</a></li>
-<li><a href="#chapter-20-search-engine-design" data-toc-link>Chapter 20: Search Engine Design</a></li>
+<li><a href="#1-system-design-interview-framework" data-toc-link>1: System Design Interview Framework</a></li>
+<li><a href="#2-fundamentals-of-system-design" data-toc-link>2: Fundamentals of System Design</a></li>
+<li><a href="#3-networking-and-internet-fundamentals" data-toc-link>3: Networking &amp; Internet Fundamentals</a></li>
+<li><a href="#4-microservice-architecture" data-toc-link>4: Microservice Architecture</a></li>
+<li><a href="#5-availability-cap-theorem-and-reliability-patterns" data-toc-link>5: Availability, CAP Theorem &amp; Reliability Patterns</a></li>
+<li><a href="#6-database-internals" data-toc-link>6: Database Internals</a></li>
+<li><a href="#7-rate-limiting" data-toc-link>7: Rate Limiting</a></li>
+<li><a href="#8-distributed-consensus" data-toc-link>8: Distributed Consensus</a></li>
+<li><a href="#9-distributed-systems" data-toc-link>9: Distributed Systems</a></li>
+<li><a href="#10-security-design" data-toc-link>10: Security Design</a></li>
+<li><a href="#11-caching-strategies" data-toc-link>11: Caching Strategies</a></li>
+<li><a href="#12-event-driven-messaging-systems" data-toc-link>12: Event-Driven Messaging Systems</a></li>
+<li><a href="#13-consistent-hashing" data-toc-link>13: Consistent Hashing</a></li>
+<li><a href="#14-designing-a-distributed-cache" data-toc-link>14: Designing a Distributed Cache</a></li>
+<li><a href="#15-designing-an-auto-complete-engine" data-toc-link>15: Designing an Auto-Complete Engine</a></li>
+<li><a href="#16-designing-a-scalable-notification-service" data-toc-link>16: Designing a Scalable Notification Service</a></li>
+<li><a href="#17-designing-a-real-time-push-platform" data-toc-link>17: Designing a Real-Time Push Platform</a></li>
+<li><a href="#18-counting-at-scale-top-k-trending-items" data-toc-link>18: Counting at Scale — Top-K Trending Items</a></li>
+<li><a href="#19-url-shortener-and-pastebin" data-toc-link>19: URL Shortener and Pastebin</a></li>
+<li><a href="#20-search-engine-design" data-toc-link>20: Search Engine Design</a></li>
         </ul></nav>
       </aside>
 
@@ -146,13 +148,10 @@
         <article class="article">
 <h1>System Design Tutorial</h1>
 <p class="article-intro">A complete reference for distributed systems, from networking and data fundamentals through caching, consistency, scalability, and reliability.</p>
-<h2 id="chapter-1-system-design-interview-framework">Chapter 1: System Design Interview Framework</h2>
-<p><strong>Goal:</strong> Build a repeatable mental process for approaching any system design question — from a beginner who draws boxes to an expert who dissects failure modes, cost, and evolution. By the end of this chapter you have a framework, templates, and the vocabulary to run a strong interview discussion at any level.</p>
-<p><strong>How to use this chapter:</strong> Read Sections 1.2 to 1.8 first and practice the loop with one system (for example, URL shortener or notification service). Then revisit Sections 1.9 to 1.11 to deepen your answers from &quot;works on paper&quot; to &quot;works in production.&quot;</p>
-<hr>
+<h2 id="1-system-design-interview-framework">1: System Design Interview Framework</h2>
 <h3 id="11-what-is-system-design-and-why-does-it-matter">1.1 What Is System Design, and Why Does It Matter?</h3>
 <p>System design is the practice of defining how software components — services, databases, caches, queues, APIs — fit together to solve a real business problem at a specific scale.</p>
-<p><strong>For beginners:</strong> Think of it like designing a city. A small town (startup) needs a road, a post office, and a store. A metropolis (Google-scale) needs highways, airports, multiple distribution centres, and backup power grids. The components are the same in concept, but the constraints — volume, reliability, cost — are entirely different.</p>
+<p>Think of it like designing a city. A small town (startup) needs a road, a post office, and a store. A metropolis (Google-scale) needs highways, airports, multiple distribution centres, and backup power grids. The components are the same in concept, but the constraints — volume, reliability, cost — are entirely different.</p>
 <p><strong>Why interviews test it:</strong> Writing code is table stakes for software engineering. System design tests whether you can reason about trade-offs, anticipate failure, and design something a team can actually build and operate. A senior engineer who cannot explain <em>why</em> they chose PostgreSQL over Cassandra, or <em>what</em> happens when their cache goes down, is a risk in production.</p>
 <p><strong>Real-world grounding:</strong> When a user submits a ride request on Uber, dozens of systems interact within milliseconds: the mobile client, an API gateway, a location service, a matching engine, a pricing service, a payment service, a notification service, and a driver app. None of those were designed in isolation. Each owns its data, its failure mode, and its scaling profile. System design is how Uber&#39;s engineers made deliberate choices about where each boundary sits.</p>
 <hr>
@@ -225,7 +224,7 @@ Step 6  →  Discuss trade-offs and evolution
 <li><strong>Durability:</strong> Can any data loss be tolerated? (e.g., &quot;a lost notification is acceptable; a lost payment is not&quot;)</li>
 <li><strong>Scale:</strong> How many daily active users? What is the read/write ratio?</li>
 </ul>
-<h4 id="the-two-questions-most-beginners-forget">The two questions most beginners forget</h4>
+<h4 id="two-questions-worth-getting-right">Two Questions Worth Getting Right</h4>
 <ol>
 <li><strong>&quot;What is the read/write ratio?&quot;</strong> — A system that is 99% reads (Wikipedia) is designed very differently from one that is 50/50 (Twitter timeline writes). Reads are typically cheap to scale horizontally; writes require more care with consistency and replication.</li>
 <li><strong>&quot;Is correctness, freshness, or cost the primary constraint?&quot;</strong> — These three frequently conflict. A social media feed can show slightly old posts (freshness sacrificed for cost). A bank ledger cannot (correctness non-negotiable, cost secondary).</li>
@@ -657,9 +656,7 @@ GET  /v1/links/{code}/stats       # Click analytics
 </ul>
 <p><strong>Rule of thumb:</strong> Data model for data-intensive products, failure handling for correctness-critical products, scaling for high-volume products.</p>
 <hr>
-<h2 id="chapter-2-fundamentals-of-system-design">Chapter 2: Fundamentals of System Design</h2>
-<p><strong>Goal:</strong> Build the baseline mental model for system design by understanding the core trade-off forces and the foundational building blocks used in nearly every large-scale system. By the end of this chapter you should be able to explain why a design uses a given component, what problem it solves, and what failure modes or costs it introduces.</p>
-<p><strong>How to use this chapter:</strong> Read Sections 2.1 to 2.3 first to internalize the forces and service boundaries that drive architectural choices. Then use Sections 2.4 to 2.8 as a reference for the core infrastructure components that recur in almost every interview and production system.</p>
+<h2 id="2-fundamentals-of-system-design">2: Fundamentals of System Design</h2>
 <p>This chapter covers the core trade-off forces that drive every system design decision and the fundamental building blocks — microservices, load balancers, databases, caches, file storage, and messaging queues — used to construct large-scale systems. Understanding these forces and components is the foundation for every design in this guide.</p>
 <h3 id="21-the-core-forces-behind-most-system-designs">2.1 The Core Forces Behind Most System Designs</h3>
 <p>Nearly every design decision in distributed systems is a response to a small number of recurring forces:</p>
@@ -830,7 +827,7 @@ GET  /v1/links/{code}/stats       # Click analytics
 <li><strong>Observability</strong> — log every request, emit metrics, inject trace IDs.</li>
 </ul>
 <p>Common tools: AWS API Gateway, Kong, Nginx, Envoy. The API gateway should be thin — it routes and enforces policies, but business logic stays in the services.</p>
-<h4 id="why-this-architecture">Why this architecture?</h4>
+<h4 id="design-rationale">Design Rationale</h4>
 <p>A monolith is fast to start with, but as the codebase grows past ~50 engineers, a single deploy cycle becomes a coordination nightmare — one broken test blocks the whole release train. Microservices give each team an independent deploy pipeline. At Amazon, the move to services was driven by a 2002 Jeff Bezos mandate: all data and functionality must be exposed via service interfaces, with no other form of inter-process communication.</p>
 <p>The deeper reason microservices work at scale is <strong>Conway&#39;s Law</strong>: organizations tend to produce architectures that mirror their communication structures. A company with 20 product teams building a monolith spends enormous energy coordinating changes. The same company with well-defined service boundaries lets each team move at its own pace.</p>
 <h4 id="what-can-fail">What can fail?</h4>
@@ -915,7 +912,7 @@ GET  /v1/links/{code}/stats       # Click analytics
 </tr>
 </tbody></table></div>
 <p>At scale (Netflix-level, thousands of services), the cost runs into tens of millions/year — largely offset by engineering velocity gains and reduced incident blast radius. The hidden cost of microservices is <strong>operational complexity</strong>, not infrastructure: more deployable units, more failure surfaces, and more observability tooling to buy and maintain.</p>
-<h4 id="how-will-teams-maintain-it">How will teams maintain it?</h4>
+<h4 id="operations">Operations</h4>
 <ul>
 <li><strong>Service catalog</strong> (e.g., Backstage by Spotify) tracks every service, its owner, runbooks, and on-call rotation. Without this, services become orphans with no clear owner.</li>
 <li><strong>Centralized logging</strong> (ELK, Datadog, Splunk) with structured logs + <strong>correlation IDs</strong> — a single ID injected at the API gateway and propagated through every service so a full request trace can be reconstructed from logs.</li>
@@ -1160,8 +1157,6 @@ User in London ──► Global LB ──► EU-West Region
 <hr>
 <p><strong>Real-world example:</strong> During Amazon Prime Day, the AWS ALB fleet absorbs hundreds of millions of requests per second globally. Each regional ALB autoscales its own capacity, while Route 53 and Global Accelerator handle cross-region routing. A backend fleet of thousands of EC2 instances uses Least Connections routing so that heavier requests (large product pages) do not pile onto the same servers.</p>
 <hr>
-<h4 id="why-this-architecture-1">Why this architecture?</h4>
-<p>Without a load balancer, all traffic hits a single server. One server caps out at ~10–100K requests/second depending on complexity. A load balancer enables horizontal scaling — add more servers, the LB distributes load automatically. It also provides health checking — if server 3 fails, the LB stops sending traffic to it within seconds.</p>
 <h4 id="what-can-fail-1">What can fail?</h4>
 <div class="table-wrap"><table>
 <thead>
@@ -1237,7 +1232,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p>At high scale (millions of req/s), managed LBs like AWS ALB cost ~$500–5,000/month but save significant ops effort vs. self-managed HAProxy/NGINX.</p>
-<h4 id="how-will-teams-maintain-it-1">How will teams maintain it?</h4>
+<h4 id="operations-1">Operations</h4>
 <ul>
 <li>Monitor <strong>connection count, request rate, error rate (5xx), target health count, and p99 latency</strong> in CloudWatch or Datadog.</li>
 <li>Set alerts on: unhealthy host count &gt; 1, 5xx error rate &gt; 0.1%, p99 latency spike &gt; 2×  baseline.</li>
@@ -1313,7 +1308,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p><strong>Real-world example:</strong> Stripe uses Postgres for its core payments ledger (ACID required) but uses Redis for rate-limit counters and DynamoDB for audit log event streams (write-heavy, no joins needed).</p>
-<h4 id="why-this-architecture-2">Why this architecture?</h4>
+<h4 id="design-rationale-1">Design Rationale</h4>
 <p>SQL databases are the right default when data has relationships, requires consistent multi-row updates, and needs complex queries. NoSQL is the right choice when write throughput exceeds what a single SQL primary can handle (typically &gt;100K writes/second), when the data model is inherently key-based, or when global distribution with low write latency is required (Cassandra&#39;s leaderless design handles multi-region writes natively).</p>
 <p><strong>Example decision point:</strong> Instagram&#39;s user feed metadata is stored in Cassandra (high write throughput, simple key lookups), but the user&#39;s account settings are in Postgres (relational, low write volume, requires consistency).</p>
 <h4 id="what-can-fail-2">What can fail?</h4>
@@ -1377,7 +1372,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p>Storage costs $0.115/GB/month on RDS. A 1 TB database adds ~$115/month just in storage.</p>
-<h4 id="how-will-teams-maintain-it-2">How will teams maintain it?</h4>
+<h4 id="operations-2">Operations</h4>
 <ul>
 <li><strong>Schema migrations</strong> via tools like Flyway or Liquibase — never modify production schemas manually.</li>
 <li><strong>Slow query log</strong> enabled; alert on queries exceeding 500ms.</li>
@@ -1445,7 +1440,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p><strong>Real-world example:</strong> Twitter uses Redis to cache pre-computed timelines for active users. Without the cache, loading a timeline would require a multi-join query across hundreds of millions of tweets and follow relationships — taking seconds per load.</p>
-<h4 id="why-this-architecture-3">Why this architecture?</h4>
+<h4 id="design-rationale-2">Design Rationale</h4>
 <p>Applications follow a <strong>Zipfian distribution (a skewed pattern where a small set of items gets most of the traffic, often roughly 80/20)</strong> — 80% of requests touch the same 20% of data. Caches exploit this by keeping hot data in fast memory (~100 ns access vs. ~10ms for disk). The result: a cache hit rate of 99% means only 1 in 100 requests hits the database, enabling a single DB instance to serve 100× more users.</p>
 <p><strong>Example:</strong> Facebook&#39;s Memcached deployment absorbs billions of cache reads per second, preventing those requests from ever reaching MySQL.</p>
 <h4 id="what-can-fail-3">What can fail?</h4>
@@ -1510,7 +1505,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p>A typical mid-scale app spends $200–$1,500/month on caching infrastructure. The ROI is immediate: eliminating DB reads avoids horizontal DB scaling costs many times larger.</p>
-<h4 id="how-will-teams-maintain-it-3">How will teams maintain it?</h4>
+<h4 id="operations-3">Operations</h4>
 <ul>
 <li>Monitor <strong>cache hit rate</strong> (target &gt; 95%), <strong>eviction rate</strong>, <strong>memory usage</strong>, and <strong>connection count</strong>.</li>
 <li>Alert when hit rate drops below 90% — indicates cache is undersized or TTLs are too aggressive.</li>
@@ -1584,7 +1579,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p><strong>Real-world example:</strong> Google&#39;s Colossus (successor to GFS) stores all Gmail attachments, Google Drive files, and YouTube videos — exabytes of data, distributed across global data centers.</p>
-<h4 id="why-this-architecture-4">Why this architecture?</h4>
+<h4 id="design-rationale-3">Design Rationale</h4>
 <p>Block storage is fast but expensive and tied to a single instance. Object storage is cheap ($0.023/GB on S3 vs. $0.10/GB on EBS), globally accessible, and scales infinitely without provisioning. Any service in any region can read from S3 via an API call. This makes object storage the de facto choice for user-generated content (profile photos, video uploads, documents) and large static datasets.</p>
 <h4 id="what-can-fail-4">What can fail?</h4>
 <div class="table-wrap"><table>
@@ -1651,7 +1646,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p>Egress is the largest hidden cost. Serving 10 TB/month directly from S3 costs <del>$900 in egress alone. Putting CloudFront in front reduces this: CloudFront-to-S3 transfer is free; users pay CloudFront pricing (</del>$0.085/GB), which also benefits from caching.</p>
-<h4 id="how-will-teams-maintain-it-4">How will teams maintain it?</h4>
+<h4 id="operations-4">Operations</h4>
 <ul>
 <li>Enable <strong>S3 Storage Lens</strong> for visibility into bucket size, access patterns, and cost by prefix (the starting characters of a word or query).</li>
 <li>Set <strong>S3 Lifecycle Policies</strong>: move objects to S3 Infrequent Access after 30 days ($0.0125/GB); move to Glacier after 90 days ($0.004/GB).</li>
@@ -1690,7 +1685,7 @@ User in London ──► Global LB ──► EU-West Region
 </ul>
 <p><strong>Popular implementations:</strong> Apache Kafka, RabbitMQ, Amazon SQS, Google Pub/Sub (publish-subscribe, where one event can go to many consumers).</p>
 <p><strong>Real-world example:</strong> Uber uses Kafka to propagate all ride lifecycle events (booking, driver location updates, cancellation) between services. The booking service does not wait for the notification service — it fires the event and moves on.</p>
-<h4 id="why-this-architecture-5">Why this architecture?</h4>
+<h4 id="design-rationale-4">Design Rationale</h4>
 <p>Synchronous HTTP calls between services create tight coupling and cascading failure risk. If the Notification Service is slow or down, a synchronous call from the Booking Service would cause the booking itself to timeout. A queue decouples them: the Booking Service writes to Kafka and returns immediately; the Notification Service processes the event whenever it is ready. This provides:</p>
 <ol>
 <li><strong>Temporal decoupling</strong> — Producer and consumer do not need to be running simultaneously.</li>
@@ -1759,7 +1754,7 @@ User in London ──► Global LB ──► EU-West Region
 </tr>
 </tbody></table></div>
 <p>Kafka&#39;s operational cost is dominated by <strong>storage</strong> (retained messages) and <strong>replication</strong> (3× storage). A topic retaining 7 days of data at 1 TB/day costs ~$2,100/month in storage alone on AWS MSK. Set retention policies carefully.</p>
-<h4 id="how-will-teams-maintain-it-5">How will teams maintain it?</h4>
+<h4 id="operations-5">Operations</h4>
 <ul>
 <li>Monitor <strong>consumer group lag</strong> per partition (Kafka&#39;s most important operational metric). Alert when lag exceeds 5 minutes of expected throughput.</li>
 <li>Monitor <strong>broker disk usage</strong> — Kafka does not auto-delete unless retention policy fires. Alert at 70%.</li>
@@ -1849,9 +1844,7 @@ User in London ──► Global LB ──► EU-West Region
 <li>When should you choose SQL over NoSQL for a new service, and what future scaling cost are you accepting?</li>
 </ol>
 <hr>
-<h2 id="chapter-3-networking-and-internet-fundamentals">Chapter 3: Networking &amp; Internet Fundamentals</h2>
-<p><strong>Goal:</strong> Understand how a request travels from a client to a backend and back, and how each hop affects latency, reliability, security, and cost. By the end of this chapter you can trace any request end-to-end, name every component, attach a latency number and failure mode to each, and make principled design decisions about protocols, edge architecture, and retry behavior.</p>
-<hr>
+<h2 id="3-networking-and-internet-fundamentals">3: Networking &amp; Internet Fundamentals</h2>
 <h3 id="31-the-mental-model-one-request-five-stages">3.1 The Mental Model: One Request, Five Stages</h3>
 <p>When a user taps &quot;Place Order,&quot; the phone does not talk to business logic directly. Before a single line of your application code runs, the request passes through name resolution, connection setup, edge infrastructure, and a routing layer. Understanding that path is the foundation of all networking reasoning.</p>
 <p>The five-stage mental model to internalize:</p>
@@ -2379,8 +2372,8 @@ Client → ACK    → Server
 </ul>
 <p><strong>When it might be acceptable:</strong> Coarse traffic routing (send 10% of traffic to a new service version for a canary) is a legitimate gateway concern — that is routing policy, not application logic. The key distinction is whether the flag controls <em>which service handles the request</em> (gateway&#39;s domain) or <em>what the service does with it</em> (application&#39;s domain). If the team&#39;s feature flag is really just a canary routing rule, the gateway is the right place. If it changes application behavior based on user attributes, it belongs in the application.</p>
 <hr>
-<h2 id="chapter-4-microservice-architecture">Chapter 4: Microservice Architecture</h2>
-<h3 id="what-is-a-microservice-start-here">What Is a Microservice? (Start Here)</h3>
+<h2 id="4-microservice-architecture">4: Microservice Architecture</h2>
+<h3 id="what-is-a-microservice">What Is a Microservice?</h3>
 <p>Imagine a restaurant. A monolith is one person who takes orders, cooks, plates, and handles payment — fast to start, hard to scale when busy. A microservice architecture is a kitchen divided into stations: host, chef, pastry, cashier. Each station can be staffed independently, upgraded, and swapped without shutting down the others.</p>
 <p>A <strong>microservice</strong> is a small, independently deployable unit of software that owns one focused business capability and its own data. Services communicate over a network — typically HTTP/REST, gRPC, or an event bus like Kafka.</p>
 <p>This is different from how most applications start. Understanding the spectrum of architectures helps you decide <em>when</em> to use microservices — and when not to.</p>
@@ -2752,7 +2745,7 @@ Client → ACK    → Server
 <li>You&#39;re a 10-person startup being asked to build in microservices from day one. How do you respond?</li>
 </ol>
 <hr>
-<h2 id="chapter-5-availability-cap-theorem-and-reliability-patterns">Chapter 5: Availability, CAP Theorem &amp; Reliability Patterns</h2>
+<h2 id="5-availability-cap-theorem-and-reliability-patterns">5: Availability, CAP Theorem &amp; Reliability Patterns</h2>
 <h3 id="why-availability-is-a-business-requirement">Why Availability Is a Business Requirement</h3>
 <p>Before diving into theory, understand why availability is non-negotiable:</p>
 <ul>
@@ -3229,7 +3222,7 @@ After processing successfully:
 </tbody></table></div>
 <p>The root cause of most double-charges is not missing idempotency keys — it is that the key is not stored durably on the client before the first attempt. If the app crashes after sending but before persisting the key, the next launch generates a new key and charges again.</p>
 <hr>
-<h2 id="chapter-6-database-internals">Chapter 6: Database Internals</h2>
+<h2 id="6-database-internals">6: Database Internals</h2>
 <h3 id="why-storage-engines-matter">Why Storage Engines Matter</h3>
 <p>When you pick a database, you are really picking a storage engine — the subsystem that decides how bytes land on disk, how they are read back, and what happens during a crash. Every database you have used (Postgres, MySQL, Cassandra, Redis) is built on a storage engine, and most performance, cost, and reliability trade-offs trace back to that choice.</p>
 <p>The core tension: reading, writing, and crash recovery all want different things from on-disk layout. No engine delivers all three at peak performance simultaneously. Understanding the trade-offs lets you pick the right tool and explain your choice in any system design conversation.</p>
@@ -3736,7 +3729,7 @@ After processing successfully:
 <p><strong>Q3: When should you keep strong transactional semantics in one database versus moving part of the workload to logs, caches, or separate stores?</strong></p>
 <p><strong>A:</strong> Keep transactions in one database when correctness depends on atomicity across multiple entities — e.g., deducting inventory and creating an order must either both succeed or both fail. Move to logs or caches when: (a) the workload is append-only and eventual consistency is acceptable (event logs, audit trails, analytics); (b) the data is read-heavy and can tolerate staleness (session state, feature flags, search indexes); or (c) the volume far exceeds what the primary can handle and the consumer can reconcile late updates. The risk of splitting is that cross-store consistency is now the application&#39;s responsibility — you lose the database&#39;s ACID guarantee. A common pattern: keep the source-of-truth write in Postgres, publish a domain event to Kafka, and let downstream stores (Elasticsearch, Redis, a reporting DB) consume it asynchronously. This gives you both strong transactional semantics for the write path and scalable read paths without coupling them.</p>
 <hr>
-<h2 id="chapter-7-rate-limiting">Chapter 7: Rate Limiting</h2>
+<h2 id="7-rate-limiting">7: Rate Limiting</h2>
 <h3 id="what-is-rate-limiting-and-why-does-it-exist">What Is Rate Limiting and Why Does It Exist?</h3>
 <p>Every shared system has finite resources — CPU, database connections, memory, third-party API quota, and outbound bandwidth. Without a mechanism to control how fast clients consume these resources, a single misbehaving caller can exhaust capacity for everyone else.</p>
 <p>Rate limiting is the policy that answers: <strong>how many requests can this caller make in this time window before we start rejecting them?</strong></p>
@@ -3754,7 +3747,7 @@ After processing successfully:
 <li><strong>GitHub</strong> returns <code>X-RateLimit-Remaining: 0</code> and a <code>Retry-After</code> header when an unauthenticated client polls the API too frequently.</li>
 </ul>
 <hr>
-<h3 id="core-concepts-beginner">Core Concepts (Beginner)</h3>
+<h3 id="core-concepts">Core Concepts</h3>
 <p><strong>The stadium gate analogy</strong></p>
 <p>Imagine a concert venue with a single entry gate. The gate controls throughput — it does not care who is outside, only how fast people can enter.</p>
 <ul>
@@ -3849,7 +3842,7 @@ No matter how fast requests arrive, output is always ≤5/sec.
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="deciding-what-to-limit-intermediate">Deciding What to Limit (Intermediate)</h3>
+<h3 id="deciding-what-to-limit">Deciding What to Limit</h3>
 <p>Rate limiting is not just &quot;requests per minute.&quot; You must specify three things precisely before writing any code.</p>
 <h4 id="1-who-is-being-limited">1. Who is being limited?</h4>
 <div class="table-wrap"><table>
@@ -3933,7 +3926,7 @@ No matter how fast requests arrive, output is always ≤5/sec.
 </ul>
 <p>A single <code>1000 req/min</code> global rule applied to all endpoints protects nothing well. The <code>/send-sms</code> endpoint and the <code>/search-products</code> endpoint have completely different cost and abuse profiles.</p>
 <hr>
-<h3 id="distributed-rate-limiting-intermediate-advanced">Distributed Rate Limiting (Intermediate → Advanced)</h3>
+<h3 id="distributed-rate-limiting">Distributed Rate Limiting</h3>
 <h4 id="the-core-problem">The Core Problem</h4>
 <p>With multiple servers, each holding its own in-memory counter, the effective limit multiplies by the number of servers. With 10 app servers and a 100 req/min limit, the real limit is 1,000 req/min.</p>
 <div class="code-block"><pre><code>Server A: counter=40
@@ -4052,7 +4045,7 @@ end
 }
 </code></pre></div>
 <hr>
-<h3 id="fail-behavior-open-vs-closed-advanced">Fail Behavior: Open vs. Closed (Advanced)</h3>
+<h3 id="fail-behavior-open-vs-closed">Fail Behavior: Open vs. Closed</h3>
 <p>What happens when the rate-limit store (Redis) is unreachable?</p>
 <p><strong>Fail open</strong> — allow all requests through.</p>
 <ul>
@@ -4253,7 +4246,7 @@ end
 <p>During a distributed attack from many accounts, the fleet-level limit absorbs the burst. During a single rogue tenant, the per-tenant limit contains the damage without affecting others.</p>
 <p>Additionally, <strong>dynamic limits</strong> improve this further: detect anomalous behavior (a user sending 10× their historical average) and tighten their window automatically — isolating the bad actor while preserving capacity for everyone else. This requires behavioral baselines but scales well on mature platforms.</p>
 <hr>
-<h2 id="chapter-8-distributed-consensus">Chapter 8: Distributed Consensus</h2>
+<h2 id="8-distributed-consensus">8: Distributed Consensus</h2>
 <h3 id="what-problem-does-consensus-solve">What Problem Does Consensus Solve?</h3>
 <p>Imagine you run a bank with three ATMs. A customer withdraws $500. Which ATM records it first? What if two ATMs both think they processed it? Without coordination, the customer might withdraw $1,000 when they only have $500.</p>
 <p>Distributed consensus solves this: <strong>multiple machines must agree on a single sequence of events, even when some machines crash or messages get delayed.</strong></p>
@@ -4272,7 +4265,7 @@ end
 </ul>
 <p><strong>Real-world analogy:</strong> When Kubernetes scales your app from 3 pods to 5, it writes that desired state to etcd (a distributed key-value store using the Raft consensus algorithm). If two control-plane nodes disagree about the current value, the cluster might create duplicate or missing pods. Consensus prevents that split view.</p>
 <hr>
-<h3 id="beginner-the-core-concepts">Beginner: The Core Concepts</h3>
+<h3 id="the-core-concepts">The Core Concepts</h3>
 <h4 id="leader-followers-and-terms">Leader, Followers, and Terms</h4>
 <p>Raft — the dominant modern consensus algorithm, designed to be easier to understand than older approaches — organizes nodes into three roles:</p>
 <ul>
@@ -4315,7 +4308,7 @@ Committed:  ✓           ✓              ✓
 </tbody></table></div>
 <p><strong>Never run an even number of nodes</strong> — 4 nodes tolerate only 1 failure (same as 3), but pay the cost of an extra node. Use 3 or 5.</p>
 <hr>
-<h3 id="intermediate-how-raft-works-step-by-step">Intermediate: How Raft Works Step by Step</h3>
+<h3 id="how-raft-works-step-by-step">How Raft Works Step by Step</h3>
 <h4 id="steady-state-normal-operation">Steady State (Normal Operation)</h4>
 <ol>
 <li>One node is elected leader for the current term.</li>
@@ -4344,7 +4337,7 @@ Committed:  ✓           ✓              ✓
 <p>On restart: load the snapshot, then replay only the remaining log entries.</p>
 <p><strong>Example:</strong> etcd defaults to snapshotting every 10,000 entries. An etcd cluster handling 1,000 writes/second at 1 KB each accumulates ~86 GB/day before compaction. Configure <code>auto-compaction-retention = 1h</code> and <code>--snapshot-count = 10000</code> to bound disk usage.</p>
 <hr>
-<h3 id="advanced-nuances-that-matter-at-scale">Advanced: Nuances That Matter at Scale</h3>
+<h3 id="nuances-that-matter-at-scale">Nuances That Matter at Scale</h3>
 <h4 id="read-linearizability-and-follower-reads">Read Linearizability and Follower Reads</h4>
 <p>A subtle but critical point: <strong>reads from a consensus cluster are not automatically linearizable.</strong></p>
 <p>In Raft, followers can serve reads from their local state — but a follower might be slightly behind the leader. Three strategies to handle this:</p>
@@ -4638,10 +4631,10 @@ Committed:  ✓           ✓              ✓
 <p><strong>Q3: Is multi-region consensus worth the write-latency cost for your workload, or should coordination stay regional?</strong></p>
 <p><strong>A:</strong> Multi-region consensus pays 70–200ms per write for cross-region round trips. That’s acceptable for configuration changes that happen rarely but unacceptable for any latency-sensitive write path. The standard pattern is: keep consensus clusters regional, use async replication between regions for data, and only use multi-region consensus when the failure scenario is a full regional outage. For most systems, regional consensus with cross-region async replication and a runbook for region failover is the right balance. CockroachDB’s per-range Raft approach is the exception — it places Raft groups near their data, limiting cross-region hops to ranges that genuinely span regions.</p>
 <hr>
-<h2 id="chapter-9-distributed-systems">Chapter 9: Distributed Systems</h2>
+<h2 id="9-distributed-systems">9: Distributed Systems</h2>
 <p>Distributed systems are the backbone of every large-scale product — Google Search, Amazon&#39;s checkout, Netflix streaming, WhatsApp messaging. This chapter builds understanding from scratch: what a distributed system is, why you build one, the fundamental problems they introduce, and the engineering techniques used to solve those problems. By the end you will be able to reason about coordination, failure, and consistency trade-offs in a system design interview.</p>
 <hr>
-<h3 id="part-1-foundations-beginner">Part 1 — Foundations (Beginner)</h3>
+<h3 id="part-1-foundations-1">Part 1 — Foundations</h3>
 <h4 id="what-is-a-distributed-system">What Is a Distributed System?</h4>
 <p>A distributed system is a collection of independent computers that appears to users as a single coherent system. Your laptop and a server farm are both computers, but when you use Gmail, you interact with thousands of servers spread across multiple data centers — yet it feels like one inbox.</p>
 <p><strong>Simple mental model:</strong> Think of a restaurant chain. Each franchise location (node) can take orders and serve food independently. The corporate headquarters (control plane) keeps the menu in sync across all locations. If one location burns down, customers go to the next one. That is a distributed system.</p>
@@ -4687,7 +4680,7 @@ Committed:  ✓           ✓              ✓
 <p><strong>Rule of thumb:</strong> Distribute only what must be distributed, and only when the cost of not distributing is real and measurable. Premature distribution is one of the most expensive engineering mistakes.</p>
 </blockquote>
 <hr>
-<h3 id="part-2-core-concepts-intermediate">Part 2 — Core Concepts (Intermediate)</h3>
+<h3 id="part-2-core-concepts">Part 2 — Core Concepts</h3>
 <h4 id="the-fundamental-challenges-of-distribution">The Fundamental Challenges of Distribution</h4>
 <p>Four problems arise over a network that simply do not exist on a single machine:</p>
 <ol>
@@ -4845,7 +4838,7 @@ Committed:  ✓           ✓              ✓
 <p><strong>Real-world postmortem:</strong> In 2012, AWS suffered a widespread outage when an EBS control plane bug triggered a cascading failure. Services using circuit breakers and async decoupling degraded gracefully. Services with tight synchronous coupling failed completely. The incident validated the importance of bulkhead patterns in distributed architectures.</p>
 </blockquote>
 <hr>
-<h3 id="part-3-advanced-mechanics-expert">Part 3 — Advanced Mechanics (Expert)</h3>
+<h3 id="part-3-advanced-mechanics">Part 3 — Advanced Mechanics</h3>
 <h4 id="leader-election">Leader Election</h4>
 <p>Leader election is the process by which nodes agree on which one node is the current authoritative coordinator. Without it, you get split-brain.</p>
 <p><strong>How it works in practice (Raft algorithm):</strong></p>
@@ -5164,7 +5157,7 @@ GET /v1/config/{key}           → returns current configuration value
 <p>Avoid distributed locks when the lock window would be long (seconds or minutes), when the downstream operation is an external API call, or when the lock holder can fail silently (GC pause, network partition). In these cases, the lock provides false safety — a stale holder can resume after its lease expires and corrupt shared state.</p>
 <p>The safer alternative is idempotent design: assign a unique operation ID (idempotency key) to each logical operation. Before executing, check whether the operation has already been completed. If yes, return the cached result. If no, execute and record the result atomically. This approach handles retries, concurrent attempts, and stale workers without relying on a lock&#39;s availability or timing guarantees. Stripe&#39;s payment API, AWS S3&#39;s conditional puts, and database <code>INSERT ... ON CONFLICT DO NOTHING</code> are all examples of idempotent design replacing distributed locks.</p>
 <hr>
-<h2 id="chapter-10-security-design">Chapter 10: Security Design</h2>
+<h2 id="10-security-design">10: Security Design</h2>
 <h3 id="what-is-security-design">What Is Security Design?</h3>
 <p>Security in distributed systems is not a single feature — it is a layered system that spans identity, transport, application logic, data storage, and operations. Every layer must be independently secured because a failure in any one layer can compromise the entire system.</p>
 <p>Think of it like a bank. The front door requires an ID (authentication). The teller checks if you&#39;re allowed to access a specific account (authorization). Your account data is encrypted in the bank&#39;s storage (encryption at rest). The wire transfer goes over a secure channel (encryption in transit). The vault credentials rotate regularly (secrets management). Cameras log everything (audit logging). Security guards block a crowd trying to rush the door (DDoS protection).</p>
@@ -5755,7 +5748,7 @@ GET  /v1/me                 # return current user&#39;s identity
 <p>For immediate revocation (account compromise, admin lockout): maintain a <code>jti</code> blocklist in Redis. Only compromised or force-logged-out tokens need to be blocklisted — the vast majority of tokens expire naturally. This keeps the blocklist small and the Redis lookup fast (sub-millisecond at typical scale).</p>
 <p>Avoid caching access tokens at the edge for longer than their <code>exp</code> — a CDN that caches a 401 response or a valid token for 10 minutes can mask revocations and break logout flows.</p>
 <hr>
-<h2 id="chapter-11-caching-strategies">Chapter 11: Caching Strategies</h2>
+<h2 id="11-caching-strategies">11: Caching Strategies</h2>
 <h3 id="why-caching-exists">Why Caching Exists</h3>
 <p>Every system eventually hits a wall where the database cannot keep up with read traffic. Memory is roughly 100× faster than SSD and thousands of times faster than a cross-region database query. Caching exploits this gap by keeping frequently accessed data in fast memory so the database does not have to answer the same question repeatedly.</p>
 <p>Three concrete problems caching solves:</p>
@@ -6324,7 +6317,7 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 </ol>
 <p>Redis is typically far cheaper than scaling the database to serve equivalent read throughput.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-6">How Will Teams Maintain It?</h3>
+<h3 id="operations-6">Operations</h3>
 <ul>
 <li><strong>Monitor:</strong> hit rate, miss rate, eviction rate, memory usage, hot key distribution, and replication lag.</li>
 <li><strong>Alert on:</strong> hit rate dropping below 85%, memory usage above 80%, eviction rate spikes, node failover events.</li>
@@ -6401,40 +6394,11 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 <p><strong>Q5. How would you design a caching layer that can survive a complete cache cluster restart without a thundering herd?</strong></p>
 <p>Use a combination of: (1) Redis RDB snapshots or AOF persistence so the cache can reload its state on restart without hitting the database; (2) a pre-warm script that populates the top N keys before the cache is put back into the load balancer; (3) request coalescing (singleflight) at the application layer so that simultaneous misses for the same key result in only one database query; (4) a circuit breaker that limits the miss-fallthrough rate to the database during the warm-up window; and (5) TTL jitter on all cached entries to prevent simultaneous mass expiry after the warm-up completes.</p>
 <hr>
-<h2 id="chapter-12-event-driven-messaging-systems">Chapter 12: Event-Driven Messaging Systems</h2>
-<h3 id="what-this-chapter-covers">What This Chapter Covers</h3>
+<h2 id="12-event-driven-messaging-systems">12: Event-Driven Messaging Systems</h2>
 <p>This chapter builds a complete mental model of event-driven messaging from first principles to production-grade design. You will understand why asynchronous messaging exists, how to choose between queues and pub/sub, how to guarantee correctness under retries and failures, and how to design systems that stay operationally healthy at scale.</p>
 <p><strong>Topics covered:</strong> queues, pub/sub, delivery guarantees, idempotency, retries, dead letter queues, backpressure, ordering, replay, schema evolution, outbox pattern, event sourcing, CQRS, broker selection, capacity planning, and operations.</p>
-<h3 id="learning-path">Learning Path</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>Level</th>
-<th>What you should understand by the end</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Beginner</td>
-<td>What a message queue is, why async reduces user-facing latency, queue vs pub/sub</td>
-</tr>
-<tr>
-<td>Intermediate</td>
-<td>Idempotency, retries with backoff, DLQ, partitioning, consumer groups, backpressure</td>
-</tr>
-<tr>
-<td>Advanced</td>
-<td>Ordering trade-offs, replay-safe design, outbox pattern, schema compatibility, event sourcing, CQRS</td>
-</tr>
-</tbody></table></div>
-<h3 id="how-to-use-this-chapter">How to Use This Chapter</h3>
-<ul>
-<li>Read Parts 1-3 first to establish the mental model and vocabulary.</li>
-<li>Treat Parts 4-9 as the correctness core (idempotency, retries, outbox, replay, schema evolution).</li>
-<li>Use Parts 10-17 as interview and production design material.</li>
-<li>If preparing for interviews, practice answering the 8 Q&amp;A prompts out loud in under 2 minutes each.</li>
-</ul>
 <hr>
-<h3 id="part-1-why-messaging-beginner">Part 1 — Why Messaging? (Beginner)</h3>
+<h3 id="part-1-why-messaging">Part 1 — Why Messaging?</h3>
 <h4 id="the-problem-with-synchronous-chains">The Problem with Synchronous Chains</h4>
 <p>Imagine a user clicks &quot;Place Order&quot;. The checkout service must:</p>
 <ol>
@@ -6478,7 +6442,7 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 </code></pre></div>
 <p>Key fields: an <code>event_type</code> naming what happened, an <code>event_id</code> for deduplication, a timestamp, and a business payload.</p>
 <hr>
-<h3 id="part-2-core-building-blocks-beginner">Part 2 — Core Building Blocks (Beginner)</h3>
+<h3 id="part-2-core-building-blocks">Part 2 — Core Building Blocks</h3>
 <h4 id="queue-vs-pubsub">Queue vs Pub/Sub</h4>
 <p>These are the two fundamental message delivery patterns:</p>
 <p><strong>Queue (Point-to-Point)</strong></p>
@@ -6600,7 +6564,7 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="part-3-delivery-guarantees-intermediate">Part 3 — Delivery Guarantees (Intermediate)</h3>
+<h3 id="part-3-delivery-guarantees">Part 3 — Delivery Guarantees</h3>
 <p>Every messaging system makes a promise about what happens to messages. There are three levels:</p>
 <h4 id="at-most-once">At-Most-Once</h4>
 <p>The broker delivers each message zero or one time. If the consumer crashes before processing, the message is lost.</p>
@@ -6615,7 +6579,7 @@ Compare: Postgres RDS instance to absorb 475K reads/s would cost $10,000+/month
 <p><strong>Rule:</strong> Treat exactly-once as at-least-once at any external system boundary. Design consumers for idempotency regardless.</p>
 <p><strong>For most systems:</strong> Design for at-least-once delivery and make side effects idempotent.</p>
 <hr>
-<h3 id="part-4-idempotency-handling-duplicates-safely-intermediate">Part 4 — Idempotency: Handling Duplicates Safely (Intermediate)</h3>
+<h3 id="part-4-idempotency-handling-duplicates-safely">Part 4 — Idempotency: Handling Duplicates Safely</h3>
 <p>Idempotency means processing the same message twice produces the same result as processing it once.</p>
 <h4 id="why-you-need-it">Why You Need It</h4>
 <p>With at-least-once delivery, a consumer can receive the same message multiple times because:</p>
@@ -6656,7 +6620,7 @@ ON CONFLICT (consumer_name, idempotency_key) DO NOTHING;
 <h4 id="real-world-example">Real-World Example</h4>
 <p>Stripe&#39;s payment API accepts an <code>Idempotency-Key</code> header. If you call Stripe twice with the same key, you get the same result without a second charge. Their servers store the first response keyed by your idempotency key and return it on replay.</p>
 <hr>
-<h3 id="part-5-retries-backoff-and-dead-letter-queues-intermediate">Part 5 — Retries, Backoff, and Dead Letter Queues (Intermediate)</h3>
+<h3 id="part-5-retries-backoff-and-dead-letter-queues">Part 5 — Retries, Backoff, and Dead Letter Queues</h3>
 <h4 id="when-to-retry">When to Retry</h4>
 <p>Retry only for <strong>transient failures</strong>: timeouts, HTTP 429 rate limit responses, temporary service unavailability.</p>
 <p>Do not retry <strong>permanent failures</strong>: invalid payload, business rule violation, message too large. These will never succeed and will tie up the consumer.</p>
@@ -6701,7 +6665,7 @@ attempt 5: wait 16s + random(0–8s)
 5. DLQ → alert on growth, require investigation before replay
 </code></pre></div>
 <hr>
-<h3 id="part-6-partitioning-consumer-groups-and-ordering-intermediate">Part 6 — Partitioning, Consumer Groups, and Ordering (Intermediate)</h3>
+<h3 id="part-6-partitioning-consumer-groups-and-ordering">Part 6 — Partitioning, Consumer Groups, and Ordering</h3>
 <h4 id="why-partition">Why Partition?</h4>
 <p>A single broker node cannot handle millions of events per second. Partitioning splits a topic into parallel shards, each served by different broker nodes.</p>
 <div class="code-block"><pre><code>Topic: order_events
@@ -6763,7 +6727,7 @@ attempt 5: wait 16s + random(0–8s)
 <li><strong>Apply load shedding</strong> — if lag threatens critical SLOs, drop or sample non-critical traffic first.</li>
 </ol>
 <hr>
-<h3 id="part-7-the-outbox-pattern-solving-dual-write-intermediate-advanced">Part 7 — The Outbox Pattern: Solving Dual-Write (Intermediate → Advanced)</h3>
+<h3 id="part-7-the-outbox-pattern-solving-dual-write">Part 7 — The Outbox Pattern: Solving Dual-Write</h3>
 <h4 id="the-dual-write-problem">The Dual-Write Problem</h4>
 <p>Every service that publishes events after a database write faces a subtle risk:</p>
 <div class="code-block"><pre><code>Step 1: Write order row to database  ✓ (succeeds)
@@ -6804,7 +6768,7 @@ COMMIT;
 </code></pre></div>
 <p>Debezium reads the database write-ahead log and streams outbox row insertions directly to Kafka without polling. This eliminates DB polling load and achieves near-zero latency from DB write to event publication.</p>
 <hr>
-<h3 id="part-8-replay-safe-consumer-design-advanced">Part 8 — Replay-Safe Consumer Design (Advanced)</h3>
+<h3 id="part-8-replay-safe-consumer-design">Part 8 — Replay-Safe Consumer Design</h3>
 <p>Consumers must be safe to replay. This is required for:</p>
 <ul>
 <li>Recovery after a consumer outage</li>
@@ -6826,7 +6790,7 @@ CORRECT:
   process message → commit offset   (message replayed on crash — safe with idempotency)
 </code></pre></div>
 <hr>
-<h3 id="part-9-schema-evolution-and-compatibility-advanced">Part 9 — Schema Evolution and Compatibility (Advanced)</h3>
+<h3 id="part-9-schema-evolution-and-compatibility">Part 9 — Schema Evolution and Compatibility</h3>
 <h4 id="why-schema-matters">Why Schema Matters</h4>
 <p>Producers and consumers are deployed independently. A producer may add a field today; consumers running yesterday&#39;s code still need to read the message. Without governance, schema changes break consumers silently.</p>
 <h4 id="compatibility-modes">Compatibility Modes</h4>
@@ -6871,7 +6835,7 @@ CORRECT:
 <li><strong>JSON Schema</strong> — human-readable, slower, good for lower-volume or debugging-heavy pipelines.</li>
 </ul>
 <hr>
-<h3 id="part-10-event-sourcing-and-cqrs-advanced">Part 10 — Event Sourcing and CQRS (Advanced)</h3>
+<h3 id="part-10-event-sourcing-and-cqrs">Part 10 — Event Sourcing and CQRS</h3>
 <h4 id="event-sourcing">Event Sourcing</h4>
 <p>Traditional systems store current state: the <code>orders</code> table has the current status of each order.</p>
 <p>Event sourcing stores immutable events as the source of truth. The current state is derived by replaying events:</p>
@@ -6908,7 +6872,7 @@ Read Path:   Query   → Read Projection (pre-computed from events)
 <p><strong>Combined Event Sourcing + CQRS:</strong> Events are the write model; projections are the read models. Adding a new read view means deploying a new consumer that replays the event history — no schema migration required.</p>
 <p><strong>Trade-off:</strong> CQRS introduces eventual consistency between write and read paths. A write succeeds immediately but the read projection may be seconds or minutes behind.</p>
 <hr>
-<h3 id="part-11-broker-selection-guide-intermediate-advanced">Part 11 — Broker Selection Guide (Intermediate → Advanced)</h3>
+<h3 id="part-11-broker-selection-guide">Part 11 — Broker Selection Guide</h3>
 <h4 id="kafka">Kafka</h4>
 <p>Apache Kafka is a distributed log: an append-only, partitioned, replicated stream of records.</p>
 <p><strong>Strengths:</strong></p>
@@ -6998,7 +6962,7 @@ Read Path:   Query   → Read Projection (pre-computed from events)
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="part-12-system-architecture-advanced">Part 12 — System Architecture (Advanced)</h3>
+<h3 id="part-12-system-architecture">Part 12 — System Architecture</h3>
 <h4 id="high-level-architecture-e-commerce-checkout">High-Level Architecture: E-Commerce Checkout</h4>
 <div class="code-block"><pre><code>Checkout API
      │
@@ -7034,7 +6998,7 @@ GET  /v1/dlq/{topic}                     -- list DLQ messages
 POST /v1/dlq/{topic}/replay              -- replay DLQ messages
 </code></pre></div>
 <hr>
-<h3 id="part-13-capacity-planning-advanced">Part 13 — Capacity Planning (Advanced)</h3>
+<h3 id="part-13-capacity-planning">Part 13 — Capacity Planning</h3>
 <h4 id="example-calculation">Example Calculation</h4>
 <p>Assume:</p>
 <ul>
@@ -7107,7 +7071,7 @@ POST /v1/dlq/{topic}/replay              -- replay DLQ messages
 <li>At 50 MB/s ingress: ~$13,000/month — significantly higher but zero operational overhead.</li>
 </ul>
 <hr>
-<h3 id="part-14-what-can-fail-advanced">Part 14 — What Can Fail? (Advanced)</h3>
+<h3 id="part-14-what-can-fail">Part 14 — What Can Fail?</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -7310,7 +7274,7 @@ POST /v1/dlq/{topic}/replay              -- replay DLQ messages
 <p><strong>Q8. How do you handle a poison pill message that keeps crashing a consumer?</strong></p>
 <p>A poison pill is a message the consumer cannot process, causing repeated crashes and blocking all messages behind it on that partition. Mitigations: (1) catch deserialization errors and route directly to DLQ without retrying; (2) validate schema at consumer startup and reject malformed messages on receipt; (3) enforce schema compatibility in the schema registry to prevent malformed messages from being published; (4) add per-message error isolation so one bad message does not block the partition.</p>
 <hr>
-<h2 id="chapter-13-consistent-hashing">Chapter 13: Consistent Hashing</h2>
+<h2 id="13-consistent-hashing">13: Consistent Hashing</h2>
 <h3 id="the-core-problem-1">The Core Problem</h3>
 <p>Distributed systems constantly add nodes (capacity, recovery) and lose nodes (failures, decommissions). You need to route each key to the right server — but how do you do that when the set of servers keeps changing?</p>
 <p>The naive approach is <strong>modulo hashing</strong>: <code>server = hash(key) % N</code>. It works perfectly when <code>N</code> is fixed. But when <code>N</code> changes:</p>
@@ -7323,7 +7287,7 @@ server = hash(&quot;user:42&quot;) % 9  →  7  ← moved!
 <p>Adding just one server to an 8-server Memcached pool causes ~87.5% of keys to remap to different servers. Every remapped key is a cache miss. Every cache miss hits the database. For a system doing millions of lookups per second, this is a thundering herd that can bring down the database.</p>
 <p><strong>Consistent hashing solves this.</strong> When you add or remove one node from an N-node ring, only ~1/N of keys move — the theoretical minimum. The rest of the cluster is completely unaffected.</p>
 <hr>
-<h3 id="level-1-the-ring-intuition">Level 1: The Ring Intuition</h3>
+<h3 id="the-ring-intuition">The Ring Intuition</h3>
 <p>Imagine a clock face, but instead of 12 positions it has positions from 0 to 2³²−1 (about 4 billion). Both servers and keys are placed on this clock by hashing them.</p>
 <ul>
 <li><strong>Server placement:</strong> <code>position(server) = hash(server_name)</code></li>
@@ -7352,7 +7316,7 @@ Ring positions (example):
 <p><strong>Removing a server:</strong> Its keys pass to its clockwise successor. Every other key is untouched.</p>
 <p>With modulo hashing: <code>(N-1)/N</code> keys move when N changes ≈ 87.5% for N=8.<br>With consistent hashing: <code>1/N</code> keys move ≈ 12.5% for N=8.</p>
 <hr>
-<h3 id="level-2-the-problem-with-a-simple-ring">Level 2: The Problem with a Simple Ring</h3>
+<h3 id="the-problem-with-a-simple-ring">The Problem with a Simple Ring</h3>
 <p>A single position per server creates <strong>uneven arc sizes</strong>. With 3 servers randomly placed, one server might own 60% of the ring and another only 10% — by pure chance.</p>
 <p>The solution is <strong>virtual nodes (vnodes)</strong>: each physical server owns many positions on the ring, not just one.</p>
 <div class="code-block"><pre><code>Physical servers: A, B, C
@@ -7434,7 +7398,7 @@ Ring: A1-B2-C1-A2-B1-C2-A3-B3-C3-A4-B4-C4-A5-B5-C5-A6-B6-C6...
 <p>Node C owns 50% of the ring because it can store 50% of the data. Without weighting, it would be overloaded and become the hot spot.</p>
 <p><strong>Metadata overhead:</strong> 600 vnodes × 16 bytes/token × 100 nodes = ~960 KB — fits in memory on any client and is trivial to gossip across the cluster.</p>
 <hr>
-<h3 id="level-3-production-ring-mechanics">Level 3: Production Ring Mechanics</h3>
+<h3 id="production-ring-mechanics">Production Ring Mechanics</h3>
 <h4 id="lookup-algorithm">Lookup Algorithm</h4>
 <p>The ring is stored as a <strong>sorted array of (token, node_id) pairs</strong>. Lookup is a binary search — O(log V) where V is the number of vnodes.</p>
 <div class="code-block"><span class="code-label">python</span><pre><code class="language-python">import bisect, hashlib
@@ -7511,7 +7475,7 @@ Quorum reads: any 2-of-3 replicas must agree (W + R &gt; N → 2 + 2 &gt; 3 ✓)
 </tbody></table></div>
 <p><strong>Critical rule:</strong> Every client and every server in the cluster must use the <strong>same hash function and same seed</strong>. A mismatch causes different clients to compute different ring positions — silently routing keys to wrong nodes.</p>
 <hr>
-<h3 id="level-4-ring-membership-keeping-everyone-in-sync">Level 4: Ring Membership — Keeping Everyone in Sync</h3>
+<h3 id="ring-membership-keeping-everyone-in-sync">Ring Membership — Keeping Everyone in Sync</h3>
 <p>The ring is shared state. When nodes join or leave, all clients need to know. There are three propagation mechanisms:</p>
 <div class="table-wrap"><table>
 <thead>
@@ -7565,7 +7529,7 @@ Quorum reads: any 2-of-3 replicas must agree (W + R &gt; N → 2 + 2 &gt; 3 ✓)
 </code></pre></div>
 <p><strong>Never abruptly remove a node.</strong> If the node was the only replica for some token range (possible during failure scenarios), abrupt removal causes permanent data loss.</p>
 <hr>
-<h3 id="level-5-advanced-patterns">Level 5: Advanced Patterns</h3>
+<h3 id="advanced-patterns">Advanced Patterns</h3>
 <h4 id="pattern-1-client-side-ring-smart-client">Pattern 1 — Client-Side Ring (Smart Client)</h4>
 <div class="code-block"><pre><code>┌──────────────────┐    ring cached locally    ┌──────────────┐
 │  Client          │──────────────────────────▶│  Node A      │
@@ -7621,7 +7585,7 @@ Moving Node B&#39;s slots to Node D:
 </code></pre></div>
 <p><strong>Pro:</strong> Client routing table is a fixed-size array (16,384 entries). Simple to implement correctly in any language.<br><strong>Con:</strong> Less flexible than vnodes (no weighted distribution, fixed slot count).</p>
 <hr>
-<h3 id="level-6-alternative-hashing-algorithms">Level 6: Alternative Hashing Algorithms</h3>
+<h3 id="alternative-hashing-algorithms">Alternative Hashing Algorithms</h3>
 <p>Ring-based consistent hashing isn&#39;t the only option. Three alternatives are worth knowing:</p>
 <h4 id="rendezvous-hashing-highest-random-weight-hrw">Rendezvous Hashing (Highest Random Weight, HRW)</h4>
 <p>For each key, score every server and pick the highest score:</p>
@@ -7868,8 +7832,8 @@ GET /v1/ring/state
 <p><strong>Q5: What happens during a network partition that splits the gossip graph?</strong></p>
 <p><strong>A:</strong> Each partition island develops a diverging view of the ring. Nodes on each side believe they own certain token ranges. This leads to: (1) writes accepted by wrong nodes, (2) reads missing data on the &quot;real&quot; owner, (3) eventual data divergence when partition heals. Mitigation: use a strongly consistent store (etcd, ZooKeeper) as the source of truth for ring state. Treat gossip as a propagation optimization only — never as authoritative. With etcd, ring updates require quorum; during a partition, ring changes block rather than diverge.</p>
 <hr>
-<h2 id="chapter-14-designing-a-distributed-cache">Chapter 14: Designing a Distributed Cache</h2>
-<h3 id="140-the-problem-why-caches-exist">14.0 The Problem: Why Caches Exist</h3>
+<h2 id="14-designing-a-distributed-cache">14: Designing a Distributed Cache</h2>
+<h3 id="141-the-problem-why-caches-exist">14.1 The Problem: Why Caches Exist</h3>
 <h4 id="plain-english-intuition">Plain-English Intuition</h4>
 <p>Imagine a popular restaurant where a waiter takes your order to the kitchen. On a quiet evening, that works fine. On a Friday night with 500 customers, every waiter running to the kitchen for every request creates a bottleneck — the kitchen (your database) gets overwhelmed.</p>
 <p>A cache is a &quot;prep station&quot; near the front. The most popular dishes are pre-prepared and sitting on a shelf. 80% of orders are served from that shelf in seconds. Only 20% of unusual orders go back to the kitchen (database).</p>
@@ -7916,7 +7880,7 @@ GET /v1/ring/state
 </tbody></table></div>
 <p><strong>Facebook&#39;s Memcached lesson (2013 paper):</strong> Without the cache tier, Facebook would need 100× more MySQL servers. The cache layer processes tens of millions of requests per second with sub-millisecond latency. The paper introduced the concept of <em>lease-based invalidation</em> to solve cache stampedes.</p>
 <hr>
-<h3 id="141-requirements">14.1 Requirements</h3>
+<h3 id="142-requirements">14.2 Requirements</h3>
 <h4 id="functional-requirements">Functional Requirements</h4>
 <ol>
 <li><code>put(key, value, ttl)</code> — Store a key-value pair with optional expiry.</li>
@@ -7960,7 +7924,7 @@ GET /v1/ring/state
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="142-capacity-estimation">14.2 Capacity Estimation</h3>
+<h3 id="143-capacity-estimation">14.3 Capacity Estimation</h3>
 <p><strong>Scenario:</strong> A social network with 10 M active users serving user profile pages.</p>
 <p><strong>QPS estimation:</strong></p>
 <ul>
@@ -7985,7 +7949,7 @@ GET /v1/ring/state
 <li>6 shards × 2 replicas = 12 nodes; using r6g.2xlarge (52 GB each) = 312 GB primary capacity, <strong>624 GB total</strong> with replicas</li>
 </ul>
 <hr>
-<h3 id="143-api-design">14.3 API Design</h3>
+<h3 id="144-api-design">14.4 API Design</h3>
 <div class="code-block"><span class="code-label">http</span><pre><code class="language-http">GET    /v1/cache/{key}
 PUT    /v1/cache/{key}
 DELETE /v1/cache/{key}
@@ -8006,7 +7970,7 @@ DELETE /v1/cache/{key}
 <p>Response for <code>GET</code> (miss): <code>404 Not Found</code></p>
 <p><strong>Key namespacing convention:</strong> Use <code>{entity}:{id}:{attribute}</code> (e.g., <code>user:42:profile</code>, <code>product:99:inventory</code>). This avoids key collisions between services sharing the same cluster and enables prefix-based scanning for debugging (<code>redis-cli --scan --pattern &quot;user:*&quot;</code>).</p>
 <hr>
-<h3 id="144-single-node-cache-internals">14.4 Single-Node Cache Internals</h3>
+<h3 id="145-single-node-cache-internals">14.5 Single-Node Cache Internals</h3>
 <p>Before distributing a cache, understand how a single node works. Every distributed cache is a collection of single-node caches working together.</p>
 <h4 id="core-data-structures">Core Data Structures</h4>
 <p>A single-node LRU cache uses a <strong>hash map + doubly linked list</strong> to achieve O(1) get, put, and eviction:</p>
@@ -8087,7 +8051,7 @@ Linked List:   [HEAD: most-recent] ↔ [nodeA] ↔ [nodeB] ↔ [TAIL: least-rece
 <li>Together, these two mechanisms keep memory clean without a full scan.</li>
 </ul>
 <hr>
-<h3 id="145-scaling-to-a-distributed-cache">14.5 Scaling to a Distributed Cache</h3>
+<h3 id="146-scaling-to-a-distributed-cache">14.6 Scaling to a Distributed Cache</h3>
 <p>A single-node cache is bounded by one server&#39;s RAM (~100–500 GB). At 100 M users × 5 KB average profile = 500 GB of data, you need to distribute the cache across nodes.</p>
 <h4 id="co-located-vs-remote-cache">Co-located vs. Remote Cache</h4>
 <div class="table-wrap"><table>
@@ -8138,7 +8102,7 @@ Linked List:   [HEAD: most-recent] ↔ [nodeA] ↔ [nodeB] ↔ [TAIL: least-rece
 </ol>
 <p><strong>Real-world adoption:</strong> Apache Cassandra, Amazon DynamoDB, Riak, and Memcached&#39;s <code>ketama</code> library all use consistent hashing with vnodes.</p>
 <hr>
-<h3 id="146-cache-access-patterns">14.6 Cache Access Patterns</h3>
+<h3 id="147-cache-access-patterns">14.7 Cache Access Patterns</h3>
 <p>How the application reads and writes through the cache determines consistency, latency, and write complexity. There are five standard patterns.</p>
 <h4 id="pattern-1-cache-aside-lazy-loading">Pattern 1: Cache-Aside (Lazy Loading)</h4>
 <p>The application manages the cache explicitly. The most common production pattern.</p>
@@ -8234,7 +8198,7 @@ Read:   cache.get(key) → miss → DB.read → cache.put (lazy)
 </tbody></table></div>
 <p><strong>Most common production choice:</strong> Cache-aside for reads + write-through for critical entities + TTL as a safety net.</p>
 <hr>
-<h3 id="147-cache-invalidation-strategies">14.7 Cache Invalidation Strategies</h3>
+<h3 id="148-cache-invalidation-strategies">14.8 Cache Invalidation Strategies</h3>
 <blockquote>
 <p>&quot;There are only two hard things in Computer Science: cache invalidation and naming things.&quot; — Phil Karlton</p>
 </blockquote>
@@ -8301,7 +8265,7 @@ cache.delete(&quot;user:42:profile&quot;)  # Explicit invalidation
 <p><strong>Pros:</strong> Decouples application code from cache management. Catches invalidations even if the application forgot to call <code>cache.delete</code>. Works across multiple services sharing the same cache.<br><strong>Cons:</strong> Adds infrastructure (Debezium, Kafka). Lag between DB write and cache invalidation (~100 ms–1 s). Consumer must be idempotent.</p>
 <p><strong>Real-world:</strong> Netflix&#39;s Hollow library pushes DB state snapshots to in-memory caches across thousands of servers. Facebook&#39;s McSqueal reads MySQL binlogs and publishes invalidation messages to the Memcached tier.</p>
 <hr>
-<h3 id="148-high-level-architecture">14.8 High-Level Architecture</h3>
+<h3 id="149-high-level-architecture">14.9 High-Level Architecture</h3>
 <div class="code-block"><pre><code>┌────────────────────────────────────────────┐
 │              Application Tier              │
 │   (stateless; all reads hit cache first)   │
@@ -8384,7 +8348,7 @@ Shard 1 Primary              Shard 2 Primary  ...  Shard N Primary
 </ol>
 <p><strong>Cross-AZ placement:</strong> Primary in AZ-A, Replica-1 in AZ-B, Replica-2 in AZ-C. A full AZ outage does not take down the shard.</p>
 <hr>
-<h3 id="149-failure-modes-and-mitigations">14.9 Failure Modes and Mitigations</h3>
+<h3 id="1410-failure-modes-and-mitigations">14.10 Failure Modes and Mitigations</h3>
 <h4 id="cache-stampede-thundering-herd">Cache Stampede (Thundering Herd)</h4>
 <p><strong>Scenario:</strong> A hot key&#39;s TTL expires. 10,000 simultaneous requests all miss the cache and fire DB queries at the same instant. The database is overwhelmed.</p>
 <p><strong>Mitigation 1 — Mutex lock on first miss:</strong></p>
@@ -8470,7 +8434,7 @@ Read:   shard = random.randint(0, 9)
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="1410-multi-tier-caching-l1-l2-l3">14.10 Multi-Tier Caching (L1 + L2 + L3)</h3>
+<h3 id="1411-multi-tier-caching-l1-l2-l3">14.11 Multi-Tier Caching (L1 + L2 + L3)</h3>
 <p>Production systems use multiple cache tiers to balance latency, consistency, and cost.</p>
 <div class="code-block"><pre><code>Request → L1 (In-Process, ~100 ns) → L2 (Redis Cluster, ~500 µs) → L3 (Database, ~5 ms)
 </code></pre></div>
@@ -8529,7 +8493,7 @@ Read:   shard = random.randint(0, 9)
 <li>L3: Cassandra / MySQL</li>
 </ul>
 <hr>
-<h3 id="1411-redis-vs-memcached">14.11 Redis vs. Memcached</h3>
+<h3 id="1412-redis-vs-memcached">14.12 Redis vs. Memcached</h3>
 <p>Both are production-proven distributed caches. The right choice depends on your requirements.</p>
 <div class="table-wrap"><table>
 <thead>
@@ -8606,7 +8570,7 @@ Read:   shard = random.randint(0, 9)
 </ul>
 <p><strong>Facebook&#39;s approach:</strong> Operates both — Memcached for the primary cache tier (pure KV, multi-threaded, highest throughput) and Redis for features requiring richer data structures or persistence.</p>
 <hr>
-<h3 id="1412-data-model">14.12 Data Model</h3>
+<h3 id="1413-data-model">14.13 Data Model</h3>
 <p><strong>CacheEntry</strong></p>
 <div class="table-wrap"><table>
 <thead>
@@ -8760,7 +8724,7 @@ Read:   shard = random.randint(0, 9)
 <li>The <strong>Consistent Hash Ring</strong> is an in-memory routing structure maintained by each client from the live node list in ZooKeeper — not a database table.</li>
 </ul>
 <hr>
-<h3 id="1413-key-design-decisions-and-trade-offs">14.13 Key Design Decisions and Trade-Offs</h3>
+<h3 id="1414-key-design-decisions-and-trade-offs">14.14 Key Design Decisions and Trade-Offs</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -8820,7 +8784,7 @@ Read:   shard = random.randint(0, 9)
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="1414-operational-considerations">14.14 Operational Considerations</h3>
+<h3 id="1415-operational-considerations">14.15 Operational Considerations</h3>
 <h4 id="key-metrics-to-monitor">Key Metrics to Monitor</h4>
 <div class="table-wrap"><table>
 <thead>
@@ -8902,7 +8866,7 @@ Read:   shard = random.randint(0, 9)
 <li>Prevents the abrupt miss spike of a sudden ring removal.</li>
 </ol>
 <hr>
-<h3 id="1415-cost-estimation">14.15 Cost Estimation</h3>
+<h3 id="1416-cost-estimation">14.16 Cost Estimation</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -8949,7 +8913,7 @@ Read:   shard = random.randint(0, 9)
 <li><strong>Graviton (r6g) instances:</strong> ~20% better price/performance vs x86 (r5/r6i).</li>
 </ul>
 <hr>
-<h3 id="1416-three-year-evolution-roadmap">14.16 Three-Year Evolution Roadmap</h3>
+<h3 id="1417-three-year-evolution-roadmap">14.17 Three-Year Evolution Roadmap</h3>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -8980,7 +8944,7 @@ Read:   shard = random.randint(0, 9)
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="1417-interview-questions-and-answers">14.17 Interview Questions and Answers</h3>
+<h3 id="1418-interview-questions-and-answers">14.18 Interview Questions and Answers</h3>
 <p><strong>Q1: When should you use a local in-process cache vs. a remote shared cache vs. both?</strong></p>
 <p><strong>Answer:</strong></p>
 <p>Use a <strong>local (in-process) cache</strong> (Caffeine, Guava Cache, lru-cache) when:</p>
@@ -9038,14 +9002,14 @@ Read:   shard = random.randint(0, 9)
 </ol>
 <p><strong>Decision heuristic:</strong> If a managed service covers 90% of your requirements and the remaining 10% can be worked around, use managed. A self-managed cache control plane requires 3–5 dedicated engineers to maintain safely — that cost is rarely justified below significant scale.</p>
 <hr>
-<h2 id="chapter-15-designing-an-auto-complete-engine">Chapter 15: Designing an Auto-Complete Engine</h2>
-<h3 id="60-second-interview-summary">60-Second Interview Summary</h3>
+<h2 id="15-designing-an-auto-complete-engine">15: Designing an Auto-Complete Engine</h2>
+<h3 id="design-at-a-glance">Design at a Glance</h3>
 <p>Build autocomplete as an in-memory, sharded trie with top-K suggestions precomputed at each prefix node. Keep the serving path short: client -&gt; web tier -&gt; Redis -&gt; trie shard on cache miss. Route misses with consistent hashing, keep shard replicas for failover, and refresh ranking signals every 15 minutes from query logs. This gives sub-10 ms p99 latency with high availability while keeping operational complexity manageable.</p>
 <h3 id="what-problem-are-we-solving">What Problem Are We Solving?</h3>
 <p>Auto-complete is the feature where a search box shows suggestions as you type. You type <code>&quot;Dub&quot;</code> and see <code>Dubai</code>, <code>Dublin</code>, <code>Dubrovnik</code> appear instantly — before you finish the word.</p>
 <p><strong>Why is this hard?</strong> Every single keystroke fires a query. At 1,000 users typing simultaneously, that is thousands of sub-10 ms requests per second. A normal database query takes 20–100 ms. A disk seek takes ~10 ms. Neither can keep up. We need a completely different approach.</p>
 <p><strong>Real-world scale:</strong> Google&#39;s autocomplete serves billions of queries per day at under 5 ms median latency. Amazon shows product suggestions as you type in the search box. Airbnb completes destination names. Spotify completes song and artist names. All of these use the same core architecture this chapter walks through.</p>
-<h3 id="scope-and-assumptions-for-this-design">Scope and Assumptions (For This Design)</h3>
+<h3 id="scope-and-assumptions">Scope and Assumptions</h3>
 <p>To keep the chapter focused, we explicitly scope what this system does and does not do:</p>
 <ul>
 <li><strong>In scope:</strong> Exact prefix suggestions, popularity-based ranking, locale-aware results, high availability.</li>
@@ -9111,7 +9075,7 @@ Read:   shard = random.randint(0, 9)
 </tbody></table></div>
 <p>The trie&#39;s O(M) complexity is the reason every major autocomplete system uses it. No other structure comes close for prefix queries at scale.</p>
 <hr>
-<h3 id="beginner-view-one-server-simple-trie">Beginner View: One Server, Simple Trie</h3>
+<h3 id="the-single-server-trie">The Single-Server Trie</h3>
 <p>Start simple: one server, all strings loaded into a trie in memory, HTTP endpoint to query it.</p>
 <div class="code-block"><pre><code>Client → Web Server → In-Memory Trie → Return top-10 suggestions
 </code></pre></div>
@@ -9139,7 +9103,7 @@ class Trie:
 <li>The server restarts and takes minutes to reload the trie</li>
 </ul>
 <hr>
-<h3 id="intermediate-view-requirements-at-scale">Intermediate View: Requirements at Scale</h3>
+<h3 id="requirements-at-scale">Requirements at Scale</h3>
 <p>Now design for Google-scale. Nail the requirements first.</p>
 <h4 id="functional-requirements-1">Functional Requirements</h4>
 <ol>
@@ -9735,7 +9699,7 @@ Indexer Shard 1   Shard 2   ...  Shard 8   (logical shards; trie in RAM)
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="expert-view-advanced-topics">Expert View: Advanced Topics</h3>
+<h3 id="advanced-topics">Advanced Topics</h3>
 <h4 id="compressed-tries-patricia-trie-radix-tree">Compressed Tries (PATRICIA Trie / Radix Tree)</h4>
 <p>A standard trie wastes nodes on long common prefixes. The string <code>&quot;autocomplete&quot;</code> creates 12 nodes. A <strong>compressed trie</strong> collapses paths with single children into a single edge:</p>
 <div class="code-block"><pre><code>Standard trie:  root → a → u → t → o → c → ...  (12 nodes)
@@ -9777,7 +9741,7 @@ Compressed:     root → &quot;auto&quot; → &quot;complete&quot;       (2 node
 <li><strong>Measurement:</strong> Which SLOs and business guardrails prove the system is healthy?</li>
 </ol>
 <hr>
-<h2 id="chapter-16-designing-a-scalable-notification-service">Chapter 16: Designing a Scalable Notification Service</h2>
+<h2 id="16-designing-a-scalable-notification-service">16: Designing a Scalable Notification Service</h2>
 <h3 id="the-core-problem-why-notifications-are-harder-than-they-look">The Core Problem: Why Notifications Are Harder Than They Look</h3>
 <p>Imagine you are building the Uber app. A driver cancels a ride. Within 5 seconds, the rider&#39;s phone must buzz with a push notification, an email must be queued, and possibly an SMS must be sent. Three things must happen right now while the booking service moves on to the next operation.</p>
 <p>The naive solution: call APNs/FCM/Twilio directly from the booking service before returning the response. This works for one request. At scale it breaks:</p>
@@ -9789,7 +9753,7 @@ Compressed:     root → &quot;auto&quot; → &quot;complete&quot;       (2 node
 </ul>
 <p>The real solution is <strong>complete decoupling</strong>: the booking service publishes an event and returns immediately. A separate notification pipeline drains that event asynchronously, applies preference rules, deduplicates, fan-outs to providers, and records delivery state.</p>
 <p>This is why real notification systems (Uber, DoorDash, Stripe, GitHub) look like <strong>orchestration pipelines</strong>, not simple sender services.</p>
-<h3 id="beginners-mental-model-the-post-office-analogy">Beginner&#39;s Mental Model: The Post Office Analogy</h3>
+<h3 id="the-post-office-analogy">The Post Office Analogy</h3>
 <p>Think of the notification service as a <strong>post office</strong>:</p>
 <ul>
 <li>Your business service drops a <strong>letter</strong> (event) into a <strong>mailbox</strong> (Kafka) and walks away — it doesn&#39;t care when it&#39;s delivered.</li>
@@ -10450,7 +10414,7 @@ sms:   primary=Twilio,     fallback=Vonage
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="why-this-architecture-6">Why This Architecture?</h3>
+<h3 id="design-rationale-5">Design Rationale</h3>
 <p>Coupling business services to notification delivery creates a latency and availability dependency — a slow APNs or Twilio call delays the original user action. This architecture separates <strong>acceptance</strong> (fast, synchronous), <strong>orchestration</strong> (preference policy, dedup, rate limiting), and <strong>provider delivery</strong> (async, retryable) so each layer scales and fails independently. Policy stays centralized, so opt-outs and quiet hours are enforced consistently across all channels regardless of which team owns which provider.</p>
 <hr>
 <h3 id="how-much-will-it-cost-7">How Much Will It Cost?</h3>
@@ -10500,7 +10464,7 @@ sms:   primary=Twilio,     fallback=Vonage
 </tbody></table></div>
 <p>External provider fees (especially SMS) dominate. Infrastructure cost is a small fraction of total spend.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-7">How Will Teams Maintain It?</h3>
+<h3 id="operations-7">Operations</h3>
 <ul>
 <li>Monitor end-to-end latency from acceptance to provider acknowledgement, broken down by channel and priority.</li>
 <li>Alert on: consumer lag, DLQ depth, per-provider error rate, duplicate-delivery rate, per-user rate-limit suppression rate.</li>
@@ -10546,7 +10510,7 @@ sms:   primary=Twilio,     fallback=Vonage
 <p><strong>Q6: How do you handle a user with 5 registered push notification tokens (3 iPhones, 2 iPads) without flooding all 5 devices?</strong></p>
 <p>Use the <code>dedup_group</code> concept on the <strong>Endpoint</strong> table. All 5 devices for the same user belong to the same <code>dedup_group</code>. The orchestrator&#39;s fan-out logic picks <strong>one representative endpoint per dedup_group</strong> for each notification — typically the most recently active device. Rules: (a) prefer the most-recently-seen device by <code>updated_at</code>; (b) if the primary times out after delivery, retry on the next device in the group. Tokens that APNs/FCM return as invalid (device unregistered) are purged immediately from the Endpoint table to keep the group clean.</p>
 <hr>
-<h2 id="chapter-17-designing-a-real-time-push-platform">Chapter 17: Designing a Real-Time Push Platform</h2>
+<h2 id="17-designing-a-real-time-push-platform">17: Designing a Real-Time Push Platform</h2>
 <blockquote>
 <p><strong>Case Study:</strong> Netflix&#39;s Zuul Push Service — delivering real-time updates to 250 M+ devices.</p>
 </blockquote>
@@ -10561,7 +10525,7 @@ sms:   primary=Twilio,     fallback=Vonage
 <li><strong>Routing:</strong> When you want to push to <code>user_456</code>, which of your 80 servers currently owns their socket?</li>
 <li><strong>Deployability:</strong> When you redeploy code, you cannot disconnect all 10 M clients at once.</li>
 </ol>
-<h3 id="beginners-mental-model-the-stadium-intercom">Beginner&#39;s Mental Model: The Stadium Intercom</h3>
+<h3 id="the-stadium-intercom">The Stadium Intercom</h3>
 <p>Think of this system as a <strong>stadium with 10 million seats</strong>:</p>
 <ul>
 <li>Each spectator (device) is seated in a specific section (connection server). They are just sitting there — they opened a persistent connection and are waiting.</li>
@@ -11133,7 +11097,7 @@ Message Router ──► Offline Fallback Worker ──► APNs / FCM / Notifica
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="why-this-architecture-7">Why This Architecture?</h3>
+<h3 id="design-rationale-6">Design Rationale</h3>
 <p>10 million open connections is a <strong>state-management problem</strong>, not a request-rate problem. A thread-per-connection model collapses under memory and scheduling pressure. Event-driven I/O + a dedicated connection tier + a registry-based router turns this into a horizontally scalable system: keep sockets on specialized servers, keep routing logic separate, keep reconnect storms bounded by design. The registry is the key insight — routing without it requires broadcasting every message to every server, which is O(N servers) per message and untenable at scale.</p>
 <hr>
 <h3 id="how-much-will-it-cost-8">How Much Will It Cost?</h3>
@@ -11184,7 +11148,7 @@ Message Router ──► Offline Fallback Worker ──► APNs / FCM / Notifica
 </tbody></table></div>
 <p>At smaller scale (100 K connections): 1–2 connection servers + small Redis + small Kafka ≈ ~$1,000/month.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-8">How Will Teams Maintain It?</h3>
+<h3 id="operations-8">Operations</h3>
 <p><strong>The three operational lessons from Netflix Zuul Push:</strong></p>
 <p><strong>Lesson 1: Connections make servers stateful — rollback is painful.</strong><br>A buggy build affects every client still connected to that server. Mitigation: bounded lifetimes + jitter mean bugs self-correct as connections cycle; canary deploys limit exposure.</p>
 <p><strong>Lesson 2: The right auto-scaling metric is open connection count, not CPU or RPS.</strong><br>RPS is deceptively low (most connections are idle most of the time). CPU can stay low even at full capacity. Monitor <code>open_connections / server</code> and scale out at 80% of target. Use reconnect rate as a leading indicator — a spike usually precedes a CPU or memory alarm.</p>
@@ -11232,7 +11196,7 @@ Message Router ──► Offline Fallback Worker ──► APNs / FCM / Notifica
 <p><strong>Q6: How does MQTT differ from WebSockets, and when would you choose it for a push platform?</strong></p>
 <p>MQTT is a lightweight publish-subscribe protocol designed specifically for constrained environments: low-bandwidth networks (2G/3G), battery-powered devices, and unreliable connections. Key differences from WebSockets: (a) <strong>Message framing is more compact</strong> — a minimal MQTT PUBLISH packet is 2 bytes of fixed header vs. 2–10 bytes for WebSocket framing. (b) <strong>Built-in QoS levels</strong> — MQTT natively supports fire-and-forget (QoS 0), at-least-once (QoS 1), and exactly-once (QoS 2). WebSockets have no built-in QoS. (c) <strong>Clean session vs persistent session</strong> — an MQTT broker can hold queued messages for a disconnected client with a persistent session, re-delivering them on reconnect. Choose MQTT for: IoT sensors, wearables, vehicles, and any scenario where the device has constrained power or bandwidth. Choose WebSockets for: browser-based apps and native apps on full-power mobile devices where latency matters more than efficiency.</p>
 <hr>
-<h2 id="chapter-18-counting-at-scale-top-k-trending-items">Chapter 18: Counting at Scale — Top-K Trending Items</h2>
+<h2 id="18-counting-at-scale-top-k-trending-items">18: Counting at Scale — Top-K Trending Items</h2>
 <h3 id="the-core-problem-counting-billions-of-events-in-real-time">The Core Problem: Counting Billions of Events in Real Time</h3>
 <p>You run a music streaming service like Spotify. You want to answer: <strong>&quot;What are the 100 most-played songs in the last hour?&quot;</strong></p>
 <p><strong>Naive approach:</strong> Keep a counter for every song. When a song plays, increment its counter. Sort by count at the end of each hour. This works for 1,000 songs. It breaks for 50 million songs with 1 billion plays per hour because:</p>
@@ -11272,7 +11236,7 @@ Message Router ──► Offline Fallback Worker ──► APNs / FCM / Notifica
 </tr>
 </tbody></table></div>
 <p>This natural tension — <strong>speed vs accuracy</strong> — leads to a <strong>dual-path architecture</strong>: a fast approximate path for product surfaces, and a slow exact path for billing and audit.</p>
-<h3 id="beginners-mental-model-the-ballot-counter">Beginner&#39;s Mental Model: The Ballot Counter</h3>
+<h3 id="the-ballot-counter">The Ballot Counter</h3>
 <p>Imagine an election with millions of ballots arriving per second at 1,000 different counting stations:</p>
 <p><strong>Exact count:</strong> Collect every ballot at one place and count. Perfect, but slow — you need all ballots before you know the result.</p>
 <p><strong>Approximate count:</strong> Each station takes a sample and estimates the total. Fast — but has some error margin.</p>
@@ -11798,7 +11762,7 @@ for each event x:
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="why-this-architecture-8">Why This Architecture?</h3>
+<h3 id="design-rationale-7">Design Rationale</h3>
 <p>The system serves two fundamentally different consumers: product surfaces need fresh approximate results, and billing/audit needs exact counts. A single design over-optimizes for one side and fails the other. The two-path architecture explicitly accepts the tension: compact approximate summaries for fast answers, durable raw-event aggregation for exact answers later. Count-Min Sketch is the key enabler of the fast path — it provides sub-percent error in <strong>fixed memory</strong> (400 KB regardless of unique item count), enabling sketches to run on every partition simultaneously with trivial merge semantics.</p>
 <hr>
 <h3 id="how-much-will-it-cost-9">How Much Will It Cost?</h3>
@@ -11849,7 +11813,7 @@ for each event x:
 </tbody></table></div>
 <p>Storage and streaming compute dominate at large scale. At smaller scale (1 B events/day), total cost drops to ~$2,000/month.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-9">How Will Teams Maintain It?</h3>
+<h3 id="operations-9">Operations</h3>
 <ul>
 <li>Monitor: fast-path freshness, approximate error rate vs sampled exact counts, consumer lag per partition, exact-job SLA breach rate.</li>
 <li>Maintain a <strong>hot-key runbook</strong> — operators must know how to detect and split a viral item before it crashes a processor.</li>
@@ -11894,7 +11858,7 @@ for each event x:
 <p><strong>Detection:</strong> Track <code>events_per_second</code> per Kafka partition. Alert when any partition exceeds <code>3× average</code>. This is a leading indicator that triggers intervention before the processor falls behind.</p>
 <p><strong>Mitigation:</strong> Implement sub-key splitting at the ingestion layer. Route all events for the hot item <code>viral_song_xyz</code> to a dedicated set of partitions using a random sub-key suffix: <code>viral_song_xyz_0</code> through <code>viral_song_xyz_9</code>. Each partition is processed independently. The global aggregator sums the sub-key counts: <code>total_count(&quot;viral_song_xyz&quot;) = sum(count(&quot;viral_song_xyz_0&quot;), ..., count(&quot;viral_song_xyz_9&quot;))</code>. This splits the hot key&#39;s load across 10 partitions without changing the rest of the pipeline. The sub-key mapping must be idempotent and stored in the routing configuration so replays produce the same routing decisions.</p>
 <hr>
-<h2 id="chapter-19-url-shortener-and-pastebin">Chapter 19: URL Shortener and Pastebin</h2>
+<h2 id="19-url-shortener-and-pastebin">19: URL Shortener and Pastebin</h2>
 <h3 id="the-core-problem-2">The Core Problem</h3>
 <p>A URL shortener stores a mapping from a short code to a long destination URL:</p>
 <ul>
@@ -11913,7 +11877,7 @@ for each event x:
 </ul>
 <p>That asymmetry pushes the design toward a very fast read path, aggressive caching, and asynchronous background processing for everything that is not strictly required to serve the user immediately.</p>
 <hr>
-<h3 id="beginners-mental-model">Beginner&#39;s Mental Model</h3>
+<h3 id="the-dictionary-analogy">The Dictionary Analogy</h3>
 <p>Think of the system as a highly optimized dictionary:</p>
 <ul>
 <li>Input key: short code such as <code>aZ81kQ</code></li>
@@ -12714,7 +12678,7 @@ if code already exists -&gt; retry
 <li>explain trade-offs in business terms, especially around caching and analytics</li>
 </ol>
 <p>If you can clearly justify code generation, caching, redirect semantics, storage separation, and asynchronous analytics, you have covered the heart of this design problem.</p>
-<h2 id="chapter-20-search-engine-design">Chapter 20: Search Engine Design</h2>
+<h2 id="20-search-engine-design">20: Search Engine Design</h2>
 <h3 id="the-core-problem-finding-needles-in-billions-of-haystacks-in-200-ms">The Core Problem: Finding Needles in Billions of Haystacks in 200 ms</h3>
 <p>Design a search engine that crawls documents from the web or an internal corpus, builds an inverted index, ranks results by relevance, and serves queries with low latency.</p>
 <p>This chapter extends the inverted-index and trie ideas from Chapter 15, scaling them to billions of documents and 100,000 queries/second.</p>
@@ -12725,7 +12689,7 @@ if code already exists -&gt; retry
 </ol>
 <p>The reason search feels instant despite indexing the entire web: all the hard work is done before the user ever types a word.</p>
 <hr>
-<h3 id="beginners-mental-model-the-library-analogy">Beginner&#39;s Mental Model: The Library Analogy</h3>
+<h3 id="the-library-analogy">The Library Analogy</h3>
 <p>Imagine a 10-million-book library. You want every book that mentions &quot;distributed consensus.&quot; You could read every book — that&#39;s a <strong>full scan</strong>, taking years. Or the library could maintain a <strong>master index</strong>: &quot;distributed → [Book 42, Book 97]&quot;, &quot;consensus → [Book 42, Book 201]&quot;. Finding all books becomes a two-second lookup.</p>
 <p>A search engine is this master index, built for billions of web pages:</p>
 <ol>
@@ -13632,7 +13596,7 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tr>
 </tbody></table></div>
 <hr>
-<h3 id="why-this-architecture-9">Why This Architecture?</h3>
+<h3 id="design-rationale-8">Design Rationale</h3>
 <p>Search separates offline indexing from online query serving because each has incompatible performance requirements. Crawling, parsing, link-graph analysis, embedding generation, and segment merging are throughput-bound batch workloads that can afford latency. Query serving is a latency-bound interactive workload that cannot afford heavy computation. Mixing them degrades both.</p>
 <p>The inverted index is the foundational reason keyword search scales: it converts O(N) document scans into O(log N + result set size) postings list lookups. Hybrid retrieval adds semantic recall via vector search. BM25 provides robust relevance scoring with well-understood parameters. KWIC snippet generation makes results actionable without users needing to click through to understand relevance.</p>
 <hr>
@@ -13709,7 +13673,7 @@ Shard Builder / Segment Merger       Vector Shard Store
 </tbody></table></div>
 <p>Vector search (GPU embedding + ANN storage) adds ~$9,500/month versus keyword-only. At early stage, defer vector search until keyword search quality plateaus.</p>
 <hr>
-<h3 id="how-will-teams-maintain-it-10">How Will Teams Maintain It?</h3>
+<h3 id="operations-10">Operations</h3>
 <ul>
 <li>Monitor crawl success rate, robots.txt compliance, frontier depth, and per-domain fetch latency.</li>
 <li>Track indexing freshness SLO: time from fetch → searchable (target &lt; 5 min for high-priority domains).</li>

@@ -23,8 +23,8 @@ const renderThemeToggle = () => `    <button class="atlas-topbar__theme-btn" typ
     </button>`;
 
 const renderThemeMenuItem = () => `        <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" data-theme-icon-moon width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" data-theme-icon-moon width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span data-theme-label>Light Mode</span>
         </button>`;
 
@@ -61,7 +61,10 @@ const renderTopbar = ({
   const homeHref = `${depth}index.html`;
   const currentTopic = tutorials.find((tutorial) => tutorial.key === current);
   const navLabel = currentTopic ? currentTopic.label : "Topics";
-  const topicLinks = publicTutorials.map((tutorial) => {
+  const visibleTutorials = current === "home"
+    ? publicTutorials.filter((tutorial) => tutorial.showOnHome !== false)
+    : publicTutorials;
+  const topicLinks = visibleTutorials.map((tutorial) => {
     const isCurrent = tutorial.key === current;
     const currentClass = isCurrent ? " is-current" : "";
     const ariaCurrent = isCurrent ? ' aria-current="page"' : "";

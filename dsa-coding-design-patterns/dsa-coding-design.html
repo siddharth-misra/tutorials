@@ -45,7 +45,7 @@
     <div class="atlas-topbar__nav-menu" data-nav-menu>
       <button class="atlas-topbar__nav-btn is-active" type="button" aria-label="Tutorial topics" aria-expanded="false" aria-haspopup="true" data-nav-btn>
         <span>Java DSA + Patterns</span>
-        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="flex-shrink:0">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
           <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
@@ -56,6 +56,7 @@
         <a class="atlas-topbar__nav-item" href="../dsa/dsa.html" data-topic-link>DSA</a>
         <a class="atlas-topbar__nav-item" href="../coding-patterns/coding-patterns.html" data-topic-link>Coding Patterns</a>
         <a class="atlas-topbar__nav-item is-current" href="../dsa-coding-design-patterns/dsa-coding-design.html" data-topic-link aria-current="page">Java DSA + Patterns</a>
+        <a class="atlas-topbar__nav-item" href="../payment-systems/visa-payments.html" data-topic-link>Visa &amp; Payments</a>
       </div>
     </div>
   </div>
@@ -79,8 +80,8 @@
         <button class="atlas-topbar__dropdown-item" type="button" data-view-mode="chapter">Chapter Wise</button>
         <hr class="atlas-topbar__dropdown-divider" />
         <button class="atlas-topbar__dropdown-item" type="button" data-theme-toggle>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" data-theme-icon-moon width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="margin-right:8px;flex-shrink:0"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--sun" data-theme-icon-sun width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="atlas-topbar__theme-icon atlas-topbar__theme-icon--moon" data-theme-icon-moon width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span data-theme-label>Light Mode</span>
         </button>
         <hr class="atlas-topbar__dropdown-divider" />
@@ -92,9 +93,11 @@
 <!-- END_SHARED_TOPBAR -->
 
 
+
+
     <div class="layout">
       <aside class="sidebar" aria-label="Document navigation">
-        <div class="chapter-controls" data-chapter-controls hidden style="display:none !important">
+        <div class="chapter-controls" data-chapter-controls hidden>
           <p class="chapter-controls__meta" data-chapter-indicator>Chapter 1</p>
           <div class="chapter-controls__nav">
             <button class="button" type="button" data-prev-chapter aria-label="Go to previous chapter">Previous</button>
@@ -20109,7 +20112,6 @@ boolean canWin(int[] piles, Map&lt;String, Boolean&gt; memo) {
     markChapterSections();
 
     if (viewModeButtons.length && chapters.length) {
-      const savedMode = localStorage.getItem('dsa-coding-design-view-mode');
       activeChapterIndex = getBestChapterForScroll();
 
       viewModeButtons.forEach((button) => {
@@ -20130,7 +20132,7 @@ boolean canWin(int[] piles, Map&lt;String, Boolean&gt; memo) {
         nextChapterButton.addEventListener('click', () => setActiveChapter(activeChapterIndex + 1));
       }
 
-      applyViewMode(savedMode === 'continuous' ? 'continuous' : 'chapter');
+            applyViewMode('chapter');
     } else {
       viewModeButtons.forEach((button) => {
         button.disabled = true;

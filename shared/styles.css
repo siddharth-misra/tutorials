@@ -295,6 +295,15 @@ a {
   cursor: pointer;
 }
 
+.atlas-topbar__theme-btn .atlas-topbar__theme-icon,
+.atlas-topbar__dropdown-item .atlas-topbar__theme-icon {
+  flex-shrink: 0;
+}
+
+.atlas-topbar__dropdown-item .atlas-topbar__theme-icon {
+  margin-right: 8px;
+}
+
 .atlas-topbar__nav-item:hover,
 .atlas-topbar__dropdown-item:hover {
   background: var(--item-hover-bg);

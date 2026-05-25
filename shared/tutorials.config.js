@@ -33,7 +33,7 @@ const tutorials = [
     key: "visa-payments",
     label: "Visa & Payments",
     hrefFromRoot: "payment-systems/visa-payments.html",
-    showInNav: false,
+    showOnHome: false,
   },
 ];
 
